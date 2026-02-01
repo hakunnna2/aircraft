@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { AIRCRAFT_DATA } from '../data/aircraft.ts';
 import { 
@@ -10,47 +10,124 @@ import {
   Maximize, 
   Activity, 
   Wind, 
-  ArrowUpRight 
+  ArrowUpRight,
+  Heart
 } from 'lucide-react';
 
 const AircraftDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const aircraft = AIRCRAFT_DATA.find((a) => a.id === id);
+  const [heroImageError, setHeroImageError] = useState(false);
+
+  // Get related aircraft (same category or manufacturer, excluding current)
+  const relatedAircraft = AIRCRAFT_DATA
+    .filter(a => 
+      a.id !== id && 
+      (a.category === aircraft?.category || a.manufacturer === aircraft?.manufacturer)
+    )
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 4);
+
+  // Country code mapping for flags
+  const countryCodeMap: Record<string, string> = {
+    'USA': 'us',
+    'France': 'fr',
+    'Royaume-Uni': 'gb',
+    'Allemagne': 'de',
+    'Russie': 'ru',
+    'Chine': 'cn',
+    'Japon': 'jp',
+    'Italie': 'it',
+    'Canada': 'ca',
+    'Suède': 'se',
+    'Pays-Bas': 'nl',
+    'Espagne': 'es',
+    'Suisse': 'ch',
+    'Autriche': 'at',
+    'Brésil': 'br',
+    'Argentine': 'ar',
+    'Australie': 'au',
+    'Inde': 'in',
+    'Israël': 'il',
+    'Afrique du Sud': 'za',
+    'Corée du Sud': 'kr',
+    'Pologne': 'pl',
+    'République tchèque': 'cz',
+    'Roumanie': 'ro',
+    'Ukraine': 'ua',
+    'Yougoslavie': 'rs',
+    'Indonésie': 'id',
+    'Pakistan': 'pk',
+    'Turquie': 'tr',
+    'Émirats arabes unis': 'ae',
+    'Taiwan': 'tw',
+    'Taïwan': 'tw',
+    'Chili': 'cl',
+    'Nouvelle-Zélande': 'nz',
+    'Iran': 'ir',
+    'Finlande': 'fi',
+    'UK': 'gb',
+    // Multi-country entries (using first country's flag)
+    'USA / Royaume-Uni': 'us',
+    'USA / UK': 'us',
+    'UK/USA': 'gb',
+    'Royaume-Uni / USA': 'gb',
+    'France / Allemagne': 'fr',
+    'France / UK': 'fr',
+    'France / Italie': 'fr',
+    'Allemagne / Italie / UK': 'de',
+    'Allemagne / Italie / Espagne / UK': 'de',
+    'Italie / Brésil': 'it',
+    'Italie / Finlande': 'it',
+    'Italie / UK': 'it',
+    'Italie / USA': 'it',
+    'Chine / Pakistan': 'cn',
+    'Pakistan / Chine': 'pk',
+    'Japon / USA': 'jp',
+    'Russie / Italie': 'ru',
+    'Russie / Pologne': 'ru',
+    'Ukraine / Russie': 'ua',
+    'Espagne / Indonésie': 'es',
+    'Canada / Europe': 'ca',
+    'Europe': 'eu'
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
 
   const handlePDFExport = () => {
+    if (!aircraft) return;
     try {
-      // Create a simple canvas with image and name
       const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
+      const ctx = canvas.getContext('2d', { alpha: false, willReadFrequently: false });
       if (!ctx) {
         throw new Error('Could not get 2D context from canvas');
       }
       
-      // Set canvas size (square format for simplicity)
-      canvas.width = 1080;
-      canvas.height = 1350;
+      // High resolution 4K canvas for better quality
+      canvas.width = 2160;  // 2x increase
+      canvas.height = 2700; // 2x increase
       
-      // White background
+      // Enable image smoothing for better quality
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+      
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
-      // Load aircraft image
       const img = new Image();
       img.crossOrigin = 'anonymous';
       img.src = aircraft.image;
       
       img.onload = () => {
         try {
-          const margin = 60;
+          const margin = 120;  // 2x for higher resolution
           
           // Draw aircraft image (centered, taking most of the space)
-          const imgHeight = 900;
-          const imgY = 80;
+          const imgHeight = 1800;  // 2x for higher resolution
+          const imgY = 160;  // 2x for higher resolution
           
           ctx.save();
           const imgAspect = img.width / img.height;
@@ -75,24 +152,24 @@ const AircraftDetail: React.FC = () => {
           ctx.restore();
           
           // Aircraft name (below image)
-          const nameY = imgY + imgHeight + 80;
+          const nameY = imgY + imgHeight + 160;  // 2x for higher resolution
           ctx.fillStyle = '#0f172a';
-          ctx.font = 'bold 56px Inter, sans-serif';
+          ctx.font = 'bold 112px Inter, sans-serif';  // 2x for higher resolution
           ctx.textAlign = 'center';
           ctx.fillText(aircraft.name, canvas.width / 2, nameY);
           
           // Footer text - "made with love for jojo"
-          const footerY = canvas.height - 80;
+          const footerY = canvas.height - 160;  // 2x for higher resolution
           ctx.fillStyle = '#64748b';
-          ctx.font = '28px Inter, sans-serif';
+          ctx.font = '56px Inter, sans-serif';  // 2x for higher resolution
           ctx.textAlign = 'center';
           ctx.fillText('Made with love for JoJo', canvas.width / 2, footerY);
           
           // Optional: Add a small heart emoji
-          ctx.font = '32px Arial';
-          ctx.fillText('❤️', canvas.width / 2 - 220, footerY);
+          ctx.font = '64px Arial';  // 2x for higher resolution
+          ctx.fillText('❤️', canvas.width / 2 - 440, footerY);  // 2x for higher resolution
           
-          // Convert to blob and download
+          // Convert to blob and download (PNG for maximum quality, no compression)
           canvas.toBlob((blob) => {
             if (!blob) {
               throw new Error('Failed to create image blob');
@@ -101,12 +178,12 @@ const AircraftDetail: React.FC = () => {
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
-            link.download = `${aircraft.id}-for-jojo.png`;
+            link.download = `${aircraft.id}-for-jojo-hq.png`;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
-          }, 'image/png');
+          }, 'image/png', 1.0);
         } catch (error) {
           console.error('Error processing image:', error);
           alert('Erreur lors de la génération de l\'image. Veuillez réessayer.');
@@ -141,7 +218,7 @@ const AircraftDetail: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-10 page-transition">
       <button 
-        onClick={() => navigate(-1)}
+        onClick={() => navigate(`/?category=${encodeURIComponent(aircraft.category)}`)}
         className="inline-flex items-center text-xs md:text-sm font-bold text-slate-500 hover:text-yellow-600 mb-6 md:mb-10 group bg-white md:bg-transparent px-3 py-2 md:px-0 rounded-lg shadow-sm md:shadow-none border border-slate-200 md:border-none"
       >
         <ChevronLeft size={18} className="mr-1 group-hover:-translate-x-1 transition-transform" />
@@ -156,11 +233,19 @@ const AircraftDetail: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         <div className="lg:col-span-8 space-y-8 md:space-y-12">
           <div className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-xl md:shadow-2xl bg-slate-200">
-            <img 
-              src={aircraft.image} 
-              alt={aircraft.name} 
-              className="w-full h-full object-cover aspect-[4/3] sm:aspect-[16/10]"
-            />
+            {!heroImageError ? (
+              <img 
+                src={aircraft.image} 
+                alt={aircraft.name} 
+                className="w-full h-full object-cover aspect-[4/3] sm:aspect-[16/10]"
+                loading="eager"
+                onError={() => setHeroImageError(true)}
+              />
+            ) : (
+              <div className="w-full aspect-[4/3] sm:aspect-[16/10] flex items-center justify-center bg-gradient-to-br from-slate-300 to-slate-400 text-slate-500">
+                <span className="text-sm font-semibold">Image non disponible</span>
+              </div>
+            )}
             <div className="absolute top-4 right-4 md:top-6 md:right-6">
               <span className="px-4 py-2 bg-black/60 backdrop-blur-md rounded-full text-[10px] md:text-xs font-bold text-white border border-white/20">
                 {aircraft.category === 'Combat Aircraft' || 
@@ -223,7 +308,20 @@ const AircraftDetail: React.FC = () => {
                   <MapPin size={18} className="mr-3" />
                   <span className="text-sm font-semibold">Origine</span>
                 </div>
-                <span className="text-sm font-bold text-slate-900">{aircraft.country}</span>
+                <div className="flex items-center gap-2">
+                  {!aircraft.country.includes('/') && countryCodeMap[aircraft.country] && (
+                    <img 
+                      src={`https://flagcdn.com/w80/${countryCodeMap[aircraft.country]}.png`}
+                      srcSet={`https://flagcdn.com/w160/${countryCodeMap[aircraft.country]}.png 2x`}
+                      width="24"
+                      height="18"
+                      alt={aircraft.country}
+                      className="rounded-sm shadow-sm object-cover"
+                      loading="lazy"
+                    />
+                  )}
+                  <span className="text-sm font-bold text-slate-900">{aircraft.country}</span>
+                </div>
               </div>
               <div className="flex items-center justify-between py-3.5">
                 <div className="flex items-center text-slate-400">
@@ -244,7 +342,20 @@ const AircraftDetail: React.FC = () => {
              </div>
              <div className="p-4 bg-white rounded-2xl border border-slate-200">
                 <span className="text-[10px] font-bold text-slate-400 uppercase">Origine</span>
-                <p className="text-sm font-bold text-slate-900">{aircraft.country}</p>
+                <div className="flex items-center gap-2 mt-1">
+                  {!aircraft.country.includes('/') && countryCodeMap[aircraft.country] && (
+                    <img 
+                      src={`https://flagcdn.com/w80/${countryCodeMap[aircraft.country]}.png`}
+                      srcSet={`https://flagcdn.com/w160/${countryCodeMap[aircraft.country]}.png 2x`}
+                      width="20"
+                      height="15"
+                      alt={aircraft.country}
+                      className="rounded-sm shadow-sm object-cover"
+                      loading="lazy"
+                    />
+                  )}
+                  <p className="text-sm font-bold text-slate-900">{aircraft.country}</p>
+                </div>
              </div>
           </div>
 
@@ -284,8 +395,46 @@ const AircraftDetail: React.FC = () => {
               * Les informations de reconnaissance sont fournies à titre indicatif pour les passionnés.
             </p>
           </div>
+
         </div>
       </div>
+
+      {/* Related Aircraft Section */}
+      {relatedAircraft.length > 0 && (
+        <div className="mt-8 md:mt-12 p-5 md:p-8 border border-slate-200 rounded-2xl md:rounded-[2.5rem] bg-white text-slate-900">
+          <div className="flex items-center mb-4 md:mb-6">
+            <Heart size={24} className="text-red-500 mr-3 fill-red-500" />
+            <h3 className="text-lg md:text-xl font-black text-slate-900">
+              Vous pourriez aussi aimer
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {relatedAircraft.map((related) => (
+              <Link
+                key={related.id}
+                to={`/aircraft/${related.id}`}
+                className="group bg-white rounded-xl md:rounded-2xl overflow-hidden border border-slate-200 hover:border-yellow-400 hover:shadow-xl transition-all active:scale-95"
+              >
+                <div className="aspect-[4/3] bg-slate-100 overflow-hidden">
+                  <img 
+                    src={related.image} 
+                    alt={related.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-3">
+                  <p className="text-xs md:text-sm font-bold text-slate-900 whitespace-normal break-words leading-snug group-hover:text-yellow-600 transition-colors">
+                    {related.name}
+                  </p>
+                  <p className="text-[10px] md:text-xs text-slate-500 whitespace-normal break-words leading-snug">
+                    {related.manufacturer}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

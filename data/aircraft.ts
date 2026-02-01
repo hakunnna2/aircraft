@@ -4816,23 +4816,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     specs: { wingspan: '15,6 m', length: '11,4 m', height: '3,9 m', payload: '1 000 kg' }
   },
   {
-    id: 'galivan358',
-    name: 'Galivan 358',
-    category: 'Civil Utility',
-    role: 'Transport utilitaire léger',
-    manufacturer: 'Galivan',
-    country: 'Colombie',
-    engineType: 'Piston',
-    enginesCount: 2,
-    recognitionTips: [
-      "Ressemble au Cessna 337 Skymaster",
-      "Moteurs en configuration push-pull",
-      "Double poutre de queue"
-    ],
-    description: "Premier avion indigène de Colombie, conçu pour le transport de passagers et de fret dans les Andes.",
-    specs: { wingspan: '11,6 m', length: '9,1 m', height: '2,8 m', payload: '700 kg' }
-  },
-  {
     id: 'g250-strato',
     name: 'Grob G-250 Strato',
     category: 'Civil Utility',
@@ -9643,7 +9626,1045 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     ],
     description: "Concentré de technologies, il utilise des pales 'Blue Edge' en forme de boomerang pour réduire drastiquement le bruit.",
     specs: { wingspan: '12 m (rotor)', length: '13,96 m', height: '4,91 m', payload: '2 000 kg' }
+  },
+  {
+    id: 'sr71-blackbird',
+    name: 'Lockheed SR-71 Blackbird',
+    category: 'Combat Aircraft',
+    role: 'Avion de reconnaissance stratégique supersonique',
+    manufacturer: 'Lockheed Martin',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Profil extrêmement fin et futuriste",
+      "Couleur noir mat intégrale",
+      "Deux moteurs massifs intégrés au milieu des ailes delta",
+      "Long nez effilé avec des bords tranchants (chines)"
+    ],
+    description: "L'avion le plus rapide de l'histoire à avoir été mis en service (Mach 3.3). Conçu pour voler à très haute altitude afin d'échapper aux missiles.",
+    specs: { wingspan: '16,94 m', length: '32,74 m', height: '5,64 m', payload: 'Reconnaissance optique/radar' }
+  },
+  {
+    id: 'a220',
+    name: 'Airbus A220',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne court/moyen-courrier',
+    manufacturer: 'Airbus (ex-Bombardier)',
+    country: 'Canada / Europe',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs de très gros diamètre par rapport au fuselage",
+      "Cinq sièges de front en cabine (2+3)",
+      "Pare-brise du cockpit composé de quatre larges vitres"
+    ],
+    description: "Anciennement Bombardier CSeries, c'est l'avion le plus moderne de sa catégorie, extrêmement silencieux et économe en carburant.",
+    specs: { wingspan: '35,10 m', length: '35,00 m', height: '11,50 m', payload: '15 000 kg' }
+  },
+  {
+    id: 'b737-max',
+    name: 'Boeing 737 MAX',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne moyen-courrier',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Winglets en forme de 'V' double (Advanced Technology Winglets)",
+      "Nacelles moteurs avec chevrons dentelés à l'arrière",
+      "Moteurs positionnés plus haut et plus en avant sur l'aile"
+    ],
+    description: "La dernière génération du célèbre 737. Il se distingue des versions du livre par ses moteurs plus imposants et ses winglets complexes.",
+    specs: { wingspan: '35,92 m', length: '39,52 m', height: '12,30 m', payload: '20 800 kg' }
+  },
+  {
+    id: 'b21-raider',
+    name: 'Northrop Grumman B-21 Raider',
+    category: 'Combat Aircraft',
+    role: 'Bombardier furtif stratégique de 6ème génération',
+    manufacturer: 'Northrop Grumman',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Aile volante pure sans aucune dérive verticale",
+      "Plus petit et plus blanc/clair que le B-2 Spirit",
+      "Entrées d'air moteur extrêmement plates et intégrées"
+    ],
+    description: "Le futur bombardier furtif américain. Conçu pour être invisible aux radars les plus modernes et remplacer progressivement le B-2 et le B-1.",
+    specs: { wingspan: '40,00 m', length: '20,00 m', height: 'N/A', payload: 'Charge nucléaire et conventionnelle' }
+  },
+  {
+    id: 'p8-poseidon',
+    name: 'Boeing P-8 Poseidon',
+    category: 'Combat Support Aircraft',
+    role: 'Patrouille maritime et lutte anti-sous-marine',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Basé sur la cellule du Boeing 737-800",
+      "Pas de winglets (bouts d'ailes inclinés type 777)",
+      "Baie d'armement située derrière les ailes sous le fuselage"
+    ],
+    description: "Le successeur moderne du P-3 Orion. Utilisé pour traquer les sous-marins et assurer la surveillance maritime mondiale.",
+    specs: { wingspan: '37,64 m', length: '39,47 m', height: '12,83 m', payload: '9 000 kg (bouées, missiles, torpilles)' }
+  },
+  {
+    id: 'rq4-globalhawk',
+    name: 'Northrop Grumman RQ-4 Global Hawk',
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: 'Drone de surveillance haute altitude (HALE)',
+    manufacturer: 'Northrop Grumman',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Envergure immense type planeur",
+      "Nez massif en forme de bulbe (antenne satellite)",
+      "Empennage en V"
+    ],
+    description: "Un drone de la taille d'un avion de ligne capable de surveiller d'immenses zones pendant plus de 30 heures sans interruption.",
+    specs: { wingspan: '39,90 m', length: '14,50 m', height: '4,70 m', payload: '1 360 kg de capteurs' }
+  },
+  {
+    id: 'spitfire',
+    name: 'Supermarine Spitfire',
+    category: 'Combat Aircraft',
+    role: 'Chasseur intercepteur iconique',
+    manufacturer: 'Supermarine',
+    country: 'Royaume-Uni',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes elliptiques uniques et très reconnaissables",
+      "Nez long logeant le moteur Rolls-Royce Merlin",
+      "Train d'atterrissage à voie étroite se rétractant vers l'extérieur"
+    ],
+    description: "Le défenseur de l'Angleterre pendant la Seconde Guerre mondiale. Il est considéré comme l'un des avions les plus élégants jamais construits.",
+    specs: { wingspan: '11,23 m', length: '9,12 m', height: '3,86 m', payload: 'Canons de 20mm et mitrailleuses' }
+  },
+  {
+    id: 'shahed-136',
+    name: 'Shahed 136',
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: 'Drone suicide / Munition rodeuse',
+    manufacturer: 'HESA',
+    country: 'Iran',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Forme en delta pur (triangle)",
+      "Petites stabilisateurs verticaux aux bouts d'ailes",
+      "Hélice propulsive à l'arrière avec un son de mobylette"
+    ],
+    description: "Drone low-cost devenu célèbre dans les conflits récents. Il est utilisé pour saturer les défenses aériennes par le nombre.",
+    specs: { wingspan: '2,50 m', length: '3,50 m', height: 'N/A', payload: '40 kg d\'explosifs' }
+  },
+  {
+    id: 'j10-vigorous-dragon',
+    name: 'Chengdu J-10',
+    category: 'Combat Aircraft',
+    role: 'Chasseur multirôle',
+    manufacturer: 'Chengdu',
+    country: 'Chine',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile delta basse avec plans canards à l'avant",
+      "Entrée d'air unique sous le fuselage (type F-16)",
+      "Dérive verticale unique large"
+    ],
+    description: "L'épine dorsale de l'armée de l'air chinoise moderne. Il combine agilité et technologies polyvalentes.",
+    specs: { wingspan: '9,75 m', length: '15,49 m', height: '5,43 m', payload: '5 600 kg' }
+  },
+  {
+    id: 'e195-e2',
+    name: 'Embraer E195-E2',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne régional haute efficacité',
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage très long et fin (aspect 'crayon')",
+      "Moteurs de très grand diamètre (GTF)",
+      "Pas de winglets, mais des bouts d'ailes très effilés et inclinés"
+    ],
+    description: "Surnommé le 'Profit Hunter', c'est l'avion le plus efficace du marché régional actuel, avec une consommation extrêmement faible.",
+    specs: { wingspan: '35,10 m', length: '41,50 m', height: '10,90 m', payload: '16 150 kg' }
+  },
+
+  {
+    id: 'p51-mustang',
+    name: 'North American P-51 Mustang',
+    category: 'Combat Aircraft',
+    role: 'Chasseur d\'escorte à long rayon d\'action',
+    manufacturer: 'North American Aviation',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Radiateur proéminent sous le fuselage arrière",
+      "Ailes à profil laminaire droites",
+      "Verrière en forme de goutte d'eau (versions D)"
+    ],
+    description: "L'un des chasseurs les plus célèbres de la Seconde Guerre mondiale, capable d'escorter les bombardiers jusqu'au cœur de l'Allemagne.",
+    specs: { wingspan: '11,28 m', length: '9,83 m', height: '4,08 m', payload: '450 kg de bombes' }
+  },
+  {
+    id: 'b17-flying-fortress',
+    name: 'Boeing B-17 Flying Fortress',
+    category: 'Combat Aircraft',
+    role: 'Bombardier lourd stratégique',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 4,
+    recognitionTips: [
+      "Grande dérive verticale arrondie",
+      "Nez entièrement vitré",
+      "Nombreuses tourelles de mitrailleuses défensives"
+    ],
+    description: "Surnommé la 'Forteresse Volante', il est le symbole des raids de bombardement de jour sur l'Europe occupée.",
+    specs: { wingspan: '31,62 m', length: '22,66 m', height: '5,82 m', payload: '7 900 kg' }
+  },
+  {
+    id: 'bf109',
+    name: 'Messerschmitt Bf 109',
+    category: 'Combat Aircraft',
+    role: 'Chasseur intercepteur',
+    manufacturer: 'Messerschmitt',
+    country: 'Allemagne',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Train d'atterrissage très étroit",
+      "Capot moteur anguleux",
+      "Stabilisateurs horizontaux haubanés (sur les premiers modèles)"
+    ],
+    description: "Le principal chasseur de la Luftwaffe, produit à plus de 33 000 exemplaires, un record pour un avion de chasse.",
+    specs: { wingspan: '9,92 m', length: '8,95 m', height: '2,60 m', payload: 'Canons de 20mm' }
+  },
+  {
+    id: 'vision-jet',
+    name: 'Cirrus Vision SF50',
+    category: 'Private Executive Aircraft',
+    role: 'Jet personnel léger',
+    manufacturer: 'Cirrus Aircraft',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Un seul moteur monté sur le dessus du fuselage",
+      "Empennage en V (V-tail)",
+      "Taille très compacte"
+    ],
+    description: "Le premier jet privé monoréacteur certifié. Il inclut un parachute de cellule et un système d'atterrissage automatique d'urgence.",
+    specs: { wingspan: '11,79 m', length: '9,42 m', height: '3,32 m', payload: '1 100 kg' }
+  },
+  {
+    id: 'c919',
+    name: 'COMAC C919',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne moyen-courrier',
+    manufacturer: 'COMAC',
+    country: 'Chine',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ressemble à l'Airbus A320",
+      "Nez plus arrondi que les Boeing",
+      "Winglets simples courbés"
+    ],
+    description: "Le premier avion de ligne chinois moderne destiné à briser le duopole Boeing-Airbus sur le marché des monocouloirs.",
+    specs: { wingspan: '35,80 m', length: '38,90 m', height: '11,95 m', payload: '20 400 kg' }
+  },
+  {
+    id: 'vulcan',
+    name: 'Avro Vulcan',
+    category: 'Combat Aircraft',
+    role: 'Bombardier stratégique delta',
+    manufacturer: 'Avro',
+    country: 'Royaume-Uni',
+    engineType: 'Jet',
+    enginesCount: 4,
+    recognitionTips: [
+      "Immense aile delta sans empennage horizontal",
+      "Moteurs enterrés dans l'emplanture des ailes",
+      "Silhouette de raie manta"
+    ],
+    description: "Pilier de la force de dissuasion britannique pendant la Guerre Froide, célèbre pour son hurlement sonore unique au décollage.",
+    specs: { wingspan: '30,18 m', length: '29,59 m', height: '8,08 m', payload: '9 500 kg' }
+  },
+  {
+    id: 'me262',
+    name: 'Messerschmitt Me 262 Schwalbe',
+    category: 'Combat Aircraft',
+    role: 'Premier chasseur à réaction opérationnel',
+    manufacturer: 'Messerschmitt',
+    country: 'Allemagne',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes en flèche",
+      "Deux moteurs en nacelles sous les ailes",
+      "Fuselage en forme de triangle arrondi (section de requin)"
+    ],
+    description: "Le premier avion de combat à réaction de l'histoire. Bien que révolutionnaire, il est arrivé trop tard pour changer l'issue de la guerre.",
+    specs: { wingspan: '12,60 m', length: '10,60 m', height: '3,50 m', payload: '4 canons de 30mm' }
+  },
+  {
+    id: 'da42',
+    name: 'Diamond DA42 Twin Star',
+    category: 'Private Light Aircraft',
+    role: 'Bimoteur léger moderne',
+    manufacturer: 'Diamond Aircraft',
+    country: 'Autriche',
+    engineType: 'Piston',
+    enginesCount: 2,
+    recognitionTips: [
+      "Design très fin de planeur",
+      "Empennage en T",
+      "Construction tout composite très lisse"
+    ],
+    description: "Avion de voyage et d'entraînement moderne utilisant des moteurs diesel très économes en carburant.",
+    specs: { wingspan: '13,42 m', length: '8,56 m', height: '2,49 m', payload: '590 kg' }
+  },
+  {
+    id: 'a6m-zero',
+    name: 'Mitsubishi A6M Zero',
+    category: 'Combat Aircraft',
+    role: 'Chasseur embarqué',
+    manufacturer: 'Mitsubishi',
+    country: 'Japon',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Fuselage très fin et léger",
+      "Capot moteur cylindrique noir",
+      "Verrière à cadres multiples"
+    ],
+    description: "Le chasseur japonais le plus redouté au début de la guerre du Pacifique grâce à son agilité et son rayon d'action exceptionnels.",
+    specs: { wingspan: '12,00 m', length: '9,06 m', height: '3,05 m', payload: '2 canons et 2 mitrailleuses' }
+  },
+  {
+    id: 'b29-superfortress',
+    name: 'Boeing B-29 Superfortress',
+    category: 'Combat Aircraft',
+    role: 'Bombardier lourd stratégique pressurisé',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 4,
+    recognitionTips: [
+      "Fuselage cylindrique parfait",
+      "Nez en forme de serre vitrée",
+      "Grosse dérive droite"
+    ],
+    description: "L'avion le plus avancé technologiquement de 1945, utilisé pour larguer les premières bombes atomiques.",
+    specs: { wingspan: '43,06 m', length: '30,18 m', height: '8,46 m', payload: '9 000 kg' }
   }
+,
+
+  {
+    id: 'de-havilland-comet',
+    name: 'de Havilland Comet',
+    category: 'Civil Jet Airliners',
+    role: 'Premier avion de ligne à réaction au monde',
+    manufacturer: 'de Havilland',
+    country: 'Royaume-Uni',
+    engineType: 'Jet',
+    enginesCount: 4,
+    recognitionTips: [
+      "Moteurs entièrement encastrés dans l'emplanture des ailes",
+      "Nez très arrondi",
+      "Hublots de cabine carrés (sur les premiers modèles) puis ronds"
+    ],
+    description: "L'avion qui a ouvert l'ère du jet en 1952. Après des débuts tragiques dus à la fatigue du métal, il a été redessiné pour devenir un transport sûr et élégant.",
+    specs: { wingspan: '35,00 m', length: '34,00 m', height: '9,00 m', payload: '81 passagers' }
+  },
+  {
+    id: 'tu144-charger',
+    name: 'Tupolev Tu-144',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne supersonique',
+    manufacturer: 'Tupolev',
+    country: 'Russie',
+    engineType: 'Jet',
+    enginesCount: 4,
+    recognitionTips: [
+      "Configuration delta avec plans canards rétractables derrière le cockpit",
+      "Nez basculant (droop nose) très long",
+      "Moteurs groupés en deux blocs massifs sous le fuselage"
+    ],
+    description: "Le concurrent soviétique du Concorde. Il fut le premier avion civil à dépasser Mach 2, mais sa carrière commerciale fut très courte.",
+    specs: { wingspan: '28,80 m', length: '65,70 m', height: '12,85 m', payload: '15 000 kg' }
+  },
+  {
+    id: 'fokker-dr1',
+    name: 'Fokker Dr.I',
+    category: 'Combat Aircraft',
+    role: 'Chasseur triplan',
+    manufacturer: 'Fokker',
+    country: 'Allemagne',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Trois ailes superposées de tailles dégressives",
+      "Moteur rotatif court",
+      "Queue de forme triangulaire arrondie"
+    ],
+    description: "Rendu légendaire par Manfred von Richthofen (le Baron Rouge), ce triplan était incroyablement maniable malgré sa lenteur relative.",
+    specs: { wingspan: '7,19 m', length: '5,77 m', height: '2,95 m', payload: '2 mitrailleuses' }
+  },
+  {
+    id: 'caravelle',
+    name: 'Sud Aviation Caravelle',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne court-courrier',
+    manufacturer: 'Sud Aviation',
+    country: 'France',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs montés à l'arrière du fuselage (une première mondiale)",
+      "Hublots de cabine en forme de triangle arrondi",
+      "Dérive fine avec empennage horizontal à mi-hauteur"
+    ],
+    description: "Le premier jet français à succès. Son design avec moteurs à l'arrière a influencé des générations d'avions comme le DC-9 ou le Boeing 727.",
+    specs: { wingspan: '34,30 m', length: '32,01 m', height: '8,72 m', payload: '9 000 kg' }
+  },
+  {
+    id: 'tejas-lca',
+    name: 'HAL Tejas',
+    category: 'Combat Aircraft',
+    role: 'Chasseur multirôle léger',
+    manufacturer: 'HAL',
+    country: 'Inde',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile delta pure sans empennage horizontal",
+      "Entrées d'air latérales simples",
+      "Taille très compacte (le plus petit chasseur moderne)"
+    ],
+    description: "Fruit d'un très long développement indigène, le Tejas est un intercepteur agile conçu pour remplacer les MiG-21 indiens.",
+    specs: { wingspan: '8,20 m', length: '13,20 m', height: '4,40 m', payload: '3 500 kg' }
+  },
+  {
+    id: 'jf17-thunder',
+    name: 'JF-17 Thunder',
+    category: 'Combat Aircraft',
+    role: 'Chasseur multirôle léger',
+    manufacturer: 'PAC / CAC',
+    country: 'Pakistan / Chine',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile médiane avec extensions de bord d'attaque (LERX)",
+      "Entrées d'air de type DSI (diverterless)",
+      "Simple dérive et empennage classique"
+    ],
+    description: "Développé conjointement pour fournir une plateforme moderne et économique aux pays en développement.",
+    specs: { wingspan: '9,45 m', length: '14,30 m', height: '4,72 m', payload: '3 700 kg' }
+  },
+  {
+    id: 'kai-t50',
+    name: 'KAI T-50 Golden Eagle',
+    category: 'Combat Training Aircraft',
+    role: 'Entraîneur avancé et chasseur léger',
+    manufacturer: 'KAI / Lockheed Martin',
+    country: 'Corée du Sud',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ressemble à un petit F-16 biplace",
+      "Entrées d'air sous l'emplanture des ailes",
+      "Configuration biplace en tandem"
+    ],
+    description: "L'un des rares entraîneurs supersoniques au monde. Sa version FA-50 est un avion de combat complet très efficace.",
+    specs: { wingspan: '9,45 m', length: '13,14 m', height: '4,94 m', payload: '4 500 kg' }
+  },
+  {
+    id: 'be200-altair',
+    name: 'Beriev Be-200 Altair',
+    category: 'Civil Utility',
+    role: 'Amphibie polyvalent / Bombardier d\'eau',
+    manufacturer: 'Beriev',
+    country: 'Russie',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs montés au-dessus des ailes pour éviter l'eau",
+      "Fuselage en forme de coque de bateau",
+      "Empennage en T"
+    ],
+    description: "Le seul avion amphibie au monde propulsé par des turboréacteurs. Il peut écoper 12 tonnes d'eau en 14 secondes sur un lac ou en mer.",
+    specs: { wingspan: '32,80 m', length: '32,00 m', height: '8,90 m', payload: '12 000 kg d\'eau' }
+  },
+  {
+    id: 'icon-a5',
+    name: 'Icon A5',
+    category: 'Private Light Aircraft',
+    role: 'Amphibie de sport léger',
+    manufacturer: 'Icon Aircraft',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes repliables",
+      "Hélice propulsive derrière le cockpit",
+      "Cockpit ressemblant à l'intérieur d'une voiture de sport"
+    ],
+    description: "Conçu pour rendre l'aviation accessible, cet avion peut être transporté sur une remorque et décoller depuis l'eau ou la terre.",
+    specs: { wingspan: '10,36 m', length: '7,01 m', height: '2,46 m', payload: '195 kg' }
+  },
+  {
+    id: 'vickers-vimy',
+    name: 'Vickers Vimy',
+    category: 'Combat Aircraft',
+    role: 'Bombardier lourd / Pionnier des records',
+    manufacturer: 'Vickers',
+    country: 'Royaume-Uni',
+    engineType: 'Piston',
+    enginesCount: 2,
+    recognitionTips: [
+      "Configuration biplan massive",
+      "Double dérive verticale",
+      "Moteurs montés dans des nacelles entre les ailes"
+    ],
+    description: "Célèbre pour avoir réalisé la première traversée de l'Atlantique sans escale en 1919 avec Alcock et Brown.",
+    specs: { wingspan: '20,75 m', length: '13,28 m', height: '4,76 m', payload: '1 123 kg' }
+  },
+  
+  {
+    id: 'hurricane',
+    name: 'Hawker Hurricane',
+    category: 'Combat Aircraft',
+    role: 'Chasseur intercepteur',
+    manufacturer: 'Hawker Aircraft',
+    country: 'Royaume-Uni',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Fuselage arrière 'bossu' (humpback)",
+      "Structure entoilée visible sur l'arrière du fuselage",
+      "Train d'atterrissage à voie large se rétractant vers l'intérieur"
+    ],
+    description: "Le véritable héros de la Bataille d'Angleterre. Moins célèbre que le Spitfire, il a pourtant abattu plus d'avions ennemis grâce à sa robustesse et sa facilité de réparation.",
+    specs: { wingspan: '12,19 m', length: '9,84 m', height: '4,00 m', payload: '8 mitrailleuses' }
+  },
+  {
+    id: 'fw190',
+    name: 'Focke-Wulf Fw 190 Würger',
+    category: 'Combat Aircraft',
+    role: 'Chasseur multirôle',
+    manufacturer: 'Focke-Wulf',
+    country: 'Allemagne',
+    engineType: 'Radial',
+    enginesCount: 1,
+    recognitionTips: [
+      "Capot moteur radial compact et puissant",
+      "Train d'atterrissage très haut et large",
+      "Verrière coulissante offrant une excellente vue"
+    ],
+    description: "Surnommé 'la pie-grièche', il était l'un des meilleurs chasseurs de la guerre, capable de surpasser les premiers Spitfire grâce à sa vitesse et son armement lourd.",
+    specs: { wingspan: '10,50 m', length: '9,00 m', height: '3,95 m', payload: '4 canons et 2 mitrailleuses' }
+  },
+  {
+    id: 'p38-lightning',
+    name: 'Lockheed P-38 Lightning',
+    category: 'Combat Aircraft',
+    role: 'Chasseur lourd bimoteur',
+    manufacturer: 'Lockheed',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 2,
+    recognitionTips: [
+      "Double poutre de queue (twin-boom)",
+      "Nacelle centrale pour le pilote et l'armement",
+      "Hélices tournant en sens opposé"
+    ],
+    description: "Surnommé 'le diable à queue fourchue' par la Luftwaffe, il excellait dans le Pacifique grâce à son immense rayon d'action.",
+    specs: { wingspan: '15,85 m', length: '11,53 m', height: '3,00 m', payload: '1 450 kg' }
+  },
+  {
+    id: 'ju87-stuka',
+    name: 'Junkers Ju 87 Stuka',
+    category: 'Combat Aircraft',
+    role: 'Bombardier en piqué',
+    manufacturer: 'Junkers',
+    country: 'Allemagne',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile en 'W' (mouette inversée) inversé",
+      "Train d'atterrissage fixe caréné",
+      "Sirènes 'trompettes de Jéricho' (sur les versions B)"
+    ],
+    description: "Symbole de la Blitzkrieg, il plongeait à la verticale sur ses cibles. Ses sirènes terrorisaient les populations et les troupes au sol.",
+    specs: { wingspan: '13,80 m', length: '11,00 m', height: '4,23 m', payload: '500 kg de bombes' }
+  },
+  {
+    id: 'f4u-corsair',
+    name: 'Vought F4U Corsair',
+    category: 'Combat Aircraft',
+    role: 'Chasseur embarqué',
+    manufacturer: 'Vought',
+    country: 'USA',
+    engineType: 'Radial',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile en 'W' (mouette inversée) caractéristique",
+      "Cockpit reculé loin derrière le long nez",
+      "Énorme hélice tripale ou quadripale"
+    ],
+    description: "Célèbre pour ses ailes brisées et son sifflement sonore, il fut le terreur des pilotes japonais et la star de la série 'Les Têtes Brulées'.",
+    specs: { wingspan: '12,50 m', length: '10,10 m', height: '4,90 m', payload: '1 800 kg' }
+  },
+  {
+    id: 'b24-liberator',
+    name: 'Consolidated B-24 Liberator',
+    category: 'Combat Aircraft',
+    role: 'Bombardier lourd stratégique',
+    manufacturer: 'Consolidated Aircraft',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 4,
+    recognitionTips: [
+      "Double dérive ovale massive",
+      "Aile haute très fine (aile Davis)",
+      "Fuselage profond avec soutes à bombes à rideaux"
+    ],
+    description: "Produit en plus grand nombre que n'importe quel autre avion américain de la guerre. Plus rapide et emportant plus que le B-17, mais plus difficile à piloter.",
+    specs: { wingspan: '33,50 m', length: '20,60 m', height: '5,50 m', payload: '3 600 kg' }
+  },
+
+  // --- JET CLASSICS (POST-WWII) ---
+  {
+    id: 'f86-sabre',
+    name: 'North American F-86 Sabre',
+    category: 'Combat Aircraft',
+    role: 'Chasseur intercepteur à réaction',
+    manufacturer: 'North American Aviation',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes et empennage en flèche (35°)",
+      "Entrée d'air nasale circulaire",
+      "Verrière bulle très dégagée"
+    ],
+    description: "Le premier grand chasseur à réaction américain, célèbre pour ses duels contre les MiG-15 russes pendant la guerre de Corée.",
+    specs: { wingspan: '11,30 m', length: '11,40 m', height: '4,50 m', payload: '2 400 kg' }
+  },
+  {
+    id: 'hawker-hunter',
+    name: 'Hawker Hunter',
+    category: 'Combat Aircraft',
+    role: 'Chasseur et avion d\'attaque',
+    manufacturer: 'Hawker Siddeley',
+    country: 'Royaume-Uni',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Lignes extrêmement fluides et pures",
+      "Entrées d'air à l'emplanture des ailes",
+      "Extrémités d'ailes arrondies"
+    ],
+    description: "Considéré comme l'un des plus beaux jets jamais construits. Il est resté en service opérationnel dans certains pays jusqu'aux années 2010.",
+    specs: { wingspan: '10,26 m', length: '14,00 m', height: '4,01 m', payload: '3 400 kg' }
+  },
+  {
+    id: 'gloster-meteor',
+    name: 'Gloster Meteor',
+    category: 'Combat Aircraft',
+    role: 'Premier chasseur à réaction allié',
+    manufacturer: 'Gloster Aircraft',
+    country: 'Royaume-Uni',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Deux longs fuseaux moteurs traversant les ailes",
+      "Empennage horizontal monté haut sur la dérive",
+      "Train d'atterrissage tricycle très bas"
+    ],
+    description: "Seul avion à réaction allié à avoir combattu pendant la Seconde Guerre mondiale, principalement utilisé pour intercepter les missiles V1.",
+    specs: { wingspan: '11,30 m', length: '13,59 m', height: '3,96 m', payload: '4 canons de 20mm' }
+  },
+
+  // --- CIVIL MODERNES (POST-2000) ---
+  {
+    id: 'b747-8',
+    name: 'Boeing 747-8 Intercontinental',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne long-courrier très grande capacité',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 4,
+    recognitionTips: [
+      "Plus long que le 747-400",
+      "Bords de fuite des moteurs dentelés (chevrons)",
+      "Bouts d'ailes inclinés (raked wingtips) sans winglets verticaux"
+    ],
+    description: "La version ultime du 'Queen of the Skies'. Il intègre la technologie des moteurs du 787 pour être plus silencieux et économe.",
+    specs: { wingspan: '68,40 m', length: '76,30 m', height: '19,40 m', payload: '132 600 kg (Cargo)' }
+  },
+  {
+    id: 'a330neo',
+    name: 'Airbus A330neo',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne moyen/long-courrier',
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Pare-brise du cockpit avec masque noir (type A350)",
+      "Winglets très courbés vers le haut",
+      "Moteurs de très gros diamètre (Trent 7000)"
+    ],
+    description: "Modernisation de l'A330 classique avec de nouvelles ailes et de nouveaux moteurs pour concurrencer le Boeing 787.",
+    specs: { wingspan: '64,00 m', length: '63,66 m', height: '16,79 m', payload: '44 000 kg' }
+  },
+  {
+    id: 'a321xlr',
+    name: 'Airbus A321XLR',
+    category: 'Civil Jet Airliners',
+    role: 'Avion monocouloir à très long rayon d\'action',
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage étroit mais très long",
+      "Sharklets massifs en bout d'aile",
+      "Moteurs imposants (LEAP ou GTF)"
+    ],
+    description: "Cet avion révolutionne le marché en permettant à un petit avion monocouloir de traverser l'Atlantique ou d'aller d'Europe en Inde.",
+    specs: { wingspan: '35,80 m', length: '44,51 m', height: '11,76 m', payload: '244 passagers' }
+  },
+  {
+    id: 'b777-9',
+    name: 'Boeing 777-9 (777X)',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne long-courrier géant',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Bouts d'ailes pliables au sol",
+      "Les plus gros moteurs à réaction jamais construits (GE9X)",
+      "Fuselage extrêmement long"
+    ],
+    description: "Le successeur du 777-300ER. Ses ailes géantes en carbone se replient aux extrémités pour pouvoir utiliser les parkings d'aéroports standards.",
+    specs: { wingspan: '71,80 m (déployé)', length: '76,70 m', height: '19,70 m', payload: '426 passagers' }
+  },
+  {
+    id: 'ssj100',
+    name: 'Sukhoi Superjet 100',
+    category: 'Civil Jet Airliners',
+    role: 'Jet régional moderne',
+    manufacturer: 'Sukhoi',
+    country: 'Russie',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez très court et arrondi",
+      "Quatre hublots de cockpit",
+      "Lignes très fluides et compactes"
+    ],
+    description: "Première tentative de la Russie moderne de revenir sur le marché des avions de ligne civils internationaux.",
+    specs: { wingspan: '27,80 m', length: '29,94 m', height: '10,28 m', payload: '100 passagers' }
+  },
+  {
+    id: 'mc21',
+    name: 'Irkut MC-21',
+    category: 'Civil Jet Airliners',
+    role: 'Avion de ligne moyen-courrier',
+    manufacturer: 'Irkut (UAC)',
+    country: 'Russie',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Aile en composite noir (carbone)",
+      "Moteurs russes PD-14",
+      "Nez très profilé"
+    ],
+    description: "Conçu pour être le concurrent russe de l'A320neo, il utilise des ailes en carbone innovantes produites par infusion.",
+    specs: { wingspan: '35,90 m', length: '42,20 m', height: '11,50 m', payload: '211 passagers' }
+  },
+
+  // --- DRONES & UAV (LA NOUVELLE ÈRE) ---
+  {
+    id: 'mq1-predator',
+    name: 'General Atomics MQ-1 Predator',
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: 'Drone de surveillance et d\'attaque',
+    manufacturer: 'General Atomics',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Nez bulbeux contenant le radar",
+      "Empennage en V inversé (pointant vers le bas)",
+      "Hélice propulsive arrière"
+    ],
+    description: "Le pionnier des drones de combat modernes. Il a transformé la manière de faire la guerre au début du XXIe siècle.",
+    specs: { wingspan: '14,80 m', length: '8,22 m', height: '2,10 m', payload: '2 missiles Hellfire' }
+  },
+  {
+    id: 'mq25-stingray',
+    name: 'Boeing MQ-25 Stingray',
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: 'Drone de ravitaillement en vol embarqué',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Corps large et plat",
+      "Entrée d'air discrète sur le dessus",
+      "Train d'atterrissage renforcé pour porte-avions"
+    ],
+    description: "Premier drone opérationnel conçu pour ravitailler les chasseurs F-18 et F-35 directement depuis les porte-avions.",
+    specs: { wingspan: '22,90 m', length: '15,50 m', height: '3,00 m', payload: '6 800 kg de carburant' }
+  },
+  {
+    id: 's70-okhotnik',
+    name: 'Sukhoi S-70 Okhotnik-B',
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: 'Drone de combat furtif (Loyal Wingman)',
+    manufacturer: 'Sukhoi',
+    country: 'Russie',
+    engineType: 'Jet',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile volante pure sans dérive",
+      "Dimensions massives (presque un chasseur)",
+      "Entrée d'air frontale aplatie"
+    ],
+    description: "Conçu pour voler en formation avec le Su-57, il agit comme un 'ailier fidèle' pour attaquer des cibles protégées.",
+    specs: { wingspan: '20,00 m', length: '14,00 m', height: 'N/A', payload: '2 000 kg interne' }
+  },
+
+  // --- BUSINESS & PRIVATE (MODERNES) ---
+  {
+    id: 'hondajet',
+    name: 'Honda HA-420 HondaJet',
+    category: 'Private Executive Aircraft',
+    role: 'Jet d\'affaires léger',
+    manufacturer: 'Honda Aircraft Company',
+    country: 'Japon / USA',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs montés sur des pylônes AU-DESSUS des ailes (OTWEM)",
+      "Nez très pointu inspiré d'une chaussure à talon",
+      "Fuselage composite sans rivets visibles"
+    ],
+    description: "Une innovation majeure : placer les moteurs sur l'aile libère l'espace cabine et réduit la traînée à haute vitesse.",
+    specs: { wingspan: '12,10 m', length: '13,00 m', height: '4,54 m', payload: '6 passagers' }
+  },
+  {
+    id: 'g650',
+    name: 'Gulfstream G650',
+    category: 'Private Executive Aircraft',
+    role: 'Jet d\'affaires ultra long-courrier',
+    manufacturer: 'Gulfstream',
+    country: 'USA',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Huit immenses hublots ovales par côté",
+      "Bouts d'ailes très fins et effilés",
+      "Nez très long et pointu"
+    ],
+    description: "La référence mondiale pour les milliardaires. Il peut voler de New York à Hong Kong sans escale presque à la vitesse du son.",
+    specs: { wingspan: '30,36 m', length: '30,41 m', height: '7,82 m', payload: '19 passagers' }
+  },
+  {
+    id: 'phenom300',
+    name: 'Embraer Phenom 300',
+    category: 'Private Executive Aircraft',
+    role: 'Jet d\'affaires léger haute performance',
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Aile basse en flèche avec winglets prononcés",
+      "Empennage en T",
+      "Lignes très agressives pour un jet léger"
+    ],
+    description: "Le jet léger le plus vendu au monde depuis plusieurs années consécutives, apprécié pour sa vitesse et son coût opératoire.",
+    specs: { wingspan: '15,90 m', length: '15,90 m', height: '5,00 m', payload: '9 passagers' }
+  },
+
+  // --- HÉLICOPTÈRES MODERNES ---
+  {
+    id: 'h145',
+    name: 'Airbus Helicopters H145',
+    category: 'Helicopters',
+    role: 'Utilitaire léger / Secours',
+    manufacturer: 'Airbus Helicopters',
+    country: 'Europe',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor de queue caréné (Fenestron)",
+      "Rotor principal à cinq pales sans articulations",
+      "Portes arrière battantes (clamshell)"
+    ],
+    description: "Héritier du célèbre BK-117. Il est l'hélicoptère de secours préféré en Europe grâce à son rotor à cinq pales ultra-fluide.",
+    specs: { wingspan: '11,00 m (rotor)', length: '13,00 m', height: '4,00 m', payload: '1 900 kg' }
+  },
+  {
+    id: 's92',
+    name: 'Sikorsky S-92 Helibus',
+    category: 'Helicopters',
+    role: 'Transport lourd / Offshore / Search & Rescue',
+    manufacturer: 'Sikorsky',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage très haut et massif",
+      "Rotor principal à quatre pales avec extrémités biseautées",
+      "Sponsons latéraux larges pour le train d'atterrissage"
+    ],
+    description: "Principal hélicoptère utilisé pour le transport vers les plateformes pétrolières géantes. Il sert aussi de base au futur hélicoptère présidentiel américain (VH-92).",
+    specs: { wingspan: '17,17 m (rotor)', length: '17,10 m', height: '4,70 m', payload: '19 passagers' }
+  },
+  {
+    id: 'v280-valor',
+    name: 'Bell V-280 Valor',
+    category: 'Helicopters', // Tilt-rotor de nouvelle génération
+    role: 'Transport d\'assaut à rotors basculants',
+    manufacturer: 'Bell',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Seuls les rotors basculent (les moteurs restent fixes)",
+      "Empennage papillon (V-tail)",
+      "Double portes latérales coulissantes"
+    ],
+    description: "Le successeur choisi par l'US Army pour remplacer le Black Hawk. Il vole deux fois plus vite et deux fois plus loin qu'un hélicoptère classique.",
+    specs: { wingspan: '11,00 m (ailes)', length: '15,40 m', height: '7,00 m', payload: '14 troupes' }
+  },
+  {
+    id: 'vickers-viscount',
+    name: 'Vickers Viscount',
+    category: 'Civil Turboprop Airliners',
+    role: 'Pionnier du transport turbopropulsé',
+    manufacturer: 'Vickers-Armstrongs',
+    country: 'Royaume-Uni',
+    engineType: 'Turboprop',
+    enginesCount: 4,
+    recognitionTips: [
+      "Quatre moteurs turbopropulsés fins",
+      "Hublots de cabine ovales géants",
+      "Dérive arrondie typique des années 50"
+    ],
+    description: "Le premier avion de ligne turbopropulsé au monde à entrer en service (1953). Très apprécié pour son absence de vibrations par rapport aux moteurs à pistons.",
+    specs: { wingspan: '28,56 m', length: '24,94 m', height: '8,15 m', payload: '75 passagers' }
+  },
+  {
+    id: 'il2-sturmovik',
+    name: 'Ilyushin Il-2 Sturmovik',
+    category: 'Combat Aircraft',
+    role: 'Avion d\'attaque au sol blindé',
+    manufacturer: 'Ilyushin',
+    country: 'Russie',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Nez massif et profil bas",
+      "Train d'atterrissage se rétractant dans de gros carénages sous l'aile",
+      "Aspect très lourd et robuste"
+    ],
+    description: "Surnommé 'le char volant' ou 'la mort noire'. L'avion le plus produit de l'histoire militaire avec 36 000 exemplaires.",
+    specs: { wingspan: '14,60 m', length: '11,60 m', height: '4,20 m', payload: '600 kg' }
+  },
+  {
+    id: 'constellation',
+    name: 'Lockheed Constellation',
+    category: 'Civil Utility',
+    role: 'Transport de ligne transatlantique',
+    manufacturer: 'Lockheed',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 4,
+    recognitionTips: [
+      "Triple dérive verticale",
+      "Fuselage galbé en forme de dauphin",
+      "Train d'atterrissage très haut"
+    ],
+    description: "Surnommé 'Connie', il fut le roi des lignes transatlantiques avant l'arrivée du Boeing 707.",
+    specs: { wingspan: '37,50 m', length: '29,00 m', height: '7,00 m', payload: '54 passagers' }
+  },
+  {
+    id: 'arj21',
+    name: 'COMAC ARJ21 Xiangfeng',
+    category: 'Civil Jet Airliners',
+    role: 'Jet régional chinois',
+    manufacturer: 'COMAC',
+    country: 'Chine',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ressemble au MD-80/90",
+      "Moteurs à l'arrière",
+      "Empennage en T avec winglets"
+    ],
+    description: "Premier avion de ligne à réaction conçu en Chine. Bien qu'il ressemble au McDonnell Douglas, il dispose d'une aile supercritique moderne.",
+    specs: { wingspan: '27,28 m', length: '33,46 m', height: '8,44 m', payload: '90 passagers' }
+  },
+  {
+    id: 'an148',
+    name: 'Antonov An-148',
+    category: 'Civil Jet Airliners',
+    role: 'Jet régional haute performance',
+    manufacturer: 'Antonov',
+    country: 'Ukraine',
+    engineType: 'Jet',
+    enginesCount: 2,
+    recognitionTips: [
+      "Aile haute avec moteurs en nacelles",
+      "Empennage en T",
+      "Garde au sol élevée pour pistes sommaires"
+    ],
+    description: "Conçu pour opérer dans les conditions difficiles de Sibérie et d'Asie Centrale sur des pistes mal préparées.",
+    specs: { wingspan: '28,91 m', length: '29,13 m', height: '8,19 m', payload: '85 passagers' }
+  },
+  {
+    id: 'mriyacopy', // Pour vérification de doublon avec votre liste manuelle
+    name: 'Antonov An-225 (Le Rêve)',
+    category: 'Combat Support Aircraft',
+    role: 'Transport stratégique unique',
+    manufacturer: 'Antonov',
+    country: 'Ukraine',
+    engineType: 'Jet',
+    enginesCount: 6,
+    recognitionTips: [
+      "Six moteurs",
+      "Double dérive verticale",
+      "32 roues au train d'atterrissage"
+    ],
+    description: "Détruit en 2022, cet exemplaire unique reste l'avion le plus lourd jamais construit.",
+    specs: { wingspan: '88,40 m', length: '84,00 m', height: '18,10 m', payload: '250 000 kg' }
+  }
+
+
+
 ];
 
 export const AIRCRAFT_DATA: Aircraft[] = AIRCRAFT_DATA_RAW.map(aircraft => ({

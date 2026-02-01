@@ -1,5 +1,6 @@
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { CATEGORIES, AIRCRAFT_DATA } from '../data/aircraft.ts';
 import { AircraftCategory, EngineType } from '../types.ts';
 import AircraftCard from '../components/AircraftCard.tsx';
@@ -11,26 +12,56 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ searchQuery }) => {
-  const [selectedCategory, setSelectedCategory] = useState<AircraftCategory | 'All'>('All');
+  const [searchParams] = useSearchParams();
+  const categoryFromUrl = searchParams.get('category');
+  
+  const [selectedCategory, setSelectedCategory] = useState<AircraftCategory | 'All'>(
+    (categoryFromUrl as AircraftCategory) || 'All'
+  );
   const [selectedEngine, setSelectedEngine] = useState<EngineType | 'All'>('All');
   const [selectedCountry, setSelectedCountry] = useState<string>('All');
   const [selectedEnginesCount, setSelectedEnginesCount] = useState<number | 'All'>('All');
   const [sortBy, setSortBy] = useState<'name' | 'manufacturer'>('name');
   const [showMobileFilters, setShowMobileFilters] = useState(false);
+  const [displayLimit, setDisplayLimit] = useState(15);
   const isInitialMount = useRef(true);
+  const hasScrolledOnce = useRef(false);
 
   // Ensure page starts at top on initial load
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    // Reset on mount
+    isInitialMount.current = true;
+    hasScrolledOnce.current = false;
   }, []);
 
-  // Scroll to library section when filters change (but not on initial mount)
+  // Scroll to library section when returning with a category filter
+  useEffect(() => {
+    if (categoryFromUrl) {
+      setTimeout(() => {
+        const exploreSection = document.getElementById('explore');
+        if (exploreSection) {
+          exploreSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [categoryFromUrl]);
+
+  // Scroll to library section when filters change (but not on initial mount or refresh)
   useEffect(() => {
     if (isInitialMount.current) {
       isInitialMount.current = false;
       return;
     }
     
+    // Only scroll if user has actually interacted (not on page load/refresh)
+    if (!hasScrolledOnce.current && (selectedCategory === 'All' && selectedEngine === 'All' && selectedCountry === 'All')) {
+      return;
+    }
+    
+    hasScrolledOnce.current = true;
     const exploreSection = document.getElementById('explore');
     if (exploreSection) {
       exploreSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -53,13 +84,19 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
   };
 
   const filteredAircraft = useMemo(() => {
+    const effectiveEnginesCount = selectedEnginesCount === 'All'
+      ? 'All'
+      : Number(selectedEnginesCount);
+
     let filtered = AIRCRAFT_DATA.filter((a) => {
       const matchesSearch = a.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                            a.manufacturer.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || a.category === selectedCategory;
       const matchesEngine = selectedEngine === 'All' || a.engineType === selectedEngine;
       const matchesCountry = selectedCountry === 'All' || a.country === selectedCountry;
-      const matchesEnginesCount = selectedEnginesCount === 'All' || a.enginesCount === selectedEnginesCount;
+      const matchesEnginesCount = effectiveEnginesCount === 'All'
+        ? true
+        : a.enginesCount === effectiveEnginesCount;
       return matchesSearch && matchesCategory && matchesEngine && matchesCountry && matchesEnginesCount;
     });
     
@@ -75,17 +112,23 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
     return filtered;
   }, [searchQuery, selectedCategory, selectedEngine, selectedCountry, selectedEnginesCount, sortBy]);
 
+  // Reset display limit when filters change
+  useEffect(() => {
+    setDisplayLimit(15);
+  }, [searchQuery, selectedCategory, selectedEngine, selectedCountry, selectedEnginesCount, sortBy]);
+
   const resetFilters = () => {
     setSelectedCategory('All');
     setSelectedEngine('All');
     setSelectedCountry('All');
     setSelectedEnginesCount('All');
     setSortBy('name');
+    setDisplayLimit(15);
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12 space-y-8 md:space-y-16 page-transition">
-      <section className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden min-h-[420px] md:h-[450px] flex items-center justify-center md:justify-start bg-slate-900 shadow-2xl">
+      <section className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden h-[500px] md:h-[550px] flex items-center justify-center md:justify-start bg-slate-900 shadow-2xl">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&w=1920&q=80" 
@@ -96,15 +139,15 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/60 to-transparent"></div>
         </div>
         
-        <div className="relative z-10 px-6 md:px-16 max-w-2xl text-white w-full text-center md:text-left">
-          <div className="inline-flex items-center px-3 py-1 bg-yellow-400 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wider mb-4 md:mb-6 text-slate-900">
+        <div className="relative z-10 px-6 md:px-16 max-w-2xl text-white w-full text-center md:text-left py-12">
+          <div className="inline-flex items-center px-3 py-1 bg-yellow-400 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wider mb-6 text-slate-900">
             <PlaneTakeoff size={14} className="mr-2" />
-            Guide du Spotter
+            Guide pour mon petit JoJo
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
             Maîtrisez la Reconnaissance Aérienne
           </h1>
-          <p className="text-sm md:text-lg text-slate-300 mb-6 md:mb-10 leading-relaxed max-w-lg mx-auto md:mx-0">
+          <p className="text-sm md:text-lg text-slate-300 mb-8 leading-relaxed max-w-lg mx-auto md:mx-0">
             Votre encyclopédie visuelle complète pour les avions civils, militaires et de collection. Identifiez chaque appareil au premier coup d'œil.
           </p>
           <button 
@@ -116,7 +159,7 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
         </div>
       </section>
 
-      <section>
+      <section id="browse-categories">
         <div className="mb-6 md:mb-10">
           <h2 className="text-xl md:text-3xl font-bold text-slate-900">Parcourir les catégories</h2>
           <p className="text-sm md:text-base text-slate-500">Découvrez les aéronefs par leur rôle principal</p>
@@ -205,11 +248,27 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
             </div>
 
             {filteredAircraft.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                {filteredAircraft.map((aircraft) => (
-                  <AircraftCard key={aircraft.id} aircraft={aircraft} />
-                ))}
-              </div>
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                  {filteredAircraft.slice(0, displayLimit).map((aircraft) => (
+                    <AircraftCard key={aircraft.id} aircraft={aircraft} />
+                  ))}
+                </div>
+                
+                {filteredAircraft.length > displayLimit && (
+                  <div className="flex justify-center mt-8">
+                    <button
+                      onClick={() => setDisplayLimit(prev => prev + 15)}
+                      className="px-8 py-3.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-all shadow-lg active:scale-95 flex items-center gap-2"
+                    >
+                      Voir plus
+                      <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">
+                        +{Math.min(15, filteredAircraft.length - displayLimit)}
+                      </span>
+                    </button>
+                  </div>
+                )}
+              </>
             ) : (
               <div className="bg-white border-2 border-dashed border-slate-200 rounded-3xl py-12 md:py-20 px-6 flex flex-col items-center text-center">
                 <div className="p-4 bg-slate-100 rounded-full text-slate-400 mb-4">

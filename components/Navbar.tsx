@@ -1,7 +1,7 @@
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Plane, Search, Menu, X } from 'lucide-react';
+import { Plane, Search, Menu, X, Shuffle, Map, Gamepad2, Maximize, Minimize } from 'lucide-react';
 import { AIRCRAFT_DATA } from '../data/aircraft.ts';
 import { useDebounce } from '../hooks/useDebounce.ts';
 import { sanitizeInput } from '../utils/helpers.ts';
@@ -14,8 +14,34 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const navigate = useNavigate();
   const debouncedQuery = useDebounce(searchQuery, 200);
+
+  // Handle fullscreen toggle
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+      setIsFullscreen(true);
+    } else {
+      document.exitFullscreen();
+      setIsFullscreen(false);
+    }
+  };
+
+  // Listen for fullscreen changes
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  // Sync debounced search to parent so Home can filter results
+  useEffect(() => {
+    onSearch(debouncedQuery);
+  }, [debouncedQuery, onSearch]);
 
   const handleSearchChange = (value: string) => {
     // Sanitize input to prevent XSS using utility function
@@ -33,6 +59,16 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
     setIsOpen(false);
     onSearch('');
     navigate(`/aircraft/${aircraftId}`);
+  };
+
+  const handleRandomAircraft = () => {
+    const randomIndex = Math.floor(Math.random() * AIRCRAFT_DATA.length);
+    const randomAircraft = AIRCRAFT_DATA[randomIndex];
+    setSearchQuery('');
+    setShowSuggestions(false);
+    setIsOpen(false);
+    onSearch('');
+    navigate(`/aircraft/${randomAircraft.id}`);
   };
 
   // Use memoized filtered results with debounced query to avoid recalculating on every keystroke
@@ -57,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
               <div className="p-1.5 md:p-2.5 bg-yellow-400 rounded-xl text-slate-900 transition-all group-hover:rotate-12 group-active:scale-90">
                 <Plane size={22} className="md:w-6 md:h-6" />
               </div>
-              <span className="text-xl md:text-2xl font-black tracking-tighter text-slate-900">SkyPedia</span>
+              <span className="text-xl md:text-2xl font-black tracking-tighter text-slate-900">Just Plane</span>
             </Link>
 
           {/* Desktop Search */}
@@ -101,11 +137,67 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
           </form>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center space-x-2">
+            <Link 
+              to="/map" 
+              className="flex items-center space-x-2 px-4 py-2 text-sm font-semibold text-slate-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-xl transition-all"
+            >
+              <Map size={18} />
+              <span>Carte</span>
+            </Link>
+            <Link 
+              to="/quiz" 
+              className="flex items-center space-x-2 px-4 py-2 text-sm font-semibold text-slate-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-xl transition-all"
+            >
+              <Gamepad2 size={18} />
+              <span>Quiz</span>
+            </Link>
+            <button
+              onClick={handleRandomAircraft}
+              className="flex items-center space-x-2 px-4 py-2 text-sm font-semibold text-white bg-yellow-400 hover:bg-yellow-500 rounded-xl transition-all active:scale-95"
+            >
+              <Shuffle size={18} />
+              <span>Surprise !</span>
+            </button>
+            <button
+              onClick={toggleFullscreen}
+              className="flex items-center space-x-2 px-4 py-2 text-sm font-semibold text-slate-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-xl transition-all"
+              title={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+            >
+              {isFullscreen ? <Minimize size={18} /> : <Maximize size={18} />}
+            </button>
+            
+            {/* User Avatars */}
+            <div className="flex items-center ml-2">
+              <div className="w-9 h-9 rounded-full bg-yellow-400 flex items-center justify-center font-bold text-slate-900 text-sm cursor-pointer z-10 border-2 border-white">
+                A
+              </div>
+              <div className="w-9 h-9 rounded-full bg-purple-400 flex items-center justify-center font-bold text-white text-sm cursor-pointer -ml-3 border-2 border-white">
+                N
+              </div>
+            </div>
           </div>
 
           {/* Mobile buttons */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center space-x-1">
+            <Link
+              to="/map"
+              className="p-2 rounded-xl text-slate-700 bg-slate-100 active:bg-slate-200 transition-colors"
+            >
+              <Map size={18} />
+            </Link>
+            <Link
+              to="/quiz"
+              className="p-2 rounded-xl text-slate-700 bg-slate-100 active:bg-slate-200 transition-colors"
+            >
+              <Gamepad2 size={18} />
+            </Link>
+            <button
+              onClick={handleRandomAircraft}
+              className="p-2 rounded-xl text-white bg-yellow-400 active:bg-yellow-500 transition-colors"
+            >
+              <Shuffle size={18} />
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-xl text-slate-700 bg-slate-100 active:bg-slate-200 transition-colors"
