@@ -5699,23 +5699,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     description: "Issu d'un programme militaire, cet avion est célèbre pour sa robustesse et ses gènes de chasseur.",
     specs: { wingspan: '13,5 m', length: '13,4 m', height: '4,8 m', payload: '900 kg' }
   },
-  {
-    id: 'starcraft',
-    name: 'Starcraft SK-700',
-    category: 'Private Executive Aircraft',
-    role: 'Transport léger rapide',
-    manufacturer: 'Starcraft',
-    country: 'USA',
-    engineType: 'Turboprop',
-    enginesCount: 1,
-    recognitionTips: [
-      "Aile basse avec winglets",
-      "Fuselage tout composite",
-      "Monoturbopropulseur"
-    ],
-    description: "Projet d'avion d'affaires ultra-efficace utilisant des matériaux composites de pointe.",
-    specs: { wingspan: '12 m', length: '10,5 m', height: '3,5 m', payload: '600 kg' }
-  },
+
   {
     id: 'sj30',
     name: 'Swearingen SJ30',
@@ -7902,23 +7886,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     ],
     description: "Amélioration du modèle 125 avec une aérodynamique affinée, une envergure accrue et de nouveaux moteurs.",
     specs: { wingspan: '15,7 m', length: '15,6 m', height: '5,4 m', payload: '907 kg' }
-  },
-  {
-    id: 'starcraft-sk700',
-    name: 'Starcraft SK-700',
-    category: 'Private Executive Aircraft',
-    role: 'Avion d\'affaires moyen-courrier',
-    manufacturer: 'Starcraft',
-    country: 'USA',
-    engineType: 'Piston',
-    enginesCount: 2,
-    recognitionTips: [
-      "Aile droite en position basse",
-      "Configuration bimoteur avec un moteur tractif et un moteur propulsif",
-      "Dérive ventrale"
-    ],
-    description: "Concept d'avion d'affaires à bas coût. Sa configuration unique maximise l'effet de ses deux moteurs à pistons, lui permettant d'atteindre plus de 400 mph.",
-    specs: { wingspan: '12,9 m', length: '10,9 m', height: '4,3 m', payload: '658 kg' }
   },
   {
     id: 'c401-402-421',

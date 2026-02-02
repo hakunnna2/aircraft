@@ -144,10 +144,19 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   
   // Memoized countries list
   const countries = useMemo(() => {
-    const uniqueCountries = [...new Set(AIRCRAFT_DATA.map(a => a.country))].sort();
+    const uniqueCountries = [...new Set(AIRCRAFT_DATA.map(a => a.country))];
+    // Separate countries with "/" and sort each group
+    const singleCountries = uniqueCountries.filter(c => !c.includes('/')).sort();
+    const multipleCountries = uniqueCountries.filter(c => c.includes('/')).sort();
+    
     return [
       { id: 'All', label: 'Tous', flagCode: null }, 
-      ...uniqueCountries.map(c => ({ 
+      ...singleCountries.map(c => ({ 
+        id: c, 
+        label: c,
+        flagCode: countryCodeMap[c] || null
+      })),
+      ...multipleCountries.map(c => ({ 
         id: c, 
         label: c,
         flagCode: countryCodeMap[c] || null
@@ -285,7 +294,17 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
                     : 'text-slate-600 hover:bg-slate-50'
                 }`}
               >
-                {!country.id.includes('/') && country.id !== 'Europe' && country.flagCode ? (
+                {country.id === 'Europe' ? (
+                  <img
+                    src="https://flagcdn.com/w80/eu.png"
+                    srcSet="https://flagcdn.com/w160/eu.png 2x"
+                    width="20"
+                    height="15"
+                    alt="European Union"
+                    className="rounded-sm flex-shrink-0 object-cover"
+                    loading="lazy"
+                  />
+                ) : !country.id.includes('/') && country.flagCode ? (
                   <img
                     src={`https://flagcdn.com/w80/${country.flagCode}.png`}
                     srcSet={`https://flagcdn.com/w160/${country.flagCode}.png 2x`}

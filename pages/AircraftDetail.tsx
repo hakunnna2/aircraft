@@ -11,7 +11,8 @@ import {
   Activity, 
   Wind, 
   ArrowUpRight,
-  Heart
+  Heart,
+  Search
 } from 'lucide-react';
 
 const AircraftDetail: React.FC = () => {
@@ -91,6 +92,20 @@ const AircraftDetail: React.FC = () => {
     'Espagne / Indonésie': 'es',
     'Canada / Europe': 'ca',
     'Europe': 'eu'
+  };
+
+  // Engine type descriptions
+  const engineDescriptions: Record<string, string> = {
+    'Jet': 'Moteurs à réaction utilisant un compresseur et une chambre de combustion pour créer une poussée. Utilisés pour les avions de combat et les gros porteurs civils.',
+    'Turboprop': 'Combinaison d\'une turbine et d\'une hélice. Plus efficace que les réacteurs à basse vitesse, utilisé pour les avions régionaux et de transport.',
+    'Piston': 'Moteurs à pistons classiques alimentant une hélice. Utilisés pour les petits avions de loisir et les avions légers.',
+    'Propfan': 'Turbine haute vitesse entrainant une hélice non carénée. Combinaison d\'efficacité du turbopropulseur et vitesse du réacteur.',
+    'Radial': 'Ancien type de moteur à pistons avec cylindres arrangés en cercle. Historiquement utilisé sur les anciens avions militaires et civils.',
+    'Ducted Fan': 'Ventilateur enfermé dans une conduite. Utilisé sur les drones et certains petits aéronefs pour la sécurité et l\'efficacité.',
+    'Piston / Turboprop': 'Avions équipés à la fois de moteurs à pistons et de turbopropulseurs.',
+    'Radial / Turboprop': 'Avions ayant à la fois des moteurs radiaux et des turbopropulseurs.',
+    'Turboprop / Jet': 'Avions hybrides combinant turbopropulseurs et réacteurs.',
+    'Turbine': 'Moteurs à turbine générique utilisés sur certains hélicoptères et convertibles.'
   };
 
   useEffect(() => {
@@ -198,6 +213,12 @@ const AircraftDetail: React.FC = () => {
       console.error('Export error:', error);
       alert('Erreur lors de l\'export. Veuillez réessayer.');
     }
+  };
+
+  const handleGoogleDiagramSearch = () => {
+    if (!aircraft) return;
+    const query = `${aircraft.name}  layout`;
+    window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank', 'noopener,noreferrer');
   };
 
   if (!aircraft) {
@@ -333,6 +354,16 @@ const AircraftDetail: React.FC = () => {
                 </span>
               </div>
             </div>
+
+            <button
+              type="button"
+              onClick={handleGoogleDiagramSearch}
+              className="mt-6 w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl flex items-center justify-center text-sm font-bold transition-all active:scale-95"
+            >
+              Viens regarder le schéma de l'avion.
+
+              <Search size={16} className="ml-2" />
+            </button>
           </div>
 
           <div className="lg:hidden grid grid-cols-2 gap-3">
@@ -357,6 +388,17 @@ const AircraftDetail: React.FC = () => {
                   <p className="text-sm font-bold text-slate-900">{aircraft.country}</p>
                 </div>
              </div>
+          </div>
+
+          <div className="lg:hidden">
+            <button
+              type="button"
+              onClick={handleGoogleDiagramSearch}
+              className="mt-3 w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl flex items-center justify-center text-sm font-bold transition-all active:scale-95"
+            >
+              Viens regarder le schéma de l'avion.
+              <Search size={16} className="ml-2" />
+            </button>
           </div>
 
           <div className="bg-yellow-400 p-6 md:p-8 rounded-2xl md:rounded-[2.5rem] text-slate-900 shadow-xl shadow-yellow-200/50">
@@ -390,11 +432,31 @@ const AircraftDetail: React.FC = () => {
             </button>
           </div>
 
-          <div className="p-5 md:p-6 border border-slate-200 rounded-2xl md:rounded-[2rem] bg-slate-50">
-            <p className="text-[10px] md:text-xs text-slate-500 leading-relaxed italic text-center md:text-left">
-              * Les informations de reconnaissance sont fournies à titre indicatif pour les passionnés.
-            </p>
-          </div>
+          
+
+          {/* Engine Type Explanation */}
+          {aircraft && engineDescriptions[aircraft.engineType] && (
+            <div className="p-5 md:p-6 border-2 border-blue-200 rounded-2xl md:rounded-[2rem] bg-blue-50">
+              <div className="flex items-center mb-4">
+                <Wind size={20} className="text-blue-600 mr-3" />
+                <h3 className="text-sm md:text-base font-bold text-blue-900">Type de moteur: {aircraft.engineType}</h3>
+              </div>
+              
+              {/* Engine Image */}
+              <div className="mb-4 rounded-xl overflow-hidden bg-black">
+                <img
+                  src={`/images/engines/${aircraft.engineType.toLowerCase().replace(/\s+\//g, '').replace(/\s+/g, '-')}.png`}
+                  alt={`Animation moteur ${aircraft.engineType}`}
+                  className="w-full h-auto max-h-80 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              
+              <p className="text-sm text-blue-800 leading-relaxed">
+                {engineDescriptions[aircraft.engineType]}
+              </p>
+            </div>
+          )}
 
         </div>
       </div>

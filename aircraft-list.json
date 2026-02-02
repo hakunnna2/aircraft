@@ -1,0 +1,2438 @@
+{
+  "total": 608,
+  "timestamp": "2026-02-01T19:51:35.808Z",
+  "aircraft": [
+    {
+      "id": "mb326",
+      "name": "Aermacchi MB-326"
+    },
+    {
+      "id": "s211",
+      "name": "Aermacchi (SIAI-Marchetti) S.211"
+    },
+    {
+      "id": "mb339c",
+      "name": "Aermacchi MB-339C"
+    },
+    {
+      "id": "l29-delfin",
+      "name": "Aero Vodochody L-29 Delfin"
+    },
+    {
+      "id": "l39-albatros",
+      "name": "Aero Vodochody L-39 Albatros"
+    },
+    {
+      "id": "cm170-magister",
+      "name": "Aerospatiale (Fouga) CM 170 Magister"
+    },
+    {
+      "id": "at3",
+      "name": "AIDC AT-3"
+    },
+    {
+      "id": "ching-kuo",
+      "name": "AIDC Ching Kuo"
+    },
+    {
+      "id": "amx",
+      "name": "AMX"
+    },
+    {
+      "id": "iar99-soim",
+      "name": "Avioane IAR-99 Soim"
+    },
+    {
+      "id": "canberra",
+      "name": "BAe (English Electric) Canberra"
+    },
+    {
+      "id": "harrier-gr7",
+      "name": "BAe/Boeing GR. Mk7 Harrier"
+    },
+    {
+      "id": "t45a-goshawk",
+      "name": "BAe/Boeing T-45A Goshawk"
+    },
+    {
+      "id": "hawk-100",
+      "name": "BAe Hawk 50/60/100"
+    },
+    {
+      "id": "hawk-200",
+      "name": "BAe Hawk 200"
+    },
+    {
+      "id": "sea-harrier-fa2",
+      "name": "BAe Sea Harrier F/A.Mk2"
+    },
+    {
+      "id": "sea-harrier-frs51",
+      "name": "BAe Sea Harrier FRS.Mk51"
+    },
+    {
+      "id": "strikemaster",
+      "name": "BAe (BAC) Strikemaster"
+    },
+    {
+      "id": "b52h-stratofortress",
+      "name": "Boeing B-52H Stratofortress"
+    },
+    {
+      "id": "av8b-harrier-ii",
+      "name": "Boeing/BAe AV-8B Harrier II"
+    },
+    {
+      "id": "a4-skyhawk",
+      "name": "Boeing (Douglas) A-4 Skyhawk"
+    },
+    {
+      "id": "f4-phantom-ii",
+      "name": "Boeing (McDonnell Douglas) F-4 Phantom II"
+    },
+    {
+      "id": "f15-eagle",
+      "name": "Boeing (McDonnell Douglas) F-15 Eagle"
+    },
+    {
+      "id": "f15e-strike-eagle",
+      "name": "Boeing (McDonnell Douglas) F-15E Strike Eagle"
+    },
+    {
+      "id": "f18-hornet",
+      "name": "Boeing (McDonnell Douglas) F/A-18 Hornet"
+    },
+    {
+      "id": "f18ef-super-hornet",
+      "name": "Boeing (McDonnell Douglas) F/A-18E/F Super Hornet"
+    },
+    {
+      "id": "b1b-lancer",
+      "name": "Boeing (Rockwell) B-1B Lancer"
+    },
+    {
+      "id": "ov10-bronco",
+      "name": "Boeing (Rockwell) OV-10 Bronco"
+    },
+    {
+      "id": "t2b-buckeye",
+      "name": "Boeing (Rockwell) T-2B Buckeye"
+    },
+    {
+      "id": "cac-f7",
+      "name": "CAC F-7"
+    },
+    {
+      "id": "cl41-tutor",
+      "name": "Canadair CL-41 Tutor"
+    },
+    {
+      "id": "c101-aviojet",
+      "name": "CASA C-101 Aviojet"
+    },
+    {
+      "id": "a37-dragonfly",
+      "name": "Cessna A-37 Dragonfly"
+    },
+    {
+      "id": "cheetah",
+      "name": "Denel (Atlas) Cheetah"
+    },
+    {
+      "id": "alpha-jet",
+      "name": "Dassault/Dornier Alpha Jet"
+    },
+    {
+      "id": "mirage-iii",
+      "name": "Dassault Mirage III"
+    },
+    {
+      "id": "mirage-iv",
+      "name": "Dassault Mirage IV"
+    },
+    {
+      "id": "mirage-v-50",
+      "name": "Dassault Mirage V/50"
+    },
+    {
+      "id": "mirage-f1c",
+      "name": "Dassault Mirage F 1C"
+    },
+    {
+      "id": "mirage-2000",
+      "name": "Dassault Mirage 2000"
+    },
+    {
+      "id": "mirage-2000dn",
+      "name": "Dassault Mirage 2000D/N"
+    },
+    {
+      "id": "rafale",
+      "name": "Dassault Rafale"
+    },
+    {
+      "id": "super-etendard",
+      "name": "Dassault Super Etendard"
+    },
+    {
+      "id": "eurofighter-2000",
+      "name": "Eurofighter 2000 Typhoon"
+    },
+    {
+      "id": "hjt16-kiran",
+      "name": "HAL HJT-16 Kiran"
+    },
+    {
+      "id": "iai-kfir",
+      "name": "IAI Kfir"
+    },
+    {
+      "id": "kawasaki-t4",
+      "name": "Kawasaki T-4"
+    },
+    {
+      "id": "ia58-pucara",
+      "name": "Lockheed Martin (FMA) IA-58 Pucará"
+    },
+    {
+      "id": "ia63-pampa",
+      "name": "Lockheed Martin (FMA) IA-63 Pampa"
+    },
+    {
+      "id": "ac130u",
+      "name": "Lockheed Martin AC-130U Spectre"
+    },
+    {
+      "id": "f16",
+      "name": "Lockheed Martin F-16 Fighting Falcon"
+    },
+    {
+      "id": "f22",
+      "name": "Lockheed Martin/Boeing F-22 Raptor"
+    },
+    {
+      "id": "f104",
+      "name": "Lockheed Martin F-104 Starfighter"
+    },
+    {
+      "id": "f111",
+      "name": "Lockheed Martin (General Dynamics) F-111 Aardvark"
+    },
+    {
+      "id": "f117a",
+      "name": "Lockheed Martin F-117A Stealth Fighter"
+    },
+    {
+      "id": "t33",
+      "name": "Lockheed Martin T-33 Shooting Star"
+    },
+    {
+      "id": "mig-at",
+      "name": "MiG-MAPO Advanced Trainer (MiG-AT)"
+    },
+    {
+      "id": "mig15",
+      "name": "MiG-MAPO (Mikoyan) MiG-15 Fagot"
+    },
+    {
+      "id": "mig17",
+      "name": "MiG-MAPO (Mikoyan) MiG-17 Fresco"
+    },
+    {
+      "id": "mig21",
+      "name": "MiG-MAPO (Mikoyan) MiG-21 Fishbed"
+    },
+    {
+      "id": "mig23",
+      "name": "MiG-MAPO (Mikoyan) MiG-23 Flogger"
+    },
+    {
+      "id": "mig25",
+      "name": "MiG-MAPO MiG-25 Foxbat"
+    },
+    {
+      "id": "mig27",
+      "name": "MiG-MAPO (Mikoyan) MiG-27 Flogger"
+    },
+    {
+      "id": "mig29",
+      "name": "MiG-MAPO MiG-29 Fulcrum"
+    },
+    {
+      "id": "mig31",
+      "name": "MiG-MAPO MiG-31 Foxhound"
+    },
+    {
+      "id": "mitsubishi-t2f1",
+      "name": "Mitsubishi T2/F1"
+    },
+    {
+      "id": "mitsubishi-f2",
+      "name": "Mitsubishi F2"
+    },
+    {
+      "id": "q5-fantan",
+      "name": "NAMC Q-5 Fantan"
+    },
+    {
+      "id": "a7-corsair",
+      "name": "Northrop Grumman (Vought) A-7 Corsair"
+    },
+    {
+      "id": "a10-thunderbolt",
+      "name": "Northrop Grumman (Fairchild) A-10 Thunderbolt"
+    },
+    {
+      "id": "b2-spirit",
+      "name": "Northrop Grumman B-2 Spirit"
+    },
+    {
+      "id": "ea6b-prowler",
+      "name": "Northrop Grumman EA-6B Prowler"
+    },
+    {
+      "id": "f5-tiger",
+      "name": "Northrop Grumman F-5 Tiger"
+    },
+    {
+      "id": "f8-crusader",
+      "name": "Northrop Grumman (Vought) F-8 Crusader"
+    },
+    {
+      "id": "f14-tomcat",
+      "name": "Northrop Grumman F-14 Tomcat"
+    },
+    {
+      "id": "t38-talon",
+      "name": "Northrop Grumman T-38 Talon"
+    },
+    {
+      "id": "k8-karakorum",
+      "name": "PAC K-8 Karakorum 8"
+    },
+    {
+      "id": "tornado-ids",
+      "name": "Panavia Tornado IDS"
+    },
+    {
+      "id": "tornado-adv",
+      "name": "Panavia Tornado ADV"
+    },
+    {
+      "id": "draken",
+      "name": "Saab Draken"
+    },
+    {
+      "id": "viggen",
+      "name": "Saab Viggen"
+    },
+    {
+      "id": "gripen",
+      "name": "Saab Gripen"
+    },
+    {
+      "id": "saab105",
+      "name": "Saab 105"
+    },
+    {
+      "id": "j8-finback",
+      "name": "SAIG J-8 Finback"
+    },
+    {
+      "id": "jaguar",
+      "name": "SEPECAT Jaguar"
+    },
+    {
+      "id": "galeb-g2",
+      "name": "SOKO G-2 Galeb"
+    },
+    {
+      "id": "super-galeb-g4",
+      "name": "SOKO G-4 Super Galeb"
+    },
+    {
+      "id": "su7-fitter",
+      "name": "Sukhoi Su-7 Fitter A"
+    },
+    {
+      "id": "su17-22-fitter",
+      "name": "Sukhoi Su-17/22 Fitter D/K"
+    },
+    {
+      "id": "su24-fencer",
+      "name": "Sukhoi Su-24 Fencer"
+    },
+    {
+      "id": "su25-frogfoot",
+      "name": "Sukhoi Su-25 Frogfoot"
+    },
+    {
+      "id": "su27-flanker",
+      "name": "Sukhoi Su-27 Flanker"
+    },
+    {
+      "id": "su30-flanker",
+      "name": "Sukhoi Su-30 Flanker"
+    },
+    {
+      "id": "su33-35-37-flanker",
+      "name": "Sukhoi Su-33/35/37 Flanker"
+    },
+    {
+      "id": "su34-flanker",
+      "name": "Sukhoi Su-34 Flanker"
+    },
+    {
+      "id": "tu16-badger",
+      "name": "Tupolev Tu-16 Badger"
+    },
+    {
+      "id": "tu22-blinder",
+      "name": "Tupolev Tu-22 Blinder"
+    },
+    {
+      "id": "tu22m-backfire",
+      "name": "Tupolev Tu-22M Backfire"
+    },
+    {
+      "id": "tu95-bear",
+      "name": "Tupolev Tu-95/142 Bear"
+    },
+    {
+      "id": "tu160-blackjack",
+      "name": "Tupolev Tu-160 Blackjack"
+    },
+    {
+      "id": "yak130",
+      "name": "Yakovlev/Aermacchi Yak-130"
+    },
+    {
+      "id": "n262-fregate",
+      "name": "Aérospatiale (Nord) N262 Frégate"
+    },
+    {
+      "id": "cn235m",
+      "name": "Airtech/CASA CN-235M"
+    },
+    {
+      "id": "g222",
+      "name": "Alenia G222"
+    },
+    {
+      "id": "an12-cub",
+      "name": "Antonov An-12 Cub"
+    },
+    {
+      "id": "an22-antheus",
+      "name": "Antonov An-22 Antheus"
+    },
+    {
+      "id": "an24-coke",
+      "name": "Antonov An-24 Coke"
+    },
+    {
+      "id": "an26-curl",
+      "name": "Antonov An-26 Curl"
+    },
+    {
+      "id": "an32-cline",
+      "name": "Antonov An-32 Cline"
+    },
+    {
+      "id": "an70",
+      "name": "Antonov An-70"
+    },
+    {
+      "id": "an72-74-coaler",
+      "name": "Antonov An-72/74 Coaler"
+    },
+    {
+      "id": "an124-condor",
+      "name": "Antonov An-124 Condor"
+    },
+    {
+      "id": "an225-mriya",
+      "name": "Antonov An-225 Mriya"
+    },
+    {
+      "id": "nimrod",
+      "name": "BAe (HS) Nimrod"
+    },
+    {
+      "id": "vc10",
+      "name": "BAe (BAC/Vickers) VC10"
+    },
+    {
+      "id": "be12-chaika",
+      "name": "Beriev Be-12 Chaika"
+    },
+    {
+      "id": "a40-albatross",
+      "name": "Beriev A-40 Albatross"
+    },
+    {
+      "id": "e3-sentry",
+      "name": "Boeing E-3 Sentry"
+    },
+    {
+      "id": "e4b",
+      "name": "Boeing E-4B"
+    },
+    {
+      "id": "e767-awacs",
+      "name": "Boeing E-767 AWACS"
+    },
+    {
+      "id": "kc135-stratotanker",
+      "name": "Boeing KC-135 Stratotanker"
+    },
+    {
+      "id": "rc135s-cobra-ball",
+      "name": "Boeing RC-135S Cobra Ball"
+    },
+    {
+      "id": "rc135u-combat-sent",
+      "name": "Boeing RC-135U Combat Sent"
+    },
+    {
+      "id": "rc135v-rivet-joint",
+      "name": "Boeing RC-135V Rivet Joint"
+    },
+    {
+      "id": "c17-globemaster-iii",
+      "name": "Boeing C-17 Globemaster III"
+    },
+    {
+      "id": "kc10-extender",
+      "name": "Boeing (McDonnell Douglas) KC-10 Extender"
+    },
+    {
+      "id": "c212-aviocar",
+      "name": "CASA C-212 Aviocar"
+    },
+    {
+      "id": "o2-skymaster",
+      "name": "Cessna O-2 Skymaster"
+    },
+    {
+      "id": "alize",
+      "name": "Dassault (Breguet) Alizé"
+    },
+    {
+      "id": "atlantic",
+      "name": "Dassault (Breguet) Atlantic"
+    },
+    {
+      "id": "dhc4a-caribou",
+      "name": "de Havilland Canada DHC-4A Caribou"
+    },
+    {
+      "id": "dhc5-buffalo",
+      "name": "de Havilland Canada DHC-5 Buffalo"
+    },
+    {
+      "id": "dc3",
+      "name": "Douglas DC-3"
+    },
+    {
+      "id": "do228-asw",
+      "name": "Dornier Do-228 ASW"
+    },
+    {
+      "id": "f27-f50-maritime",
+      "name": "Fokker F27/F50 Maritime"
+    },
+    {
+      "id": "sh5",
+      "name": "HAMC SH-5"
+    },
+    {
+      "id": "arava",
+      "name": "IAI Arava"
+    },
+    {
+      "id": "phalcon",
+      "name": "IAI Phalcon"
+    },
+    {
+      "id": "il20-coot",
+      "name": "Ilyushin Il-20 Coot"
+    },
+    {
+      "id": "il38-may",
+      "name": "Ilyushin Il-38 May"
+    },
+    {
+      "id": "a50-mainstay",
+      "name": "Ilyushin/Beriev A-50 Mainstay"
+    },
+    {
+      "id": "il76-candid",
+      "name": "Ilyushin Il-76 Candid"
+    },
+    {
+      "id": "il86-camber",
+      "name": "Ilyushin Il-86 Camber"
+    },
+    {
+      "id": "c1a",
+      "name": "Kawasaki C-1A"
+    },
+    {
+      "id": "c5-galaxy",
+      "name": "Lockheed Martin C-5 Galaxy"
+    },
+    {
+      "id": "c130h-hercules",
+      "name": "Lockheed Martin C-130H Hercules"
+    },
+    {
+      "id": "c130j-hercules",
+      "name": "Lockheed Martin C-130J Hercules"
+    },
+    {
+      "id": "c141-starlifter",
+      "name": "Lockheed Martin C-141 StarLifter"
+    },
+    {
+      "id": "p3-orion",
+      "name": "Lockheed Martin P-3 Orion"
+    },
+    {
+      "id": "p3-aewc",
+      "name": "Lockheed Martin P-3 AEW&C"
+    },
+    {
+      "id": "mc130e-combat-talon",
+      "name": "Lockheed Martin MC-130E Combat Talon"
+    },
+    {
+      "id": "s3-viking",
+      "name": "Lockheed Martin S-3 Viking"
+    },
+    {
+      "id": "u2-tr1a",
+      "name": "Lockheed Martin U-2/TR-1A"
+    },
+    {
+      "id": "m55-mystic",
+      "name": "Myasischev M-55 Mystic"
+    },
+    {
+      "id": "vmt-atlant",
+      "name": "Myasischev VM-T Atlant"
+    },
+    {
+      "id": "e2c-hawkeye",
+      "name": "Northrop Grumman E-2C Hawkeye"
+    },
+    {
+      "id": "e8-jstars",
+      "name": "Northrop Grumman E-8 Joint STARS"
+    },
+    {
+      "id": "ov1-mohawk",
+      "name": "Northrop Grumman OV-1 Mohawk"
+    },
+    {
+      "id": "s2-tracker",
+      "name": "Northrop Grumman S-2 Tracker"
+    },
+    {
+      "id": "pd808",
+      "name": "Piaggio PD.808"
+    },
+    {
+      "id": "rc12n-guardrail",
+      "name": "Raytheon (Beechcraft) RC-12N Guardrail"
+    },
+    {
+      "id": "saab340-aewc",
+      "name": "Saab 340 AEW&C"
+    },
+    {
+      "id": "us1a",
+      "name": "ShinMaywa US-1A"
+    },
+    {
+      "id": "c160-transall",
+      "name": "Transall C-160"
+    },
+    {
+      "id": "sf260",
+      "name": "Aermacchi (SIAI-Marchetti) SF.260"
+    },
+    {
+      "id": "m290tp-redigo",
+      "name": "Aermacchi (Valmet) M-290TP Redigo"
+    },
+    {
+      "id": "tch1-chungshing",
+      "name": "AIDC T-CH-1 Chung-Shing"
+    },
+    {
+      "id": "bulldog",
+      "name": "BAe (SA) Bulldog"
+    },
+    {
+      "id": "ktx1-woongbee",
+      "name": "Daewoo KTX-1 Woong-Bee"
+    },
+    {
+      "id": "emb312-tucano",
+      "name": "EMBRAER EMB-312 Tucano"
+    },
+    {
+      "id": "emb312-super-tucano",
+      "name": "EMBRAER EMB-312 Super Tucano"
+    },
+    {
+      "id": "t35-pilan",
+      "name": "ENAER T-35 Pilan"
+    },
+    {
+      "id": "fuji-t3",
+      "name": "Fuji T-3"
+    },
+    {
+      "id": "fuji-t5",
+      "name": "Fuji T-5"
+    },
+    {
+      "id": "hpt32-deepak",
+      "name": "HAL HPT-32 Deepak"
+    },
+    {
+      "id": "cj6a",
+      "name": "NAMC CJ-6A"
+    },
+    {
+      "id": "t25-universal",
+      "name": "Neiva N261 T-25 Universal"
+    },
+    {
+      "id": "ct4-airtrainer",
+      "name": "PAC Airtrainer CT4"
+    },
+    {
+      "id": "mushshak",
+      "name": "PAC Mushshak"
+    },
+    {
+      "id": "pc7",
+      "name": "Pilatus PC-7"
+    },
+    {
+      "id": "pc9",
+      "name": "Pilatus PC-9"
+    },
+    {
+      "id": "m26-iskierka",
+      "name": "PZL Mielec M-26 Iskierka"
+    },
+    {
+      "id": "pzl130-orlik",
+      "name": "PZL Warszawa PZL-130TB Turbo Orlik"
+    },
+    {
+      "id": "t34-mentor",
+      "name": "Raytheon (Beech) T-34 Mentor"
+    },
+    {
+      "id": "rfb-fantrainer",
+      "name": "RFB Fantrainer"
+    },
+    {
+      "id": "firefly",
+      "name": "Slingsby T67/T-3A Firefly"
+    },
+    {
+      "id": "epsilon",
+      "name": "Socata TB 30 Epsilon"
+    },
+    {
+      "id": "utva75",
+      "name": "UTVA-75"
+    },
+    {
+      "id": "a300",
+      "name": "Airbus A300"
+    },
+    {
+      "id": "a310",
+      "name": "Airbus A310"
+    },
+    {
+      "id": "a320",
+      "name": "Airbus A320"
+    },
+    {
+      "id": "a330",
+      "name": "Airbus A330"
+    },
+    {
+      "id": "a340",
+      "name": "Airbus A340"
+    },
+    {
+      "id": "concorde",
+      "name": "Aerospatiale/BAe Concorde"
+    },
+    {
+      "id": "bae146",
+      "name": "Avro Avroliner (BAe 146)"
+    },
+    {
+      "id": "one-eleven",
+      "name": "BAe (BAC) One-Eleven"
+    },
+    {
+      "id": "b707",
+      "name": "Boeing 707"
+    },
+    {
+      "id": "b717",
+      "name": "Boeing 717"
+    },
+    {
+      "id": "b727",
+      "name": "Boeing 727"
+    },
+    {
+      "id": "b737-100-200",
+      "name": "Boeing 737-100/200"
+    },
+    {
+      "id": "b737-300-500",
+      "name": "Boeing 737-300/400/500"
+    },
+    {
+      "id": "b737-600-800",
+      "name": "Boeing 737-600/700/800"
+    },
+    {
+      "id": "b747",
+      "name": "Boeing 747"
+    },
+    {
+      "id": "b747-400",
+      "name": "Boeing 747-400"
+    },
+    {
+      "id": "b757",
+      "name": "Boeing 757"
+    },
+    {
+      "id": "b767",
+      "name": "Boeing 767"
+    },
+    {
+      "id": "b777",
+      "name": "Boeing 777"
+    },
+    {
+      "id": "dc8",
+      "name": "Boeing (McDonnell Douglas) DC-8"
+    },
+    {
+      "id": "dc9",
+      "name": "Boeing (McDonnell Douglas) DC-9"
+    },
+    {
+      "id": "dc10",
+      "name": "Boeing (McDonnell Douglas) DC-10"
+    },
+    {
+      "id": "md11",
+      "name": "Boeing (McDonnell Douglas) MD-11"
+    },
+    {
+      "id": "crj",
+      "name": "Canadair Regional Jet"
+    },
+    {
+      "id": "emb145",
+      "name": "EMBRAER EMB-145"
+    },
+    {
+      "id": "f28-fellowship",
+      "name": "Fokker F28 Fellowship"
+    },
+    {
+      "id": "fokker-100-70",
+      "name": "Fokker 100/70"
+    },
+    {
+      "id": "il62-classic",
+      "name": "Ilyushin Il-62M Classic"
+    },
+    {
+      "id": "il86",
+      "name": "Ilyushin Il-86"
+    },
+    {
+      "id": "il96",
+      "name": "Ilyushin Il-96"
+    },
+    {
+      "id": "l1011-tristar",
+      "name": "Lockheed Martin L1011 Tristar"
+    },
+    {
+      "id": "tu134-crusty",
+      "name": "Tupolev Tu-134 Crusty"
+    },
+    {
+      "id": "tu154-careless",
+      "name": "Tupolev Tu-154 Careless"
+    },
+    {
+      "id": "tu204",
+      "name": "Tupolev Tu-204"
+    },
+    {
+      "id": "yak40-codling",
+      "name": "Yakovlev Yak-40 Codling"
+    },
+    {
+      "id": "yak42-clobber",
+      "name": "Yakovlev Yak-42 Clobber"
+    },
+    {
+      "id": "cn235-civil",
+      "name": "Airtech/CASA CN-235"
+    },
+    {
+      "id": "an38",
+      "name": "Antonov An-38"
+    },
+    {
+      "id": "atr42-72",
+      "name": "ATR 42/72"
+    },
+    {
+      "id": "bae748",
+      "name": "BAe (HS) 748"
+    },
+    {
+      "id": "bae-atp",
+      "name": "BAe ATP"
+    },
+    {
+      "id": "jetstream41",
+      "name": "BAe Jetstream 41"
+    },
+    {
+      "id": "be32-cuff",
+      "name": "Beriev Be-32 Cuff"
+    },
+    {
+      "id": "cv440",
+      "name": "Convair CV 440 Metropolitan"
+    },
+    {
+      "id": "dash7",
+      "name": "de Havilland Canada DHC-7 Dash 7"
+    },
+    {
+      "id": "dash8",
+      "name": "de Havilland Canada DHC-8 Dash 8"
+    },
+    {
+      "id": "do228",
+      "name": "Dornier Do.228"
+    },
+    {
+      "id": "do328",
+      "name": "Dornier Do.328"
+    },
+    {
+      "id": "dc6",
+      "name": "Douglas DC-6"
+    },
+    {
+      "id": "emb110",
+      "name": "EMBRAER EMB-110 Bandeirante"
+    },
+    {
+      "id": "emb120",
+      "name": "EMBRAER EMB-120 Brasilia"
+    },
+    {
+      "id": "fairchild-metro",
+      "name": "Fairchild Metro"
+    },
+    {
+      "id": "fokker-f27",
+      "name": "Fokker F27 Friendship"
+    },
+    {
+      "id": "fokker-50",
+      "name": "Fokker 50"
+    },
+    {
+      "id": "il18",
+      "name": "Ilyushin Il-18"
+    },
+    {
+      "id": "il114",
+      "name": "Ilyushin Il-114"
+    },
+    {
+      "id": "n250",
+      "name": "IPTN N-250"
+    },
+    {
+      "id": "l410",
+      "name": "Let L-410 Turbolet"
+    },
+    {
+      "id": "l610",
+      "name": "Let L-610"
+    },
+    {
+      "id": "l188-electra",
+      "name": "Lockheed Martin L-188 Electra"
+    },
+    {
+      "id": "beech1900",
+      "name": "Raytheon (Beechcraft) 1900"
+    },
+    {
+      "id": "saab340b",
+      "name": "Saab 340B"
+    },
+    {
+      "id": "saab2000",
+      "name": "Saab 2000"
+    },
+    {
+      "id": "shorts330",
+      "name": "Shorts 330"
+    },
+    {
+      "id": "shorts360",
+      "name": "Shorts 360 Sherpa"
+    },
+    {
+      "id": "t101-grach",
+      "name": "AeroProgress T-101 Grach"
+    },
+    {
+      "id": "dingo",
+      "name": "AeroRic Dingo"
+    },
+    {
+      "id": "nomad",
+      "name": "ASTA (GAF) Nomad"
+    },
+    {
+      "id": "an2-colt",
+      "name": "Antonov An-2 Colt"
+    },
+    {
+      "id": "an14-clod",
+      "name": "Antonov An-14 Clod"
+    },
+    {
+      "id": "an30-clank",
+      "name": "Antonov An-30 Clank"
+    },
+    {
+      "id": "cl415",
+      "name": "Canadair CL-415"
+    },
+    {
+      "id": "c208-caravan",
+      "name": "Cessna 208 Caravan 1"
+    },
+    {
+      "id": "dhc2-beaver",
+      "name": "de Havilland Canada DHC-2 Beaver"
+    },
+    {
+      "id": "dhc6-twinotter",
+      "name": "de Havilland Canada DHC-6 Twin Otter"
+    },
+    {
+      "id": "do28d-skyservant",
+      "name": "Dornier Do.28D Skyservant"
+    },
+    {
+      "id": "g250-strato",
+      "name": "Grob G-250 Strato"
+    },
+    {
+      "id": "hamc-y12",
+      "name": "HAMC Y-12"
+    },
+    {
+      "id": "au24a-stallion",
+      "name": "Helio Au-24A Stallion"
+    },
+    {
+      "id": "super-courier",
+      "name": "Helio Super Courier"
+    },
+    {
+      "id": "mu2",
+      "name": "Mitsubishi Mu-2"
+    },
+    {
+      "id": "m101t",
+      "name": "Myasishchev M-101T"
+    },
+    {
+      "id": "p69-victor",
+      "name": "Partenavia P.69 Victor"
+    },
+    {
+      "id": "pc6-turboporter",
+      "name": "Pilatus PC-6 Turbo Porter"
+    },
+    {
+      "id": "pc12",
+      "name": "Pilatus PC-12"
+    },
+    {
+      "id": "islander",
+      "name": "Britten Norman Islander"
+    },
+    {
+      "id": "trislander",
+      "name": "Britten Norman Trislander"
+    },
+    {
+      "id": "pzl105-flaming",
+      "name": "PZL-Warszawa PZL-105L Flaming"
+    },
+    {
+      "id": "f406-caravan2",
+      "name": "Reims F406 Caravan II"
+    },
+    {
+      "id": "beluga",
+      "name": "SATIC A300-600T Beluga"
+    },
+    {
+      "id": "tbm700",
+      "name": "Socata TBM700"
+    },
+    {
+      "id": "skyvan",
+      "name": "Shorts Skyvan"
+    },
+    {
+      "id": "sm92-finist",
+      "name": "Technovia SM-92 Finist"
+    },
+    {
+      "id": "utva66",
+      "name": "UTVA-66"
+    },
+    {
+      "id": "jetcruzer500",
+      "name": "AASI Jetcruzer 500"
+    },
+    {
+      "id": "corvette",
+      "name": "Aerospatiale SN-601 Corvette"
+    },
+    {
+      "id": "jetstream31",
+      "name": "BAe Jetstream 31"
+    },
+    {
+      "id": "global-express",
+      "name": "Bombardier BD-700 Global Express"
+    },
+    {
+      "id": "challenger",
+      "name": "Canadair Challenger"
+    },
+    {
+      "id": "citationjet",
+      "name": "Cessna 525 Citationjet"
+    },
+    {
+      "id": "citation-ii",
+      "name": "Cessna 550 Citation II"
+    },
+    {
+      "id": "citation-iii",
+      "name": "Cessna 650 Citation III"
+    },
+    {
+      "id": "citation-v",
+      "name": "Cessna 560 Citation V"
+    },
+    {
+      "id": "citation-x",
+      "name": "Cessna 750 Citation X"
+    },
+    {
+      "id": "falcon-50",
+      "name": "Dassault Falcon 50"
+    },
+    {
+      "id": "falcon-100",
+      "name": "Dassault Falcon 100"
+    },
+    {
+      "id": "falcon-200",
+      "name": "Dassault Falcon 200"
+    },
+    {
+      "id": "falcon-900",
+      "name": "Dassault Falcon 900"
+    },
+    {
+      "id": "emb121-xingu",
+      "name": "EMBRAER EMB-121 Xingu"
+    },
+    {
+      "id": "gulfstream-1-2",
+      "name": "Gulfstream I/II"
+    },
+    {
+      "id": "gulfstream-4-5",
+      "name": "Gulfstream IV/V"
+    },
+    {
+      "id": "westwind",
+      "name": "IAI 1123 Westwind"
+    },
+    {
+      "id": "astra",
+      "name": "IAI 1125 Astra"
+    },
+    {
+      "id": "learjet-23-29",
+      "name": "Learjet 23-29"
+    },
+    {
+      "id": "learjet-35-36",
+      "name": "Learjet 35/36"
+    },
+    {
+      "id": "learjet-45",
+      "name": "Learjet 45"
+    },
+    {
+      "id": "learjet-55-60",
+      "name": "Learjet 55/60"
+    },
+    {
+      "id": "jetstar-ii",
+      "name": "Lockheed Martin Jetstar II"
+    },
+    {
+      "id": "hansa-jet",
+      "name": "MBB HFB 320 Hansa"
+    },
+    {
+      "id": "avanti",
+      "name": "Piaggio P.180 Avanti"
+    },
+    {
+      "id": "chieftain",
+      "name": "Pilatus PA-31-350 Chieftain"
+    },
+    {
+      "id": "beechjet",
+      "name": "Raytheon (Beechcraft) 400A Beechjet"
+    },
+    {
+      "id": "king-air",
+      "name": "Raytheon (Beechcraft) King Air"
+    },
+    {
+      "id": "starship",
+      "name": "Raytheon (Beechcraft) Starship 1"
+    },
+    {
+      "id": "bae125",
+      "name": "Raytheon (BAe) 125"
+    },
+    {
+      "id": "hawker-800-xp",
+      "name": "Raytheon (BAe) Hawker 800"
+    },
+    {
+      "id": "hawker-1000",
+      "name": "Raytheon (BAe) Hawker 1000"
+    },
+    {
+      "id": "sabreliner",
+      "name": "Rockwell Sabreliner"
+    },
+    {
+      "id": "starcraft",
+      "name": "Starcraft SK-700"
+    },
+    {
+      "id": "sj30",
+      "name": "Swearingen SJ30"
+    },
+    {
+      "id": "vantage",
+      "name": "Visionaire VA-10 Vantage"
+    },
+    {
+      "id": "boero-115",
+      "name": "Aero Boero 115"
+    },
+    {
+      "id": "skyrocket",
+      "name": "AviaBellanca Skyrocket"
+    },
+    {
+      "id": "viking",
+      "name": "AviaBellanca Viking"
+    },
+    {
+      "id": "c152-aerobat",
+      "name": "Cessna 152 Aerobat"
+    },
+    {
+      "id": "c172-skyhawk",
+      "name": "Cessna 172 Skyhawk"
+    },
+    {
+      "id": "c180-skywagon",
+      "name": "Cessna 180 Skywagon"
+    },
+    {
+      "id": "c210-centurion",
+      "name": "Cessna 210 Centurion"
+    },
+    {
+      "id": "c303-crusader",
+      "name": "Cessna T303 Crusader"
+    },
+    {
+      "id": "c310",
+      "name": "Cessna 310"
+    },
+    {
+      "id": "c340a",
+      "name": "Cessna 340A"
+    },
+    {
+      "id": "c402-421",
+      "name": "Cessna 401/402/421"
+    },
+    {
+      "id": "c-cardinal-rg",
+      "name": "Cessna Cardinal RGII"
+    },
+    {
+      "id": "c-stationair-6",
+      "name": "Cessna Stationair 6"
+    },
+    {
+      "id": "c-titan",
+      "name": "Cessna Titan"
+    },
+    {
+      "id": "cirrus-sr20",
+      "name": "Cirrus Design SR-20"
+    },
+    {
+      "id": "eagle-xts",
+      "name": "EAM Eagle X-TS"
+    },
+    {
+      "id": "namcu",
+      "name": "ENAER Namcu"
+    },
+    {
+      "id": "extra-300",
+      "name": "Extra 300"
+    },
+    {
+      "id": "rf6-sportsman",
+      "name": "Fournier RF6-180 Sportsman"
+    },
+    {
+      "id": "aero-subaru",
+      "name": "Fuji FA-200 Aero Subaru"
+    },
+    {
+      "id": "as202-bravo",
+      "name": "FFA AS202 Bravo"
+    },
+    {
+      "id": "optica",
+      "name": "FLS Optica"
+    },
+    {
+      "id": "pinguino",
+      "name": "General Avia Pinguino"
+    },
+    {
+      "id": "grob-g115",
+      "name": "Grob G115"
+    },
+    {
+      "id": "grob-acro",
+      "name": "Grob G115T Acro"
+    },
+    {
+      "id": "grob-gf200",
+      "name": "Grob GF200"
+    },
+    {
+      "id": "aa1c-lynx",
+      "name": "Gulfstream AA-1C"
+    },
+    {
+      "id": "cheetah-tiger",
+      "name": "Gulfstream AA-5A Cheetah"
+    },
+    {
+      "id": "ga7-cougar",
+      "name": "Gulfstream GA-7 Cougar"
+    },
+    {
+      "id": "st50",
+      "name": "Istravion ST-50"
+    },
+    {
+      "id": "lake-renegade",
+      "name": "Lake La-250 Renegade"
+    },
+    {
+      "id": "falco",
+      "name": "Laverda Falco F8"
+    },
+    {
+      "id": "l200-morava",
+      "name": "Let L-200 Morava"
+    },
+    {
+      "id": "mooney-ranger",
+      "name": "Mooney Ranger"
+    },
+    {
+      "id": "cap10b",
+      "name": "Mudry CAP 10B"
+    },
+    {
+      "id": "super-cub",
+      "name": "Piper PA-18 Super Cub"
+    },
+    {
+      "id": "aztec",
+      "name": "Piper PA-23 Aztec"
+    },
+    {
+      "id": "cherokee",
+      "name": "Piper PA-28 Cherokee"
+    },
+    {
+      "id": "twin-comanche",
+      "name": "Piper PA-30 Twin Comanche"
+    },
+    {
+      "id": "navajo",
+      "name": "Piper PA-31 Navajo"
+    },
+    {
+      "id": "cheyenne-ii",
+      "name": "Piper PA-31T Cheyenne II"
+    },
+    {
+      "id": "saratoga",
+      "name": "Piper PA-32 Saratoga"
+    },
+    {
+      "id": "seneca",
+      "name": "Piper PA-34 Seneca"
+    },
+    {
+      "id": "cheyenne-iii",
+      "name": "Piper PA-42 Cheyenne III"
+    },
+    {
+      "id": "seminole",
+      "name": "Piper PA-44 Seminole"
+    },
+    {
+      "id": "malibu",
+      "name": "Piper PA-46 Malibu Mirage"
+    },
+    {
+      "id": "arrow",
+      "name": "Piper PA-28 Arrow"
+    },
+    {
+      "id": "wilga",
+      "name": "PZL-Warszawa PZL-104 Wilga"
+    },
+    {
+      "id": "baron",
+      "name": "Raytheon (Beechcraft) B58 Baron"
+    },
+    {
+      "id": "duchess",
+      "name": "Raytheon (Beechcraft) B76 Duchess"
+    },
+    {
+      "id": "bonanza-f33",
+      "name": "Raytheon (Beechcraft) Model F33A Bonanza"
+    },
+    {
+      "id": "bonanza-v35",
+      "name": "Raytheon (Beechcraft) V35B Bonanza"
+    },
+    {
+      "id": "sierra200",
+      "name": "Raytheon (Beechcraft) Sierra 200"
+    },
+    {
+      "id": "skipper",
+      "name": "Raytheon (Beechcraft) Skipper"
+    },
+    {
+      "id": "robin-atl",
+      "name": "Robin ATL Club"
+    },
+    {
+      "id": "robin-dr400",
+      "name": "Robin DR400"
+    },
+    {
+      "id": "rockwell-commander",
+      "name": "Rockwell Commander 114"
+    },
+    {
+      "id": "tampico",
+      "name": "Socata TB9 Tampico"
+    },
+    {
+      "id": "rallye",
+      "name": "Socata Rallye"
+    },
+    {
+      "id": "su26",
+      "name": "Sukhoi Su-26"
+    },
+    {
+      "id": "hansa3",
+      "name": "TAAL Hansa 3"
+    },
+    {
+      "id": "zlin-z50",
+      "name": "Zlin Z50L"
+    },
+    {
+      "id": "zlin-z142",
+      "name": "Zlin Z142"
+    },
+    {
+      "id": "a109",
+      "name": "Agusta A 109"
+    },
+    {
+      "id": "a129",
+      "name": "Agusta A 129 Mangusta"
+    },
+    {
+      "id": "ab212",
+      "name": "Agusta-Bell AB 212"
+    },
+    {
+      "id": "a119-koala",
+      "name": "Agusta A 119 Koala"
+    },
+    {
+      "id": "as61-sea-king",
+      "name": "Agusta-Sikorsky AS-61"
+    },
+    {
+      "id": "bell47",
+      "name": "Bell Model 47"
+    },
+    {
+      "id": "jet-ranger",
+      "name": "Bell Model 206 Jet Ranger"
+    },
+    {
+      "id": "long-ranger",
+      "name": "Bell Model 206L-4 LongRanger"
+    },
+    {
+      "id": "bell430",
+      "name": "Bell Model 430"
+    },
+    {
+      "id": "huey",
+      "name": "Bell UH-1 Iroquois (Huey)"
+    },
+    {
+      "id": "twin-huey",
+      "name": "Bell UH-1N Iroquois (Twin Huey)"
+    },
+    {
+      "id": "kiowa",
+      "name": "Bell OH-58D Kiowa Warrior"
+    },
+    {
+      "id": "ah1-cobra",
+      "name": "Bell AH-1 Cobra"
+    },
+    {
+      "id": "v22-osprey",
+      "name": "Bell/Boeing V-22 Osprey"
+    },
+    {
+      "id": "apache",
+      "name": "Boeing AH-64 Apache"
+    },
+    {
+      "id": "sea-knight",
+      "name": "Boeing CH-46 Sea Knight"
+    },
+    {
+      "id": "chinook",
+      "name": "Boeing CH-47 Chinook"
+    },
+    {
+      "id": "md500-defender",
+      "name": "Boeing MD-500 Defender"
+    },
+    {
+      "id": "md500e",
+      "name": "Boeing MD-500E"
+    },
+    {
+      "id": "md520-notar",
+      "name": "Boeing MD-520 NOTAR"
+    },
+    {
+      "id": "explorer",
+      "name": "Boeing Explorer"
+    },
+    {
+      "id": "comanche",
+      "name": "Boeing/Sikorsky RAH-66 Comanche"
+    },
+    {
+      "id": "brantly-b2",
+      "name": "Brantly B-2"
+    },
+    {
+      "id": "rooivalk",
+      "name": "Denel (Atlas) Rooivalk"
+    },
+    {
+      "id": "eh101-merlin",
+      "name": "EHI EH-101 Merlin"
+    },
+    {
+      "id": "enstrom-f28",
+      "name": "Enstrom F28"
+    },
+    {
+      "id": "puma",
+      "name": "Eurocopter (Aerospatiale) SA 330 Puma"
+    },
+    {
+      "id": "super-puma",
+      "name": "Eurocopter (Aerospatiale) AS 332 Super Puma"
+    },
+    {
+      "id": "ecureuil",
+      "name": "Eurocopter AS 350 Ecureuil"
+    },
+    {
+      "id": "dauphin",
+      "name": "Eurocopter AS 365 Dauphin 2"
+    },
+    {
+      "id": "ec135",
+      "name": "Eurocopter EC 135"
+    },
+    {
+      "id": "lama",
+      "name": "Eurocopter (Aerospatiale) SA 315B Lama"
+    },
+    {
+      "id": "alouette-iii",
+      "name": "Eurocopter (Aerospatiale) SA 316/319 Alouette III"
+    },
+    {
+      "id": "gazelle",
+      "name": "Eurocopter (Aerospatiale) SA 341/342 Gazelle"
+    },
+    {
+      "id": "bo105",
+      "name": "Eurocopter (MBB) BO-105"
+    },
+    {
+      "id": "tiger",
+      "name": "Eurocopter Tiger"
+    },
+    {
+      "id": "lynx",
+      "name": "GKN Westland Lynx"
+    },
+    {
+      "id": "dhruv",
+      "name": "HAL Advanced Light Helicopter (Dhruv)"
+    },
+    {
+      "id": "kmax",
+      "name": "Kaman K-Max"
+    },
+    {
+      "id": "seasprite",
+      "name": "Kaman SH-2F Seasprite"
+    },
+    {
+      "id": "ka25",
+      "name": "Kamov Ka-25 Hormone"
+    },
+    {
+      "id": "ka27-helix",
+      "name": "Kamov Ka-27 Helix"
+    },
+    {
+      "id": "ka50-hokum",
+      "name": "Kamov Ka-50 Hokum"
+    },
+    {
+      "id": "mi2-hoplite",
+      "name": "Mil Mi-2 Hoplite"
+    },
+    {
+      "id": "mi6-hook",
+      "name": "Mil Mi-6 Hook"
+    },
+    {
+      "id": "mi8-hip",
+      "name": "Mil Mi-8/17 Hip"
+    },
+    {
+      "id": "mi24-hind",
+      "name": "Mil Mi-24 Hind"
+    },
+    {
+      "id": "mi26-halo",
+      "name": "Mil Mi-26 Halo"
+    },
+    {
+      "id": "mi28-havoc",
+      "name": "Mil Mi-28 Havoc"
+    },
+    {
+      "id": "nh90",
+      "name": "NHI NH-90"
+    },
+    {
+      "id": "w3-sokol",
+      "name": "PZL Swidnik W-3 Sokol"
+    },
+    {
+      "id": "r22",
+      "name": "Robinson R22 Beta"
+    },
+    {
+      "id": "r44",
+      "name": "Robinson R44 Astro/Raven"
+    },
+    {
+      "id": "schweizer300",
+      "name": "Schweizer Model 300"
+    },
+    {
+      "id": "s58-choctaw",
+      "name": "Sikorsky S-58"
+    },
+    {
+      "id": "s61-sea-king",
+      "name": "Sikorsky S-61 (SH-3 Sea King)"
+    },
+    {
+      "id": "s64-skycrane",
+      "name": "Sikorsky S-64 Skycrane"
+    },
+    {
+      "id": "s65-stallion",
+      "name": "Sikorsky S-65 (CH-53 Sea Stallion)"
+    },
+    {
+      "id": "s70-black-hawk",
+      "name": "Sikorsky S-70 (UH-60 Black Hawk)"
+    },
+    {
+      "id": "s76-spirit",
+      "name": "Sikorsky S-76 Spirit"
+    },
+    {
+      "id": "s80-super-stallion",
+      "name": "Sikorsky S-80 (CH-53E Super Stallion)"
+    },
+    {
+      "id": "xingu",
+      "name": "EMBRAER EMB-121 Xingu"
+    },
+    {
+      "id": "gulfstream-ii-iii",
+      "name": "Gulfstream II/III"
+    },
+    {
+      "id": "gulfstream-iv-v",
+      "name": "Gulfstream IV/V"
+    },
+    {
+      "id": "raytheon-125",
+      "name": "Raytheon (BAe) 125"
+    },
+    {
+      "id": "hawker-800",
+      "name": "Raytheon (BAe) Hawker 800"
+    },
+    {
+      "id": "starcraft-sk700",
+      "name": "Starcraft SK-700"
+    },
+    {
+      "id": "c401-402-421",
+      "name": "Cessna 401/402/421 Golden Eagle"
+    },
+    {
+      "id": "sr20",
+      "name": "Cirrus Design SR-20"
+    },
+    {
+      "id": "extra300",
+      "name": "Extra 300"
+    },
+    {
+      "id": "rf6-180",
+      "name": "Fournier/Sportavia RF6-180 Sportsman"
+    },
+    {
+      "id": "g115",
+      "name": "Grob G115"
+    },
+    {
+      "id": "g115t-acro",
+      "name": "Grob G115T Acro"
+    },
+    {
+      "id": "gf200",
+      "name": "Grob GF 200"
+    },
+    {
+      "id": "aa1c",
+      "name": "Gulfstream AA-1C"
+    },
+    {
+      "id": "aa5a-cheetah",
+      "name": "Gulfstream AA-5A Cheetah"
+    },
+    {
+      "id": "la250-renegade",
+      "name": "Lake La-250 Renegade"
+    },
+    {
+      "id": "falco-f8",
+      "name": "Laverda Falco F8"
+    },
+    {
+      "id": "pa18-supercub",
+      "name": "Piper PA-18 Super Cub"
+    },
+    {
+      "id": "pa23-aztec",
+      "name": "Piper PA-23 Aztec"
+    },
+    {
+      "id": "pa28-cherokee",
+      "name": "Piper PA-28 Cherokee"
+    },
+    {
+      "id": "pa30-twin-comanche",
+      "name": "Piper PA-30 Twin Comanche"
+    },
+    {
+      "id": "pa31-navajo",
+      "name": "Piper PA-31 Navajo"
+    },
+    {
+      "id": "pa31t-cheyenne-ii",
+      "name": "Piper PA-31T Cheyenne II"
+    },
+    {
+      "id": "pa32-saratoga",
+      "name": "Piper PA-32 Saratoga"
+    },
+    {
+      "id": "pa34-seneca",
+      "name": "Piper PA-34 Seneca"
+    },
+    {
+      "id": "pa42-cheyenne-iii",
+      "name": "Piper PA-42 Cheyenne III"
+    },
+    {
+      "id": "pa44-seminole",
+      "name": "Piper PA-44 Seminole"
+    },
+    {
+      "id": "pa46-malibu",
+      "name": "Piper PA-46 Malibu Mirage"
+    },
+    {
+      "id": "pa28-arrow",
+      "name": "Piper PA-28 Arrow"
+    },
+    {
+      "id": "b58-baron",
+      "name": "Raytheon (Beechcraft) B58 Baron"
+    },
+    {
+      "id": "b60-duke",
+      "name": "Raytheon (Beechcraft) B60 Duke"
+    },
+    {
+      "id": "b76-duchess",
+      "name": "Raytheon (Beechcraft) B76 Duchess"
+    },
+    {
+      "id": "f33a-bonanza",
+      "name": "Raytheon (Beechcraft) F33A Bonanza"
+    },
+    {
+      "id": "v35b-bonanza",
+      "name": "Raytheon (Beechcraft) V35B Bonanza"
+    },
+    {
+      "id": "sierra-200",
+      "name": "Raytheon (Beechcraft) Sierra 200"
+    },
+    {
+      "id": "atl-club",
+      "name": "Robin ATL Club"
+    },
+    {
+      "id": "hr100",
+      "name": "Robin HR100"
+    },
+    {
+      "id": "hr200",
+      "name": "Robin HR200"
+    },
+    {
+      "id": "dr400",
+      "name": "Robin DR400"
+    },
+    {
+      "id": "r3000",
+      "name": "Robin R3000"
+    },
+    {
+      "id": "tb9-tampico",
+      "name": "Socata TB9 Tampico"
+    },
+    {
+      "id": "hansa-3",
+      "name": "TAAL Hansa 3"
+    },
+    {
+      "id": "a129-mangusta",
+      "name": "Agusta A 129 Mangusta"
+    },
+    {
+      "id": "as61",
+      "name": "Agusta/Sikorsky AS-61"
+    },
+    {
+      "id": "cobra",
+      "name": "Bell AH-1 Cobra/SuperCobra"
+    },
+    {
+      "id": "osprey",
+      "name": "Bell/Boeing V-22 Osprey"
+    },
+    {
+      "id": "defender",
+      "name": "Boeing (McDonnell Douglas) MD-500 Defender"
+    },
+    {
+      "id": "md520",
+      "name": "Boeing (McDonnell Douglas) Model 520"
+    },
+    {
+      "id": "eh101-utility",
+      "name": "EHI EH-101 Merlin Utility"
+    },
+    {
+      "id": "sa330-puma",
+      "name": "Eurocopter SA 330 Puma"
+    },
+    {
+      "id": "as332-super-puma",
+      "name": "Eurocopter AS 332 Super Puma"
+    },
+    {
+      "id": "as550-ecureuil",
+      "name": "Eurocopter AS 550/555 Ecureuil"
+    },
+    {
+      "id": "as365-dauphin-2",
+      "name": "Eurocopter AS 365 Dauphin 2"
+    },
+    {
+      "id": "sa315b-lama",
+      "name": "Eurocopter (Aerospatiale) SA 315B Lama II"
+    },
+    {
+      "id": "sa316-alouette-iii",
+      "name": "Eurocopter (Aerospatiale) SA 316/319 Alouette III"
+    },
+    {
+      "id": "sa341-gazelle",
+      "name": "Eurocopter (Aerospatiale) SA 341 Gazelle"
+    },
+    {
+      "id": "westland-lynx",
+      "name": "GKN Westland Lynx"
+    },
+    {
+      "id": "westland-sea-king",
+      "name": "GKN Westland Sea King"
+    },
+    {
+      "id": "westland-wasp",
+      "name": "GKN Westland Wasp"
+    },
+    {
+      "id": "westland-wessex",
+      "name": "GKN Westland Wessex"
+    },
+    {
+      "id": "hal-alh",
+      "name": "HAL Advanced Light Helicopter"
+    },
+    {
+      "id": "hiller-uh12e",
+      "name": "Hiller UH-12E"
+    },
+    {
+      "id": "kaman-kmax",
+      "name": "Kaman K-max"
+    },
+    {
+      "id": "kaman-sh2",
+      "name": "Kaman SH-2 Seasprite"
+    },
+    {
+      "id": "kamov-ka25",
+      "name": "Kamov Ka-25 Hormone"
+    },
+    {
+      "id": "kamov-ka27",
+      "name": "Kamov Ka-27 Helix A"
+    },
+    {
+      "id": "kamov-ka29",
+      "name": "Kamov Ka-29 Helix-B"
+    },
+    {
+      "id": "kamov-ka50",
+      "name": "Kamov Ka-50 Hokum"
+    },
+    {
+      "id": "kamov-ka126",
+      "name": "Kamov Ka-126 Hoodlum"
+    },
+    {
+      "id": "kawasaki-xoh1",
+      "name": "Kawasaki XOH-1"
+    },
+    {
+      "id": "mil-mi2",
+      "name": "Mil Mi-2 Hoplite"
+    },
+    {
+      "id": "mil-mi6",
+      "name": "Mil Mi-6 Hook"
+    },
+    {
+      "id": "mil-mi8",
+      "name": "Mil Mi-8 Hip"
+    },
+    {
+      "id": "mil-mi14",
+      "name": "Mil Mi-14 Haze"
+    },
+    {
+      "id": "mil-mi17",
+      "name": "Mil Mi-17 Hip"
+    },
+    {
+      "id": "mil-mi24",
+      "name": "Mil Mi-24 Hind"
+    },
+    {
+      "id": "mil-mi26",
+      "name": "Mil Mi-26 Halo"
+    },
+    {
+      "id": "mil-mi28",
+      "name": "Mil Mi-28 Havoc"
+    },
+    {
+      "id": "mil-mi34",
+      "name": "Mil Mi-34 Hermit"
+    },
+    {
+      "id": "sokol",
+      "name": "PZL Swidnik W-3 Sokol"
+    },
+    {
+      "id": "pzl-sw4",
+      "name": "PZL SW-4"
+    },
+    {
+      "id": "r22-beta",
+      "name": "Robinson R22 Beta"
+    },
+    {
+      "id": "r44-astro",
+      "name": "Robinson R44 Astro"
+    },
+    {
+      "id": "schweizer-300",
+      "name": "Schweizer Model 300"
+    },
+    {
+      "id": "sikorsky-s58",
+      "name": "Sikorsky S-58"
+    },
+    {
+      "id": "sea-king",
+      "name": "Sikorsky S-61 Sea King"
+    },
+    {
+      "id": "s61n",
+      "name": "Sikorsky S-61N"
+    },
+    {
+      "id": "s61r-ch3",
+      "name": "Sikorsky S-61R CH-3"
+    },
+    {
+      "id": "s62",
+      "name": "Sikorsky S-62"
+    },
+    {
+      "id": "skycrane",
+      "name": "Sikorsky S-64 Skycrane"
+    },
+    {
+      "id": "sea-stallion",
+      "name": "Sikorsky S-65A/CH-53 Sea Stallion"
+    },
+    {
+      "id": "black-hawk",
+      "name": "Sikorsky S-70 UH-60 Black Hawk"
+    },
+    {
+      "id": "pave-hawk",
+      "name": "Sikorsky MH-60 Pave Hawk"
+    },
+    {
+      "id": "seahawk",
+      "name": "Sikorsky S-70A SH-60B Seahawk"
+    },
+    {
+      "id": "s76",
+      "name": "Sikorsky S-76"
+    },
+    {
+      "id": "super-sea-stallion",
+      "name": "Sikorsky S-80 CH-53E Super Sea Stallion"
+    },
+    {
+      "id": "a380",
+      "name": "Airbus A380"
+    },
+    {
+      "id": "b787-dreamliner",
+      "name": "Boeing 787 Dreamliner"
+    },
+    {
+      "id": "a350-xwb",
+      "name": "Airbus A350 XWB"
+    },
+    {
+      "id": "f35-lightning-ii",
+      "name": "Lockheed Martin F-35 Lightning II"
+    },
+    {
+      "id": "su57-felon",
+      "name": "Sukhoi Su-57 Felon"
+    },
+    {
+      "id": "j20-mighty-dragon",
+      "name": "Chengdu J-20"
+    },
+    {
+      "id": "a400m-atlas",
+      "name": "Airbus A400M Atlas"
+    },
+    {
+      "id": "mq9-reaper",
+      "name": "General Atomics MQ-9 Reaper"
+    },
+    {
+      "id": "tb2-bayraktar",
+      "name": "Baykar Bayraktar TB2"
+    },
+    {
+      "id": "h160",
+      "name": "Airbus Helicopters H160"
+    },
+    {
+      "id": "sr71-blackbird",
+      "name": "Lockheed SR-71 Blackbird"
+    },
+    {
+      "id": "a220",
+      "name": "Airbus A220"
+    },
+    {
+      "id": "b737-max",
+      "name": "Boeing 737 MAX"
+    },
+    {
+      "id": "b21-raider",
+      "name": "Northrop Grumman B-21 Raider"
+    },
+    {
+      "id": "p8-poseidon",
+      "name": "Boeing P-8 Poseidon"
+    },
+    {
+      "id": "rq4-globalhawk",
+      "name": "Northrop Grumman RQ-4 Global Hawk"
+    },
+    {
+      "id": "spitfire",
+      "name": "Supermarine Spitfire"
+    },
+    {
+      "id": "shahed-136",
+      "name": "Shahed 136"
+    },
+    {
+      "id": "j10-vigorous-dragon",
+      "name": "Chengdu J-10"
+    },
+    {
+      "id": "e195-e2",
+      "name": "Embraer E195-E2"
+    },
+    {
+      "id": "p51-mustang",
+      "name": "North American P-51 Mustang"
+    },
+    {
+      "id": "b17-flying-fortress",
+      "name": "Boeing B-17 Flying Fortress"
+    },
+    {
+      "id": "bf109",
+      "name": "Messerschmitt Bf 109"
+    },
+    {
+      "id": "vision-jet",
+      "name": "Cirrus Vision SF50"
+    },
+    {
+      "id": "c919",
+      "name": "COMAC C919"
+    },
+    {
+      "id": "vulcan",
+      "name": "Avro Vulcan"
+    },
+    {
+      "id": "me262",
+      "name": "Messerschmitt Me 262 Schwalbe"
+    },
+    {
+      "id": "da42",
+      "name": "Diamond DA42 Twin Star"
+    },
+    {
+      "id": "a6m-zero",
+      "name": "Mitsubishi A6M Zero"
+    },
+    {
+      "id": "b29-superfortress",
+      "name": "Boeing B-29 Superfortress"
+    },
+    {
+      "id": "de-havilland-comet",
+      "name": "de Havilland Comet"
+    },
+    {
+      "id": "tu144-charger",
+      "name": "Tupolev Tu-144"
+    },
+    {
+      "id": "fokker-dr1",
+      "name": "Fokker Dr.I"
+    },
+    {
+      "id": "caravelle",
+      "name": "Sud Aviation Caravelle"
+    },
+    {
+      "id": "tejas-lca",
+      "name": "HAL Tejas"
+    },
+    {
+      "id": "jf17-thunder",
+      "name": "JF-17 Thunder"
+    },
+    {
+      "id": "kai-t50",
+      "name": "KAI T-50 Golden Eagle"
+    },
+    {
+      "id": "be200-altair",
+      "name": "Beriev Be-200 Altair"
+    },
+    {
+      "id": "icon-a5",
+      "name": "Icon A5"
+    },
+    {
+      "id": "vickers-vimy",
+      "name": "Vickers Vimy"
+    },
+    {
+      "id": "hurricane",
+      "name": "Hawker Hurricane"
+    },
+    {
+      "id": "fw190",
+      "name": "Focke-Wulf Fw 190 Würger"
+    },
+    {
+      "id": "p38-lightning",
+      "name": "Lockheed P-38 Lightning"
+    },
+    {
+      "id": "ju87-stuka",
+      "name": "Junkers Ju 87 Stuka"
+    },
+    {
+      "id": "f4u-corsair",
+      "name": "Vought F4U Corsair"
+    },
+    {
+      "id": "b24-liberator",
+      "name": "Consolidated B-24 Liberator"
+    },
+    {
+      "id": "f86-sabre",
+      "name": "North American F-86 Sabre"
+    },
+    {
+      "id": "hawker-hunter",
+      "name": "Hawker Hunter"
+    },
+    {
+      "id": "gloster-meteor",
+      "name": "Gloster Meteor"
+    },
+    {
+      "id": "b747-8",
+      "name": "Boeing 747-8 Intercontinental"
+    },
+    {
+      "id": "a330neo",
+      "name": "Airbus A330neo"
+    },
+    {
+      "id": "a321xlr",
+      "name": "Airbus A321XLR"
+    },
+    {
+      "id": "b777-9",
+      "name": "Boeing 777-9 (777X)"
+    },
+    {
+      "id": "ssj100",
+      "name": "Sukhoi Superjet 100"
+    },
+    {
+      "id": "mc21",
+      "name": "Irkut MC-21"
+    },
+    {
+      "id": "mq1-predator",
+      "name": "General Atomics MQ-1 Predator"
+    },
+    {
+      "id": "mq25-stingray",
+      "name": "Boeing MQ-25 Stingray"
+    },
+    {
+      "id": "s70-okhotnik",
+      "name": "Sukhoi S-70 Okhotnik-B"
+    },
+    {
+      "id": "hondajet",
+      "name": "Honda HA-420 HondaJet"
+    },
+    {
+      "id": "g650",
+      "name": "Gulfstream G650"
+    },
+    {
+      "id": "phenom300",
+      "name": "Embraer Phenom 300"
+    },
+    {
+      "id": "h145",
+      "name": "Airbus Helicopters H145"
+    },
+    {
+      "id": "s92",
+      "name": "Sikorsky S-92 Helibus"
+    },
+    {
+      "id": "v280-valor",
+      "name": "Bell V-280 Valor"
+    },
+    {
+      "id": "vickers-viscount",
+      "name": "Vickers Viscount"
+    },
+    {
+      "id": "il2-sturmovik",
+      "name": "Ilyushin Il-2 Sturmovik"
+    },
+    {
+      "id": "constellation",
+      "name": "Lockheed Constellation"
+    },
+    {
+      "id": "arj21",
+      "name": "COMAC ARJ21 Xiangfeng"
+    },
+    {
+      "id": "an148",
+      "name": "Antonov An-148"
+    }
+  ]
+}
