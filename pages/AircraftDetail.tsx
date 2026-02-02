@@ -217,8 +217,10 @@ const AircraftDetail: React.FC = () => {
 
   const handleGoogleDiagramSearch = () => {
     if (!aircraft) return;
-    const query = `${aircraft.name}  layout`;
-    window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank', 'noopener,noreferrer');
+
+    const query = `${aircraft.name} layout`;
+    // Open Google Images directly for the layout
+    window.open(`https://www.google.com/search?tbm=isch&q=${encodeURIComponent(query)}`, '_blank', 'noopener,noreferrer');
   };
 
   if (!aircraft) {
@@ -499,6 +501,6 @@ const AircraftDetail: React.FC = () => {
       )}
     </div>
   );
-};
+}
 
 export default AircraftDetail;
