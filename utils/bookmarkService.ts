@@ -21,10 +21,7 @@ export const saveBookmark = async (bookmarkedId: string | null, orderIds: string
     await setDoc(doc(db, COLLECTION_NAME, USER_ID), bookmarkData);
     console.log('✅ Bookmark saved to Firebase:', bookmarkData);
   } catch (error) {
-    console.error('Error saving bookmark:', error);
-    // Fallback to localStorage
-    localStorage.setItem('bookview-bookmark', bookmarkedId || '');
-    localStorage.setItem('bookview-order', JSON.stringify(orderIds));
+    console.error('❌ Error saving bookmark to Firebase:', error);
   }
 };
 
@@ -38,29 +35,9 @@ export const loadBookmark = async (): Promise<BookmarkData | null> => {
       return docSnap.data() as BookmarkData;
     }
     
-    // Try to load from localStorage as fallback
-    const bookmarkedId = localStorage.getItem('bookview-bookmark');
-    const orderIds = JSON.parse(localStorage.getItem('bookview-order') || '[]');
-    
-    if (bookmarkedId || orderIds.length > 0) {
-      return {
-        bookmarkedId,
-        orderIds,
-        lastUpdated: Date.now()
-      };
-    }
-    
     return null;
   } catch (error) {
-    console.error('Error loading bookmark:', error);
-    // Fallback to localStorage
-    const bookmarkedId = localStorage.getItem('bookview-bookmark');
-    const orderIds = JSON.parse(localStorage.getItem('bookview-order') || '[]');
-    
-    return {
-      bookmarkedId,
-      orderIds,
-      lastUpdated: Date.now()
-    };
+    console.error('❌ Error loading bookmark from Firebase:', error);
+    return null;
   }
 };

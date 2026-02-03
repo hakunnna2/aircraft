@@ -4,9 +4,6 @@ import { AircraftCategory, EngineType } from '../types.ts';
 import { BookOpen, Filter, Bookmark, BookmarkCheck } from 'lucide-react';
 import { saveBookmark, loadBookmark } from '../utils/bookmarkService';
 
-const BOOKMARK_KEY = 'bookview-bookmark';
-const ORDER_KEY = 'bookview-order';
-
 const BookView: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<AircraftCategory | 'All'>('All');
   const [selectedEngine, setSelectedEngine] = useState<EngineType | 'All'>('All');
@@ -22,16 +19,12 @@ const BookView: React.FC = () => {
       if (data) {
         if (data.bookmarkedId) {
           setBookmarkedId(data.bookmarkedId);
-          // Also save to localStorage as backup
-          localStorage.setItem(BOOKMARK_KEY, data.bookmarkedId);
         }
         if (data.orderIds && data.orderIds.length > 0) {
           const allIds = AIRCRAFT_DATA.map((aircraft) => aircraft.id);
           const knownIds = data.orderIds.filter((id) => allIds.includes(id));
           const newIds = allIds.filter((id) => !knownIds.includes(id));
-          const finalOrder = [...knownIds, ...newIds];
-          setOrderIds(finalOrder);
-          localStorage.setItem(ORDER_KEY, JSON.stringify(finalOrder));
+          setOrderIds([...knownIds, ...newIds]);
         }
       }
     };
@@ -53,14 +46,8 @@ const BookView: React.FC = () => {
       return;
     }
 
-    // Save to Firebase and localStorage
+    // Save to Firebase only
     saveBookmark(bookmarkedId, nextOrder);
-    if (bookmarkedId) {
-      localStorage.setItem(BOOKMARK_KEY, bookmarkedId);
-    } else {
-      localStorage.removeItem(BOOKMARK_KEY);
-    }
-    localStorage.setItem(ORDER_KEY, JSON.stringify(nextOrder));
   }, [orderIds, bookmarkedId]);
 
   const aircraftById = useMemo(() => {
@@ -94,7 +81,6 @@ const BookView: React.FC = () => {
 
   const handleBookmark = async (aircraftId: string) => {
     setBookmarkedId(aircraftId);
-    localStorage.setItem(BOOKMARK_KEY, aircraftId);
     await saveBookmark(aircraftId, orderIds);
   };
 
