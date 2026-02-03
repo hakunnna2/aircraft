@@ -10,6 +10,9 @@ export const IMAGE_TRANSFORMS = {
   // Thumbnail for cards (small, optimized)
   thumbnail: 'c_fill,w_400,h_300,q_auto,f_auto',
   
+  // Medium for srcset (mid-size)
+  medium: 'c_fill,w_800,h_600,q_auto,f_auto',
+  
   // Detail page (larger, high quality)
   detail: 'c_fill,w_1200,h_900,q_auto:good,f_auto',
   
@@ -77,8 +80,8 @@ export const getResponsiveSrcSet = (imageId: string): string => {
   
   return [
     `${getCloudinaryUrl(imageId, 'thumbnail')} 400w`,
-    `${getCloudinaryUrl(imageId, 'detail')} 800w`,
-    `${getCloudinaryUrl(imageId, 'hero')} 1200w`
+    `${getCloudinaryUrl(imageId, 'medium')} 800w`,
+    `${getCloudinaryUrl(imageId, 'detail')} 1200w`
   ].join(', ');
 };
 
@@ -90,7 +93,7 @@ export const getCategoryResponsiveSrcSet = (imagePath: string): string => {
   
   return [
     `${getCategoryCloudinaryUrl(imagePath, 'thumbnail')} 400w`,
-    `${getCategoryCloudinaryUrl(imagePath, 'detail')} 800w`,
-    `${getCategoryCloudinaryUrl(imagePath, 'hero')} 1200w`
+    `${getCategoryCloudinaryUrl(imagePath, 'medium')} 800w`,
+    `${getCategoryCloudinaryUrl(imagePath, 'detail')} 1200w`
   ].join(', ');
 };
