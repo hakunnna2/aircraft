@@ -14,10 +14,14 @@
       if (window.location.hash) {
         history.replaceState(null, null, ' ');
       }
-      // Force immediate scroll to top
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
+      // Force immediate scroll to top (safely)
+      try {
+        window.scrollTo(0, 0);
+        if (document.documentElement) document.documentElement.scrollTop = 0;
+        if (document.body) document.body.scrollTop = 0;
+      } catch (e) {
+        // Scroll may not be available yet
+      }
     </script>
     <meta name="description" content="JoJo's Guide: votre encyclopédie visuelle complète pour identifier les avions civils, militaires et de collection. Plus de 18 aéronefs avec photos, spécifications et astuces d'identification." />
     <meta name="keywords" content="avions, identification avions, encyclopédie aviation, spotting, reconnaissance aérienne" />
@@ -46,10 +50,14 @@
   </head>
   <body class="bg-slate-50 text-slate-900 transition-colors duration-300">
     <script>
-      // Additional scroll prevention on body load
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
+      // Additional scroll prevention on body load (safely)
+      try {
+        window.scrollTo(0, 0);
+        if (document.documentElement) document.documentElement.scrollTop = 0;
+        if (document.body) document.body.scrollTop = 0;
+      } catch (e) {
+        // Scroll may not be available yet
+      }
     </script>
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>

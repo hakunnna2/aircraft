@@ -12,6 +12,15 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ searchQuery }) => {
+    // Scroll to library section when search is active
+    useEffect(() => {
+      if (searchQuery && searchQuery.trim().length > 0) {
+        const exploreSection = document.getElementById('explore');
+        if (exploreSection) {
+          exploreSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }, [searchQuery]);
   const [searchParams] = useSearchParams();
   const categoryFromUrl = searchParams.get('category');
   

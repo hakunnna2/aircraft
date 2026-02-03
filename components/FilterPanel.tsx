@@ -196,22 +196,24 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   const handleSortByManufacturer = useCallback(() => setSortBy('manufacturer'), [setSortBy]);
 
   return (
-    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm sticky top-24 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 7rem)' }}>
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-2">
+    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm sticky top-24 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 7rem)' }}>
+      <div className="sticky top-0 z-10 px-6 py-4 bg-white border-b border-slate-100 rounded-t-2xl shadow-sm">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
           <Filter size={18} className="text-yellow-600" />
           <h2 className="font-bold text-slate-900">Filtres</h2>
+          </div>
+          <button 
+            onClick={onReset}
+            className="text-xs font-medium text-slate-400 hover:text-yellow-600 transition-colors flex items-center gap-1"
+          >
+            <RotateCcw size={12} />
+            Réinitialiser
+          </button>
         </div>
-        <button 
-          onClick={onReset}
-          className="text-xs font-medium text-slate-400 hover:text-yellow-600 transition-colors flex items-center gap-1"
-        >
-          <RotateCcw size={12} />
-          Réinitialiser
-        </button>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-6 px-6 pb-6 pt-4">
         {/* Sort Options */}
         <div>
           <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Trier par</h3>

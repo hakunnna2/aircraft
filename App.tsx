@@ -3,12 +3,16 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import ErrorBoundary from './components/ErrorBoundary.tsx';
 import Navbar from './components/Navbar.tsx';
 import ScrollToTopButton from './components/ScrollToTop.tsx';
+import PasswordGate from './pages/PasswordGate.tsx';
 
 const Home = lazy(() => import('./pages/Home.tsx'));
 const AircraftDetail = lazy(() => import('./pages/AircraftDetail.tsx'));
 const QuizMenu = lazy(() => import('./pages/QuizMenu.tsx'));
 const QuickChoice = lazy(() => import('./pages/QuickChoice.tsx'));
 const MapView = lazy(() => import('./pages/MapView.tsx'));
+const BookView = lazy(() => import('./pages/BookView.tsx'));
+const FavoritesView = lazy(() => import('./pages/FavoritesView.tsx'));
+const GameHistory = lazy(() => import('./pages/GameHistory.tsx'));
 const NotFound = lazy(() => import('./pages/NotFound.tsx'));
 
 const ScrollToTop: React.FC = () => {
@@ -38,7 +42,39 @@ const ScrollToTop: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const ACCESS_KEY = 'jp_access_granted';
+  const REFRESH_KEY = 'jp_access_refreshes';
+  const APP_PASSWORD = 'justplane';
+  const [isUnlocked, setIsUnlocked] = useState(() => {
+    const unlocked = sessionStorage.getItem(ACCESS_KEY) === 'true';
+    if (!unlocked) return false;
+
+    const count = Number(sessionStorage.getItem(REFRESH_KEY) ?? '0');
+    if (count >= 5) {
+      sessionStorage.removeItem(ACCESS_KEY);
+      sessionStorage.setItem(REFRESH_KEY, '0');
+      return false;
+    }
+
+    sessionStorage.setItem(REFRESH_KEY, String(count + 1));
+    return true;
+  });
   const [searchQuery, setSearchQuery] = useState('');
+
+  if (!isUnlocked) {
+    return (
+      <ErrorBoundary>
+        <PasswordGate
+          accessKey={ACCESS_KEY}
+          password={APP_PASSWORD}
+          onSuccess={() => {
+            sessionStorage.setItem(REFRESH_KEY, '0');
+            setIsUnlocked(true);
+          }}
+        />
+      </ErrorBoundary>
+    );
+  }
 
   return (
     <ErrorBoundary>
@@ -60,8 +96,11 @@ const App: React.FC = () => {
               <Routes>
                 <Route path="/" element={<Home searchQuery={searchQuery} />} />
                 <Route path="/quiz" element={<QuizMenu />} />
+                <Route path="/quiz/history" element={<GameHistory />} />
                 <Route path="/quiz/quick-choice" element={<QuickChoice />} />
                 <Route path="/map" element={<MapView />} />
+                <Route path="/book" element={<BookView />} />
+                <Route path="/favorites" element={<FavoritesView />} />
                 <Route path="/aircraft/:id" element={<AircraftDetail />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

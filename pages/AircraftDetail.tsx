@@ -14,12 +14,34 @@ import {
   Heart,
   Search
 } from 'lucide-react';
+import { loadFavorites, toggleFavorite } from '../utils/favoritesService';
 
 const AircraftDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const aircraft = AIRCRAFT_DATA.find((a) => a.id === id);
   const [heroImageError, setHeroImageError] = useState(false);
+  const [favorites, setFavorites] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Load favorites on mount
+  useEffect(() => {
+    const loadFavs = async () => {
+      const favs = await loadFavorites();
+      setFavorites(favs);
+      setLoading(false);
+    };
+    loadFavs();
+  }, []);
+
+  const isFavorited = favorites.includes(id || '');
+
+  const handleToggleFavorite = async () => {
+    if (id) {
+      const updated = await toggleFavorite(favorites, id);
+      setFavorites(updated);
+    }
+  };
 
   // Get related aircraft (same category or manufacturer, excluding current)
   const relatedAircraft = AIRCRAFT_DATA
@@ -248,9 +270,22 @@ const AircraftDetail: React.FC = () => {
         Retour à la galerie
       </button>
 
-      <div className="lg:hidden mb-6">
-        <h1 className="text-3xl font-black text-slate-900 mb-2">{aircraft.name}</h1>
-        <p className="text-sm font-medium text-slate-500 uppercase tracking-wide">{aircraft.role}</p>
+      <div className="lg:hidden mb-6 flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-black text-slate-900 mb-2">{aircraft.name}</h1>
+          <p className="text-sm font-medium text-slate-500 uppercase tracking-wide">{aircraft.role}</p>
+        </div>
+        <button
+          onClick={handleToggleFavorite}
+          className={`p-2 rounded-lg transition-all ${
+            isFavorited
+              ? 'bg-red-100 text-red-600'
+              : 'bg-slate-100 text-slate-400 hover:bg-red-50 hover:text-red-500'
+          }`}
+          title={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+        >
+          <Heart size={24} fill={isFavorited ? 'currentColor' : 'none'} />
+        </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -315,8 +350,23 @@ const AircraftDetail: React.FC = () => {
 
         <div className="lg:col-span-4 space-y-6 md:space-y-8">
           <div className="hidden lg:block bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm">
-            <h1 className="text-4xl font-black text-slate-900 mb-2 leading-tight tracking-tight">{aircraft.name}</h1>
-            <p className="text-slate-500 font-medium mb-8 text-sm uppercase tracking-widest">{aircraft.role}</p>
+            <div className="flex items-start justify-between mb-8">
+              <div>
+                <h1 className="text-4xl font-black text-slate-900 mb-2 leading-tight tracking-tight">{aircraft.name}</h1>
+                <p className="text-slate-500 font-medium text-sm uppercase tracking-widest">{aircraft.role}</p>
+              </div>
+              <button
+                onClick={handleToggleFavorite}
+                className={`p-3 rounded-lg transition-all flex-shrink-0 ${
+                  isFavorited
+                    ? 'bg-red-100 text-red-600'
+                    : 'bg-slate-100 text-slate-400 hover:bg-red-50 hover:text-red-500'
+                }`}
+                title={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+              >
+                <Heart size={24} fill={isFavorited ? 'currentColor' : 'none'} />
+              </button>
+            </div>
             
             <div className="space-y-2">
               <div className="flex items-center justify-between py-3.5 border-b border-slate-50">

@@ -1,7 +1,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Plane, Search, Menu, X, Shuffle, Map, Gamepad2, Maximize, Minimize } from 'lucide-react';
+import { Plane, Search, Menu, X, Shuffle, Map, Gamepad2, Maximize, Minimize, BookOpen, Heart } from 'lucide-react';
 import { AIRCRAFT_DATA } from '../data/aircraft.ts';
 import { useDebounce } from '../hooks/useDebounce.ts';
 import { sanitizeInput } from '../utils/helpers.ts';
@@ -111,45 +111,37 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
                 onFocus={() => setShowSuggestions(searchQuery.length > 0)}
                 onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
               />
-              
-              {/* Desktop Suggestions Dropdown */}
-              {showSuggestions && filteredAircraft.length > 0 && (
-                <div className="absolute top-full mt-2 w-full bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden z-50">
-                  {filteredAircraft.map((aircraft) => (
-                    <button
-                      key={aircraft.id}
-                      type="button"
-                      onClick={() => handleSuggestionClick(aircraft.id)}
-                      className="w-full px-4 py-3 text-left hover:bg-slate-50 flex items-center space-x-3 border-b border-slate-100 last:border-0"
-                    >
-                      <div className="w-12 h-12 rounded-lg overflow-hidden bg-slate-200 flex-shrink-0">
-                        <img src={aircraft.image} alt={aircraft.name} className="w-full h-full object-cover" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-sm font-bold text-slate-900 truncate">{aircraft.name}</p>
-                        <p className="text-xs text-slate-500 truncate">{aircraft.manufacturer}</p>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              )}
             </div>
           </form>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center space-x-2">
+          <div className="hidden md:flex items-center gap-1">
+            <Link 
+              to="/book" 
+              className="flex items-center space-x-1 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-lg transition-all"
+            >
+              <BookOpen size={16} />
+              <span>Livre</span>
+            </Link>
+            <Link 
+              to="/favorites" 
+              className="flex items-center space-x-1 px-3 py-2 text-xs font-semibold text-slate-700 bg-white hover:text-red-600 hover:bg-red-50 rounded-lg transition-all shadow-sm"
+            >
+              <Heart size={16} />
+              <span>Favoris</span>
+            </Link>
             <Link 
               to="/map" 
-              className="flex items-center space-x-2 px-4 py-2 text-sm font-semibold text-slate-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-xl transition-all"
+              className="flex items-center space-x-1 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-lg transition-all"
             >
-              <Map size={18} />
+              <Map size={16} />
               <span>Carte</span>
             </Link>
             <Link 
               to="/quiz" 
-              className="flex items-center space-x-2 px-4 py-2 text-sm font-semibold text-slate-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-xl transition-all"
+              className="flex items-center space-x-1 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-lg transition-all"
             >
-              <Gamepad2 size={18} />
+              <Gamepad2 size={16} />
               <span>Quiz</span>
             </Link>
             <button
@@ -181,10 +173,22 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
           {/* Mobile buttons */}
           <div className="md:hidden flex items-center space-x-1">
             <Link
+              to="/book"
+              className="p-2 rounded-xl text-slate-700 bg-slate-100 active:bg-slate-200 transition-colors"
+            >
+              <BookOpen size={18} />
+            </Link>
+            <Link
               to="/map"
               className="p-2 rounded-xl text-slate-700 bg-slate-100 active:bg-slate-200 transition-colors"
             >
               <Map size={18} />
+            </Link>
+            <Link
+              to="/favorites"
+              className="p-2 rounded-xl text-slate-700 bg-slate-100 active:bg-slate-200 transition-colors"
+            >
+              <Heart size={18} />
             </Link>
             <Link
               to="/quiz"

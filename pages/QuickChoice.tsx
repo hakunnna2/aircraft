@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, Check, X, RotateCcw, Zap } from 'lucide-react';
 import { AIRCRAFT_DATA } from '../data/aircraft.ts';
+import { saveGameScore } from '../utils/gameProgressService';
 
 interface GameAircraft {
   id: string;
@@ -98,6 +99,8 @@ const QuickChoice: React.FC = () => {
     if (currentIndex >= totalQuestions - 1) {
       setGameOver(true);
       setTimerActive(false);
+      // Save game score to Firebase
+      saveGameScore('quickChoice', score, totalQuestions);
     } else {
       setCurrentIndex(currentIndex + 1);
       // Scroll to top to show the image

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ChevronLeft, Zap, ListChecks, Smile } from 'lucide-react';
+import { ChevronLeft, Zap, ListChecks, Smile, BarChart3 } from 'lucide-react';
 
 const QuizMenu: React.FC = () => {
   const navigate = useNavigate();
@@ -67,13 +67,22 @@ const QuizMenu: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <button
-                onClick={() => navigate('/quiz/quick-choice')}
-                className="inline-flex items-center space-x-2 sm:space-x-3 px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-yellow-300 to-yellow-400 text-slate-900 font-bold sm:font-black text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl group-hover:shadow-xl transition-all active:scale-95 hover:shadow-lg hover:-translate-y-1 border-2 border-yellow-200"
-              >
-                <Zap size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                <span>Lancer le défi</span>
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => navigate('/quiz/quick-choice')}
+                  className="inline-flex items-center space-x-2 sm:space-x-3 px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-yellow-300 to-yellow-400 text-slate-900 font-bold sm:font-black text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl group-hover:shadow-xl transition-all active:scale-95 hover:shadow-lg hover:-translate-y-1 border-2 border-yellow-200"
+                >
+                  <Zap size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                  <span>Lancer le défi</span>
+                </button>
+                <button
+                  onClick={() => navigate('/quiz/history')}
+                  className="inline-flex items-center space-x-2 sm:space-x-3 px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold sm:font-black text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl group-hover:shadow-xl transition-all active:scale-95 hover:shadow-lg hover:-translate-y-1 border-2 border-blue-400"
+                >
+                  <BarChart3 size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                  <span>Historique</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
