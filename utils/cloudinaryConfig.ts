@@ -48,8 +48,8 @@ export const getCategoryCloudinaryUrl = (imagePath: string, transform: keyof typ
   // Extract filename from path like '/images/categories/Avions de Ligne.jpg'
   let filename = imagePath.split('/').pop() || imagePath;
   
-  // Remove extension and sanitize (replace & with _)
-  const nameWithoutExt = filename.split('.')[0].replace(/&/g, '_').replace(/\?/g, '_').replace(/#/g, '_');
+  // Sanitize the filename (replace & ? # with _) while keeping extension
+  const nameWithSanitization = filename.replace(/&/g, '_').replace(/\?/g, '_').replace(/#/g, '_');
   
   // If using local images (fallback), return the original path
   if (CLOUDINARY_CLOUD_NAME === 'YOUR_CLOUD_NAME') {
@@ -57,8 +57,9 @@ export const getCategoryCloudinaryUrl = (imagePath: string, transform: keyof typ
   }
   
   const transformation = IMAGE_TRANSFORMS[transform];
-  // Cloudinary folder structure: categories/sanitized_filename
-  return `${CLOUDINARY_BASE_URL}/${transformation}/categories/${nameWithoutExt}`;
+  // Cloudinary folder structure: categories/filename-with-extension
+  // The public_id includes the extension for proper file type detection
+  return `${CLOUDINARY_BASE_URL}/${transformation}/categories/${nameWithSanitization}`;
 };
 
 /**
@@ -75,9 +76,9 @@ export const getResponsiveSrcSet = (imageId: string): string => {
   if (!isCloudinaryEnabled()) return '';
   
   return [
-    `${CLOUDINARY_BASE_URL}/c_fill,w_400,h_300,q_auto,f_auto/aircraft/${imageId}.jpg 400w`,
-    `${CLOUDINARY_BASE_URL}/c_fill,w_800,h_600,q_auto,f_auto/aircraft/${imageId}.jpg 800w`,
-    `${CLOUDINARY_BASE_URL}/c_fill,w_1200,h_900,q_auto,f_auto/aircraft/${imageId}.jpg 1200w`
+    `${getCloudinaryUrl(imageId, 'thumbnail')} 400w`,
+    `${getCloudinaryUrl(imageId, 'detail')} 800w`,
+    `${getCloudinaryUrl(imageId, 'hero')} 1200w`
   ].join(', ');
 };
 
@@ -87,12 +88,9 @@ export const getResponsiveSrcSet = (imageId: string): string => {
 export const getCategoryResponsiveSrcSet = (imagePath: string): string => {
   if (!isCloudinaryEnabled()) return '';
   
-  let filename = imagePath.split('/').pop() || imagePath;
-  const nameWithoutExt = filename.split('.')[0].replace(/&/g, '_').replace(/\?/g, '_').replace(/#/g, '_');
-  
   return [
-    `${CLOUDINARY_BASE_URL}/c_fill,w_400,h_300,q_auto,f_auto/categories/${nameWithoutExt} 400w`,
-    `${CLOUDINARY_BASE_URL}/c_fill,w_800,h_600,q_auto,f_auto/categories/${nameWithoutExt} 800w`,
-    `${CLOUDINARY_BASE_URL}/c_fill,w_1200,h_900,q_auto,f_auto/categories/${nameWithoutExt} 1200w`
+    `${getCategoryCloudinaryUrl(imagePath, 'thumbnail')} 400w`,
+    `${getCategoryCloudinaryUrl(imagePath, 'detail')} 800w`,
+    `${getCategoryCloudinaryUrl(imagePath, 'hero')} 1200w`
   ].join(', ');
 };

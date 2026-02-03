@@ -82,7 +82,14 @@ def upload_images(images_dir: Path, folder_name: str = "aircraft"):
         image_id = image_path.stem  # filename without extension
         # Sanitize public_id: replace invalid characters with underscores
         # Cloudinary doesn't allow: &, ?, #, etc.
-        sanitized_id = image_id.replace('&', '_').replace('?', '_').replace('#', '_')
+        # For category images, we need to include the extension in the public_id
+        if folder_name == 'categories':
+            # Keep extension for category images: Drones_UAV.jpg instead of Drones & UAV.jpg
+            sanitized_id = (image_path.stem.replace('&', '_').replace('?', '_').replace('#', '_') 
+                           + image_path.suffix)
+        else:
+            # For aircraft, just sanitize the stem
+            sanitized_id = image_id.replace('&', '_').replace('?', '_').replace('#', '_')
         
         max_retries = 3
         retry_count = 0
