@@ -6247,7 +6247,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     description: "Bimoteur léger conçu pour l'entraînement et le voyage privé économique.",
     specs: { wingspan: '11,2 m', length: '8,7 m', height: '3,1 m', payload: '600 kg' }
   },
-    
+
   {
     id: 'lake-renegade',
     name: 'Lake La-250 Renegade',
@@ -13351,28 +13351,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     }
   },
   {
-    id: 'calidus-b250',
-    name: "Calidus B-250 Bader",
-    category: 'Combat Training Aircraft',
-    role: "Attaque légère et entraînement",
-    manufacturer: 'Calidus',
-    country: 'EAU',
-    engineType: 'Turboprop',
-    enginesCount: 1,
-    recognitionTips: [
-      "Structure tout carbone fluide",
-      "Sept points d'emport",
-      "Cockpit tandem large"
-    ],
-    description: "Avion d'attaque léger entièrement en fibre de carbone conçu pour les guerres asymétriques.",
-    specs: {
-      wingspan: '12.1 m',
-      length: '11.0 m',
-      height: '3.8 m',
-      payload: '1 800 kg'
-    }
-  },
-  {
     id: 'h215-airbus',
     name: "Airbus H215 (Super Puma)",
     category: 'Helicopters',
@@ -14302,7 +14280,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     category: 'Private Light Aircraft',
     role: "ULM haute performance",
     manufacturer: 'JMB Aircraft',
-    country: 'République Tchèque',
+    country: 'République tchèque',
     engineType: 'Piston',
     enginesCount: 1,
     recognitionTips: [
