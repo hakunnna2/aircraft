@@ -39,6 +39,26 @@ export const getCloudinaryUrl = (imageId: string, transform: keyof typeof IMAGE_
 };
 
 /**
+ * Generate Cloudinary URL for a category image
+ * @param imagePath - The image path or filename
+ * @param transform - Transformation preset (thumbnail, detail, hero, placeholder)
+ * @returns Optimized Cloudinary URL
+ */
+export const getCategoryCloudinaryUrl = (imagePath: string, transform: keyof typeof IMAGE_TRANSFORMS = 'thumbnail'): string => {
+  // Extract filename from path like '/images/categories/Avions de Ligne.jpg'
+  const filename = imagePath.split('/').pop() || imagePath;
+  
+  // If using local images (fallback), return the original path
+  if (CLOUDINARY_CLOUD_NAME === 'YOUR_CLOUD_NAME') {
+    return `/images/categories/${filename}`;
+  }
+  
+  const transformation = IMAGE_TRANSFORMS[transform];
+  // Cloudinary folder structure: categories/filename
+  return `${CLOUDINARY_BASE_URL}/${transformation}/categories/${filename}`;
+};
+
+/**
  * Check if Cloudinary is configured
  */
 export const isCloudinaryEnabled = (): boolean => {
@@ -55,5 +75,20 @@ export const getResponsiveSrcSet = (imageId: string): string => {
     `${CLOUDINARY_BASE_URL}/c_fill,w_400,h_300,q_auto,f_auto/aircraft/${imageId}.jpg 400w`,
     `${CLOUDINARY_BASE_URL}/c_fill,w_800,h_600,q_auto,f_auto/aircraft/${imageId}.jpg 800w`,
     `${CLOUDINARY_BASE_URL}/c_fill,w_1200,h_900,q_auto,f_auto/aircraft/${imageId}.jpg 1200w`
+  ].join(', ');
+};
+
+/**
+ * Generate srcset for responsive category images
+ */
+export const getCategoryResponsiveSrcSet = (imagePath: string): string => {
+  if (!isCloudinaryEnabled()) return '';
+  
+  const filename = imagePath.split('/').pop() || imagePath;
+  
+  return [
+    `${CLOUDINARY_BASE_URL}/c_fill,w_400,h_300,q_auto,f_auto/categories/${filename} 400w`,
+    `${CLOUDINARY_BASE_URL}/c_fill,w_800,h_600,q_auto,f_auto/categories/${filename} 800w`,
+    `${CLOUDINARY_BASE_URL}/c_fill,w_1200,h_900,q_auto,f_auto/categories/${filename} 1200w`
   ].join(', ');
 };

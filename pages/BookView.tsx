@@ -3,6 +3,7 @@ import { AircraftCategory, EngineType } from '../types.ts';
 import { BookOpen, Filter, Bookmark, BookmarkCheck } from 'lucide-react';
 import { saveBookmark, loadBookmark } from '../utils/bookmarkService';
 import { useAircraftData } from '../context/AircraftDataContext.tsx';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 const BookView: React.FC = () => {
   const { data: AIRCRAFT_DATA, loading } = useAircraftData();
@@ -213,13 +214,12 @@ const BookView: React.FC = () => {
           >
             {/* Aircraft Image */}
             <div className="relative h-[40vh] sm:h-[50vh] bg-slate-100">
-              <img
-                src={aircraft.image}
+              <OptimizedImage
+                imageId={aircraft.id}
                 alt={aircraft.name}
+                transform="detail"
+                loading="lazy"
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = '/images/placeholder.jpg';
-                }}
               />
               <div className="absolute top-4 right-4 bg-yellow-500 text-slate-900 px-3 py-1 rounded-full text-sm font-medium">
                 {aircraft.category}

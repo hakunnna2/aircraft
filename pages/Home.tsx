@@ -7,6 +7,7 @@ import AircraftCard from '../components/AircraftCard.tsx';
 import FilterPanel from '../components/FilterPanel.tsx';
 import { useAircraftData } from '../context/AircraftDataContext.tsx';
 import { ArrowRight, PlaneTakeoff, Info, Filter as FilterIcon } from 'lucide-react';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 interface HomeProps {
   searchQuery: string;
@@ -35,7 +36,7 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
   const [selectedEnginesCount, setSelectedEnginesCount] = useState<number | 'All'>('All');
   const [sortBy, setSortBy] = useState<'name' | 'manufacturer'>('name');
   const [showMobileFilters, setShowMobileFilters] = useState(false);
-  const [displayLimit, setDisplayLimit] = useState(15);
+  const [displayLimit, setDisplayLimit] = useState(9);
   const isInitialMount = useRef(true);
   const hasScrolledOnce = useRef(false);
 
@@ -126,7 +127,7 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
 
   // Reset display limit when filters change
   useEffect(() => {
-    setDisplayLimit(15);
+    setDisplayLimit(9);
   }, [searchQuery, selectedCategory, selectedEngine, selectedCountry, selectedEnginesCount, sortBy]);
 
   const resetFilters = () => {
@@ -135,7 +136,7 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
     setSelectedCountry('All');
     setSelectedEnginesCount('All');
     setSortBy('name');
-    setDisplayLimit(15);
+    setDisplayLimit(9);
   };
 
   if (loading) {
@@ -209,7 +210,14 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
               }}
               className="group cursor-pointer relative rounded-2xl overflow-hidden aspect-video shadow-md hover:shadow-2xl transition-all duration-300"
             >
-              <img src={cat.image} alt={cat.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <OptimizedImage 
+                imagePath={cat.image} 
+                type="category"
+                alt={cat.title} 
+                transform="thumbnail"
+                loading="eager" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+              />
               <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/10 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
               <div className="absolute inset-0 p-5 md:p-6 text-white w-full flex flex-col justify-between">
                 <div>
@@ -284,20 +292,20 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
             {filteredAircraft.length > 0 ? (
               <>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                  {filteredAircraft.slice(0, displayLimit).map((aircraft) => (
-                    <AircraftCard key={aircraft.id} aircraft={aircraft} />
+                  {filteredAircraft.slice(0, displayLimit).map((aircraft, index) => (
+                    <AircraftCard key={aircraft.id} aircraft={aircraft} priority={index < 6} />
                   ))}
                 </div>
                 
                 {filteredAircraft.length > displayLimit && (
                   <div className="flex justify-center mt-8">
                     <button
-                      onClick={() => setDisplayLimit(prev => prev + 15)}
+                      onClick={() => setDisplayLimit(prev => prev + 9)}
                       className="px-8 py-3.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-all shadow-lg active:scale-95 flex items-center gap-2"
                     >
                       Voir plus
                       <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">
-                        +{Math.min(15, filteredAircraft.length - displayLimit)}
+                        +{Math.min(9, filteredAircraft.length - displayLimit)}
                       </span>
                     </button>
                   </div>

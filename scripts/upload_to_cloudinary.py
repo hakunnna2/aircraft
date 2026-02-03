@@ -149,17 +149,26 @@ def upload_images(images_dir: Path, folder_name: str = "aircraft"):
 def main():
     """Main upload function"""
     script_dir = Path(__file__).parent
-    images_dir = script_dir.parent / "public" / "images" / "aircraft"
-    
-    if not images_dir.exists():
-        print("[ERROR] Images directory not found: " + str(images_dir))
-        return
+    aircraft_dir = script_dir.parent / "public" / "images" / "aircraft"
+    categories_dir = script_dir.parent / "public" / "images" / "categories"
     
     print("="*60)
     print("Cloudinary Image Uploader")
     print("="*60)
     
-    upload_images(images_dir, folder_name="aircraft")
+    # Upload aircraft images
+    if aircraft_dir.exists():
+        print("\n[INFO] Uploading aircraft images...")
+        upload_images(aircraft_dir, folder_name="aircraft")
+    else:
+        print("[ERROR] Aircraft images directory not found: " + str(aircraft_dir))
+    
+    # Upload category images
+    if categories_dir.exists():
+        print("\n[INFO] Uploading category images...")
+        upload_images(categories_dir, folder_name="categories")
+    else:
+        print("[WARNING] Categories images directory not found: " + str(categories_dir))
 
 if __name__ == "__main__":
     main()

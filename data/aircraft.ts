@@ -14936,9 +14936,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
   },
 ];
 
-console.log('AIRCRAFT_DATA_RAW length:', AIRCRAFT_DATA_RAW.length);
-console.log('AIRCRAFT_DATA_RAW first 5:', AIRCRAFT_DATA_RAW.slice(0, 5).map(a => a?.name || 'undefined'));
-
 const AIRCRAFT_DATA_DEDUPED: Omit<Aircraft, 'image'>[] = (() => {
   const seenNames = new Set<string>();
   return AIRCRAFT_DATA_RAW.filter(aircraft => {
@@ -14949,11 +14946,7 @@ const AIRCRAFT_DATA_DEDUPED: Omit<Aircraft, 'image'>[] = (() => {
   });
 })();
 
-console.log('AIRCRAFT_DATA_DEDUPED length:', AIRCRAFT_DATA_DEDUPED.length);
-
 export const AIRCRAFT_DATA: Aircraft[] = AIRCRAFT_DATA_DEDUPED.map(aircraft => ({
   ...aircraft,
   image: `/images/aircraft/${aircraft.id}.jpg`
 }));
-
-console.log('AIRCRAFT_DATA final length:', AIRCRAFT_DATA.length);

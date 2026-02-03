@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { getCloudinaryUrl, getResponsiveSrcSet, isCloudinaryEnabled } from '../utils/cloudinaryConfig';
+import { getCloudinaryUrl, getResponsiveSrcSet, isCloudinaryEnabled, getCategoryCloudinaryUrl, getCategoryResponsiveSrcSet } from '../utils/cloudinaryConfig';
 
 interface OptimizedImageProps {
-  imageId: string;
+  imageId?: string;
+  imagePath?: string; // For category images with full path
   alt: string;
   className?: string;
   transform?: 'thumbnail' | 'detail' | 'hero' | 'placeholder';
   loading?: 'lazy' | 'eager';
   onError?: () => void;
+  type?: 'aircraft' | 'category'; // Specify image type
 }
 
 /**
@@ -16,11 +18,13 @@ interface OptimizedImageProps {
  */
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   imageId,
+  imagePath,
   alt,
   className = '',
   transform = 'thumbnail',
   loading = 'lazy',
-  onError
+  onError,
+  type = 'aircraft'
 }) => {
   const [hasError, setHasError] = useState(false);
   const [useFallback, setUseFallback] = useState(!isCloudinaryEnabled());
@@ -56,7 +60,19 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   // Use local images as fallback
   if (useFallback) {
-    const localPath = `/images/aircraft/${imageId}.jpg`;
+    let localPath: string;
+    
+    if (type === 'category' && imagePath) {
+      // Category image with full path
+      localPath = imagePath;
+    } else if (imageId) {
+      // Aircraft image with ID
+      localPath = `/images/aircraft/${imageId}.jpg`;
+    } else {
+      // Fallback to imagePath
+      localPath = imagePath || '';
+    }
+    
     return (
       <img
         src={localPath}
@@ -69,8 +85,20 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }
 
   // Use Cloudinary with responsive images
-  const src = getCloudinaryUrl(imageId, transform);
-  const srcSet = getResponsiveSrcSet(imageId);
+  let src: string;
+  let srcSet: string;
+  
+  if (type === 'category' && imagePath) {
+    src = getCategoryCloudinaryUrl(imagePath, transform);
+    srcSet = getCategoryResponsiveSrcSet(imagePath);
+  } else if (imageId) {
+    src = getCloudinaryUrl(imageId, transform);
+    srcSet = getResponsiveSrcSet(imageId);
+  } else {
+    // Fallback
+    src = imagePath || '';
+    srcSet = '';
+  }
 
   return (
     <img
