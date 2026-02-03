@@ -1,10 +1,11 @@
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { CATEGORIES, AIRCRAFT_DATA } from '../data/aircraft.ts';
+import { CATEGORIES } from '../data/aircraft.ts';
 import { AircraftCategory, EngineType } from '../types.ts';
 import AircraftCard from '../components/AircraftCard.tsx';
 import FilterPanel from '../components/FilterPanel.tsx';
+import { useAircraftData } from '../context/AircraftDataContext.tsx';
 import { ArrowRight, PlaneTakeoff, Info, Filter as FilterIcon } from 'lucide-react';
 
 interface HomeProps {
@@ -12,6 +13,8 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ searchQuery }) => {
+  const { data: AIRCRAFT_DATA } = useAircraftData();
+  
     // Scroll to library section when search is active
     useEffect(() => {
       if (searchQuery && searchQuery.trim().length > 0) {

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AIRCRAFT_DATA } from '../data/aircraft.ts';
+import { useAircraftData } from '../context/AircraftDataContext.tsx';
 import { Map, MapPin } from 'lucide-react';
 
 const geoUrl = 'https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson';
@@ -210,6 +210,7 @@ type GeoJSON = {
 };
 
 const MapView: React.FC = () => {
+  const { data: AIRCRAFT_DATA } = useAircraftData();
   const navigate = useNavigate();
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);

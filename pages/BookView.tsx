@@ -1,15 +1,16 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { AIRCRAFT_DATA } from '../data/aircraft.ts';
 import { AircraftCategory, EngineType } from '../types.ts';
 import { BookOpen, Filter, Bookmark, BookmarkCheck } from 'lucide-react';
 import { saveBookmark, loadBookmark } from '../utils/bookmarkService';
+import { useAircraftData } from '../context/AircraftDataContext.tsx';
 
 const BookView: React.FC = () => {
+  const { data: AIRCRAFT_DATA } = useAircraftData();
   const [selectedCategory, setSelectedCategory] = useState<AircraftCategory | 'All'>('All');
   const [selectedEngine, setSelectedEngine] = useState<EngineType | 'All'>('All');
   const [showFilters, setShowFilters] = useState(false);
   const [bookmarkedId, setBookmarkedId] = useState<string | null>(null);
-  const [orderIds, setOrderIds] = useState<string[]>(AIRCRAFT_DATA.map((aircraft) => aircraft.id));
+  const [orderIds, setOrderIds] = useState<string[]>(AIRCRAFT_DATA.length > 0 ? AIRCRAFT_DATA.map((aircraft) => aircraft.id) : []);
   const [isLoaded, setIsLoaded] = useState(false);
   const aircraftRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 

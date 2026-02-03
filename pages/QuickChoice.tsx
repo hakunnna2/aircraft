@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, Check, X, RotateCcw, Zap } from 'lucide-react';
-import { AIRCRAFT_DATA } from '../data/aircraft.ts';
+import { useAircraftData } from '../context/AircraftDataContext.tsx';
 import { saveGameScore } from '../utils/gameProgressService';
 
 interface GameAircraft {
@@ -12,6 +12,7 @@ interface GameAircraft {
 }
 
 const QuickChoice: React.FC = () => {
+  const { data: AIRCRAFT_DATA } = useAircraftData();
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AIRCRAFT_DATA } from '../data/aircraft.ts';
+import { useAircraftData } from '../context/AircraftDataContext.tsx';
 import { Heart, ArrowLeft } from 'lucide-react';
 import { loadFavorites, toggleFavorite } from '../utils/favoritesService';
 import AircraftCard from '../components/AircraftCard';
 
 const FavoritesView: React.FC = () => {
+  const { data: AIRCRAFT_DATA } = useAircraftData();
   const navigate = useNavigate();
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);

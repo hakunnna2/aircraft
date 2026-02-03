@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, Check, X, RotateCcw } from 'lucide-react';
-import { AIRCRAFT_DATA } from '../data/aircraft.ts';
+import { useAircraftData } from '../context/AircraftDataContext.tsx';
 
 interface GameAircraft {
   id: string;
@@ -17,6 +17,7 @@ interface GameAircraft {
 }
 
 const SpecsChallenge: React.FC = () => {
+  const { data: AIRCRAFT_DATA } = useAircraftData();
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);

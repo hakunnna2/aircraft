@@ -2,7 +2,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Plane, Search, Menu, X, Shuffle, Map, Gamepad2, Maximize, Minimize, BookOpen, Heart } from 'lucide-react';
-import { AIRCRAFT_DATA } from '../data/aircraft.ts';
+import { useAircraftData } from '../context/AircraftDataContext.tsx';
 import { useDebounce } from '../hooks/useDebounce.ts';
 import { sanitizeInput } from '../utils/helpers.ts';
 
@@ -11,6 +11,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
+  const { data: AIRCRAFT_DATA } = useAircraftData();
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);

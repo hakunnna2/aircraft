@@ -2,7 +2,8 @@
 import React, { useMemo, useCallback } from 'react';
 import { EngineType, AircraftCategory } from '../types.ts';
 import { Filter, RotateCcw } from 'lucide-react';
-import { AIRCRAFT_DATA, CATEGORIES } from '../data/aircraft.ts';
+import { CATEGORIES } from '../data/aircraft.ts';
+import { useAircraftData } from '../context/AircraftDataContext.tsx';
 
 interface FilterPanelProps {
   selectedCategory: AircraftCategory | 'All';
@@ -31,6 +32,8 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
   setSortBy,
   onReset
 }) => {
+  const { data: AIRCRAFT_DATA } = useAircraftData();
+  
   // Create memoized category list
   const categories: {id: AircraftCategory | 'All', label: string}[] = useMemo(() => [
     { id: 'All', label: 'Tous' },

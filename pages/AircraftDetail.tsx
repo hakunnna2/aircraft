@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { AIRCRAFT_DATA } from '../data/aircraft.ts';
+import { useAircraftData } from '../context/AircraftDataContext.tsx';
 import { 
   ChevronLeft, 
   MapPin, 
@@ -17,6 +17,7 @@ import {
 import { loadFavorites, toggleFavorite } from '../utils/favoritesService';
 
 const AircraftDetail: React.FC = () => {
+  const { data: AIRCRAFT_DATA } = useAircraftData();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const aircraft = AIRCRAFT_DATA.find((a) => a.id === id);

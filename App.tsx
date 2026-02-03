@@ -4,6 +4,7 @@ import ErrorBoundary from './components/ErrorBoundary.tsx';
 import Navbar from './components/Navbar.tsx';
 import ScrollToTopButton from './components/ScrollToTop.tsx';
 import { AnimatedLogin } from './components/AnimatedLogin';
+import { AircraftDataProvider } from './context/AircraftDataContext.tsx';
 
 const Home = lazy(() => import('./pages/Home.tsx'));
 const AircraftDetail = lazy(() => import('./pages/AircraftDetail.tsx'));
@@ -125,11 +126,12 @@ const App: React.FC = () => {
 
   return (
     <ErrorBoundary>
-      <Router>
-        <ScrollToTop />
-        <ScrollToTopButton />
-        <div className="min-h-screen flex flex-col bg-slate-50">
-          <Navbar onSearch={setSearchQuery} />
+      <AircraftDataProvider>
+        <Router>
+          <ScrollToTop />
+          <ScrollToTopButton />
+          <div className="min-h-screen flex flex-col bg-slate-50">
+            <Navbar onSearch={setSearchQuery} />
           
           <main className="flex-grow">
             <Suspense fallback={
@@ -155,6 +157,7 @@ const App: React.FC = () => {
           </main>
       </div>
     </Router>
+    </AircraftDataProvider>
     </ErrorBoundary>
   );
 };
