@@ -11,7 +11,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
-  const { data: AIRCRAFT_DATA } = useAircraftData();
+  const { data: AIRCRAFT_DATA, loading } = useAircraftData();
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -63,6 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
   };
 
   const handleRandomAircraft = () => {
+    if (loading || AIRCRAFT_DATA.length === 0) return;
     const randomIndex = Math.floor(Math.random() * AIRCRAFT_DATA.length);
     const randomAircraft = AIRCRAFT_DATA[randomIndex];
     setSearchQuery('');
@@ -74,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
 
   // Use memoized filtered results with debounced query to avoid recalculating on every keystroke
   const filteredAircraft = useMemo(() => {
-    if (debouncedQuery.length === 0) return [];
+    if (loading || debouncedQuery.length === 0) return [];
     
     return AIRCRAFT_DATA
       .filter((a) => 
@@ -82,7 +83,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
         a.manufacturer.toLowerCase().includes(debouncedQuery.toLowerCase())
       )
       .slice(0, 5);
-  }, [debouncedQuery]);
+  }, [debouncedQuery, loading, AIRCRAFT_DATA.length]);
 
   return (
     <>

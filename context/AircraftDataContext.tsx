@@ -5,6 +5,7 @@ interface AircraftDataState {
   data: Aircraft[];
   loading: boolean;
   error: Error | null;
+  startLoading?: () => void;
 }
 
 const AircraftDataContext = createContext<AircraftDataState>({
@@ -36,39 +37,48 @@ const loadAircraftData = async (): Promise<Aircraft[]> => {
 export const AircraftDataProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [state, setState] = useState<AircraftDataState>({
     data: aircraftDataCache || [],
-    loading: !aircraftDataCache,
+    loading: false, // Start as not loading - will load on demand
     error: null
   });
+  const [hasStartedLoading, setHasStartedLoading] = useState(!!aircraftDataCache);
 
-  useEffect(() => {
-    let isMounted = true;
+  // Expose a method to trigger loading
+  const startLoading = () => {
+    if (aircraftDataCache || hasStartedLoading) return;
+    
+    setHasStartedLoading(true);
+    setState(prev => ({ ...prev, loading: true }));
+    
+    loadAircraftData()
+      .then(data => {
+        setState({ data, loading: false, error: null });
+      })
+      .catch(error => {
+        setState({ data: [], loading: false, error });
+      });
+  };
 
-    if (!aircraftDataCache) {
-      loadAircraftData()
-        .then(data => {
-          if (isMounted) {
-            setState({ data, loading: false, error: null });
-          }
-        })
-        .catch(error => {
-          if (isMounted) {
-            setState({ data: [], loading: false, error });
-          }
-        });
-    }
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  const value = useMemo(() => state, [state.data.length, state.loading, state.error]);
+  const value = useMemo(() => ({
+    ...state,
+    startLoading
+  }), [state.data.length, state.loading, state.error]);
 
   return (
-    <AircraftDataContext.Provider value={value}>
+    <AircraftDataContext.Provider value={value as any}>
       {children}
     </AircraftDataContext.Provider>
   );
 };
 
-export const useAircraftData = () => useContext(AircraftDataContext);
+export const useAircraftData = () => {
+  const context = useContext(AircraftDataContext);
+  
+  // Automatically trigger loading when hook is used
+  useEffect(() => {
+    if (!aircraftDataCache && !(context as any).loading) {
+      (context as any).startLoading?.();
+    }
+  }, []);
+  
+  return context;
+};
