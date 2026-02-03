@@ -46,7 +46,10 @@ export const getCloudinaryUrl = (imageId: string, transform: keyof typeof IMAGE_
  */
 export const getCategoryCloudinaryUrl = (imagePath: string, transform: keyof typeof IMAGE_TRANSFORMS = 'thumbnail'): string => {
   // Extract filename from path like '/images/categories/Avions de Ligne.jpg'
-  const filename = imagePath.split('/').pop() || imagePath;
+  let filename = imagePath.split('/').pop() || imagePath;
+  
+  // Remove extension and sanitize (replace & with _)
+  const nameWithoutExt = filename.split('.')[0].replace(/&/g, '_').replace(/\?/g, '_').replace(/#/g, '_');
   
   // If using local images (fallback), return the original path
   if (CLOUDINARY_CLOUD_NAME === 'YOUR_CLOUD_NAME') {
@@ -54,8 +57,8 @@ export const getCategoryCloudinaryUrl = (imagePath: string, transform: keyof typ
   }
   
   const transformation = IMAGE_TRANSFORMS[transform];
-  // Cloudinary folder structure: categories/filename
-  return `${CLOUDINARY_BASE_URL}/${transformation}/categories/${filename}`;
+  // Cloudinary folder structure: categories/sanitized_filename
+  return `${CLOUDINARY_BASE_URL}/${transformation}/categories/${nameWithoutExt}`;
 };
 
 /**
@@ -84,11 +87,12 @@ export const getResponsiveSrcSet = (imageId: string): string => {
 export const getCategoryResponsiveSrcSet = (imagePath: string): string => {
   if (!isCloudinaryEnabled()) return '';
   
-  const filename = imagePath.split('/').pop() || imagePath;
+  let filename = imagePath.split('/').pop() || imagePath;
+  const nameWithoutExt = filename.split('.')[0].replace(/&/g, '_').replace(/\?/g, '_').replace(/#/g, '_');
   
   return [
-    `${CLOUDINARY_BASE_URL}/c_fill,w_400,h_300,q_auto,f_auto/categories/${filename} 400w`,
-    `${CLOUDINARY_BASE_URL}/c_fill,w_800,h_600,q_auto,f_auto/categories/${filename} 800w`,
-    `${CLOUDINARY_BASE_URL}/c_fill,w_1200,h_900,q_auto,f_auto/categories/${filename} 1200w`
+    `${CLOUDINARY_BASE_URL}/c_fill,w_400,h_300,q_auto,f_auto/categories/${nameWithoutExt} 400w`,
+    `${CLOUDINARY_BASE_URL}/c_fill,w_800,h_600,q_auto,f_auto/categories/${nameWithoutExt} 800w`,
+    `${CLOUDINARY_BASE_URL}/c_fill,w_1200,h_900,q_auto,f_auto/categories/${nameWithoutExt} 1200w`
   ].join(', ');
 };

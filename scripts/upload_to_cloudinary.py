@@ -80,6 +80,9 @@ def upload_images(images_dir: Path, folder_name: str = "aircraft"):
     
     for i, image_path in enumerate(image_files, 1):
         image_id = image_path.stem  # filename without extension
+        # Sanitize public_id: replace invalid characters with underscores
+        # Cloudinary doesn't allow: &, ?, #, etc.
+        sanitized_id = image_id.replace('&', '_').replace('?', '_').replace('#', '_')
         
         max_retries = 3
         retry_count = 0
@@ -92,7 +95,7 @@ def upload_images(images_dir: Path, folder_name: str = "aircraft"):
                 
                 result = cloudinary.uploader.upload(
                     str(image_path),
-                    public_id=image_id,
+                    public_id=sanitized_id,
                     folder=folder_name,
                     overwrite=True,  # Replace if exists to keep exact names
                     unique_filename=False,  # Don't add random suffixes
