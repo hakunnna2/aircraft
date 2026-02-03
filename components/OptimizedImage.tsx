@@ -103,8 +103,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   return (
     <img
       src={src}
-      srcSet={srcSet || undefined}
-      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      srcSet={srcSet && srcSet.trim() ? srcSet : undefined}
+      sizes={srcSet && srcSet.trim() ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" : undefined}
       alt={alt}
       className={className}
       loading={loading}
