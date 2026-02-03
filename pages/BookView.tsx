@@ -10,6 +10,7 @@ const BookView: React.FC = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [bookmarkedId, setBookmarkedId] = useState<string | null>(null);
   const [orderIds, setOrderIds] = useState<string[]>(AIRCRAFT_DATA.map((aircraft) => aircraft.id));
+  const [isLoaded, setIsLoaded] = useState(false);
   const aircraftRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   // Load bookmark data from Firebase on mount
@@ -27,12 +28,15 @@ const BookView: React.FC = () => {
           setOrderIds([...knownIds, ...newIds]);
         }
       }
+      setIsLoaded(true);
     };
     loadData();
   }, []);
 
-  // Save to Firebase when bookmark or order changes
+  // Save to Firebase when bookmark or order changes (only after initial load)
   useEffect(() => {
+    if (!isLoaded) return;
+
     const allIds = AIRCRAFT_DATA.map((aircraft) => aircraft.id);
     const knownIds = orderIds.filter((id) => allIds.includes(id));
     const newIds = allIds.filter((id) => !knownIds.includes(id));
@@ -48,7 +52,7 @@ const BookView: React.FC = () => {
 
     // Save to Firebase only
     saveBookmark(bookmarkedId, nextOrder);
-  }, [orderIds, bookmarkedId]);
+  }, [orderIds, bookmarkedId, isLoaded]);
 
   const aircraftById = useMemo(() => {
     return new Map(AIRCRAFT_DATA.map((aircraft) => [aircraft.id, aircraft]));
