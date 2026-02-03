@@ -11,20 +11,8 @@ const BookView: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<AircraftCategory | 'All'>('All');
   const [selectedEngine, setSelectedEngine] = useState<EngineType | 'All'>('All');
   const [showFilters, setShowFilters] = useState(false);
-  const [bookmarkedId, setBookmarkedId] = useState<string | null>(
-    localStorage.getItem(BOOKMARK_KEY)
-  );
-  const [orderIds, setOrderIds] = useState<string[]>(() => {
-    try {
-      const saved = JSON.parse(localStorage.getItem(ORDER_KEY) || '[]');
-      if (Array.isArray(saved) && saved.every((id) => typeof id === 'string')) {
-        return saved as string[];
-      }
-    } catch {
-      // Ignore invalid stored data
-    }
-    return AIRCRAFT_DATA.map((aircraft) => aircraft.id);
-  });
+  const [bookmarkedId, setBookmarkedId] = useState<string | null>(null);
+  const [orderIds, setOrderIds] = useState<string[]>(AIRCRAFT_DATA.map((aircraft) => aircraft.id));
   const aircraftRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   // Load bookmark data from Firebase on mount

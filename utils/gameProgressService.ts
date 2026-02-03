@@ -9,7 +9,31 @@ export interface GameScore {
 }
 
 export interface GameProgress {
+  quickFire: {
+    bestScore: number;
+    totalGames: number;
+    lastPlayed: number;
+    scores: GameScore[];
+  };
+  quiz: {
+    bestScore: number;
+    totalGames: number;
+    lastPlayed: number;
+    scores: GameScore[];
+  };
+  multipleChoice: {
+    bestScore: number;
+    totalGames: number;
+    lastPlayed: number;
+    scores: GameScore[];
+  };
   quickChoice: {
+    bestScore: number;
+    totalGames: number;
+    lastPlayed: number;
+    scores: GameScore[];
+  };
+  specsChallenge: {
     bestScore: number;
     totalGames: number;
     lastPlayed: number;
