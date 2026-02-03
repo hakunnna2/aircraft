@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Aircraft } from '../types.ts';
 import { ChevronRight } from 'lucide-react';
+import { OptimizedImage } from './OptimizedImage';
 
 interface AircraftCardProps {
   aircraft: Aircraft;
@@ -34,9 +35,10 @@ const AircraftCard: React.FC<AircraftCardProps> = ({ aircraft }) => {
     >
       <div className="relative h-48 overflow-hidden bg-slate-200">
         {!imageError ? (
-          <img 
-            src={aircraft.image} 
-            alt={aircraft.name} 
+          <OptimizedImage
+            imageId={aircraft.id}
+            alt={aircraft.name}
+            transform="thumbnail"
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             onError={() => setImageError(true)}
