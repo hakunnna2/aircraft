@@ -35,7 +35,24 @@ const countryNameMap: Record<string, string> = {
   'Pakistan': 'Pakistan',
   'Turquie': 'Turkey',
   'Émirats arabes unis': 'United Arab Emirates',
-  'USA / Royaume-Uni': 'United States of America'
+  'USA / Royaume-Uni': 'United States of America',
+  'Finlande': 'Finland',
+  'Nouvelle-Zélande': 'New Zealand',
+  'Chili': 'Chile',
+  'Iran': 'Iran',
+  'Taïwan': 'Taiwan',
+  'Islande': 'Iceland',
+  'Belgique': 'Belgium',
+  'Danemark': 'Denmark',
+  'Hongrie': 'Hungary',
+  'Norvège': 'Norway',
+  'Bulgarie': 'Bulgaria',
+  'Croatie': 'Croatia',
+  'Slovénie': 'Slovenia',
+  'Bosnie-Herzégovine': 'Bosnia and Herzegovina',
+  'Monténégro': 'Montenegro',
+  'Macedoine': 'North Macedonia',
+  'Serbie': 'Serbia'
 };
 
 const countryCodeMap: Record<string, string> = {
@@ -74,6 +91,18 @@ const countryCodeMap: Record<string, string> = {
   'Chile': 'cl',
   'Iran': 'ir',
   'Finland': 'fi',
+  'Iceland': 'is',
+  'Belgium': 'be',
+  'Denmark': 'dk',
+  'Hungary': 'hu',
+  'Norway': 'no',
+  'Bulgaria': 'bg',
+  'Croatia': 'hr',
+  'Slovenia': 'si',
+  'Bosnia and Herzegovina': 'ba',
+  'Montenegro': 'me',
+  'North Macedonia': 'mk',
+  'Taiwan': 'tw',
   
   // French names (from aircraft data)
   'USA': 'us',
@@ -107,6 +136,18 @@ const countryCodeMap: Record<string, string> = {
   'Finlande': 'fi',
   'UK': 'gb',
   'Taïwan': 'tw',
+  'Islande': 'is',
+  'Belgique': 'be',
+  'Danemark': 'dk',
+  'Hongrie': 'hu',
+  'Norvège': 'no',
+  'Bulgarie': 'bg',
+  'Croatie': 'hr',
+  'Slovénie': 'si',
+  'Bosnie-Herzégovine': 'ba',
+  'Monténégro': 'me',
+  'Macedoine': 'mk',
+  'Serbie': 'rs',
   
   // Multi-country (use first country flag)
   'Allemagne / Italie / Espagne / UK': 'de',
@@ -186,6 +227,7 @@ const MapView: React.FC = () => {
 
     AIRCRAFT_DATA.forEach((aircraft) => {
       const mapName = countryNameMap[aircraft.country] ?? aircraft.country;
+      // Use the mapped GeoJSON name as the key for countries on the map
       if (!map[mapName]) {
         map[mapName] = { displayName: aircraft.country, count: 0, aircraft: [] };
       }
@@ -201,6 +243,20 @@ const MapView: React.FC = () => {
     return Math.max(1, ...counts);
   }, [byMapName]);
 
+  // Create a map from aircraft country names to data
+  const byAircraftCountry = useMemo(() => {
+    const map: Record<string, { displayName: string; count: number; aircraft: Array<(typeof AIRCRAFT_DATA)[number]> }> = {};
+    AIRCRAFT_DATA.forEach((aircraft) => {
+      const countryName = aircraft.country;
+      if (!map[countryName]) {
+        map[countryName] = { displayName: aircraft.country, count: 0, aircraft: [] };
+      }
+      map[countryName].count += 1;
+      map[countryName].aircraft.push(aircraft);
+    });
+    return map;
+  }, []);
+
   const getFill = (name: string) => {
     const count = byMapName[name]?.count ?? 0;
     if (!count) return '#CBD5E1';
@@ -208,7 +264,10 @@ const MapView: React.FC = () => {
     return `hsl(45, 95%, ${lightness}%)`;
   };
 
-  const selectedData = selectedCountry ? byMapName[selectedCountry] : null;
+  // Get selected data from either map name or aircraft country name
+  const selectedData = selectedCountry 
+    ? (byMapName[selectedCountry] || byAircraftCountry[selectedCountry])
+    : null;
 
   const countriesOnMap = useMemo(() => {
     if (!geoData) return new Set<string>();
