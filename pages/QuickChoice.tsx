@@ -124,7 +124,7 @@ const QuickChoice: React.FC = () => {
 
   if (gameAircraft.length === 0 || options.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-white flex items-center justify-center p-4">
         <div className="animate-pulse text-center">
           <div className="w-16 h-16 mx-auto bg-yellow-400 rounded-full mb-4" />
           <p className="text-slate-600">Préparation du jeu rapide...</p>
@@ -156,10 +156,10 @@ const QuickChoice: React.FC = () => {
     }
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-slate-50 to-orange-50 p-4">
+      <div className="min-h-screen bg-white p-4">
         <button
           onClick={() => navigate('/quiz')}
-          className="flex items-center space-x-2 mb-8 text-slate-700 hover:text-yellow-600 transition-colors font-semibold"
+          className="flex items-center space-x-2 mb-8 text-white bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-lg transition-colors font-semibold"
         >
           <ChevronLeft size={20} />
           <span>Menu</span>
@@ -230,14 +230,14 @@ const QuickChoice: React.FC = () => {
   const correctOptionIndex = options.findIndex((opt) => opt.id === aircraft.id);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-slate-50 to-orange-50">
+    <div className="min-h-screen bg-white">
       {/* Fixed Header - Below Navbar */}
-      <div className="fixed top-16 sm:top-20 left-0 right-0 z-40 bg-gradient-to-br from-yellow-50 via-slate-50 to-orange-50 border-b border-slate-200/50 backdrop-blur-sm p-4">
+      <div className="fixed top-16 sm:top-20 left-0 right-0 z-40 bg-white border-b border-slate-200/50 backdrop-blur-sm p-4">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center justify-between mb-6">
             <button
               onClick={() => navigate('/quiz')}
-              className="flex items-center space-x-2 text-slate-700 hover:text-yellow-600 transition-colors font-semibold"
+              className="flex items-center space-x-2 text-white bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-lg transition-colors font-semibold"
             >
               <ChevronLeft size={20} />
               <span>Menu</span>

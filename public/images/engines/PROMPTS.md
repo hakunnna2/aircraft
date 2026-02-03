@@ -7,6 +7,12 @@ Save images in: `public/images/engines/`
 ### jet.png - JET ENGINE / RÉACTEUR
 Ultra-detailed 4K technical cutaway of a jet engine, showing intake, compressor stages, combustion chamber glow, turbine blades, and exhaust flow. Clean engineering illustration style, realistic materials, high contrast, dark background, 16:9.
 
+### turbofan.png - TURBOFAN ENGINE / MOTEUR TURBOFAN
+4K technical cutaway of a modern turbofan engine. Show high-pressure compressor, large intake fan at front, combustion chamber with flame, turbine stages, and exhaust. Emphasize the fan bypass airflow around the core. Modern realistic style, high detail, 16:9.
+
+### turbofan-vectorielle.png - TURBOFAN WITH THRUST VECTORING / TURBOFAN À POUSSÉE VECTORIELLE
+4K technical cutaway of an advanced turbofan engine with thrust vectoring nozzles. Show compressor stages, combustion chamber, turbine blades, and MOST IMPORTANTLY the movable/rotating exhaust nozzles at the rear that can deflect thrust. Highlight nozzle articulation joints. Modern military fighter engine style, ultra-detailed, 16:9.
+
 ### turboprop.png - TURBOPROP ENGINE / TURBOPROPULSEUR
 4K cutaway illustration of a turboprop engine. Show turbine core, reduction gearbox, and propeller hub. Emphasize airflow direction and mechanical shafts. Modern technical diagram look, 16:9.
 

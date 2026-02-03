@@ -39,7 +39,7 @@ const FavoritesView: React.FC = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-white p-4 flex items-center justify-center">
-        <div className="text-slate-700 text-lg">Loading favorites...</div>
+        <div className="text-slate-700 text-lg">Chargement des favoris...</div>
       </div>
     );
   }
@@ -53,18 +53,18 @@ const FavoritesView: React.FC = () => {
           className="flex items-center gap-2 text-yellow-600 hover:text-yellow-700 mb-6 transition"
         >
           <ArrowLeft size={20} />
-          Back
+          Retour
         </button>
 
         <div className="flex items-center gap-3 mb-4">
           <Heart size={32} fill="currentColor" className="text-red-500" />
-          <h1 className="text-4xl font-bold text-slate-900">Favorite Aircraft</h1>
+          <h1 className="text-4xl font-bold text-slate-900">Avions Favoris</h1>
         </div>
 
         <p className="text-slate-600 text-lg">
           {favoriteAircraftList.length === 0
-            ? 'No favorites yet. Start adding aircraft to your favorites!'
-            : `You have ${favoriteAircraftList.length} favorite aircraft`}
+            ? 'Aucun favori pour le moment. Commencez à ajouter des avions à vos favoris!'
+            : `Vous avez ${favoriteAircraftList.length} avion${favoriteAircraftList.length > 1 ? 's' : ''} favori${favoriteAircraftList.length > 1 ? 's' : ''}`}
         </p>
       </div>
 
@@ -80,7 +80,7 @@ const FavoritesView: React.FC = () => {
                 <button
                   onClick={() => handleRemoveFavorite(aircraft.id)}
                   className="absolute top-3 right-3 bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
-                  title="Remove from favorites"
+                  title="Supprimer des favoris"
                 >
                   <Heart size={20} fill="currentColor" />
                 </button>
@@ -93,13 +93,21 @@ const FavoritesView: React.FC = () => {
           <div className="bg-slate-100 rounded-lg p-12 inline-block">
             <Heart size={64} className="text-gray-400 mx-auto mb-4 opacity-50" />
             <p className="text-slate-600 text-xl">
-              Click the heart button on any aircraft to add it to favorites!
+              Cliquez sur le bouton cœur sur n'importe quel avion pour l'ajouter à vos favoris!
             </p>
             <button
-              onClick={() => navigate('/book')}
+              onClick={() => {
+                navigate('/');
+                setTimeout(() => {
+                  const exploreSection = document.getElementById('explore');
+                  if (exploreSection) {
+                    exploreSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }, 300);
+              }}
               className="mt-6 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition"
             >
-              Browse Aircraft
+              Parcourir les Avions
             </button>
           </div>
         </div>

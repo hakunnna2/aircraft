@@ -20,9 +20,9 @@ const GameHistory: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-white flex items-center justify-center p-4">
         <div className="animate-pulse text-center">
-          <div className="w-16 h-16 mx-auto bg-blue-400 rounded-full mb-4" />
+          <div className="w-16 h-16 mx-auto bg-yellow-400 rounded-full mb-4" />
           <p className="text-slate-600">Chargement de l'historique...</p>
         </div>
       </div>
@@ -33,18 +33,18 @@ const GameHistory: React.FC = () => {
   const scores = quickChoiceGame?.scores || [];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+    <div className="min-h-screen bg-white text-slate-900">
       {/* Header */}
-      <div className="bg-slate-900 border-b border-slate-700 shadow-lg">
+      <div className="bg-white border-b border-slate-200 shadow-lg">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <button
             onClick={() => navigate('/quiz')}
-            className="flex items-center gap-2 text-slate-400 hover:text-white mb-4 transition-colors"
+            className="flex items-center gap-2 text-white bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-lg mb-4 transition-colors font-semibold"
           >
             <ChevronLeft size={20} />
             Retour
           </button>
-          <h1 className="text-3xl font-bold flex items-center gap-3">
+          <h1 className="text-3xl font-bold flex items-center gap-3 text-slate-900">
             <BarChart3 size={32} className="text-yellow-400" />
             Historique Quick Choice
           </h1>
@@ -55,17 +55,17 @@ const GameHistory: React.FC = () => {
         {/* Stats Overview */}
         {quickChoiceGame && (
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-            <div className="bg-slate-700 rounded-lg p-6">
-              <div className="text-sm text-slate-400 mb-2">Meilleur Score</div>
+            <div className="bg-slate-100 rounded-lg p-6">
+              <div className="text-sm text-slate-600 mb-2">Meilleur Score</div>
               <div className="text-4xl font-bold text-yellow-400">{quickChoiceGame.bestScore}</div>
             </div>
-            <div className="bg-slate-700 rounded-lg p-6">
-              <div className="text-sm text-slate-400 mb-2">Jeux Joués</div>
+            <div className="bg-slate-100 rounded-lg p-6">
+              <div className="text-sm text-slate-600 mb-2">Jeux Joués</div>
               <div className="text-4xl font-bold text-blue-400">{quickChoiceGame.totalGames}</div>
             </div>
-            <div className="bg-slate-700 rounded-lg p-6">
-              <div className="text-sm text-slate-400 mb-2">Dernier Jeu</div>
-              <div className="text-lg font-semibold">
+            <div className="bg-slate-100 rounded-lg p-6">
+              <div className="text-sm text-slate-600 mb-2">Dernier Jeu</div>
+              <div className="text-lg font-semibold text-slate-900">
                 {quickChoiceGame.lastPlayed > 0
                   ? new Date(quickChoiceGame.lastPlayed).toLocaleDateString('fr-FR')
                   : 'Jamais'}
@@ -75,46 +75,46 @@ const GameHistory: React.FC = () => {
         )}
 
         {/* Game History List */}
-        <div className="bg-slate-800 rounded-lg overflow-hidden">
-          <div className="bg-slate-700 px-6 py-4 border-b border-slate-600">
-            <h3 className="text-lg font-semibold">Historique ({scores.length} jeux)</h3>
+        <div className="bg-slate-50 rounded-lg overflow-hidden border border-slate-200">
+          <div className="bg-slate-100 px-6 py-4 border-b border-slate-200">
+            <h3 className="text-lg font-semibold text-slate-900">Historique ({scores.length} jeux)</h3>
           </div>
 
           {scores.length === 0 ? (
             <div className="px-6 py-12 text-center">
-              <p className="text-slate-400 text-lg">Aucun jeu joué pour le moment</p>
+              <p className="text-slate-600 text-lg">Aucun jeu joué pour le moment</p>
               <button
                 onClick={() => navigate('/quiz/quick-choice')}
-                className="mt-6 px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors"
+                className="mt-6 px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-500 transition-colors"
               >
                 Jouer maintenant
               </button>
             </div>
           ) : (
-            <div className="divide-y divide-slate-700">
+            <div className="divide-y divide-slate-200">
               {[...scores].reverse().map((score, index) => {
                 const date = new Date(score.timestamp);
                 const dateStr = date.toLocaleDateString('fr-FR');
                 const timeStr = date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
                 
                 return (
-                  <div key={index} className="px-6 py-4 hover:bg-slate-700/50 transition-colors">
+                  <div key={index} className="px-6 py-4 hover:bg-slate-100 transition-colors">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                       <div>
-                        <div className="text-lg font-semibold text-yellow-400">
+                        <div className="text-lg font-semibold text-yellow-500">
                           {score.score}/{score.totalQuestions}
                         </div>
-                        <div className="text-sm text-slate-400">
+                        <div className="text-sm text-slate-600">
                           {dateStr} à {timeStr}
                         </div>
                       </div>
                       <div className="flex items-center gap-6">
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-green-400">{score.accuracy}%</div>
-                          <div className="text-xs text-slate-400">Précision</div>
+                          <div className="text-2xl font-bold text-green-500">{score.accuracy}%</div>
+                          <div className="text-xs text-slate-600">Précision</div>
                         </div>
                         <div className="text-right">
-                          <div className="text-sm text-slate-300">{score.totalQuestions} questions</div>
+                          <div className="text-sm text-slate-700">{score.totalQuestions} questions</div>
                         </div>
                       </div>
                     </div>

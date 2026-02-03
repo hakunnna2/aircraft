@@ -1,5 +1,5 @@
 
-export type EngineType = 'Jet' | 'Turboprop' | 'Propfan' | 'Piston' | 'Radial' | 'Ducted Fan' | 'Piston / Turboprop' | 'Radial / Turboprop' | 'Turboprop / Jet' | 'Turbine';
+export type EngineType = 'Jet' | 'Turboprop' | 'Turbofan' | 'Turbofan (Poussée vectorielle)' | 'Propfan' | 'Piston' | 'Radial' | 'Ducted Fan' | 'Piston / Turboprop' | 'Radial / Turboprop' | 'Turboprop / Jet' | 'Turbine';
 export type AircraftCategory = 'Civil Jet Airliners' | 'Civil Turboprop Airliners' | 'Civil Utility' | 'Combat Aircraft' | 'Combat Support Aircraft' | 'Combat Training Aircraft' | 'Helicopters' | 'Private Executive Aircraft' | 'Private Light Aircraft' | 'Unmanned Aerial Vehicle (UAV)';
 
 export interface Aircraft {

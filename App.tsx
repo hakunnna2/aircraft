@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import ErrorBoundary from './components/ErrorBoundary.tsx';
 import Navbar from './components/Navbar.tsx';
 import ScrollToTopButton from './components/ScrollToTop.tsx';
-import PasswordGate from './pages/PasswordGate.tsx';
+import { AnimatedLogin } from './components/AnimatedLogin';
 
 const Home = lazy(() => import('./pages/Home.tsx'));
 const AircraftDetail = lazy(() => import('./pages/AircraftDetail.tsx'));
@@ -43,32 +43,79 @@ const ScrollToTop: React.FC = () => {
 
 const App: React.FC = () => {
   const ACCESS_KEY = 'jp_access_granted';
-  const REFRESH_KEY = 'jp_access_refreshes';
+  const ACCESS_LAST_ACTIVITY_KEY = 'jp_access_last_activity';
+  const SESSION_IDLE_DURATION = 10 * 60 * 1000; // 10 minutes in milliseconds
   const APP_PASSWORD = 'justplane';
   const [isUnlocked, setIsUnlocked] = useState(() => {
     const unlocked = sessionStorage.getItem(ACCESS_KEY) === 'true';
     if (!unlocked) return false;
 
-    const count = Number(sessionStorage.getItem(REFRESH_KEY) ?? '0');
-    if (count >= 5) {
+    // Check if session has expired due to inactivity
+    const lastActivity = sessionStorage.getItem(ACCESS_LAST_ACTIVITY_KEY);
+    if (!lastActivity) {
       sessionStorage.removeItem(ACCESS_KEY);
-      sessionStorage.setItem(REFRESH_KEY, '0');
       return false;
     }
 
-    sessionStorage.setItem(REFRESH_KEY, String(count + 1));
+    const elapsed = Date.now() - parseInt(lastActivity);
+    if (elapsed > SESSION_IDLE_DURATION) {
+      sessionStorage.removeItem(ACCESS_KEY);
+      sessionStorage.removeItem(ACCESS_LAST_ACTIVITY_KEY);
+      return false;
+    }
+
     return true;
   });
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Track inactivity and enforce 10-minute idle timeout
+  useEffect(() => {
+    if (!isUnlocked) return;
+
+    const updateLastActivity = () => {
+      sessionStorage.setItem(ACCESS_LAST_ACTIVITY_KEY, String(Date.now()));
+    };
+
+    const checkSession = setInterval(() => {
+      const lastActivity = sessionStorage.getItem(ACCESS_LAST_ACTIVITY_KEY);
+      if (!lastActivity) {
+        setIsUnlocked(false);
+        return;
+      }
+
+      const elapsed = Date.now() - parseInt(lastActivity);
+      if (elapsed > SESSION_IDLE_DURATION) {
+        sessionStorage.removeItem(ACCESS_KEY);
+        sessionStorage.removeItem(ACCESS_LAST_ACTIVITY_KEY);
+        setIsUnlocked(false);
+      }
+    }, 1000); // Check every second
+
+    const events: Array<keyof WindowEventMap> = [
+      'mousemove',
+      'mousedown',
+      'keydown',
+      'scroll',
+      'touchstart'
+    ];
+
+    events.forEach((event) => window.addEventListener(event, updateLastActivity, { passive: true }));
+
+    return () => {
+      clearInterval(checkSession);
+      events.forEach((event) => window.removeEventListener(event, updateLastActivity));
+    };
+  }, [isUnlocked]);
+
   if (!isUnlocked) {
     return (
       <ErrorBoundary>
-        <PasswordGate
-          accessKey={ACCESS_KEY}
+        <AnimatedLogin
           password={APP_PASSWORD}
+          accessKey={ACCESS_KEY}
           onSuccess={() => {
-            sessionStorage.setItem(REFRESH_KEY, '0');
+            sessionStorage.setItem(ACCESS_KEY, 'true');
+            sessionStorage.setItem(ACCESS_LAST_ACTIVITY_KEY, String(Date.now()));
             setIsUnlocked(true);
           }}
         />

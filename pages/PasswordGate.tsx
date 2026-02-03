@@ -49,13 +49,13 @@ const PasswordGate: React.FC<PasswordGateProps> = ({ password, accessKey, onSucc
                   setValue(e.target.value);
                   if (error) setError('');
                 }}
-                className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white shadow-sm"
+                className="w-full px-4 py-3 pr-16 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent bg-white shadow-sm"
                 placeholder="••••••••"
               />
               <button
                 type="button"
                 onClick={() => setShow(!show)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500 hover:text-slate-700"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-500 hover:text-slate-700 font-medium"
               >
                 {show ? 'Masquer' : 'Afficher'}
               </button>

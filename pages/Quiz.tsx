@@ -143,10 +143,10 @@ const Quiz: React.FC = () => {
     }
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-slate-50 to-blue-50 p-4">
+      <div className="min-h-screen bg-white p-4">
         <button
           onClick={() => navigate('/')}
-          className="flex items-center space-x-2 mb-8 text-slate-700 hover:text-yellow-600 transition-colors font-semibold"
+          className="flex items-center space-x-2 mb-8 text-white bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-lg transition-colors font-semibold"
         >
           <ChevronLeft size={20} />
           <span>Retour</span>
@@ -203,13 +203,13 @@ const Quiz: React.FC = () => {
   const progress = ((currentIndex + 1) / quizAircraft.length) * 100;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-slate-50 to-yellow-50 p-4">
+    <div className="min-h-screen bg-white p-4">
       {/* Header */}
       <div className="max-w-2xl mx-auto mb-8">
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-slate-700 hover:text-yellow-600 transition-colors font-semibold"
+            className="flex items-center space-x-2 text-white bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-lg transition-colors font-semibold"
           >
             <ChevronLeft size={20} />
             <span>Retour</span>

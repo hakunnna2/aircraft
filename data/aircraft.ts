@@ -926,7 +926,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     country: 'France',
     engineType: 'Jet',
     enginesCount: 1,
-    imageExt: 'avif',
     recognitionTips: [
       "Aile haute en flèche",
       "Monoréacteur",
@@ -949,7 +948,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     country: 'France',
     engineType: 'Jet',
     enginesCount: 1,
-    imageExt: 'jpeg',
     recognitionTips: [
       "Aile delta sans empennage horizontal",
       "Petites moustaches (canards) fixes sur les entrées d'air",
@@ -1238,7 +1236,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     country: 'USA',
     engineType: 'Jet',
     enginesCount: 2,
-    imageExt: 'avif',
     recognitionTips: [
       "Aile à géométrie variable (médiane)",
       "Dérive unique large",
@@ -1307,7 +1304,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     country: 'Russie',
     engineType: 'Jet',
     enginesCount: 1,
-    imageExt: 'avif',
     recognitionTips: [
       "Aile médiane en flèche",
       "Entrée d'air frontale (nez)",
@@ -5722,23 +5718,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     description: "Issu d'un programme militaire, cet avion est célèbre pour sa robustesse et ses gènes de chasseur.",
     specs: { wingspan: '13,5 m', length: '13,4 m', height: '4,8 m', payload: '900 kg' }
   },
-  {
-    id: 'starcraft',
-    name: 'Starcraft SK-700',
-    category: 'Private Executive Aircraft',
-    role: 'Transport léger rapide',
-    manufacturer: 'Starcraft',
-    country: 'USA',
-    engineType: 'Turboprop',
-    enginesCount: 1,
-    recognitionTips: [
-      "Aile basse avec winglets",
-      "Fuselage tout composite",
-      "Monoturbopropulseur"
-    ],
-    description: "Projet d'avion d'affaires ultra-efficace utilisant des matériaux composites de pointe.",
-    specs: { wingspan: '12 m', length: '10,5 m', height: '3,5 m', payload: '600 kg' }
-  },
+  
   {
     id: 'sj30',
     name: 'Swearingen SJ30',
@@ -6267,23 +6247,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     description: "Bimoteur léger conçu pour l'entraînement et le voyage privé économique.",
     specs: { wingspan: '11,2 m', length: '8,7 m', height: '3,1 m', payload: '600 kg' }
   },
-  {
-    id: 'st50',
-    name: 'Istravion ST-50',
-    category: 'Private Light Aircraft',
-    role: 'Transport léger d\'affaires',
-    manufacturer: 'Istravion',
-    country: 'Russie',
-    engineType: 'Turboprop',
-    enginesCount: 1,
-    recognitionTips: [
-      "Configuration canard",
-      "Turbopropulseur propulsif",
-      "Double dérive"
-    ],
-    description: "Design russe innovant tout composite visant le marché du voyage d'affaires rapide.",
-    specs: { wingspan: '9,1 m', length: '7,6 m', height: '2,7 m', payload: '500 kg' }
-  },
+    
   {
     id: 'lake-renegade',
     name: 'Lake La-250 Renegade',
@@ -7914,24 +7878,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     description: "Amélioration du modèle 125 avec une aérodynamique affinée, une envergure accrue et de nouveaux moteurs.",
     specs: { wingspan: '15,7 m', length: '15,6 m', height: '5,4 m', payload: '907 kg' }
   },
-  {
-    id: 'starcraft-sk700',
-    name: 'Starcraft SK-700',
-    category: 'Private Executive Aircraft',
-    role: 'Avion d\'affaires moyen-courrier',
-    manufacturer: 'Starcraft',
-    country: 'USA',
-    engineType: 'Piston',
-    enginesCount: 2,
-    recognitionTips: [
-      "Aile droite en position basse",
-      "Configuration bimoteur avec un moteur tractif et un moteur propulsif",
-      "Dérive ventrale"
-    ],
-    description: "Concept d'avion d'affaires à bas coût. Sa configuration unique maximise l'effet de ses deux moteurs à pistons, lui permettant d'atteindre plus de 400 mph.",
-    specs: { wingspan: '12,9 m', length: '10,9 m', height: '4,3 m', payload: '658 kg' }
-  },
-,
+  
   {
     id: 'c401-402-421',
     name: 'Cessna 401/402/421 Golden Eagle',
@@ -9641,7 +9588,5378 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     description: "Concentré de technologies, il utilise des pales 'Blue Edge' en forme de boomerang pour réduire drastiquement le bruit.",
     specs: { wingspan: '12 m (rotor)', length: '13,96 m', height: '4,91 m', payload: '2 000 kg' }
   },
+  {
+    id: 'kf21-boramae',
+    name: 'KAI KF-21 Boramae',
+    category: 'Combat Aircraft',
+    role: 'Chasseur multirôle furtif',
+    manufacturer: 'KAI',
+    country: 'Corée du Sud',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette de petit F-22",
+      "Double dérive inclinée",
+      "Entrées d\'air en losange",
+    ],
+    description: "Chasseur de génération 4.5 conçu pour remplacer les F-4 et F-5 avec une signature radar réduite.",
+    specs: {
+      wingspan: '11.2 m',
+      length: '16.9 m',
+      height: '4.7 m',
+      payload: '7 700 kg'
+    }
+  },
+  {
+    id: 'jf17-block3',
+    name: 'PAC JF-17 Thunder Block III',
+    category: 'Combat Aircraft',
+    role: 'Chasseur léger multirôle',
+    manufacturer: 'PAC/Chengdu',
+    country: 'Pakistan/Chine',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Entrées d\'air DSI sans séparateur",
+      "Ailes en flèche avec extensions LERX",
+      "Une seule tuyère arrière",
+    ],
+    description: "Version la plus moderne du JF-17 avec un radar AESA et une avionique de pointe.",
+    specs: {
+      wingspan: '9.4 m',
+      length: '14.3 m',
+      height: '4.7 m',
+      payload: '3 600 kg'
+    }
+  },
+  {
+    id: 'j10c-vigorous',
+    name: 'Chengdu J-10C',
+    category: 'Combat Aircraft',
+    role: 'Chasseur multirôle',
+    manufacturer: 'Chengdu Aircraft',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile delta avec canards",
+      "Entrée d\'air ventrale rectangulaire",
+      "Grande dérive verticale unique",
+    ],
+    description: "Dernière variante du J-10 équipée de capteurs avancés et d\'une entrée d\'air optimisée.",
+    specs: {
+      wingspan: '9.8 m',
+      length: '15.5 m',
+      height: '5.4 m',
+      payload: '7 000 kg'
+    }
+  },
+  {
+    id: 'hal-tejas-mk1',
+    name: 'HAL Tejas Mk1',
+    category: 'Combat Aircraft',
+    role: 'Chasseur léger de défense',
+    manufacturer: 'HAL',
+    country: 'Inde',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile delta sans canards",
+      "Taille très compacte",
+      "Cockpit en une seule pièce",
+    ],
+    description: "Le plus petit chasseur multirôle supersonique au monde conçu pour l\'armée indienne.",
+    specs: {
+      wingspan: '8.2 m',
+      length: '13.2 m',
+      height: '4.4 m',
+      payload: '5 300 kg'
+    }
+  },
+  {
+    id: 'f15ex-eagle-ii',
+    name: 'Boeing F-15EX Eagle II',
+    category: 'Combat Aircraft',
+    role: 'Chasseur de supériorité aérienne',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette classique F-15",
+      "Nombreux pylônes sous les ailes",
+      "Cockpit biplace systématique",
+    ],
+    description: "Version modernisée du F-15 avec commandes de vol électriques et capacité d\'emport massive.",
+    specs: {
+      wingspan: '13.1 m',
+      length: '19.4 m',
+      height: '5.6 m',
+      payload: '13 400 kg'
+    }
+  },
+  {
+    id: 'j16-flanker-h',
+    name: 'Shenyang J-16',
+    category: 'Combat Aircraft',
+    role: 'Chasseur de frappe',
+    manufacturer: 'Shenyang Aircraft',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Biplace en tandem",
+      "Pas de tube Pitot sur le nez",
+      "Peinture gris foncé mate",
+    ],
+    description: "Chasseur multirôle chinois dérivé du Su-30 spécialisé dans l\'attaque au sol.",
+    specs: {
+      wingspan: '14.7 m',
+      length: '21.9 m',
+      height: '6.4 m',
+      payload: '8 000 kg'
+    }
+  },
+  {
+    id: 'gripen-e',
+    name: 'Saab Gripen E',
+    category: 'Combat Aircraft',
+    role: 'Chasseur multirôle léger',
+    manufacturer: 'Saab',
+    country: 'Suède',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Configuration canard-delta",
+      "Un seul moteur",
+      "Train d\'atterrissage rentrant dans l\'aile",
+    ],
+    description: "Évolution majeure du Gripen avec une autonomie et une charge utile augmentées.",
+    specs: {
+      wingspan: '8.6 m',
+      length: '15.2 m',
+      height: '4.5 m',
+      payload: '5 300 kg'
+    }
+  },
+  {
+    id: 'su35s-flanker-e',
+    name: 'Sukhoi Su-35S',
+    category: 'Combat Aircraft',
+    role: 'Chasseur de supériorité aérienne',
+    manufacturer: 'Sukhoi',
+    country: 'Russie',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Pas de canards",
+      "Tuyères de moteur orientables",
+      "Longue pointe de queue arrière",
+    ],
+    description: "Chasseur de génération 4++ doté d\'une agilité extrême grâce à la poussée vectorielle.",
+    specs: {
+      wingspan: '15.3 m',
+      length: '21.9 m',
+      height: '5.9 m',
+      payload: '8 000 kg'
+    }
+  },
+  {
+    id: 'p8-poseidon',
+    name: 'Boeing P-8A Poseidon',
+    category: 'Combat Support Aircraft',
+    role: 'Patrouille maritime et ASW',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Cellule de 737",
+      "Pas de winglets (bouts d\'ailes biseautés)",
+      "Baie d\'armement sous le fuselage",
+    ],
+    description: "Avion de lutte anti-sous-marine basé sur la cellule du Boeing 737-800.",
+    specs: {
+      wingspan: '37.6 m',
+      length: '39.5 m',
+      height: '12.8 m',
+      payload: '9 000 kg'
+    }
+  },
+  {
+    id: 'kc46-pegasus',
+    name: 'Boeing KC-46 Pegasus',
+    category: 'Combat Support Aircraft',
+    role: 'Avion ravitailleur',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Basé sur le Boeing 767",
+      "Perche de ravitaillement rigide sous la queue",
+      "Pas de fenêtres passagers",
+    ],
+    description: "Nouveau ravitailleur stratégique de l\'US Air Force basé sur le Boeing 767.",
+    specs: {
+      wingspan: '47.9 m',
+      length: '50.5 m',
+      height: '15.9 m',
+      payload: '96 000 kg fuel'
+    }
+  },
+  {
+    id: 'a330-mrtt',
+    name: 'Airbus A330 MRTT',
+    category: 'Combat Support Aircraft',
+    role: 'Ravitailleur et transport',
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Pods sous les ailes",
+      "Perche rigide ou tuyaux souples",
+      "Cellule d\'A330-200",
+    ],
+    description: "Avion multirôle de transport et de ravitaillement basé sur l\'A330-200.",
+    specs: {
+      wingspan: '60.3 m',
+      length: '58.8 m',
+      height: '17.4 m',
+      payload: '111 000 kg fuel'
+    }
+  },
+  {
+    id: 'c390-millennium',
+    name: 'Embraer C-390',
+    category: 'Combat Support Aircraft',
+    role: 'Transport militaire tactique',
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs à réaction sous ailes hautes",
+      "Empennage en T",
+      "Fuselage large avec rampe arrière",
+    ],
+    description: "Avion de transport moderne à réaction conçu pour remplacer le C-130.",
+    specs: {
+      wingspan: '35.1 m',
+      length: '35.2 m',
+      height: '11.8 m',
+      payload: '26 000 kg'
+    }
+  },
+  {
+    id: 'kawasaki-c2',
+    name: 'Kawasaki C-2',
+    category: 'Combat Support Aircraft',
+    role: 'Transport militaire lourd',
+    manufacturer: 'Kawasaki',
+    country: 'Japon',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Taille massive",
+      "Deux moteurs imposants",
+      "Stabilisateurs horizontaux très hauts",
+    ],
+    description: "Avion de transport stratégique japonais à haute performance et longue portée.",
+    specs: {
+      wingspan: '44.4 m',
+      length: '43.9 m',
+      height: '14.2 m',
+      payload: '37 600 kg'
+    }
+  },
+  {
+    id: 'mq4c-triton',
+    name: 'Northrop Grumman MQ-4C Triton',
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: 'Surveillance maritime HALE',
+    manufacturer: 'Northrop Grumman',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes très longues type planeur",
+      "Dôme radar sous le ventre",
+      "Moteur sur le dessus de la queue",
+    ],
+    description: "Drone de reconnaissance maritime haute altitude capable de voler 24 heures.",
+    specs: {
+      wingspan: '39.9 m',
+      length: '14.5 m',
+      height: '4.7 m',
+      payload: '1 450 kg'
+    }
+  },
+  {
+    id: 't7-red-hawk',
+    name: 'Boeing-Saab T-7A Red Hawk',
+    category: 'Combat Training Aircraft',
+    role: 'Entraîneur avancé',
+    manufacturer: 'Boeing/Saab',
+    country: 'USA/Suède',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Double dérive inclinée",
+      "Ailes hautes trapézoïdales",
+      "Nez pointu type F-18",
+    ],
+    description: "Nouvel avion d\'entraînement de l\'US Air Force pour la formation des pilotes de chasse.",
+    specs: {
+      wingspan: '9.3 m',
+      length: '14.3 m',
+      height: '4.1 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'm346-master',
+    name: 'Leonardo M-346 Master',
+    category: 'Combat Training Aircraft',
+    role: 'Entraîneur avancé (LIFT)',
+    manufacturer: 'Leonardo',
+    country: 'Italie',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez court et arrondi",
+      "Entrées d\'air sous l\'emplanture",
+      "Empennage horizontal bas",
+    ],
+    description: "Avion d\'entraînement polyvalent simulant les avions de chasse de 5e génération.",
+    specs: {
+      wingspan: '9.7 m',
+      length: '11.5 m',
+      height: '4.8 m',
+      payload: '3 000 kg'
+    }
+  },
+  {
+    id: 'l15-falcon',
+    name: 'Hongdu L-15 Falcon',
+    category: 'Combat Training Aircraft',
+    role: 'Entraîneur et attaque légère',
+    manufacturer: 'Hongdu',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ressemble au M-346 mais plus long",
+      "Deux moteurs avec postcombustion",
+      "Longs apex (LERX)",
+    ],
+    description: "Avion d\'entraînement supersonique chinois pour pilotes de J-10 et J-20.",
+    specs: {
+      wingspan: '9.5 m',
+      length: '12.3 m',
+      height: '4.8 m',
+      payload: '3 000 kg'
+    }
+  },
+  {
+    id: 'a321neo-xlr',
+    name: 'Airbus A321neo XLR',
+    category: 'Civil Jet Airliners',
+    role: 'Long-courrier monocouloir',
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage d\'A320 allongé",
+      "Grands Sharklets",
+      "Moteurs massifs LEAP ou PW",
+    ],
+    description: "Version à très long rayon d\'action capable de traverser l\'Atlantique.",
+    specs: {
+      wingspan: '35.8 m',
+      length: '44.5 m',
+      height: '11.8 m',
+      payload: '220 passagers'
+    }
+  },
+  {
+    id: '737-max-8',
+    name: 'Boeing 737 MAX 8',
+    category: 'Civil Jet Airliners',
+    role: 'Moyen-courrier',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Winglets en V scindé",
+      "Bords de moteurs dentelés",
+      "Train principal sans trappes",
+    ],
+    description: "Dernière génération du 737 avec moteurs optimisés et nouvelles ailes.",
+    specs: {
+      wingspan: '35.9 m',
+      length: '39.5 m',
+      height: '12.3 m',
+      payload: '189 passagers'
+    }
+  },
+  {
+    id: '777-9-x',
+    name: 'Boeing 777-9',
+    category: 'Civil Jet Airliners',
+    role: 'Long-courrier gros-porteur',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Bouts d\'ailes pliables au sol",
+      "Plus gros moteurs au monde (GE9X)",
+      "Envergure immense",
+    ],
+    description: "Le plus grand bimoteur au monde avec des bouts d\'ailes pliables.",
+    specs: {
+      wingspan: '71.8 m',
+      length: '76.7 m',
+      height: '19.7 m',
+      payload: '426 passagers'
+    }
+  },
+  {
+    id: 'c919-comac',
+    name: 'COMAC C919',
+    category: 'Civil Jet Airliners',
+    role: 'Moyen-courrier',
+    manufacturer: 'COMAC',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Pare-brise à 4 vitres",
+      "Winglets courbes",
+      "Silhouette proche de l\'A320",
+    ],
+    description: "Premier avion de ligne chinois conçu pour concurrencer l\'A320 et le 737.",
+    specs: {
+      wingspan: '33.6 m',
+      length: '38.9 m',
+      height: '12.0 m',
+      payload: '168 passagers'
+    }
+  },
+  {
+    id: 'ssj100-superjet',
+    name: 'Sukhoi Superjet 100',
+    category: 'Civil Jet Airliners',
+    role: 'Jet régional',
+    manufacturer: 'Sukhoi',
+    country: 'Russie',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez bulbeux",
+      "Moteurs bas sous les ailes",
+      "Train à roues simples",
+    ],
+    description: "Avion régional russe conçu avec des partenaires technologiques occidentaux.",
+    specs: {
+      wingspan: '27.8 m',
+      length: '29.9 m',
+      height: '10.3 m',
+      payload: '87 passagers'
+    }
+  },
+  {
+    id: 'e195-e2',
+    name: 'Embraer E195-E2',
+    category: 'Civil Jet Airliners',
+    role: 'Jet régional et moyen-courrier',
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes très fines sans winglets",
+      "Moteurs GTF massifs",
+      "Fuselage étroit 2+2",
+    ],
+    description: "L\'avion monocouloir le plus efficace du marché surnommé Profit Hunter.",
+    specs: {
+      wingspan: '35.1 m',
+      length: '41.5 m',
+      height: '10.9 m',
+      payload: '146 passagers'
+    }
+  },
+  {
+    id: 'g700-gulfstream',
+    name: 'Gulfstream G700',
+    category: 'Private Executive Aircraft',
+    role: 'Jet d\'affaires ultra-long courrier',
+    manufacturer: 'Gulfstream',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "10 grands hublots ovales par côté",
+      "Winglets incurvés",
+      "Nez très effilé"
+    ],
+    description: "Le nouveau fleuron de Gulfstream avec la cabine la plus spacieuse du secteur.",
+    specs: {
+      wingspan: '31.4 m',
+      length: '33.5 m',
+      height: '7.8 m',
+      payload: '19 passagers'
+    }
+  },
+  {
+    id: 'falcon-10x',
+    name: 'Dassault Falcon 10X',
+    category: 'Private Executive Aircraft',
+    role: 'Jet d\'affaires ultra-longue portée',
+    manufacturer: 'Dassault',
+    country: 'France',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Pare-brise panoramique 4 vitres",
+      "Aile en carbone ultra-mince",
+      "Queue en T"
+    ],
+    description: "Le futur plus grand jet de Dassault capable d\'atteindre Mach 0.925.",
+    specs: {
+      wingspan: '33.6 m',
+      length: '33.4 m',
+      height: '8.4 m',
+      payload: '19 passagers'
+    }
+  },
+  {
+    id: 'hondajet-elite',
+    name: 'HondaJet Elite II',
+    category: 'Private Executive Aircraft',
+    role: 'Jet d\'affaires léger',
+    manufacturer: 'Honda Aircraft',
+    country: 'Japon/USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs sur pylônes au-dessus de l\'aile",
+      "Nez en fuseau",
+      "Peinture bicolore"
+    ],
+    description: "Jet léger innovant avec moteurs montés sur les ailes pour plus d\'espace.",
+    specs: {
+      wingspan: '12.1 m',
+      length: '13.0 m',
+      height: '4.5 m',
+      payload: '6 passagers'
+    }
+  },
+  {
+    id: 'vision-sf50',
+    name: 'Cirrus Vision SF50',
+    category: 'Private Executive Aircraft',
+    role: 'Jet personnel léger',
+    manufacturer: 'Cirrus Aircraft',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Moteur unique sur le dos",
+      "Queue en V",
+      "Grande verrière panoramique"
+    ],
+    description: "Premier jet civil monoréacteur équipé d\'un parachute de cellule.",
+    specs: {
+      wingspan: '11.8 m',
+      length: '9.4 m',
+      height: '3.3 m',
+      payload: '7 passagers'
+    }
+  },
+  {
+    id: 'sr22-g6',
+    name: 'Cirrus SR22T G6',
+    category: 'Private Light Aircraft',
+    role: 'Avion de tourisme moderne',
+    manufacturer: 'Cirrus Aircraft',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Train fixe caréné",
+      "Portes papillon",
+      "Phares LED en bout d\'aile"
+    ],
+    description: "L\'avion monomoteur le plus vendu au monde avec parachute intégré.",
+    specs: {
+      wingspan: '11.7 m',
+      length: '7.9 m',
+      height: '2.7 m',
+      payload: '500 kg'
+    }
+  },
+  {
+    id: 'aw139-leonardo',
+    name: 'Leonardo AW139',
+    category: 'Helicopters',
+    role: 'Transport utilitaire et offshore',
+    manufacturer: 'Leonardo',
+    country: 'Italie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor à 5 pales",
+      "Train rentrant",
+      "Stabilisateurs horizontaux médians"
+    ],
+    description: "Hélicoptère moyen polyvalent leader mondial de sa catégorie.",
+    specs: {
+      wingspan: '13.8 m',
+      length: '16.7 m',
+      height: '5.0 m',
+      payload: '3 000 kg'
+    }
+  },
+  {
+    id: 'ka52-alligator',
+    name: 'Kamov Ka-52 Alligator',
+    category: 'Helicopters',
+    role: 'Hélicoptère d\'attaque',
+    manufacturer: 'Kamov',
+    country: 'Russie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotors coaxiaux (pas de rotor arrière)",
+      "Sièges côte à côte",
+      "Nez massif avec optiques"
+    ],
+    description: "Hélicoptère d\'attaque russe avec rotors coaxiaux et sièges éjectables.",
+    specs: {
+      wingspan: '14.5 m',
+      length: '16.0 m',
+      height: '4.9 m',
+      payload: '2 000 kg'
+    }
+  },
+  {
+    id: 'h145-airbus',
+    name: 'Airbus Helicopters H145',
+    category: 'Helicopters',
+    role: 'Transport et secours',
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor de queue Fenestron",
+      "Nez vitré",
+      "Rotor à 4 ou 5 pales"
+    ],
+    description: "Hélicoptère biturbine polyvalent très utilisé pour le secours médical.",
+    specs: {
+      wingspan: '11.0 m',
+      length: '13.0 m',
+      height: '3.5 m',
+      payload: '1 900 kg'
+    }
+  },
+  {
+    id: 'aw101-merlin',
+    name: 'Leonardo AW101 Merlin',
+    category: 'Helicopters',
+    role: 'Transport lourd et ASW',
+    manufacturer: 'Leonardo',
+    country: 'UK/Italie',
+    engineType: 'Turbine',
+    enginesCount: 3,
+    recognitionTips: [
+      "Trois moteurs",
+      "Grand fuselage avec rampe",
+      "Rotor à 5 pales"
+    ],
+    description: "Hélicoptère trimoteur massif pour transport de troupes et lutte maritime.",
+    specs: {
+      wingspan: '18.6 m',
+      length: '22.8 m',
+      height: '6.6 m',
+      payload: '5 000 kg'
+    }
+  },
+  {
+    id: 'ch53k-king',
+    name: 'Sikorsky CH-53K King Stallion',
+    category: 'Helicopters',
+    role: 'Transport lourd',
+    manufacturer: 'Sikorsky',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 3,
+    recognitionTips: [
+      "Fuselage massif",
+      "Rotor principal à 7 pales",
+      "Queue très haute"
+    ],
+    description: "L\'hélicoptère de transport le plus puissant de l\'armée américaine.",
+    specs: {
+      wingspan: '24.0 m',
+      length: '30.2 m',
+      height: '8.5 m',
+      payload: '15 900 kg'
+    }
+  },
+  {
+    id: 'v280-valor',
+    name: 'Bell V-280 Valor',
+    category: 'Helicopters',
+    role: 'Convertible de transport',
+    manufacturer: 'Bell',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotors basculants en bout d\'aile",
+      "Queue en V",
+      "Moteurs fixes (seuls les rotors pivotent)"
+    ],
+    description: "Aéronef à rotors basculants choisi pour remplacer le Black Hawk.",
+    specs: {
+      wingspan: '24.9 m',
+      length: '15.4 m',
+      height: '7.0 m',
+      payload: '14 troupes'
+    }
+  },
+  {
+    id: 'sb1-defiant',
+    name: 'Sikorsky-Boeing SB-1 Defiant',
+    category: 'Helicopters',
+    role: 'Transport haute vitesse',
+    manufacturer: 'Sikorsky/Boeing',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotors coaxiaux rigides",
+      "Hélice propulsive arrière",
+      "Design aérodynamique"
+    ],
+    description: "Hélicoptère expérimental avec rotors coaxiaux et hélice propulsive arrière.",
+    specs: {
+      wingspan: '16.0 m',
+      length: 'N/A',
+      height: 'N/A',
+      payload: '12 troupes'
+    }
+  },
+  {
+    id: 'mq25-stingray',
+    name: 'Boeing MQ-25 Stingray',
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: 'Drone de ravitaillement',
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Fuselage plat et furtif",
+      "Perche de ravitaillement sous aile",
+      "Entrée d\'air sur le dessus"
+    ],
+    description: "Drone embarqué sur porte-avions pour ravitailler les chasseurs en vol.",
+    specs: {
+      wingspan: '22.9 m',
+      length: '15.5 m',
+      height: '3.0 m',
+      payload: '6 800 kg fuel'
+    }
+  },
+  {
+    id: 'rq4-global-hawk',
+    name: 'Northrop Grumman RQ-4',
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: 'Surveillance stratégique',
+    manufacturer: 'Northrop Grumman',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Nez en tête de baleine",
+      "Ailes très longues",
+      "Moteur sur la queue"
+    ],
+    description: "Drone haute altitude capable de surveiller de vastes zones pendant 24h.",
+    specs: {
+      wingspan: '39.9 m',
+      length: '14.5 m',
+      height: '4.7 m',
+      payload: '1 360 kg'
+    }
+  },
+  {
+    id: 'neuron-dassault',
+    name: 'Dassault nEUROn',
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: 'Drone de combat furtif',
+    manufacturer: 'Dassault',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile volante pure sans dérive",
+      "Entrée d\'air sur le dessus",
+      "Silhouette triangulaire"
+    ],
+    description: "Démonstrateur européen pour les futurs systèmes de combat aérien furtifs.",
+    specs: {
+      wingspan: '12.5 m',
+      length: '9.2 m',
+      height: 'N/A',
+      payload: 'Armes internes'
+    }
+  },
+  {
+    id: 'f18-block3',
+    name: "Boeing F/A-18E/F Block III",
+    category: 'Combat Aircraft',
+    role: "Chasseur multirôle embarqué",
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Réservoirs sur le dessus du fuselage",
+      "Grand écran tactile unique en cockpit",
+      "Signature radar réduite"
+    ],
+    description: "Version la plus avancée du Super Hornet avec réservoirs conformes et cockpit à écran large.",
+    specs: {
+      wingspan: '13.6 m',
+      length: '18.3 m',
+      height: '4.9 m',
+      payload: '8 050 kg'
+    }
+  },
+  {
+    id: 'j31-gyrfalcon',
+    name: "Shenyang FC-31 Gyrfalcon",
+    category: 'Combat Aircraft',
+    role: "Chasseur furtif multirôle",
+    manufacturer: 'Shenyang Aircraft',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette angulaire type F-35",
+      "Double dérive inclinée",
+      "Deux moteurs à l'arrière"
+    ],
+    description: "Chasseur furtif de cinquième génération conçu pour l'exportation et les futurs porte-avions chinois.",
+    specs: {
+      wingspan: '11.5 m',
+      length: '17.3 m',
+      height: '4.8 m',
+      payload: '8 000 kg'
+    }
+  },
+  {
+    id: 'kaan-tfx',
+    name: "TAI Kaan (TF-X)",
+    category: 'Combat Aircraft',
+    role: "Chasseur furtif de supériorité",
+    manufacturer: 'TAI',
+    country: 'Turquie',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette proche du F-22",
+      "Nez très long",
+      "Entrées d'air latérales en losange"
+    ],
+    description: "Le projet aéronautique le plus ambitieux de Turquie pour un chasseur de 5ème génération.",
+    specs: {
+      wingspan: '14.0 m',
+      length: '21.0 m',
+      height: '6.0 m',
+      payload: 'Classifié'
+    }
+  },
+  {
+    id: 'y20-kunpeng',
+    name: "Xian Y-20 Kunpeng",
+    category: 'Combat Support Aircraft',
+    role: "Transport militaire lourd",
+    manufacturer: 'Xian Aircraft',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Quatre moteurs à réaction",
+      "Queue en T massive",
+      "Nez arrondi et fuselage large"
+    ],
+    description: "Surnommé Chubby Girl en Chine c'est l'équivalent chinois du C-17 américain.",
+    specs: {
+      wingspan: '45.0 m',
+      length: '47.0 m',
+      height: '15.0 m',
+      payload: '66 000 kg'
+    }
+  },
+  {
+    id: 'y9-shaanxi',
+    name: "Shaanxi Y-9",
+    category: 'Combat Support Aircraft',
+    role: "Transport moyen polyvalent",
+    manufacturer: 'Shaanxi Aircraft',
+    country: 'Chine',
+    engineType: 'Turboprop',
+    enginesCount: 4,
+    recognitionTips: [
+      "Hélices à 6 pales",
+      "Petites dérives sur les stabilisateurs horizontaux",
+      "Nez vitré"
+    ],
+    description: "Version allongée et modernisée du Y-8 (basé sur l'An-12) avec de nouvelles hélices.",
+    specs: {
+      wingspan: '38.0 m',
+      length: '36.0 m',
+      height: '11.3 m',
+      payload: '20 000 kg'
+    }
+  },
+  {
+    id: 'at6-wolverine',
+    name: "Beechcraft AT-6 Wolverine",
+    category: 'Combat Aircraft',
+    role: "Attaque légère et reconnaissance",
+    manufacturer: 'Textron Aviation',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Turbopropulseur monomoteur",
+      "Pylônes d'armement sous les ailes",
+      "Cockpit biplace en tandem"
+    ],
+    description: "Version armée du célèbre entraîneur T-6 Texan II pour les missions d'appui rapproché.",
+    specs: {
+      wingspan: '10.4 m',
+      length: '10.2 m',
+      height: '3.3 m',
+      payload: '1 800 kg'
+    }
+  },
+  {
+    id: 'wing-loong-ii',
+    name: "AVIC Wing Loong II",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat MALE",
+    manufacturer: 'AVIC',
+    country: 'Chine',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ressemble au MQ-9 Reaper",
+      "Dérives de queue en V pointant vers le haut",
+      "Antenne satellite sur le dessus du nez"
+    ],
+    description: "Drone de combat longue endurance très exporté notamment au Moyen-Orient.",
+    specs: {
+      wingspan: '20.5 m',
+      length: '11.0 m',
+      height: '4.1 m',
+      payload: '480 kg'
+    }
+  },
+  {
+    id: 'ch5-rainbow',
+    name: "CASC CH-5 Rainbow",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat longue endurance",
+    manufacturer: 'CASC',
+    country: 'Chine',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Envergure imposante",
+      "Empennage en V",
+      "Train d'atterrissage escamotable"
+    ],
+    description: "Drone capable d'emporter une charge d'armement impressionnante pour sa catégorie.",
+    specs: {
+      wingspan: '21.0 m',
+      length: '11.0 m',
+      height: '4.0 m',
+      payload: '1 200 kg'
+    }
+  },
+  {
+    id: 'mq1c-gray-eagle',
+    name: "General Atomics MQ-1C Gray Eagle",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat tactique",
+    manufacturer: 'General Atomics',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Moteur diesel à l'arrière",
+      "Dérive verticale pointant vers le bas",
+      "Silhouette fine"
+    ],
+    description: "Évolution du Predator pour l'US Army avec une endurance accrue et des missiles Hellfire.",
+    specs: {
+      wingspan: '17.0 m',
+      length: '8.5 m',
+      height: '2.1 m',
+      payload: '360 kg'
+    }
+  },
+  {
+    id: 'heron-tp',
+    name: "IAI Heron TP (Eitan)",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de surveillance stratégique",
+    manufacturer: 'IAI',
+    country: 'Israël',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Taille d'un avion régional",
+      "Double poutre de queue",
+      "Moteur propulsif arrière"
+    ],
+    description: "L'un des plus grands drones au monde capable de voler au-dessus du trafic civil.",
+    specs: {
+      wingspan: '26.0 m',
+      length: '14.0 m',
+      height: '3.0 m',
+      payload: '2 700 kg'
+    }
+  },
+  {
+    id: 'hermes-900',
+    name: "Elbit Hermes 900",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Surveillance et reconnaissance MALE",
+    manufacturer: 'Elbit Systems',
+    country: 'Israël',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Nez bulbeux avec tourelle optique dessous",
+      "Ailes hautes et fines",
+      "Empennage en V"
+    ],
+    description: "Drone polyvalent utilisé pour des missions de renseignement et de patrouille maritime.",
+    specs: {
+      wingspan: '15.0 m',
+      length: '8.3 m',
+      height: 'N/A',
+      payload: '350 kg'
+    }
+  },
+  {
+    id: 'akinci-tiha',
+    name: "Baykar Bayraktar Akıncı",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat stratégique",
+    manufacturer: 'Baykar',
+    country: 'Turquie',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes en forme de mouette",
+      "Deux turbopropulseurs",
+      "Silhouette massive et élégante"
+    ],
+    description: "Drone bimoteur capable d'emporter des missiles de croisière et des bombes lourdes.",
+    specs: {
+      wingspan: '20.0 m',
+      length: '12.2 m',
+      height: '4.1 m',
+      payload: '1 350 kg'
+    }
+  },
+  {
+    id: 'kizilelma-mius',
+    name: "Baykar Bayraktar Kızılelma",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat furtif",
+    manufacturer: 'Baykar',
+    country: 'Turquie',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Plans canards à l'avant",
+      "Double dérive inclinée",
+      "Pas de verrière cockpit"
+    ],
+    description: "Drone supersonique conçu pour le combat aérien et les opérations sur porte-avions.",
+    specs: {
+      wingspan: '10.0 m',
+      length: '14.7 m',
+      height: '3.3 m',
+      payload: '1 500 kg'
+    }
+  },
+  {
+    id: 'mq28-ghost-bat',
+    name: "Boeing MQ-28 Ghost Bat",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone ailier fidèle",
+    manufacturer: 'Boeing Australia',
+    country: 'Australie',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Nez interchangeable",
+      "Entrées d'air furtives",
+      "Double dérive arrière"
+    ],
+    description: "Drone utilisant l'intelligence artificielle pour accompagner les avions de chasse pilotés.",
+    specs: {
+      wingspan: '7.3 m',
+      length: '11.7 m',
+      height: 'N/A',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'x47b-ucas',
+    name: "Northrop Grumman X-47B",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Démonstrateur de drone embarqué",
+    manufacturer: 'Northrop Grumman',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile volante pure en forme de losange",
+      "Train d'atterrissage massif",
+      "Pas de dérive verticale"
+    ],
+    description: "Premier drone à avoir opéré de manière autonome depuis un porte-avions.",
+    specs: {
+      wingspan: '18.9 m',
+      length: '11.6 m',
+      height: '3.1 m',
+      payload: '2 000 kg'
+    }
+  },
+  {
+    id: 'arj21-700',
+    name: "COMAC ARJ21-700",
+    category: 'Civil Jet Airliners',
+    role: "Jet régional",
+    manufacturer: 'COMAC',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs à l'arrière",
+      "Queue en T",
+      "Nez profilé"
+    ],
+    description: "Premier jet de ligne régional moderne développé par la Chine.",
+    specs: {
+      wingspan: '27.3 m',
+      length: '33.5 m',
+      height: '8.4 m',
+      payload: '90 passagers'
+    }
+  },
+  {
+    id: 'il114-300',
+    name: "Ilyushin Il-114-300",
+    category: 'Civil Turboprop Airliners',
+    role: "Transport régional",
+    manufacturer: 'Ilyushin',
+    country: 'Russie',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Hélices à 6 pales",
+      "Ailes basses",
+      "Fuselage cylindrique classique"
+    ],
+    description: "Version modernisée du Il-114 pour les liaisons régionales russes difficiles.",
+    specs: {
+      wingspan: '30.0 m',
+      length: '26.9 m',
+      height: '9.2 m',
+      payload: '68 passagers'
+    }
+  },
+  {
+    id: 'e175-embraer',
+    name: "Embraer E175",
+    category: 'Civil Jet Airliners',
+    role: "Jet régional",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs sous les ailes",
+      "Winglets larges",
+      "Configuration 2+2 en cabine"
+    ],
+    description: "Version courte de la famille E-Jet très populaire aux États-Unis.",
+    specs: {
+      wingspan: '26.0 m',
+      length: '31.7 m',
+      height: '9.7 m',
+      payload: '78 passagers'
+    }
+  },
+  {
+    id: 'e190-e2',
+    name: "Embraer E190-E2",
+    category: 'Civil Jet Airliners',
+    role: "Moyen-courrier monocouloir",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs de grand diamètre",
+      "Train d'atterrissage complexe",
+      "Pas de winglets (ailes biseautées)"
+    ],
+    description: "Version remotorisée et plus efficace de l'E190 original avec de nouvelles ailes.",
+    specs: {
+      wingspan: '33.7 m',
+      length: '36.2 m',
+      height: '11.0 m',
+      payload: '114 passagers'
+    }
+  },
+  {
+    id: 'mrj90-mitsubishi',
+    name: "Mitsubishi SpaceJet M90",
+    category: 'Civil Jet Airliners',
+    role: "Jet régional",
+    manufacturer: 'Mitsubishi Aircraft',
+    country: 'Japon',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez très aérodynamique",
+      "Moteurs suspendus bas",
+      "Silhouette très élancée"
+    ],
+    description: "Tentative japonaise de jet régional moderne (programme suspendu en 2023).",
+    specs: {
+      wingspan: '29.2 m',
+      length: '35.8 m',
+      height: '10.4 m',
+      payload: '88 passagers'
+    }
+  },
+  {
+    id: 'citation-latitude',
+    name: "Cessna Citation Latitude",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires moyen",
+    manufacturer: 'Textron Aviation',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez arrondi",
+      "Fenêtres cockpit larges",
+      "Queue en T"
+    ],
+    description: "Jet d'affaires connu pour son grand confort et son plancher plat.",
+    specs: {
+      wingspan: '22.1 m',
+      length: '19.0 m',
+      height: '6.4 m',
+      payload: '9 passagers'
+    }
+  },
+  {
+    id: 'citation-longitude',
+    name: "Cessna Citation Longitude",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires super-médium",
+    manufacturer: 'Textron Aviation',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Grands winglets verticaux",
+      "Moteurs à l'arrière",
+      "Queue en T"
+    ],
+    description: "Version allongée de la gamme Citation avec une plus grande autonomie.",
+    specs: {
+      wingspan: '20.4 m',
+      length: '22.3 m',
+      height: '5.9 m',
+      payload: '12 passagers'
+    }
+  },
+  {
+    id: 'challenger-350',
+    name: "Bombardier Challenger 350",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires super-médium",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Winglets inclinés vers l'extérieur",
+      "Moteurs imposants",
+      "Fenêtres de cabine carrées"
+    ],
+    description: "Amélioration du Challenger 300 avec de nouveaux winglets et moteurs.",
+    specs: {
+      wingspan: '21.0 m',
+      length: '20.9 m',
+      height: '6.1 m',
+      payload: '10 passagers'
+    }
+  },
+  {
+    id: 'falcon-6x',
+    name: "Dassault Falcon 6X",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires large cabine",
+    manufacturer: 'Dassault',
+    country: 'France',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Bimoteur à l'arrière",
+      "Nez court",
+      "Hublot de toit (SkyLight)"
+    ],
+    description: "Jet d'affaires avec la cabine la plus haute et la plus large du marché.",
+    specs: {
+      wingspan: '25.9 m',
+      length: '25.7 m',
+      height: '7.5 m',
+      payload: '16 passagers'
+    }
+  },
+  {
+    id: 'phenom-100',
+    name: "Embraer Phenom 100",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires très léger (VLJ)",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Petite taille",
+      "Pare-brise panoramique",
+      "Porte d'entrée avec escalier intégré"
+    ],
+    description: "L'un des jets privés les plus populaires pour les propriétaires-pilotes.",
+    specs: {
+      wingspan: '12.3 m',
+      length: '12.8 m',
+      height: '4.4 m',
+      payload: '4-6 passagers'
+    }
+  },
+  {
+    id: 'phenom-300',
+    name: "Embraer Phenom 300",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires léger",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes en flèche avec winglets élégants",
+      "Moteurs à l'arrière",
+      "Nez pointu"
+    ],
+    description: "Le jet léger le plus vendu au monde depuis une décennie.",
+    specs: {
+      wingspan: '16.2 m',
+      length: '15.9 m',
+      height: '5.0 m',
+      payload: '9 passagers'
+    }
+  },
+  {
+    id: 'h175-airbus',
+    name: "Airbus Helicopters H175",
+    category: 'Helicopters',
+    role: "Transport super-médium",
+    manufacturer: 'Airbus',
+    country: 'France/Chine',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez court et bulbeux",
+      "Rotor à 5 pales",
+      "Très grandes vitres de cabine"
+    ],
+    description: "Développé avec la Chine c'est l'hélicoptère de référence pour l'offshore pétrolier.",
+    specs: {
+      wingspan: '14.8 m',
+      length: '15.7 m',
+      height: '5.3 m',
+      payload: '18 passagers'
+    }
+  },
+  {
+    id: 'aw169-leonardo',
+    name: "Leonardo AW169",
+    category: 'Helicopters',
+    role: "Hélicoptère utilitaire léger",
+    manufacturer: 'Leonardo',
+    country: 'Italie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor à 5 pales",
+      "Train rétractable tricycle",
+      "Stabilisateurs horizontaux en milieu de queue"
+    ],
+    description: "Version moderne et compacte de l'AW139 très utilisé pour le secours médical.",
+    specs: {
+      wingspan: '12.1 m',
+      length: '14.7 m',
+      height: '4.5 m',
+      payload: '10 passagers'
+    }
+  },
+  {
+    id: 'aw189-leonardo',
+    name: "Leonardo AW189",
+    category: 'Helicopters',
+    role: "Transport civil lourd",
+    manufacturer: 'Leonardo',
+    country: 'Italie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette allongée de l'AW139",
+      "Fuselage large",
+      "Moteurs puissants"
+    ],
+    description: "Hélicoptère optimisé pour les longues distances en mer et le sauvetage.",
+    specs: {
+      wingspan: '14.6 m',
+      length: '17.6 m',
+      height: '5.1 m',
+      payload: '19 passagers'
+    }
+  },
+  {
+    id: 'bell-525',
+    name: "Bell 525 Relentless",
+    category: 'Helicopters',
+    role: "Transport super-médium",
+    manufacturer: 'Bell Textron',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez aérodynamique type dauphin",
+      "Rotor à 5 pales",
+      "Cockpit très vitré"
+    ],
+    description: "Premier hélicoptère civil équipé de commandes de vol électriques fly-by-wire.",
+    specs: {
+      wingspan: '16.6 m',
+      length: '16.4 m',
+      height: '4.5 m',
+      payload: '16-20 passagers'
+    }
+  },
+  {
+    id: 'z10-caic',
+    name: "CAIC Z-10",
+    category: 'Helicopters',
+    role: "Hélicoptère d'attaque lourd",
+    manufacturer: 'CAIC',
+    country: 'Chine',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez très fin et anguleux",
+      "Train d'atterrissage fixe",
+      "Cockpit en tandem"
+    ],
+    description: "Le premier hélicoptère d'attaque moderne de l'armée chinoise.",
+    specs: {
+      wingspan: '12.0 m',
+      length: '14.1 m',
+      height: '3.9 m',
+      payload: '1 500 kg'
+    }
+  },
+  {
+    id: 'hal-lch-prachand',
+    name: "HAL Prachand",
+    category: 'Helicopters',
+    role: "Hélicoptère de combat léger",
+    manufacturer: 'HAL',
+    country: 'Inde',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage très étroit",
+      "Train tricycle fixe",
+      "Nez équipé d'un canon mobile"
+    ],
+    description: "Seul hélicoptère d'attaque capable d'opérer à très haute altitude dans l'Himalaya.",
+    specs: {
+      wingspan: '13.2 m',
+      length: '15.8 m',
+      height: '4.7 m',
+      payload: '700 kg'
+    }
+  },
+  {
+    id: 'aw159-wildcat',
+    name: "Leonardo AW159 Wildcat",
+    category: 'Helicopters',
+    role: "Lutte anti-surface maritime",
+    manufacturer: 'Leonardo',
+    country: 'UK',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez plat avec capteurs radar",
+      "Fuselage angulaire",
+      "Extrémités de pales courbées"
+    ],
+    description: "Evolution technologique du célèbre Lynx pour la Royal Navy.",
+    specs: {
+      wingspan: '12.8 m',
+      length: '15.2 m',
+      height: '3.7 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'h145-m',
+    name: "Airbus Helicopters H145M",
+    category: 'Helicopters',
+    role: "Hélicoptère militaire polyvalent",
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor de queue Fenestron",
+      "Nez vitré",
+      "Poutre de queue fine"
+    ],
+    description: "Version militaire du H145 capable d'emporter le système d'armement HForce.",
+    specs: {
+      wingspan: '11.0 m',
+      length: '13.0 m',
+      height: '3.5 m',
+      payload: '1 900 kg'
+    }
+  },
+  {
+    id: 'be200-beriev',
+    name: "Beriev Be-200 Altair",
+    category: 'Civil Utility',
+    role: "Avion amphibie bombardier d'eau",
+    manufacturer: 'Beriev',
+    country: 'Russie',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs sur le dessus des ailes",
+      "Fuselage en forme de coque",
+      "Amphibie"
+    ],
+    description: "Le seul avion à réaction amphibie au monde spécialisé dans les feux de forêt.",
+    specs: {
+      wingspan: '32.7 m',
+      length: '32.0 m',
+      height: '8.9 m',
+      payload: '12 000 kg eau'
+    }
+  },
+  {
+    id: 'ag600-kunlong',
+    name: "AVIC AG600 Kunlong",
+    category: 'Civil Utility',
+    role: "Hydravion géant",
+    manufacturer: 'AVIC',
+    country: 'Chine',
+    engineType: 'Turboprop',
+    enginesCount: 4,
+    recognitionTips: [
+      "Taille gigantesque",
+      "Quatre moteurs à hélices",
+      "Fuselage coque massif"
+    ],
+    description: "Le plus grand hydravion au monde conçu pour le sauvetage et les incendies.",
+    specs: {
+      wingspan: '38.8 m',
+      length: '36.9 m',
+      height: '12.1 m',
+      payload: '50 000 kg max'
+    }
+  },
+  {
+    id: 'stratolaunch-roc',
+    name: "Scaled Composites Stratolaunch",
+    category: 'Civil Utility',
+    role: "Lancement spatial",
+    manufacturer: 'Scaled Composites',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 6,
+    recognitionTips: [
+      "Double fuselage",
+      "Six moteurs",
+      "Envergure plus longue qu'un terrain de foot"
+    ],
+    description: "L'avion à la plus grande envergure au monde avec deux fuselages.",
+    specs: {
+      wingspan: '117.0 m',
+      length: '73.0 m',
+      height: '15.0 m',
+      payload: '250 000 kg'
+    }
+  },
+  {
+    id: 'panthera-pipistrel',
+    name: "Pipistrel Panthera",
+    category: 'Private Light Aircraft',
+    role: "Avion de tourisme rapide",
+    manufacturer: 'Pipistrel',
+    country: 'Slovénie',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Design de voiture de sport",
+      "Train rentrant",
+      "Empennage en croix"
+    ],
+    description: "Un avion de voyage ultra-moderne au design fluide et aérodynamique.",
+    specs: {
+      wingspan: '10.9 m',
+      length: '8.1 m',
+      height: '2.2 m',
+      payload: '500 kg'
+    }
+  },
+  {
+    id: 'tb3-bayraktar',
+    name: "Baykar Bayraktar TB3",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat naval",
+    manufacturer: 'Baykar',
+    country: 'Turquie',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes repliables",
+      "Train d'atterrissage renforcé",
+      "Empennage en V inversé"
+    ],
+    description: "Version navale du célèbre TB2 dotée d'ailes repliables pour opérer depuis des porte-aéronefs.",
+    specs: {
+      wingspan: '14.0 m',
+      length: '8.3 m',
+      height: '2.6 m',
+      payload: '280 kg'
+    }
+  },
+  {
+    id: 'aksungur-tai',
+    name: "TAI Aksungur",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de patrouille et combat",
+    manufacturer: 'TAI',
+    country: 'Turquie',
+    engineType: 'Piston',
+    enginesCount: 2,
+    recognitionTips: [
+      "Double poutre de queue",
+      "Deux moteurs à hélices",
+      "Grande envergure"
+    ],
+    description: "Drone à haute endurance capable d'emporter des bouées acoustiques pour la lutte anti-sous-marine.",
+    specs: {
+      wingspan: '24.0 m',
+      length: '12.0 m',
+      height: '3.1 m',
+      payload: '750 kg'
+    }
+  },
+  {
+    id: 'mq9b-skyguardian',
+    name: "General Atomics MQ-9B SkyGuardian",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Surveillance et frappe MALE",
+    manufacturer: 'General Atomics',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Bout d'ailes relevés (winglets)",
+      "Nez bulbeux sans cockpit",
+      "Moteur propulsif arrière"
+    ],
+    description: "Version certifiée pour voler dans l'espace aérien civil avec une autonomie de plus de 40 heures.",
+    specs: {
+      wingspan: '24.0 m',
+      length: '11.7 m',
+      height: '3.9 m',
+      payload: '2 150 kg'
+    }
+  },
+  {
+    id: 'mojave-ga',
+    name: "General Atomics Mojave",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat STOL",
+    manufacturer: 'General Atomics',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Pneus basse pression massifs",
+      "Ailes à haute portance",
+      "Pylônes d'armement proéminents"
+    ],
+    description: "Drone capable de décoller et atterrir sur des distances très courtes ou des terrains non préparés.",
+    specs: {
+      wingspan: '16.0 m',
+      length: '9.0 m',
+      height: 'N/A',
+      payload: '1 600 kg'
+    }
+  },
+  {
+    id: 'f15sa-advanced',
+    name: "Boeing F-15SA Advanced",
+    category: 'Combat Aircraft',
+    role: "Chasseur multirôle lourd",
+    manufacturer: 'Boeing',
+    country: 'USA/Arabie Saoudite',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Deux moteurs massifs",
+      "Cockpit biplace",
+      "Nombreuses antennes sur le fuselage"
+    ],
+    description: "Variante sophistiquée du F-15 avec de nouveaux points d'emport d'armes et des commandes électriques.",
+    specs: {
+      wingspan: '13.1 m',
+      length: '19.4 m',
+      height: '5.6 m',
+      payload: '13 000 kg'
+    }
+  },
+  {
+    id: 'mitsubishi-x2',
+    name: "Mitsubishi X-2 Shinshin",
+    category: 'Combat Aircraft',
+    role: "Démonstrateur furtif",
+    manufacturer: 'Mitsubishi',
+    country: 'Japon',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Petite taille",
+      "Tuyères de moteur en 'pétales'",
+      "Double dérive inclinée"
+    ],
+    description: "Appareil expérimental japonais servant à tester les technologies de furtivité et de poussée vectorielle.",
+    specs: {
+      wingspan: '9.1 m',
+      length: '14.2 m',
+      height: '4.5 m',
+      payload: 'Prototype'
+    }
+  },
+  {
+    id: 'su30-mkk',
+    name: "Sukhoi Su-30MKK",
+    category: 'Combat Aircraft',
+    role: "Chasseur de frappe maritime",
+    manufacturer: 'Sukhoi',
+    country: 'Russie/Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Dérives verticales à sommet plat",
+      "Grand cockpit biplace",
+      "Absence de plans canards"
+    ],
+    description: "Version optimisée pour l'armée chinoise avec des capacités anti-navires et une dérive verticale plus haute.",
+    specs: {
+      wingspan: '14.7 m',
+      length: '21.9 m',
+      height: '6.4 m',
+      payload: '8 000 kg'
+    }
+  },
+  {
+    id: 'a330-800-neo',
+    name: "Airbus A330-800neo",
+    category: 'Civil Jet Airliners',
+    role: "Long-courrier gros-porteur",
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Masque noir de cockpit",
+      "Grands Sharklets incurvés",
+      "Moteurs Trent 7000 imposants"
+    ],
+    description: "Variante plus courte mais à plus long rayon d'action de la famille A330neo.",
+    specs: {
+      wingspan: '64.0 m',
+      length: '58.8 m',
+      height: '17.4 m',
+      payload: '250 passagers'
+    }
+  },
+  {
+    id: '747-8f-freighter',
+    name: "Boeing 747-8F",
+    category: 'Civil Utility',
+    role: "Transport de fret lourd",
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Bord de fuite de dérive dentelé",
+      "Nez s'ouvrant vers le haut",
+      "Quatre moteurs"
+    ],
+    description: "Version cargo du 747-8 dotée d'un nez relevable pour le chargement de pièces indivisibles.",
+    specs: {
+      wingspan: '68.4 m',
+      length: '76.3 m',
+      height: '19.4 m',
+      payload: '132 000 kg'
+    }
+  },
+  {
+    id: 'crj1000-bombardier',
+    name: "Bombardier CRJ-1000",
+    category: 'Civil Jet Airliners',
+    role: "Jet régional",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage extrêmement long et fin",
+      "Moteurs à l'arrière",
+      "Ailes basses"
+    ],
+    description: "La version la plus longue de la famille CRJ conçue pour les lignes régionales à haute densité.",
+    specs: {
+      wingspan: '26.2 m',
+      length: '39.1 m',
+      height: '7.5 m',
+      payload: '100 passagers'
+    }
+  },
+  {
+    id: 'atr72-600',
+    name: "ATR 72-600",
+    category: 'Civil Turboprop Airliners',
+    role: "Transport régional",
+    manufacturer: 'ATR',
+    country: 'France/Italie',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Hélices à 6 pales",
+      "Ailes hautes",
+      "Train d'atterrissage dans des carénages latéraux"
+    ],
+    description: "Version modernisée avec un cockpit tout écran et des performances améliorées.",
+    specs: {
+      wingspan: '27.1 m',
+      length: '27.2 m',
+      height: '7.7 m',
+      payload: '78 passagers'
+    }
+  },
+  {
+    id: 'skycourier-408',
+    name: "Cessna 408 SkyCourier",
+    category: 'Civil Turboprop Airliners',
+    role: "Utilitaire et fret",
+    manufacturer: 'Textron Aviation',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage de section carrée",
+      "Ailes hautes et droites",
+      "Train tricycle fixe"
+    ],
+    description: "Avion biturbopropulseur robuste conçu pour le transport de palettes de fret ou de passagers.",
+    specs: {
+      wingspan: '22.0 m',
+      length: '16.7 m',
+      height: '6.0 m',
+      payload: '2 700 kg'
+    }
+  },
+  {
+    id: 'ma700-xian',
+    name: "Xian MA700",
+    category: 'Civil Turboprop Airliners',
+    role: "Transport régional moderne",
+    manufacturer: 'Xian Aircraft',
+    country: 'Chine',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Hélices à 6 pales",
+      "Nez très pointu",
+      "Queue en T"
+    ],
+    description: "Nouvel avion de transport turbopropulseur chinois visant le marché international.",
+    specs: {
+      wingspan: '27.9 m',
+      length: '30.5 m',
+      height: '8.2 m',
+      payload: '80 passagers'
+    }
+  },
+  {
+    id: 'h225m-caracal',
+    name: "Airbus H225M Caracal",
+    category: 'Helicopters',
+    role: "Transport tactique et CSAR",
+    manufacturer: 'Airbus Helicopters',
+    country: 'France',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Perche de ravitaillement à l'avant",
+      "Rotor à 5 pales",
+      "Train d'atterrissage rétractable"
+    ],
+    description: "Hélicoptère militaire lourd capable de ravitaillement en vol pour des missions spéciales.",
+    specs: {
+      wingspan: '16.2 m',
+      length: '19.5 m',
+      height: '4.6 m',
+      payload: '5 600 kg'
+    }
+  },
+  {
+    id: 'mh139-greywolf',
+    name: "Boeing MH-139 Grey Wolf",
+    category: 'Helicopters',
+    role: "Protection de sites stratégiques",
+    manufacturer: 'Boeing/Leonardo',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette lisse",
+      "Rotor à 5 pales",
+      "Capteurs optroniques sous le nez"
+    ],
+    description: "Basé sur l'AW139 cet appareil protège les sites de missiles nucléaires américains.",
+    specs: {
+      wingspan: '13.8 m',
+      length: '16.7 m',
+      height: '5.0 m',
+      payload: '3 000 kg'
+    }
+  },
+  {
+    id: 'z19-blackshark',
+    name: "Harbin Z-19",
+    category: 'Helicopters',
+    role: "Reconnaissance et attaque",
+    manufacturer: 'Harbin Aircraft',
+    country: 'Chine',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor de queue Fenestron",
+      "Cockpit en tandem",
+      "Train d'atterrissage fixe"
+    ],
+    description: "Hélicoptère léger d'accompagnement doté d'un rotor de queue caréné type Fenestron.",
+    specs: {
+      wingspan: '12.0 m',
+      length: '12.0 m',
+      height: '4.0 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'aw109-trekker',
+    name: "Leonardo AW109 Trekker",
+    category: 'Helicopters',
+    role: "Utilitaire léger et médical",
+    manufacturer: 'Leonardo',
+    country: 'Italie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Patins fixes",
+      "Silhouette fuselée",
+      "Deux turbines"
+    ],
+    description: "Variante de l'AW109 équipée de patins fixes au lieu de roues pour des terrains accidentés.",
+    specs: {
+      wingspan: '10.8 m',
+      length: '12.9 m',
+      height: '3.4 m',
+      payload: '1 500 kg'
+    }
+  },
+  {
+    id: 'bell-429-globalranger',
+    name: "Bell 429 GlobalRanger",
+    category: 'Helicopters',
+    role: "Transport et secours",
+    manufacturer: 'Bell Textron',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor de queue à 4 pales",
+      "Nez arrondi",
+      "Portes arrières format 'clamshell'"
+    ],
+    description: "Hélicoptère léger biturbine moderne doté d'une cabine spacieuse à plancher plat.",
+    specs: {
+      wingspan: '11.0 m',
+      length: '12.7 m',
+      height: '4.0 m',
+      payload: '1 200 kg'
+    }
+  },
+  {
+    id: 'mi28n-havoc',
+    name: "Mil Mi-28N Havoc",
+    category: 'Helicopters',
+    role: "Attaque tout temps",
+    manufacturer: 'Mil',
+    country: 'Russie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez avec capteurs en boule",
+      "Train fixe robuste",
+      "Rotor de queue en X"
+    ],
+    description: "Hélicoptère d'attaque lourd spécialisé dans la chasse nocturne aux blindés.",
+    specs: {
+      wingspan: '17.2 m',
+      length: '17.0 m',
+      height: '3.8 m',
+      payload: '2 300 kg'
+    }
+  },
+  {
+    id: 'g600-gulfstream',
+    name: "Gulfstream G600",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires long-courrier",
+    manufacturer: 'Gulfstream',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Hublots ovales larges",
+      "Nez court",
+      "Winglets verticaux élégants"
+    ],
+    description: "Jet d'affaires rapide doté d'une aile ultra-critique pour optimiser la consommation.",
+    specs: {
+      wingspan: '28.7 m',
+      length: '29.3 m',
+      height: '7.7 m',
+      payload: '19 passagers'
+    }
+  },
+  {
+    id: 'challenger-3500',
+    name: "Bombardier Challenger 3500",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires super-médium",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Winglets imposants inclinés",
+      "Moteurs à l'arrière",
+      "Nez arrondi"
+    ],
+    description: "Evolution du Challenger 350 avec une cabine intelligente et un vol à zéro émission.",
+    specs: {
+      wingspan: '21.0 m',
+      length: '20.9 m',
+      height: '6.1 m',
+      payload: '10 passagers'
+    }
+  },
+  {
+    id: 'global-5500',
+    name: "Bombardier Global 5500",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires longue portée",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes fines et souples",
+      "Moteurs à l'arrière",
+      "Silhouette allongée"
+    ],
+    description: "Combinant l'aile du Global 6000 avec de nouveaux moteurs Rolls-Royce Pearl.",
+    specs: {
+      wingspan: '28.7 m',
+      length: '29.5 m',
+      height: '7.8 m',
+      payload: '16 passagers'
+    }
+  },
+  {
+    id: 'sr20-g6-cirrus',
+    name: "Cirrus SR20 G6",
+    category: 'Private Light Aircraft',
+    role: "Tourisme et entraînement",
+    manufacturer: 'Cirrus Aircraft',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Train fixe caréné",
+      "Portes papillon",
+      "Système de parachute CAPS"
+    ],
+    description: "Version modernisée du SR20 avec le cockpit Perspective+ et des lumières Spectra.",
+    specs: {
+      wingspan: '11.7 m',
+      length: '7.9 m',
+      height: '2.7 m',
+      payload: '470 kg'
+    }
+  },
+  {
+    id: 'v10-vulcanair',
+    name: "Vulcanair V1.0",
+    category: 'Private Light Aircraft',
+    role: "Entraînement et loisir",
+    manufacturer: 'Vulcanair',
+    country: 'Italie',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes hautes haubanées",
+      "Train tricycle fixe",
+      "Trois portes d'accès"
+    ],
+    description: "Alternative italienne au Cessna 172 avec une structure métallique robuste et 4 places.",
+    specs: {
+      wingspan: '10.0 m',
+      length: '7.2 m',
+      height: '2.3 m',
+      payload: '400 kg'
+    }
+  },
+  {
+    id: 'p2012-traveller',
+    name: "Tecnam P2012 Traveller",
+    category: 'Civil Utility',
+    role: "Transport régional et utilitaire",
+    manufacturer: 'Tecnam',
+    country: 'Italie',
+    engineType: 'Piston',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes hautes",
+      "Moteurs à pistons carénés",
+      "Train fixe"
+    ],
+    description: "Bimoteur conçu spécifiquement pour le transport régional de 9 passagers ou du fret médical.",
+    specs: {
+      wingspan: '14.0 m',
+      length: '11.8 m',
+      height: '4.4 m',
+      payload: '1 400 kg'
+    }
+  },
+  {
+    id: 'kodiak-900',
+    name: "Daher Kodiak 900",
+    category: 'Civil Utility',
+    role: "Utilitaire STOL rapide",
+    manufacturer: 'Daher',
+    country: 'USA/France',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Carénages de train intégrés",
+      "Nez allongé",
+      "Hélice à 5 pales"
+    ],
+    description: "Version allongée et plus rapide du Kodiak 100 avec des carénages de train aérodynamiques.",
+    specs: {
+      wingspan: '13.7 m',
+      length: '11.4 m',
+      height: '4.8 m',
+      payload: '1 600 kg'
+    }
+  },
+  {
+    id: 't6c-texan-ii',
+    name: "Beechcraft T-6C Texan II",
+    category: 'Combat Training Aircraft',
+    role: "Entraîneur turbopropulseur",
+    manufacturer: 'Textron Aviation',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Cockpit biplace en tandem",
+      "Hélice quadripale",
+      "Verrière en bulle"
+    ],
+    description: "Variante du T-6 dotée d'ailes renforcées pour emporter des réservoirs externes ou des armes.",
+    specs: {
+      wingspan: '10.2 m',
+      length: '10.2 m',
+      height: '3.3 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'dart-550-diamond',
+    name: "Diamond DART-550",
+    category: 'Combat Training Aircraft',
+    role: "Entraîneur acrobatique",
+    manufacturer: 'Diamond Aircraft',
+    country: 'Autriche',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Structure tout carbone",
+      "Cockpit biplace en tandem",
+      "Moteur turbopropulseur"
+    ],
+    description: "Avion d'entraînement entièrement en composite conçu pour la voltige et l'initiation.",
+    specs: {
+      wingspan: '11.8 m',
+      length: '10.7 m',
+      height: '3.4 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'pc21-pilatus',
+    name: "Pilatus PC-21",
+    category: 'Combat Training Aircraft',
+    role: "Entraîneur avancé",
+    manufacturer: 'Pilatus Aircraft',
+    country: 'Suisse',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes courtes à haute charge",
+      "Hélice à 5 pales",
+      "Verrière monobloc"
+    ],
+    description: "L'avion d'entraînement à hélice le plus performant simulant le comportement d'un jet.",
+    specs: {
+      wingspan: '9.1 m',
+      length: '11.2 m',
+      height: '3.7 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'm28-skytruck',
+    name: "PZL Mielec M28 Skytruck",
+    category: 'Civil Utility',
+    role: "Transport STOL court",
+    manufacturer: 'PZL Mielec',
+    country: 'Pologne',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Double dérive verticale",
+      "Ailes hautes haubanées",
+      "Train tricycle fixe"
+    ],
+    description: "Avion robuste capable d'opérer sur des pistes de terre très courtes grâce à sa double dérive.",
+    specs: {
+      wingspan: '22.1 m',
+      length: '13.1 m',
+      height: '4.9 m',
+      payload: '2 300 kg'
+    }
+  },
+  {
+    id: 'an132-antonov',
+    name: "Antonov An-132",
+    category: 'Combat Support Aircraft',
+    role: "Transport tactique léger",
+    manufacturer: 'Antonov',
+    country: 'Ukraine/Arabie Saoudite',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs montés très haut sur les ailes",
+      "Hélices à 6 pales",
+      "Rampe arrière"
+    ],
+    description: "Version modernisée de l'An-32 équipée de moteurs occidentaux Pratt & Whitney.",
+    specs: {
+      wingspan: '29.2 m',
+      length: '24.5 m',
+      height: '8.8 m',
+      payload: '9 200 kg'
+    }
+  },
+  {
+    id: 'mc130j-commando',
+    name: "Lockheed Martin MC-130J Commando II",
+    category: 'Combat Support Aircraft',
+    role: "Opérations spéciales et tanker",
+    manufacturer: 'Lockheed Martin',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 4,
+    recognitionTips: [
+      "Sonde de ravitaillement",
+      "Nombreux capteurs sur le nez",
+      "Hélices à 6 pales"
+    ],
+    description: "Variante du C-130J spécialisée dans l'infiltration et le ravitaillement des hélicoptères.",
+    specs: {
+      wingspan: '40.4 m',
+      length: '29.8 m',
+      height: '11.8 m',
+      payload: '19 000 kg'
+    }
+  },
+  {
+    id: 'aw149-leonardo',
+    name: "Leonardo AW149",
+    category: 'Helicopters',
+    role: "Transport militaire moyen",
+    manufacturer: 'Leonardo',
+    country: 'Italie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage large et anguleux",
+      "Train rétractable robuste",
+      "Rotor à 5 pales"
+    ],
+    description: "Hélicoptère multirôle conçu pour le transport de troupes et l'appui feu.",
+    specs: {
+      wingspan: '14.6 m',
+      length: '17.6 m',
+      height: '5.1 m',
+      payload: '3 800 kg'
+    }
+  },
+  {
+    id: 'ec155-airbus',
+    name: "Airbus H155 (ex-EC155)",
+    category: 'Helicopters',
+    role: "Transport VIP et service public",
+    manufacturer: 'Airbus Helicopters',
+    country: 'France',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor de queue Fenestron",
+      "Nez pointu",
+      "Rotor principal à 5 pales"
+    ],
+    description: "Evolution de la famille Dauphin avec une cabine agrandie et un rotor à 5 pales.",
+    specs: {
+      wingspan: '12.6 m',
+      length: '14.3 m',
+      height: '4.3 m',
+      payload: '2 300 kg'
+    }
+  },
+  {
+    id: 'f15ia-israel',
+    name: "Boeing F-15IA",
+    category: 'Combat Aircraft',
+    role: "Chasseur de supériorité avancé",
+    manufacturer: 'Boeing',
+    country: 'USA/Israël',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Dérives verticales",
+      "Cockpit biplace",
+      "Emports d'armes massifs"
+    ],
+    description: "Future variante israélienne basée sur le F-15EX avec des systèmes électroniques locaux.",
+    specs: {
+      wingspan: '13.1 m',
+      length: '19.4 m',
+      height: '5.6 m',
+      payload: '13 300 kg'
+    }
+  },
+  {
+    id: 'aksungur-b-tai',
+    name: "TAI Aksungur Block B",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat longue portée",
+    manufacturer: 'TAI',
+    country: 'Turquie',
+    engineType: 'Piston',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs diesel jumeaux",
+      "Poutres de queue reliées",
+      "Tourelle optique centrale"
+    ],
+    description: "Variante améliorée pour l'attaque au sol avec des missiles guidés laser Teber.",
+    specs: {
+      wingspan: '24.2 m',
+      length: '11.6 m',
+      height: '3.1 m',
+      payload: '750 kg'
+    }
+  },
+  {
+    id: 'scorpion-textron',
+    name: "Textron Scorpion",
+    category: 'Combat Aircraft',
+    role: "Attaque légère et ISR",
+    manufacturer: 'Textron AirLand',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes droites",
+      "Double dérive inclinée",
+      "Entrées d'air latérales simples"
+    ],
+    description: "Jet de combat à bas coût conçu pour la surveillance et l'attaque légère.",
+    specs: {
+      wingspan: '14.4 m',
+      length: '13.3 m',
+      height: '4.3 m',
+      payload: '2 800 kg'
+    }
+  },
+  {
+    id: 'p1-kawasaki',
+    name: "Kawasaki P-1",
+    category: 'Combat Support Aircraft',
+    role: "Patrouille maritime et ASW",
+    manufacturer: 'Kawasaki',
+    country: 'Japon',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Quatre moteurs à réaction",
+      "Nez avec radars latéraux",
+      "Longue perche MAD arrière"
+    ],
+    description: "Le seul avion moderne à 4 réacteurs conçu exclusivement pour la patrouille maritime.",
+    specs: {
+      wingspan: '35.4 m',
+      length: '38.0 m',
+      height: '12.1 m',
+      payload: '9 000 kg'
+    }
+  },
+  {
+    id: 'tai-hurjet',
+    name: "TAI Hürjet",
+    category: 'Combat Training Aircraft',
+    role: "Entraîneur supersonique et attaque",
+    manufacturer: 'TAI',
+    country: 'Turquie',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Nez pointu effilé",
+      "Entrées d'air latérales sous les emplantures",
+      "Double dérive arrière inclinée"
+    ],
+    description: "Premier avion de combat supersonique conçu en Turquie pour remplacer les T-38 et NF-5.",
+    specs: {
+      wingspan: '9.5 m',
+      length: '13.6 m',
+      height: '5.1 m',
+      payload: '2 720 kg'
+    }
+  },
+  {
+    id: 'boeing-747-lcf',
+    name: "Boeing 747 LCF Dreamlifter",
+    category: 'Civil Utility',
+    role: "Transport de pièces de fuselage",
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Fuselage supérieur énormément gonflé",
+      "Queue pivotante pour le chargement",
+      "Quatre moteurs sous les ailes"
+    ],
+    description: "Version modifiée du 747-400 utilisée exclusivement pour transporter les pièces du 787.",
+    specs: {
+      wingspan: '64.4 m',
+      length: '71.7 m',
+      height: '21.5 m',
+      payload: '113 000 kg'
+    }
+  },
+  {
+    id: 'casa-c295',
+    name: "Airbus C-295",
+    category: 'Combat Support Aircraft',
+    role: "Transport tactique et patrouille",
+    manufacturer: 'Airbus (CASA)',
+    country: 'Espagne',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage long et étroit",
+      "Train d'atterrissage dans des carénages proéminents",
+      "Rampe arrière"
+    ],
+    description: "Version allongée du CN-235 avec une plus grande capacité de charge et de nouveaux moteurs.",
+    specs: {
+      wingspan: '25.8 m',
+      length: '24.5 m',
+      height: '8.6 m',
+      payload: '9 250 kg'
+    }
+  },
+  {
+    id: 'il76md-90a',
+    name: "Ilyushin Il-76MD-90A",
+    category: 'Combat Support Aircraft',
+    role: "Transport lourd modernisé",
+    manufacturer: 'Ilyushin',
+    country: 'Russie',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Quatre moteurs à réaction",
+      "Nez vitré pour le navigateur",
+      "Train d'atterrissage multiple robuste"
+    ],
+    description: "Version profondément modernisée du Candid avec de nouveaux moteurs plus puissants et silencieux.",
+    specs: {
+      wingspan: '50.5 m',
+      length: '46.6 m',
+      height: '14.8 m',
+      payload: '60 000 kg'
+    }
+  },
+  {
+    id: 'beechcraft-360',
+    name: "Beechcraft King Air 360",
+    category: 'Private Executive Aircraft',
+    role: "Turbopropulseur utilitaire",
+    manufacturer: 'Textron Aviation',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Bimoteur à hélices",
+      "Nez pointu",
+      "Winglets arrondis"
+    ],
+    description: "Version modernisée du légendaire King Air avec cabine pressurisée et avionique avancée.",
+    specs: {
+      wingspan: '17.7 m',
+      length: '14.2 m',
+      height: '4.5 m',
+      payload: '2 300 kg'
+    }
+  },
+  {
+    id: 'pc12-ngx',
+    name: "Pilatus PC-12 NGX",
+    category: 'Civil Utility',
+    role: "Turbopropulseur polyvalent",
+    manufacturer: 'Pilatus',
+    country: 'Suisse',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Hublots rectangulaires larges",
+      "Hélice à 5 pales",
+      "Queue en T"
+    ],
+    description: "Version la plus récente du PC-12 avec de nouveaux hublots plus grands et un moteur amélioré.",
+    specs: {
+      wingspan: '16.3 m',
+      length: '14.4 m',
+      height: '4.3 m',
+      payload: '1 200 kg'
+    }
+  },
+  {
+    id: 'tbm-960',
+    name: "Socata TBM 960",
+    category: 'Private Executive Aircraft',
+    role: "Turbopropulseur très rapide",
+    manufacturer: 'DAHER',
+    country: 'France',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Hélice à 5 pales",
+      "Nez allongé",
+      "Winglets en bout d'ailes"
+    ],
+    description: "Dernière évolution du TBM avec contrôle numérique du moteur (FADEC) et radar domestique.",
+    specs: {
+      wingspan: '12.8 m',
+      length: '10.7 m',
+      height: '4.4 m',
+      payload: '640 kg'
+    }
+  },
+  {
+    id: 'bell-407-gxi',
+    name: "Bell 407 GXi",
+    category: 'Helicopters',
+    role: "Hélicoptère utilitaire léger",
+    manufacturer: 'Bell Textron',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 1,
+    recognitionTips: [
+      "Rotor principal à 4 pales",
+      "Silhouette classique Bell",
+      "Train d'atterrissage à patins"
+    ],
+    description: "Version modernisée du 407 avec cockpit intégré G1000H et moteur plus performant.",
+    specs: {
+      wingspan: '10.7 m',
+      length: '12.7 m',
+      height: '3.3 m',
+      payload: '1 100 kg'
+    }
+  },
+  {
+    id: 'tai-gokbey',
+    name: "TAI Gökbey",
+    category: 'Helicopters',
+    role: "Hélicoptère utilitaire léger",
+    manufacturer: 'TAI',
+    country: 'Turquie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez arrondi massif",
+      "Rotor principal à 5 pales",
+      "Train d'atterrissage tricycle"
+    ],
+    description: "Hélicoptère biturbine de 6 tonnes conçu pour des missions civiles et militaires en Turquie.",
+    specs: {
+      wingspan: '13.2 m',
+      length: '15.9 m',
+      height: '5.0 m',
+      payload: '2 000 kg'
+    }
+  },
+  {
+    id: 'ansat-kazan',
+    name: "Kazan Ansat",
+    category: 'Helicopters',
+    role: "Hélicoptère léger polyvalent",
+    manufacturer: 'Kazan Helicopters',
+    country: 'Russie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez vitré",
+      "Rotor principal à 4 pales",
+      "Portes de cabine larges"
+    ],
+    description: "Hélicoptère biturbine russe polyvalent utilisé pour l'entraînement et le secours.",
+    specs: {
+      wingspan: '11.5 m',
+      length: '13.5 m',
+      height: '3.5 m',
+      payload: '1 200 kg'
+    }
+  },
+  {
+    id: 's97-raider',
+    name: "Sikorsky S-97 Raider",
+    category: 'Helicopters',
+    role: "Hélicoptère d'attaque composé",
+    manufacturer: 'Sikorsky',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 1,
+    recognitionTips: [
+      "Rotors coaxiaux rigides superposés",
+      "Hélice propulsive à l'arrière",
+      "Design futuriste plat"
+    ],
+    description: "Hélicoptère expérimental à rotors coaxiaux et hélice propulsive pour haute vitesse.",
+    specs: {
+      wingspan: '10.4 m',
+      length: '11.0 m',
+      height: 'N/A',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'bell-360-invictus',
+    name: "Bell 360 Invictus",
+    category: 'Helicopters',
+    role: "Hélicoptère de reconnaissance",
+    manufacturer: 'Bell Textron',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 1,
+    recognitionTips: [
+      "Fuselage très étroit et plat",
+      "Rotor de queue Fenestron",
+      "Cockpit en tandem"
+    ],
+    description: "Prototype furtif conçu pour la reconnaissance armée à grande vitesse pour l'US Army.",
+    specs: {
+      wingspan: '12.2 m',
+      length: '13.4 m',
+      height: 'N/A',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'ka226t',
+    name: "Kamov Ka-226T",
+    category: 'Helicopters',
+    role: "Hélicoptère léger modulaire",
+    manufacturer: 'Kamov',
+    country: 'Russie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotors coaxiaux superposés",
+      "Pas de rotor de queue",
+      "Cabine arrière de type 'pod'"
+    ],
+    description: "Hélicoptère sans rotor de queue doté d'une cabine arrière interchangeable selon la mission.",
+    specs: {
+      wingspan: '13.0 m',
+      length: '8.1 m',
+      height: '4.1 m',
+      payload: '1 050 kg'
+    }
+  },
+  {
+    id: 'rq7-shadow',
+    name: "AAI RQ-7 Shadow",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Reconnaissance tactique",
+    manufacturer: 'Textron Systems',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Double poutre de queue",
+      "Hélice propulsive",
+      "Lancé par rampe"
+    ],
+    description: "Petit drone tactique utilisé par les armées de terre pour la surveillance du champ de bataille.",
+    specs: {
+      wingspan: '4.3 m',
+      length: '3.4 m',
+      height: '1.0 m',
+      payload: '27 kg'
+    }
+  },
+  {
+    id: 'scaneagle-boeing',
+    name: "Insitu ScanEagle",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Surveillance légère",
+    manufacturer: 'Boeing / Insitu',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes en flèche avec winglets",
+      "Absence de train d'atterrissage",
+      "Caméra sous le nez"
+    ],
+    description: "Petit drone lancé par catapulte et récupéré par un crochet sur un câble (SkyHook).",
+    specs: {
+      wingspan: '3.1 m',
+      length: '1.6 m',
+      height: 'N/A',
+      payload: '3.4 kg'
+    }
+  },
+  {
+    id: 'patroller-safran',
+    name: "Safran Patroller",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone MALE de surveillance",
+    manufacturer: 'Safran',
+    country: 'France',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes très longues",
+      "Radar ou boule optique sous le fuselage",
+      "Hélice propulsive"
+    ],
+    description: "Drone de l'armée de terre française basé sur une cellule de motoplaneur pour la surveillance.",
+    specs: {
+      wingspan: '18.0 m',
+      length: '8.5 m',
+      height: 'N/A',
+      payload: '250 kg'
+    }
+  },
+  {
+    id: 'eurodrone-male',
+    name: "Airbus Eurodrone",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone MALE stratégique",
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Double moteur turbopropulseur propulsif",
+      "Taille massive",
+      "Empennage en T"
+    ],
+    description: "Futur drone européen de grande envergure pour des missions de surveillance et de frappe.",
+    specs: {
+      wingspan: '30.0 m',
+      length: '16.0 m',
+      height: '6.0 m',
+      payload: '2 300 kg'
+    }
+  },
+  {
+    id: 'taranis-bae',
+    name: "BAE Systems Taranis",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat furtif",
+    manufacturer: 'BAE Systems',
+    country: 'UK',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Aile volante pure en forme de triangle",
+      "Entrée d'air sur le dessus",
+      "Pas de dérive"
+    ],
+    description: "Démonstrateur technologique britannique de drone de combat furtif autonome.",
+    specs: {
+      wingspan: '10.0 m',
+      length: '12.4 m',
+      height: '4.0 m',
+      payload: 'Interne'
+    }
+  },
+  {
+    id: 'vbat-martin',
+    name: "Martin UAV V-BAT",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de surveillance VTOL",
+    manufacturer: 'Martin UAV',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Hélice carénée à l'arrière",
+      "Décollage vertical sur la queue",
+      "Ailes droites"
+    ],
+    description: "Drone décollant verticalement sur sa queue avant de basculer en vol horizontal.",
+    specs: {
+      wingspan: '2.7 m',
+      length: '2.4 m',
+      height: 'N/A',
+      payload: '3.6 kg'
+    }
+  },
+  {
+    id: 'xb1-boom',
+    name: "Boom XB-1 Baby Boom",
+    category: 'Civil Jet Airliners',
+    role: "Démonstrateur supersonique",
+    manufacturer: 'Boom Supersonic',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 3,
+    recognitionTips: [
+      "Fuselage très long et fin",
+      "Ailes en delta",
+      "Trois moteurs à l'arrière"
+    ],
+    description: "Avion d'essai tiers conçu pour tester les technologies du futur transport supersonique Overture.",
+    specs: {
+      wingspan: '5.2 m',
+      length: '21.0 m',
+      height: 'N/A',
+      payload: 'Prototype'
+    }
+  },
+  {
+    id: 'x59-quesst',
+    name: "Lockheed Martin X-59",
+    category: 'Civil Jet Airliners',
+    role: "Avion supersonique silencieux",
+    manufacturer: 'Lockheed Martin',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Nez extrêmement long (un tiers de l'avion)",
+      "Pas de vitre frontale de cockpit",
+      "Aile delta"
+    ],
+    description: "Conçu par la NASA pour tester la réduction du bang supersonique au-dessus des villes.",
+    specs: {
+      wingspan: '9.0 m',
+      length: '29.0 m',
+      height: '4.3 m',
+      payload: 'Expérimental'
+    }
+  },
+  {
+    id: 'f16v-viper',
+    name: "Lockheed Martin F-16V Viper",
+    category: 'Combat Aircraft',
+    role: "Chasseur multirôle",
+    manufacturer: 'Lockheed Martin',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Radar APG-83 dans le nez",
+      "Réservoirs conformes optionnels",
+      "Affichage central IPDG en cockpit"
+    ],
+    description: "La version la plus récente du F-16 équipée d'un radar AESA et d'une électronique de 5e génération.",
+    specs: {
+      wingspan: '9.5 m',
+      length: '15.0 m',
+      height: '4.9 m',
+      payload: '7 700 kg'
+    }
+  },
+  {
+    id: 'j11d-flanker',
+    name: "Shenyang J-11D",
+    category: 'Combat Aircraft',
+    role: "Chasseur de supériorité aérienne",
+    manufacturer: 'Shenyang Aircraft',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Radar incliné vers le haut",
+      "Perche de ravitaillement",
+      "Absence de tube Pitot sur le nez"
+    ],
+    description: "Version chinoise améliorée du Flanker avec des matériaux composites et une signature radar réduite.",
+    specs: {
+      wingspan: '14.7 m',
+      length: '21.9 m',
+      height: '5.9 m',
+      payload: '6 000 kg'
+    }
+  },
+  {
+    id: 'su30-mki-in',
+    name: "Sukhoi Su-30MKI",
+    category: 'Combat Aircraft',
+    role: "Chasseur multirôle lourd",
+    manufacturer: 'Sukhoi/HAL',
+    country: 'Inde',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Plans canards à l'avant",
+      "Tuyères de moteur orientables",
+      "Grand cockpit biplace"
+    ],
+    description: "Version indienne très agile dotée de canards et d'une poussée vectorielle pour une maniabilité extrême.",
+    specs: {
+      wingspan: '14.7 m',
+      length: '21.9 m',
+      height: '6.4 m',
+      payload: '8 000 kg'
+    }
+  },
+  {
+    id: 'a29b-super-tucano',
+    name: "Embraer A-29B Super Tucano",
+    category: 'Combat Aircraft',
+    role: "Appui feu et COIN",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Hélice à 5 pales",
+      "Longs échappements latéraux",
+      "Cockpit blindé biplace"
+    ],
+    description: "Avion d'attaque léger robuste conçu pour opérer dans des environnements austères et tropicaux.",
+    specs: {
+      wingspan: '11.1 m',
+      length: '11.3 m',
+      height: '4.0 m',
+      payload: '1 550 kg'
+    }
+  },
+  {
+    id: 'il78m-90a',
+    name: "Ilyushin Il-78M-90A",
+    category: 'Combat Support Aircraft',
+    role: "Avion ravitailleur",
+    manufacturer: 'Ilyushin',
+    country: 'Russie',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Quatre réacteurs PS-90A",
+      "Pods de ravitaillement sous les ailes",
+      "Nez vitré caractéristique"
+    ],
+    description: "Dernière variante du ravitailleur Il-78 avec de nouveaux moteurs et une structure renforcée.",
+    specs: {
+      wingspan: '50.5 m',
+      length: '46.6 m',
+      height: '14.8 m',
+      payload: '126 000 kg fuel'
+    }
+  },
+  {
+    id: 'dart450-diamond',
+    name: "Diamond DART-450",
+    category: 'Combat Training Aircraft',
+    role: "Entraîneur de voltige",
+    manufacturer: 'Diamond Aircraft',
+    country: 'Autriche',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Structure fine en carbone",
+      "Cockpit tandem",
+      "Hélice propulsive haute performance"
+    ],
+    description: "Avion d'entraînement entièrement en composite carbone pour une agilité maximale.",
+    specs: {
+      wingspan: '11.8 m',
+      length: '10.8 m',
+      height: '3.4 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'sonaca-200',
+    name: "Sonaca 200",
+    category: 'Private Light Aircraft',
+    role: "Entraînement et loisir",
+    manufacturer: 'Sonaca Aircraft',
+    country: 'Belgique',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes basses",
+      "Train tricycle fixe",
+      "Verrière panoramique"
+    ],
+    description: "Avion biplace métallique moderne conçu pour la robustesse et la formation des pilotes.",
+    specs: {
+      wingspan: '9.2 m',
+      length: '7.0 m',
+      height: '2.6 m',
+      payload: '230 kg'
+    }
+  },
+  {
+    id: 'cessna-162',
+    name: "Cessna 162 Skycatcher",
+    category: 'Private Light Aircraft',
+    role: "Entraînement léger (LSA)",
+    manufacturer: 'Cessna',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes hautes",
+      "Portes ouvrant vers le haut",
+      "Dérive verticale carrée"
+    ],
+    description: "Avion léger conçu pour moderniser l'entraînement initial chez Cessna (production arrêtée).",
+    specs: {
+      wingspan: '9.1 m',
+      length: '6.9 m',
+      height: '2.5 m',
+      payload: '220 kg'
+    }
+  },
+  {
+    id: 'transition-terrafugia',
+    name: "Terrafugia Transition",
+    category: 'Private Light Aircraft',
+    role: "Voiture volante",
+    manufacturer: 'Terrafugia',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes repliables verticalement",
+      "Double dérive arrière",
+      "Look de voiture avec hélice propulsive"
+    ],
+    description: "Véhicule hybride capable de rouler sur route et de décoller depuis un aérodrome.",
+    specs: {
+      wingspan: '8.0 m',
+      length: '6.0 m',
+      height: '2.0 m',
+      payload: '210 kg'
+    }
+  },
+  {
+    id: 's100-camcopter',
+    name: "Schiebel Camcopter S-100",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone hélicoptère léger",
+    manufacturer: 'Schiebel',
+    country: 'Autriche',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Forme de goutte d'eau",
+      "Rotor à deux pales",
+      "Pas de train (posé sur le ventre ou patins)"
+    ],
+    description: "Petit drone hélicoptère utilisé mondialement pour la surveillance civile et militaire.",
+    specs: {
+      wingspan: '3.4 m',
+      length: '3.1 m',
+      height: '1.1 m',
+      payload: '50 kg'
+    }
+  },
+  {
+    id: 'mq20-avenger',
+    name: "General Atomics MQ-20 Avenger",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat furtif",
+    manufacturer: 'General Atomics',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Entrée d'air sur le dessus",
+      "Queue en V",
+      "Pas d'hélice (réaction)"
+    ],
+    description: "Drone à réaction furtif conçu pour des missions de frappe rapide avec soute interne.",
+    specs: {
+      wingspan: '20.1 m',
+      length: '13.4 m',
+      height: 'N/A',
+      payload: '2 900 kg'
+    }
+  },
+  {
+    id: 'harop-iai',
+    name: "IAI Harop",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Munition téléopérée",
+    manufacturer: 'IAI',
+    country: 'Israël',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Forme canard (petites ailes avant)",
+      "Hélice propulsive",
+      "Lancé depuis un conteneur"
+    ],
+    description: "Drone kamikaze capable de rôder au-dessus d'une zone avant de frapper une cible radar.",
+    specs: {
+      wingspan: '3.0 m',
+      length: '2.5 m',
+      height: 'N/A',
+      payload: '23 kg explosive'
+    }
+  },
+  {
+    id: 'falcon-2000lxs',
+    name: "Dassault Falcon 2000LXS",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires long-courrier",
+    manufacturer: 'Dassault',
+    country: 'France',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Bimoteur à l'arrière",
+      "Grands winglets incurvés",
+      "Nez arrondi typique Falcon"
+    ],
+    description: "Version améliorée du 2000 avec des winglets et des capacités de piste courte exceptionnelles.",
+    specs: {
+      wingspan: '21.4 m',
+      length: '20.2 m',
+      height: '7.1 m',
+      payload: '10 passagers'
+    }
+  },
+  {
+    id: 'g500-2014',
+    name: "Gulfstream G500 (GVII)",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires haute performance",
+    manufacturer: 'Gulfstream',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Sept hublots ovales par côté",
+      "Dérive verticale effilée",
+      "Moteurs Pratt & Whitney"
+    ],
+    description: "Remplaçant du G450 doté d'un cockpit à écrans tactiles et d'une vitesse de croisière élevée.",
+    specs: {
+      wingspan: '26.5 m',
+      length: '27.8 m',
+      height: '7.8 m',
+      payload: '19 passagers'
+    }
+  },
+  {
+    id: 'lineage-1000',
+    name: "Embraer Lineage 1000",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires ultra-large",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette de jet régional",
+      "Hublots rectangulaires",
+      "Moteurs sous les ailes"
+    ],
+    description: "Version exécutive de l'E190 offrant un espace intérieur massif divisé en plusieurs zones.",
+    specs: {
+      wingspan: '28.7 m',
+      length: '36.2 m',
+      height: '10.6 m',
+      payload: '19 passagers'
+    }
+  },
+  {
+    id: 'cj4-citation',
+    name: "Cessna Citation CJ4",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires léger",
+    manufacturer: 'Textron Aviation',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes en flèche",
+      "Nez pointu",
+      "Moteurs à l'arrière sans winglets verticaux"
+    ],
+    description: "Le plus grand et le plus performant des modèles de la gamme CitationJet (CE-525).",
+    specs: {
+      wingspan: '15.5 m',
+      length: '16.3 m',
+      height: '4.7 m',
+      payload: '10 passagers'
+    }
+  },
+  {
+    id: 'e1000-epic',
+    name: "Epic E1000",
+    category: 'Private Executive Aircraft',
+    role: "Turbopropulseur monomoteur",
+    manufacturer: 'Epic Aircraft',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Fuselage très fluide en composite",
+      "Pare-brise panoramique",
+      "Hélice quadripale"
+    ],
+    description: "Monomoteur ultra-rapide entièrement en carbone conçu pour concurrencer les jets légers.",
+    specs: {
+      wingspan: '13.1 m',
+      length: '10.9 m',
+      height: '3.8 m',
+      payload: '500 kg'
+    }
+  },
+  {
+    id: 'sr22t-cirrus',
+    name: "Cirrus SR22T",
+    category: 'Private Light Aircraft',
+    role: "Monomoteur haute performance",
+    manufacturer: 'Cirrus Aircraft',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Hélice tripale noire",
+      "Prises d'air moteur proéminentes",
+      "Train fixe caréné"
+    ],
+    description: "Version turbocompressée du SR22 permettant des vols à haute altitude avec parachute de cellule.",
+    specs: {
+      wingspan: '11.7 m',
+      length: '7.9 m',
+      height: '2.7 m',
+      payload: '500 kg'
+    }
+  },
+  {
+    id: 'an158-antonov',
+    name: "Antonov An-158",
+    category: 'Civil Jet Airliners',
+    role: "Jet régional allongé",
+    manufacturer: 'Antonov',
+    country: 'Ukraine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs sous ailes hautes",
+      "Winglets en bout d'aile",
+      "Silhouette trapue"
+    ],
+    description: "Version allongée de l'An-148 conçue pour le transport régional de passagers.",
+    specs: {
+      wingspan: '28.9 m',
+      length: '34.4 m',
+      height: '8.6 m',
+      payload: '99 passagers'
+    }
+  },
+  {
+    id: '737-900er',
+    name: "Boeing 737-900ER",
+    category: 'Civil Jet Airliners',
+    role: "Moyen-courrier allongé",
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Deux sorties de secours derrière les ailes",
+      "Fuselage très long",
+      "Winglets classiques"
+    ],
+    description: "Variante à autonomie étendue du 737-900 capable de transporter plus de passagers.",
+    specs: {
+      wingspan: '35.8 m',
+      length: '42.1 m',
+      height: '12.5 m',
+      payload: '215 passagers'
+    }
+  },
+  {
+    id: 'a321neo-acf',
+    name: "Airbus A321neo ACF",
+    category: 'Civil Jet Airliners',
+    role: "Moyen-courrier flexible",
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Absence de porte devant l'aile",
+      "Sorties de secours sur l'aile",
+      "Moteurs imposants"
+    ],
+    description: "Variante de l'A321neo avec une nouvelle configuration de portes pour maximiser l'espace cabine.",
+    specs: {
+      wingspan: '35.8 m',
+      length: '44.5 m',
+      height: '11.8 m',
+      payload: '240 passagers'
+    }
+  },
+  {
+    id: 'mh60r-seahawk',
+    name: "Sikorsky MH-60R Seahawk",
+    category: 'Helicopters',
+    role: "Lutte anti-sous-marine",
+    manufacturer: 'Sikorsky',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Radôme circulaire sous le nez",
+      "Lance-bouées acoustiques latéral",
+      "Train d'atterrissage arrière avancé"
+    ],
+    description: "Version 'Romeo' du Seahawk spécialisée dans la lutte sous-marine et de surface.",
+    specs: {
+      wingspan: '16.4 m',
+      length: '19.8 m',
+      height: '5.2 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'aw101-mk4',
+    name: "Leonardo AW101 Merlin Mk4",
+    category: 'Helicopters',
+    role: "Transport de troupes amphibie",
+    manufacturer: 'Leonardo',
+    country: 'UK',
+    engineType: 'Turbine',
+    enginesCount: 3,
+    recognitionTips: [
+      "Peinture grise/verte commando",
+      "Trois turbines",
+      "Queue et rotor repliables"
+    ],
+    description: "Version optimisée pour les Royal Marines avec pales et queue repliables pour les navires.",
+    specs: {
+      wingspan: '18.6 m',
+      length: '22.8 m',
+      height: '6.6 m',
+      payload: '5 000 kg'
+    }
+  },
+  {
+    id: 'bell-412epi',
+    name: "Bell 412EPI",
+    category: 'Helicopters',
+    role: "Utilitaire moyen moderne",
+    manufacturer: 'Bell Textron',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor principal à 4 pales",
+      "Nez avec radars météo",
+      "Moteurs jumeaux"
+    ],
+    description: "Version améliorée du 412 avec une puissance accrue et un cockpit numérique intégré.",
+    specs: {
+      wingspan: '14.0 m',
+      length: '17.1 m',
+      height: '4.6 m',
+      payload: '2 300 kg'
+    }
+  },
+  {
+    id: 'z20-harbin',
+    name: "Harbin Z-20",
+    category: 'Helicopters',
+    role: "Transport utilitaire moyen",
+    manufacturer: 'Harbin Aircraft',
+    country: 'Chine',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor à 5 pales (contre 4 pour le Black Hawk)",
+      "Fuselage anguleux",
+      "Queue plus haute"
+    ],
+    description: "Hélicoptère chinois multi-missions ressemblant au Black Hawk mais doté d'un rotor à 5 pales.",
+    specs: {
+      wingspan: '16.0 m',
+      length: '20.0 m',
+      height: '5.3 m',
+      payload: '5 000 kg'
+    }
+  },
+  {
+    id: 'z10me-caic',
+    name: "CAIC Z-10ME",
+    category: 'Helicopters',
+    role: "Attaque lourd (Export)",
+    manufacturer: 'CAIC',
+    country: 'Chine',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Filtres à sable sur les moteurs",
+      "Plaques de blindage additionnelles",
+      "Tourelle canon 23mm"
+    ],
+    description: "Version d'exportation améliorée avec une protection accrue et des filtres à sable pour moteurs.",
+    specs: {
+      wingspan: '12.0 m',
+      length: '14.1 m',
+      height: '3.9 m',
+      payload: '1 500 kg'
+    }
+  },
+  {
+    id: 'global-6500',
+    name: "Bombardier Global 6500",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires long-courrier",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette allongée élégante",
+      "Moteurs Pearl massifs",
+      "Ailes très souples"
+    ],
+    description: "Évolution du Global 6000 avec de nouveaux moteurs Rolls-Royce Pearl et une aile optimisée.",
+    specs: {
+      wingspan: '28.7 m',
+      length: '30.3 m',
+      height: '7.8 m',
+      payload: '17 passagers'
+    }
+  },
+  {
+    id: 'falcon-2000s',
+    name: "Dassault Falcon 2000S",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires super-médium",
+    manufacturer: 'Dassault',
+    country: 'France',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Bords d'attaque d'ailes mobiles",
+      "Winglets incurvés",
+      "Bimoteur arrière"
+    ],
+    description: "Version optimisée pour les pistes courtes et les approches raides (ex: London City).",
+    specs: {
+      wingspan: '21.4 m',
+      length: '20.2 m',
+      height: '7.1 m',
+      payload: '10 passagers'
+    }
+  },
+  {
+    id: 'g400-gulfstream',
+    name: "Gulfstream G400",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires large cabine",
+    manufacturer: 'Gulfstream',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez court effilé",
+      "Six hublots ovales par côté",
+      "Moteurs Pratt & Whitney"
+    ],
+    description: "Dernier-né de Gulfstream visant le segment des jets à large cabine de moyenne portée.",
+    specs: {
+      wingspan: '26.3 m',
+      length: '26.3 m',
+      height: '7.7 m',
+      payload: '12 passagers'
+    }
+  },
+  {
+    id: 'g800-gulfstream',
+    name: "Gulfstream G800",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires très longue portée",
+    manufacturer: 'Gulfstream',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette de G700 mais plus courte",
+      "8 hublots ovales par côté",
+      "Winglets massifs intégrés"
+    ],
+    description: "Le jet de Gulfstream ayant la plus grande autonomie au monde (14 816 km) à haute vitesse.",
+    specs: {
+      wingspan: '31.4 m',
+      length: '30.4 m',
+      height: '7.8 m',
+      payload: '19 passagers'
+    }
+  },
+  {
+    id: 'global-8000',
+    name: "Bombardier Global 8000",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires ultra-rapide",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette du Global 7500",
+      "Ailes très souples",
+      "Moteurs GE Passport haute performance"
+    ],
+    description: "Le jet d'affaires le plus rapide au monde (Mach 0.94) doté d'une portée exceptionnelle.",
+    specs: {
+      wingspan: '31.7 m',
+      length: '33.8 m',
+      height: '8.2 m',
+      payload: '19 passagers'
+    }
+  },
+  {
+    id: 'f15-mkm-malaysia',
+    name: "Boeing F-15MKM",
+    category: 'Combat Aircraft',
+    role: "Chasseur multirôle lourd",
+    manufacturer: 'Boeing',
+    country: 'USA/Malaisie',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Camouflage gris deux tons",
+      "Cockpit biplace",
+      "Emblème de la RMAF"
+    ],
+    description: "Variante malaisienne du Su-30MKM mais en version Eagle avec des systèmes d'autoprotection spécifiques.",
+    specs: {
+      wingspan: '13.1 m',
+      length: '19.4 m',
+      height: '5.6 m',
+      payload: '8 100 kg'
+    }
+  },
+  {
+    id: 'j10b-vigorous',
+    name: "Chengdu J-10B",
+    category: 'Combat Aircraft',
+    role: "Chasseur multirôle amélioré",
+    manufacturer: 'Chengdu Aircraft',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Entrée d'air ventrale sans montants",
+      "Capteur IRST sur le nez",
+      "Nez plus plat"
+    ],
+    description: "Évolution du J-10A avec une entrée d'air DSI et un capteur infrarouge (IRST) devant le cockpit.",
+    specs: {
+      wingspan: '9.8 m',
+      length: '15.5 m',
+      height: '5.4 m',
+      payload: '7 000 kg'
+    }
+  },
+  {
+    id: 'c929-comac',
+    name: "COMAC C929",
+    category: 'Civil Jet Airliners',
+    role: "Long-courrier gros-porteur",
+    manufacturer: 'COMAC',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage large",
+      "Silhouette proche de l'A330neo",
+      "Moteurs de nouvelle génération"
+    ],
+    description: "Futur avion gros-porteur chinois (ex-CR929) conçu pour briser le monopole Boeing/Airbus.",
+    specs: {
+      wingspan: '63.9 m',
+      length: '63.3 m',
+      height: '17.9 m',
+      payload: '280 passagers'
+    }
+  },
+  {
+    id: 'an132d-antonov',
+    name: "Antonov An-132D",
+    category: 'Combat Support Aircraft',
+    role: "Transport tactique léger",
+    manufacturer: 'Antonov',
+    country: 'Ukraine/Arabie Saoudite',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Hélices à 6 pales Dowty Propellers",
+      "Moteurs Pratt & Whitney",
+      "Nez arrondi sans vitres"
+    ],
+    description: "Démonstrateur technologique basé sur l'An-32 mais avec des moteurs et une avionique occidentaux.",
+    specs: {
+      wingspan: '29.2 m',
+      length: '24.5 m',
+      height: '8.8 m',
+      payload: '9 200 kg'
+    }
+  },
+  {
+    id: 'mohajer-6',
+    name: "Qods Mohajer-6",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat et ISR",
+    manufacturer: 'Qods',
+    country: 'Iran',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Double poutre de queue",
+      "Hélice propulsive",
+      "Train d'atterrissage tricycle fixe"
+    ],
+    description: "Drone de combat polyvalent capable d'emporter des bombes guidées miniatures sur des cibles fixes ou mobiles.",
+    specs: {
+      wingspan: '10.0 m',
+      length: '5.7 m',
+      height: 'N/A',
+      payload: '100 kg'
+    }
+  },
+  {
+    id: 'calidus-b250',
+    name: "Calidus B-250 Bader",
+    category: 'Combat Training Aircraft',
+    role: "Attaque légère et entraînement",
+    manufacturer: 'Calidus',
+    country: 'EAU',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Structure tout carbone fluide",
+      "Sept points d'emport",
+      "Cockpit tandem large"
+    ],
+    description: "Avion d'attaque léger entièrement en fibre de carbone conçu pour les guerres asymétriques.",
+    specs: {
+      wingspan: '12.1 m',
+      length: '11.0 m',
+      height: '3.8 m',
+      payload: '1 800 kg'
+    }
+  },
+  {
+    id: 'h215-airbus',
+    name: "Airbus H215 (Super Puma)",
+    category: 'Helicopters',
+    role: "Transport utilitaire lourd",
+    manufacturer: 'Airbus Helicopters',
+    country: 'France',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez arrondi avec radôme",
+      "Rotor à 4 pales",
+      "Fuselage long avec train fixe ou rétractable"
+    ],
+    description: "Version modernisée et simplifiée du Super Puma offrant robustesse et coût d'exploitation réduit.",
+    specs: {
+      wingspan: '16.2 m',
+      length: '18.7 m',
+      height: '4.9 m',
+      payload: '4 500 kg'
+    }
+  },
+  {
+    id: 'aw101-sar-611',
+    name: "Leonardo AW101-611",
+    category: 'Helicopters',
+    role: "Recherche et sauvetage (SAR)",
+    manufacturer: 'Leonardo',
+    country: 'Japon/Italie',
+    engineType: 'Turbine',
+    enginesCount: 3,
+    recognitionTips: [
+      "Trois moteurs",
+      "Livrée blanche et jaune (parfois)",
+      "Radar de recherche sous le nez"
+    ],
+    description: "Variante japonaise du Merlin utilisée pour le sauvetage à long rayon d'action et la chasse aux mines.",
+    specs: {
+      wingspan: '18.6 m',
+      length: '22.8 m',
+      height: '6.6 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'f15id-eagle',
+    name: "Boeing F-15ID",
+    category: 'Combat Aircraft',
+    role: "Chasseur lourd avancé",
+    manufacturer: 'Boeing',
+    country: 'USA/Indonésie',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Dérives verticales",
+      "Cockpit biplace",
+      "Emports d'armes sous les ailes massifs"
+    ],
+    description: "Version destinée à l'Indonésie basée sur le standard F-15EX Eagle II.",
+    specs: {
+      wingspan: '13.1 m',
+      length: '19.4 m',
+      height: '5.6 m',
+      payload: '13 400 kg'
+    }
+  },
+  {
+    id: 'f16-block-70',
+    name: "Lockheed Martin F-16 Block 70",
+    category: 'Combat Aircraft',
+    role: "Chasseur multirôle avancé",
+    manufacturer: 'Lockheed Martin',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Radar AESA APG-83",
+      "Réservoirs conformes (CFT)",
+      "Peinture Have Glass"
+    ],
+    description: "Dernier standard de production du F-16 intégrant le radar AESA du F-35.",
+    specs: {
+      wingspan: '9.5 m',
+      length: '15.0 m',
+      height: '4.9 m',
+      payload: '7 700 kg'
+    }
+  },
+  {
+    id: 'mi171sh-storm',
+    name: "Mil Mi-171Sh Storm",
+    category: 'Helicopters',
+    role: "Transport d'assaut armé",
+    manufacturer: 'Mil',
+    country: 'Russie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Plaques de blindage latérales",
+      "Boule optronique sous le nez",
+      "Pylônes d'armement proéminents"
+    ],
+    description: "Version lourdement armée du Mi-171 dotée d'une protection blindée et de systèmes optroniques.",
+    specs: {
+      wingspan: '21.3 m',
+      length: '18.4 m',
+      height: '4.8 m',
+      payload: '4 000 kg'
+    }
+  },
+  {
+    id: 'h135-p3h-airbus',
+    name: "Airbus H135 P3H",
+    category: 'Helicopters',
+    role: "Hélicoptère de police et secours",
+    manufacturer: 'Airbus Helicopters',
+    country: 'Europe',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fenestron (rotor de queue caréné)",
+      "Dérives verticales latérales",
+      "Rotor à 4 pales"
+    ],
+    description: "Version améliorée du H135 avec des performances accrues en haute altitude et par temps chaud.",
+    specs: {
+      wingspan: '10.2 m',
+      length: '12.2 m',
+      height: '3.5 m',
+      payload: '1 400 kg'
+    }
+  },
+  {
+    id: 'v247-vigilant',
+    name: "Bell V-247 Vigilant",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone convertible (Tiltrotor)",
+    manufacturer: 'Bell Textron',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 1,
+    recognitionTips: [
+      "Deux gros rotors basculants",
+      "Queue en V",
+      "Design furtif et anguleux"
+    ],
+    description: "Concept de drone à rotors basculants pour la surveillance et l'attaque depuis des navires.",
+    specs: {
+      wingspan: '20.0 m',
+      length: '15.0 m',
+      height: 'N/A',
+      payload: '5 900 kg'
+    }
+  },
+  {
+    id: 'heron-mk2',
+    name: "IAI Heron MK II",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de surveillance MALE",
+    manufacturer: 'IAI',
+    country: 'Israël',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Nez plus large",
+      "Double poutre de queue",
+      "Moteur à l'arrière"
+    ],
+    description: "Version améliorée du Heron avec une structure renforcée et une maintenance simplifiée.",
+    specs: {
+      wingspan: '16.6 m',
+      length: '8.5 m',
+      height: 'N/A',
+      payload: '490 kg'
+    }
+  },
+  {
+    id: 'scaneagle3',
+    name: "Boeing Insitu ScanEagle 3",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de surveillance tactique",
+    manufacturer: 'Boeing/Insitu',
+    country: 'USA',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes en flèche avec winglets",
+      "Absence de train",
+      "Récupéré par câble"
+    ],
+    description: "Version agrandie du ScanEagle capable d'emporter des capteurs multiples simultanément.",
+    specs: {
+      wingspan: '4.0 m',
+      length: '2.0 m',
+      height: 'N/A',
+      payload: '9 kg'
+    }
+  },
+  {
+    id: 'g280-gulfstream',
+    name: "Gulfstream G280",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires super-médium",
+    manufacturer: 'Gulfstream',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes sans bords d'attaque mobiles",
+      "Moteurs Honeywell à l'arrière",
+      "Queue en T"
+    ],
+    description: "Jet d'affaires performant offrant un accès à des pistes courtes et une grande autonomie.",
+    specs: {
+      wingspan: '19.2 m',
+      length: '20.4 m',
+      height: '6.5 m',
+      payload: '10 passagers'
+    }
+  },
+  {
+    id: 'challenger-650',
+    name: "Bombardier Challenger 650",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires large cabine",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Moteurs imposants à l'arrière",
+      "Ailes basses avec winglets",
+      "Fuselage large"
+    ],
+    description: "Évolution du Challenger 605 avec une avionique Vision et une cabine modernisée.",
+    specs: {
+      wingspan: '19.6 m',
+      length: '20.9 m',
+      height: '6.3 m',
+      payload: '12 passagers'
+    }
+  },
+  {
+    id: 'crj550-bombardier',
+    name: "Bombardier CRJ-550",
+    category: 'Civil Jet Airliners',
+    role: "Jet régional de luxe",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette de CRJ-700",
+      "Moteurs à l'arrière",
+      "Trois classes en cabine"
+    ],
+    description: "Basé sur le CRJ-700 mais configuré avec seulement 50 sièges pour le confort premium.",
+    specs: {
+      wingspan: '23.2 m',
+      length: '32.3 m',
+      height: '7.3 m',
+      payload: '50 passagers'
+    }
+  },
+  {
+    id: 'erj145-xr',
+    name: "Embraer ERJ-145XR",
+    category: 'Civil Jet Airliners',
+    role: "Jet régional longue portée",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Winglets larges",
+      "Fuselage étroit et long",
+      "Moteurs à l'arrière"
+    ],
+    description: "Version à autonomie étendue du 145 avec de nouveaux winglets et moteurs.",
+    specs: {
+      wingspan: '20.0 m',
+      length: '29.9 m',
+      height: '6.8 m',
+      payload: '50 passagers'
+    }
+  },
+  {
+    id: 'a350f-airbus',
+    name: "Airbus A350F",
+    category: 'Civil Utility',
+    role: "Transport de fret lourd",
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Basé sur l'A350",
+      "Grande porte cargo sur le côté",
+      "Queue en composite"
+    ],
+    description: "Version cargo de l'A350 avec une grande porte cargo et une structure renforcée.",
+    specs: {
+      wingspan: '64.8 m',
+      length: '70.8 m',
+      height: '17.1 m',
+      payload: '109 000 kg'
+    }
+  },
+  {
+    id: '777-8f-boeing',
+    name: "Boeing 777-8F",
+    category: 'Civil Utility',
+    role: "Transport de fret long-courrier",
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Bouts d'ailes pliables",
+      "Deux moteurs géants GE9X",
+      "Ailes en composite"
+    ],
+    description: "Version cargo de la nouvelle famille 777X dotée des bouts d'ailes pliables.",
+    specs: {
+      wingspan: '71.8 m',
+      length: '70.9 m',
+      height: '19.5 m',
+      payload: '118 000 kg'
+    }
+  },
+  {
+    id: 'ma600-xian',
+    name: "Xian MA600",
+    category: 'Civil Turboprop Airliners',
+    role: "Transport régional",
+    manufacturer: 'Xian Aircraft',
+    country: 'Chine',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ailes hautes",
+      "Moteurs à hélices",
+      "Fuselage court"
+    ],
+    description: "Évolution du MA60 avec une avionique moderne et un confort cabine amélioré.",
+    specs: {
+      wingspan: '29.2 m',
+      length: '24.7 m',
+      height: '8.9 m',
+      payload: '60 passagers'
+    }
+  },
+  {
+    id: 'yak152',
+    name: "Yakovlev Yak-152",
+    category: 'Combat Training Aircraft',
+    role: "Entraîneur de base",
+    manufacturer: 'Yakovlev',
+    country: 'Russie',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Moteur diesel RED A03",
+      "Cockpit tandem",
+      "Ailes basses droites"
+    ],
+    description: "Avion d'entraînement primaire pour les futurs pilotes militaires russes.",
+    specs: {
+      wingspan: '8.8 m',
+      length: '7.7 m',
+      height: '2.5 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'grob-g120tp',
+    name: "Grob G 120TP",
+    category: 'Combat Training Aircraft',
+    role: "Entraîneur et voltige",
+    manufacturer: 'Grob Aircraft',
+    country: 'Allemagne',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Turbopropulseur monomoteur",
+      "Hélice à 5 pales",
+      "Ailes basses"
+    ],
+    description: "Avion d'entraînement moderne entièrement en composite doté d'un turbopropulseur.",
+    specs: {
+      wingspan: '10.3 m',
+      length: '8.4 m',
+      height: '2.7 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'h145-d3',
+    name: "Airbus H145 (D3)",
+    category: 'Helicopters',
+    role: "Transport et secours polyvalent",
+    manufacturer: 'Airbus Helicopters',
+    country: 'Europe',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor principal à 5 pales",
+      "Fenestron (rotor de queue caréné)",
+      "Nez vitré"
+    ],
+    description: "Dernière version du H145 équipée du nouveau rotor principal à 5 pales sans roulements.",
+    specs: {
+      wingspan: '11.0 m',
+      length: '13.0 m',
+      height: '3.5 m',
+      payload: '1 905 kg'
+    }
+  },
+  {
+    id: 'aw139m-leonardo',
+    name: "Leonardo AW139M",
+    category: 'Helicopters',
+    role: "Hélicoptère militaire moyen",
+    manufacturer: 'Leonardo',
+    country: 'Italie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Tourelle FLIR sous le nez",
+      "Rotor à 5 pales",
+      "Train d'atterrissage rétractable"
+    ],
+    description: "Version militarisée de l'AW139 équipée de protection blindée et de capteurs thermiques.",
+    specs: {
+      wingspan: '13.8 m',
+      length: '16.7 m',
+      height: '5.0 m',
+      payload: '3 000 kg'
+    }
+  },
+  {
+    id: 'sh60k-seahawk',
+    name: "Mitsubishi SH-60K",
+    category: 'Helicopters',
+    role: "Lutte anti-sous-marine",
+    manufacturer: 'Mitsubishi',
+    country: 'Japon',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Radôme sous le nez",
+      "Rotor à 4 pales",
+      "Train arrière avancé"
+    ],
+    description: "Version japonaise améliorée du Seahawk avec une cabine agrandie et de nouveaux capteurs.",
+    specs: {
+      wingspan: '16.4 m',
+      length: '19.8 m',
+      height: '5.2 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'z18-changhe',
+    name: "Changhe Z-18",
+    category: 'Helicopters',
+    role: "Transport lourd et ASW",
+    manufacturer: 'Changhe Aircraft',
+    country: 'Chine',
+    engineType: 'Turbine',
+    enginesCount: 3,
+    recognitionTips: [
+      "Trois moteurs",
+      "Grand fuselage avec rampe arrière",
+      "Rotor à 6 pales"
+    ],
+    description: "Évolution massive du Z-8 (basé sur le Super Frelon) pour opérer sur les porte-avions chinois.",
+    specs: {
+      wingspan: '19.0 m',
+      length: '23.0 m',
+      height: '7.0 m',
+      payload: '5 000 kg'
+    }
+  },
+  {
+    id: 'j15d-roaring-shark',
+    name: "Shenyang J-15D",
+    category: 'Combat Aircraft',
+    role: "Guerre électronique embarquée",
+    manufacturer: 'Shenyang Aircraft',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Pods de guerre électronique aux ailes",
+      "Biplace en tandem",
+      "Crosse d'appontage"
+    ],
+    description: "Variante biplace du J-15 équipée de pods de guerre électronique en bout d'ailes.",
+    specs: {
+      wingspan: '14.7 m',
+      length: '21.9 m',
+      height: '5.9 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'mq9b-stol',
+    name: "General Atomics MQ-9B STOL",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat naval",
+    manufacturer: 'General Atomics',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes plus courtes et larges",
+      "Hélice propulsive",
+      "Pas de cockpit"
+    ],
+    description: "Variante du SkyGuardian capable d'opérer depuis des navires d'assaut à pont court.",
+    specs: {
+      wingspan: '24.0 m',
+      length: '11.7 m',
+      height: '3.9 m',
+      payload: '2 150 kg'
+    }
+  },
+  {
+    id: 't6b-texan-ii',
+    name: "Beechcraft T-6B Texan II",
+    category: 'Combat Training Aircraft',
+    role: "Entraîneur avec cockpit numérique",
+    manufacturer: 'Textron Aviation',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 1,
+    recognitionTips: [
+      "Cockpit tandem",
+      "Hélice quadripale",
+      "HUD visible dans le cockpit"
+    ],
+    description: "Standard de l'US Navy doté d'une avionique moderne et d'un affichage tête haute (HUD).",
+    specs: {
+      wingspan: '10.2 m',
+      length: '10.2 m',
+      height: '3.3 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 's92-sikorsky',
+    name: "Sikorsky S-92",
+    category: 'Helicopters',
+    role: "Transport civil et SAR",
+    manufacturer: 'Sikorsky',
+    country: 'USA',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage massif et haut",
+      "Rotor à 4 pales",
+      "Train d'atterrissage principal dans des carénages proéminents"
+    ],
+    description: "Hélicoptère de transport lourd certifié selon les normes de sécurité les plus strictes.",
+    specs: {
+      wingspan: '17.2 m',
+      length: '17.1 m',
+      height: '4.7 m',
+      payload: '4 500 kg'
+    }
+  },
+  {
+    id: 'ec130-airbus',
+    name: "Airbus H130 (ex-EC130)",
+    category: 'Helicopters',
+    role: "Transport de tourisme et médical",
+    manufacturer: 'Airbus Helicopters',
+    country: 'Europe',
+    engineType: 'Turbine',
+    enginesCount: 1,
+    recognitionTips: [
+      "Rotor de queue Fenestron",
+      "Cabine large avec 7 à 8 sièges",
+      "Nez arrondi"
+    ],
+    description: "Hélicoptère léger monoturbine doté d'une cabine très large offrant une visibilité panoramique.",
+    specs: {
+      wingspan: '10.7 m',
+      length: '10.7 m',
+      height: '3.3 m',
+      payload: '1 050 kg'
+    }
+  },
+  {
+    id: 'ec145-airbus',
+    name: "Airbus H145 (ex-EC145)",
+    category: 'Helicopters',
+    role: "Transport et service public",
+    manufacturer: 'Airbus Helicopters',
+    country: 'Europe',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor de queue Fenestron (versions récentes)",
+      "Portes arrières battantes",
+      "Nez vitré"
+    ],
+    description: "Hélicoptère biturbine polyvalent issu de la collaboration entre MBB et Kawasaki (BK 117).",
+    specs: {
+      wingspan: '11.0 m',
+      length: '13.0 m',
+      height: '3.5 m',
+      payload: '1 700 kg'
+    }
+  },
+  {
+    id: 't129-atak',
+    name: "TAI T129 ATAK",
+    category: 'Helicopters',
+    role: "Attaque et reconnaissance",
+    manufacturer: 'TAI/AgustaWestland',
+    country: 'Turquie/Italie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette très fine",
+      "Canon sous le nez",
+      "Rotor à 5 pales"
+    ],
+    description: "Version turque de l'A129 Mangusta optimisée pour les conditions de haute altitude et chaleur.",
+    specs: {
+      wingspan: '11.9 m',
+      length: '14.6 m',
+      height: '3.4 m',
+      payload: '1 200 kg'
+    }
+  },
+  {
+    id: 'mi35m-mil',
+    name: "Mil Mi-35M",
+    category: 'Helicopters',
+    role: "Attaque et transport d'assaut",
+    manufacturer: 'Mil',
+    country: 'Russie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Train d'atterrissage fixe",
+      "Rotor de queue en X",
+      "Ailes courtes avec pylônes d'armement"
+    ],
+    description: "Version modernisée du Mi-24 Hind dotée d'un train d'atterrissage fixe et de pales en composite.",
+    specs: {
+      wingspan: '17.3 m',
+      length: '17.5 m',
+      height: '6.5 m',
+      payload: '2 400 kg'
+    }
+  },
+  {
+    id: 'h6k-xian',
+    name: "Xian H-6K",
+    category: 'Combat Aircraft',
+    role: "Bombardier stratégique",
+    manufacturer: 'Xian Aircraft',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez plein sans vitrage (radar)",
+      "Moteurs de plus grand diamètre",
+      "Points d'emport pour missiles sous les ailes"
+    ],
+    description: "Version profondément modernisée du H-6 capable d'emporter des missiles de croisière longue portée.",
+    specs: {
+      wingspan: '33.0 m',
+      length: '34.8 m',
+      height: '10.4 m',
+      payload: '12 000 kg'
+    }
+  },
+  {
+    id: 'shahed-129',
+    name: "Shahed 129",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Surveillance et frappe MALE",
+    manufacturer: 'HESA',
+    country: 'Iran',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Nez bulbeux",
+      "Train d'atterrissage escamotable",
+      "Empennage en V"
+    ],
+    description: "Drone de combat iranien à longue endurance ressemblant au Hermes 450 mais de plus grande taille.",
+    specs: {
+      wingspan: '16.0 m',
+      length: '8.0 m',
+      height: 'N/A',
+      payload: '400 kg'
+    }
+  },
+  {
+    id: 'ch4-rainbow',
+    name: "CASC CH-4 Rainbow",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone de combat MALE",
+    manufacturer: 'CASC',
+    country: 'Chine',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ressemble au MQ-1 Predator",
+      "Empennage en V inversé",
+      "Dôme radar sous le fuselage"
+    ],
+    description: "Drone polyvalent très utilisé pour la surveillance des frontières et les frappes de précision.",
+    specs: {
+      wingspan: '18.0 m',
+      length: '8.5 m',
+      height: 'N/A',
+      payload: '345 kg'
+    }
+  },
+  {
+    id: 'mako-kratos',
+    name: "Kratos UTAP-22 Mako",
+    category: 'Unmanned Aerial Vehicle (UAV)',
+    role: "Drone ailier de combat",
+    manufacturer: 'Kratos Defense',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Entrée d'air sur le dessus",
+      "Ailes en flèche",
+      "Double dérive arrière inclinée"
+    ],
+    description: "Drone à réaction haute performance conçu pour accompagner les avions de chasse pilotés.",
+    specs: {
+      wingspan: '3.2 m',
+      length: '6.1 m',
+      height: 'N/A',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'a318-airbus',
+    name: "Airbus A318",
+    category: 'Civil Jet Airliners',
+    role: "Transport court-courrier",
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage très court et trapu",
+      "Dérive verticale plus haute que l'A320",
+      "Bimoteur sous ailes"
+    ],
+    description: "Surnommé le Baby Bus c'est le plus petit membre de la famille A320.",
+    specs: {
+      wingspan: '34.1 m',
+      length: '31.4 m',
+      height: '12.6 m',
+      payload: '107 passagers'
+    }
+  },
+  {
+    id: 'e170-embraer',
+    name: "Embraer E170",
+    category: 'Civil Jet Airliners',
+    role: "Jet régional",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette de jet régional",
+      "Moteurs sous les ailes",
+      "Winglets simples"
+    ],
+    description: "Plus petite version de la première génération des E-Jets d'Embraer.",
+    specs: {
+      wingspan: '26.0 m',
+      length: '29.9 m',
+      height: '9.7 m',
+      payload: '72 passagers'
+    }
+  },
+  {
+    id: 'learjet75-bombardier',
+    name: "Bombardier Learjet 75",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires léger",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Winglets imposants et inclinés",
+      "Moteurs à l'arrière",
+      "Nez très pointu effilé"
+    ],
+    description: "Dernière évolution de la célèbre lignée Learjet dotée d'une avionique Garmin G5000.",
+    specs: {
+      wingspan: '15.5 m',
+      length: '17.7 m',
+      height: '4.5 m',
+      payload: '9 passagers'
+    }
+  },
+  {
+    id: 'g450-gulfstream',
+    name: "Gulfstream G450",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires long-courrier",
+    manufacturer: 'Gulfstream',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Six grands hublots ovales par côté",
+      "Dérive verticale classique",
+      "Bimoteur arrière"
+    ],
+    description: "Amélioration du GIV-SP avec un fuselage allongé et le cockpit PlaneView.",
+    specs: {
+      wingspan: '23.7 m',
+      length: '27.2 m',
+      height: '7.7 m',
+      payload: '16 passagers'
+    }
+  },
+  {
+    id: 'citation-m2',
+    name: "Cessna Citation M2",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires très léger",
+    manufacturer: 'Textron Aviation',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Winglets arrondis (Swooplets)",
+      "Moteurs à l'arrière",
+      "Nez arrondi"
+    ],
+    description: "Jet d'entrée de gamme performant conçu pour les opérations monopilote.",
+    specs: {
+      wingspan: '14.4 m',
+      length: '13.0 m',
+      height: '4.3 m',
+      payload: '7 passagers'
+    }
+  },
+  {
+    id: 'da20-diamond',
+    name: "Diamond DA20-C1 Katana",
+    category: 'Private Light Aircraft',
+    role: "Entraînement initial",
+    manufacturer: 'Diamond Aircraft',
+    country: 'Autriche/Canada',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Queue en T",
+      "Verrière en bulle intégrale",
+      "Train tricycle fixe caréné"
+    ],
+    description: "Avion biplace léger en composite très populaire pour l'écolage primaire.",
+    specs: {
+      wingspan: '10.9 m',
+      length: '7.2 m',
+      height: '2.2 m',
+      payload: '240 kg'
+    }
+  },
+  {
+    id: 'p2008-tecnam',
+    name: "Tecnam P2008",
+    category: 'Private Light Aircraft',
+    role: "Avion de tourisme léger (LSA)",
+    manufacturer: 'Tecnam',
+    country: 'Italie',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes hautes",
+      "Fuselage aux lignes fluides",
+      "Trois roues carénées"
+    ],
+    description: "Avion mélangeant un fuselage en carbone et des ailes en métal pour plus de légèreté.",
+    specs: {
+      wingspan: '9.0 m',
+      length: '7.0 m',
+      height: '2.7 m',
+      payload: '215 kg'
+    }
+  },
+  {
+    id: 'sling-tsi',
+    name: "Sling TSi",
+    category: 'Private Light Aircraft',
+    role: "Avion de voyage rapide",
+    manufacturer: 'Sling Aircraft',
+    country: 'Afrique du Sud',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Ailes basses à bout recourbé",
+      "Fuselage métallique moderne",
+      "Verrière large"
+    ],
+    description: "Avion de 4 places performant disponible en kit ou prêt à voler avec moteur Rotax.",
+    specs: {
+      wingspan: '9.4 m',
+      length: '7.1 m',
+      height: '2.4 m',
+      payload: '430 kg'
+    }
+  },
+  {
+    id: 'vl3-evolution',
+    name: "JMB VL3 Evolution",
+    category: 'Private Light Aircraft',
+    role: "ULM haute performance",
+    manufacturer: 'JMB Aircraft',
+    country: 'République Tchèque',
+    engineType: 'Piston',
+    enginesCount: 1,
+    recognitionTips: [
+      "Train rentrant",
+      "Silhouette de petit chasseur",
+      "Hélice tripale"
+    ],
+    description: "ULM ultra-rapide capable de croiser à 280 km/h avec un train rentrant.",
+    specs: {
+      wingspan: '8.4 m',
+      length: '6.2 m',
+      height: '2.0 m',
+      payload: '200 kg'
+    }
+  },
+  {
+    id: 'mig35-fulcrum',
+    name: "Mikoyan MiG-35",
+    category: 'Combat Aircraft',
+    role: "Chasseur multirôle avancé",
+    manufacturer: 'Mikoyan',
+    country: 'Russie',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Radar AESA plat dans le nez",
+      "Double réacteur à l'arrière",
+      "Nombreux points d'emport sous ailes"
+    ],
+    description: "Version ultime du MiG-29 intégrant un radar AESA et une avionique de pointe.",
+    specs: {
+      wingspan: '12.0 m',
+      length: '17.3 m',
+      height: '4.7 m',
+      payload: '7 000 kg'
+    }
+  },
+  {
+    id: 'a340-500',
+    name: "Airbus A340-500",
+    category: 'Civil Jet Airliners',
+    role: "Très long-courrier",
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Quatre réacteurs",
+      "Fuselage long",
+      "Train d'atterrissage central à 4 roues"
+    ],
+    description: "Version à très long rayon d'action de l'A340 conçue pour les vols ultra-longs.",
+    specs: {
+      wingspan: '63.5 m',
+      length: '67.9 m',
+      height: '17.5 m',
+      payload: '313 passagers'
+    }
+  },
+  {
+    id: 'a340-600',
+    name: "Airbus A340-600",
+    category: 'Civil Jet Airliners',
+    role: "Long-courrier haute capacité",
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Fuselage extrêmement long",
+      "Quatre réacteurs imposants",
+      "Train central renforcé"
+    ],
+    description: "L'un des avions de ligne les plus longs au monde avant l'arrivée du 747-8.",
+    specs: {
+      wingspan: '63.5 m',
+      length: '75.3 m',
+      height: '17.9 m',
+      payload: '380 passagers'
+    }
+  },
+  {
+    id: 'b747-400er',
+    name: "Boeing 747-400ER",
+    category: 'Civil Jet Airliners',
+    role: "Long-courrier à autonomie étendue",
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Winglets en bout d'aile",
+      "Silhouette classique Jumbo Jet",
+      "Quatre moteurs"
+    ],
+    description: "Version à rayon d'action et poids au décollage accrus du 747-400.",
+    specs: {
+      wingspan: '64.4 m',
+      length: '70.6 m',
+      height: '19.4 m',
+      payload: '416 passagers'
+    }
+  },
+  {
+    id: 'crj900-bombardier',
+    name: "Bombardier CRJ-900",
+    category: 'Civil Jet Airliners',
+    role: "Jet régional",
+    manufacturer: 'Bombardier',
+    country: 'Canada',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage très effilé",
+      "Moteurs à l'arrière",
+      "Deux sorties de secours sur l'aile"
+    ],
+    description: "Version allongée du CRJ-700 conçue pour concurrencer les E-Jets d'Embraer.",
+    specs: {
+      wingspan: '24.9 m',
+      length: '36.2 m',
+      height: '7.5 m',
+      payload: '90 passagers'
+    }
+  },
+  {
+    id: 'kj200-shaanxi',
+    name: "Shaanxi KJ-200",
+    category: 'Combat Support Aircraft',
+    role: "Alerte avancée (AEW&C)",
+    manufacturer: 'Shaanxi Aircraft',
+    country: 'Chine',
+    engineType: 'Turboprop',
+    enginesCount: 4,
+    recognitionTips: [
+      "Antenne radar rectangulaire sur le dos",
+      "Hélices à 6 pales",
+      "Nez plein (radar)"
+    ],
+    description: "Avion radar basé sur le Y-8 avec une antenne radar fixe sur le dessus du fuselage.",
+    specs: {
+      wingspan: '38.0 m',
+      length: '34.0 m',
+      height: '11.2 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'kj500-shaanxi',
+    name: "Shaanxi KJ-500",
+    category: 'Combat Support Aircraft',
+    role: "AWACS tactique",
+    manufacturer: 'Shaanxi Aircraft',
+    country: 'Chine',
+    engineType: 'Turboprop',
+    enginesCount: 4,
+    recognitionTips: [
+      "Dôme radar fixe sur le dos",
+      "Basé sur le transport Y-9",
+      "Nombreuses antennes dorsales"
+    ],
+    description: "Avion d'alerte radar doté d'un dôme fixe contenant trois radars AESA actifs.",
+    specs: {
+      wingspan: '38.0 m',
+      length: '34.0 m',
+      height: '11.2 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'kj2000-xian',
+    name: "Xian KJ-2000",
+    category: 'Combat Support Aircraft',
+    role: "AWACS stratégique lourd",
+    manufacturer: 'Xian Aircraft',
+    country: 'Chine',
+    engineType: 'Turbofan',
+    enginesCount: 4,
+    recognitionTips: [
+      "Grand dôme radar rotatif",
+      "Quatre moteurs à réaction",
+      "Nez vitré (navigateur)"
+    ],
+    description: "Le principal AWACS lourd chinois basé sur la cellule de l'Ilyushin Il-76.",
+    specs: {
+      wingspan: '50.5 m',
+      length: '46.6 m',
+      height: '14.8 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'c130j30-super',
+    name: "Lockheed Martin C-130J-30",
+    category: 'Combat Support Aircraft',
+    role: "Transport tactique allongé",
+    manufacturer: 'Lockheed Martin',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 4,
+    recognitionTips: [
+      "Fuselage plus long que le C-130J",
+      "Hélices à 6 pales",
+      "Queue classique Hercules"
+    ],
+    description: "Version à fuselage allongé du Super Hercules offrant plus d'espace de chargement.",
+    specs: {
+      wingspan: '40.4 m',
+      length: '34.4 m',
+      height: '11.8 m',
+      payload: '20 000 kg'
+    }
+  },
+  {
+    id: 'f16-in-block70',
+    name: "Lockheed Martin F-16IN",
+    category: 'Combat Aircraft',
+    role: "Chasseur multirôle avancé",
+    manufacturer: 'Lockheed Martin',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 1,
+    recognitionTips: [
+      "Réservoirs sur le dessus",
+      "Radar AESA plat",
+      "Capteur IRST devant le cockpit"
+    ],
+    description: "Version spécifique proposée à l'Inde dotée de réservoirs conformes et radar AESA.",
+    specs: {
+      wingspan: '9.5 m',
+      length: '15.0 m',
+      height: '4.9 m',
+      payload: '7 700 kg'
+    }
+  },
+  {
+    id: 'hawker-4000',
+    name: "Hawker 4000",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires super-médium",
+    manufacturer: 'Hawker Beechcraft',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez pointu",
+      "Moteurs à l'arrière",
+      "Queue en T"
+    ],
+    description: "Jet d'affaires haute performance avec un fuselage entièrement en composite carbone.",
+    specs: {
+      wingspan: '18.8 m',
+      length: '21.1 m',
+      height: '6.0 m',
+      payload: '12 passagers'
+    }
+  },
+  {
+    id: 'legacy-650',
+    name: "Embraer Legacy 650",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires large cabine",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette de jet régional",
+      "Winglets hauts",
+      "Moteurs à l'arrière"
+    ],
+    description: "Version améliorée du Legacy 600 offrant une autonomie transatlantique.",
+    specs: {
+      wingspan: '21.2 m',
+      length: '26.3 m',
+      height: '6.8 m',
+      payload: '13 passagers'
+    }
+  },
+  {
+    id: 'kc390-millennium',
+    name: "Embraer KC-390",
+    category: 'Combat Support Aircraft',
+    role: "Ravitailleur et transport",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Pods de ravitaillement sous les ailes",
+      "Moteurs à réaction",
+      "Queue en T"
+    ],
+    description: "Version ravitailleur du C-390 capable de délivrer du carburant à des jets et hélicoptères.",
+    specs: {
+      wingspan: '35.1 m',
+      length: '35.2 m',
+      height: '11.8 m',
+      payload: '26 000 kg'
+    }
+  },
+  {
+    id: 'p8i-neptune',
+    name: "Boeing P-8I Neptune",
+    category: 'Combat Support Aircraft',
+    role: "Patrouille maritime et ASW",
+    manufacturer: 'Boeing',
+    country: 'USA/Inde',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Détecteur MAD à l'arrière",
+      "Cellule de 737",
+      "Points d'emport sous ailes"
+    ],
+    description: "Variante indienne du P-8A dotée de capteurs de queue spécifiques pour la détection magnétique.",
+    specs: {
+      wingspan: '37.6 m',
+      length: '39.5 m',
+      height: '12.8 m',
+      payload: '9 000 kg'
+    }
+  },
+  {
+    id: 'kj600-xian',
+    name: "Xian KJ-600",
+    category: 'Combat Support Aircraft',
+    role: "AWACS embarqué",
+    manufacturer: 'Xian Aircraft',
+    country: 'Chine',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Ressemble au E-2 Hawkeye",
+      "Double moteur à hélices",
+      "Grand dôme radar rotatif"
+    ],
+    description: "Nouvel avion radar chinois conçu pour opérer depuis les porte-avions à catapulte.",
+    specs: {
+      wingspan: '24.0 m',
+      length: '18.0 m',
+      height: 'N/A',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'a350-1000-airbus',
+    name: "Airbus A350-1000",
+    category: 'Civil Jet Airliners',
+    role: "Long-courrier très grande capacité",
+    manufacturer: 'Airbus',
+    country: 'Europe',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Train d'atterrissage principal à 6 roues",
+      "Fuselage très long",
+      "Masque noir de cockpit"
+    ],
+    description: "La plus grande version de l'A350 dotée d'un fuselage allongé et d'un train principal à six roues.",
+    specs: {
+      wingspan: '64.8 m',
+      length: '73.8 m',
+      height: '17.1 m',
+      payload: '440 passagers'
+    }
+  },
+  {
+    id: '777-200lr-boeing',
+    name: "Boeing 777-200LR",
+    category: 'Civil Jet Airliners',
+    role: "Long-courrier ultra-long rayon",
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Bimoteur géant",
+      "Extrémités d'ailes biseautées",
+      "Fuselage large"
+    ],
+    description: "Surnommé Worldliner c'est l'un des avions ayant la plus grande autonomie au monde.",
+    specs: {
+      wingspan: '64.8 m',
+      length: '63.7 m',
+      height: '18.6 m',
+      payload: '317 passagers'
+    }
+  },
+  {
+    id: 'dash8-q400-dhc',
+    name: "Bombardier Dash 8-Q400",
+    category: 'Civil Turboprop Airliners',
+    role: "Transport régional rapide",
+    manufacturer: 'De Havilland Canada',
+    country: 'Canada',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Fuselage très long et fin",
+      "Moteurs à hélices à 6 pales",
+      "Train d'atterrissage long"
+    ],
+    description: "Turbopropulseur moderne réputé pour sa vitesse proche de celle d'un jet et son système de réduction de bruit.",
+    specs: {
+      wingspan: '28.4 m',
+      length: '32.8 m',
+      height: '8.3 m',
+      payload: '90 passagers'
+    }
+  },
+  {
+    id: 'falcon-7x-dassault',
+    name: "Dassault Falcon 7X",
+    category: 'Private Executive Aircraft',
+    role: "Jet d'affaires long-courrier",
+    manufacturer: 'Dassault',
+    country: 'France',
+    engineType: 'Turbofan',
+    enginesCount: 3,
+    recognitionTips: [
+      "Trois moteurs à l'arrière",
+      "Winglets intégrés",
+      "Silhouette élégante tri-réacteur"
+    ],
+    description: "Premier jet d'affaires au monde équipé de commandes de vol numériques fly-by-wire.",
+    specs: {
+      wingspan: '26.2 m',
+      length: '23.2 m',
+      height: '7.8 m',
+      payload: '16 passagers'
+    }
+  },
+  {
+    id: 'g550-eitam-iai',
+    name: "IAI G550 Eitam",
+    category: 'Combat Support Aircraft',
+    role: "Alerte avancée (AEW&C)",
+    manufacturer: 'IAI/Gulfstream',
+    country: 'Israël',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Radars larges sur les flancs",
+      "Nez et queue bulbeux",
+      "Basé sur le Gulfstream G550"
+    ],
+    description: "Jet d'affaires modifié avec des radars conformes latéraux pour la surveillance aérienne et maritime.",
+    specs: {
+      wingspan: '28.5 m',
+      length: '29.4 m',
+      height: '7.9 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'm346-fa-leonardo',
+    name: "Leonardo M-346FA",
+    category: 'Combat Aircraft',
+    role: "Attaque légère et chasse",
+    manufacturer: 'Leonardo',
+    country: 'Italie',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez avec radar",
+      "Points d'emport en bout d'aile",
+      "Silhouette compacte bimoteur"
+    ],
+    description: "Variante de combat de l'entraîneur M-346 équipée d'un radar Grifo et de points d'emport renforcés.",
+    specs: {
+      wingspan: '9.7 m',
+      length: '11.5 m',
+      height: '4.8 m',
+      payload: '3 000 kg'
+    }
+  },
+  {
+    id: 'aw249-fenice',
+    name: "Leonardo AW249 Fenice",
+    category: 'Helicopters',
+    role: "Hélicoptère d'attaque",
+    manufacturer: 'Leonardo',
+    country: 'Italie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Silhouette angulaire moderne",
+      "Cockpit en tandem",
+      "Canon sous le nez"
+    ],
+    description: "Nouvel hélicoptère d'attaque italien conçu pour remplacer l'A129 Mangusta.",
+    specs: {
+      wingspan: '14.6 m',
+      length: '17.6 m',
+      height: 'N/A',
+      payload: '2 800 kg'
+    }
+  },
+  {
+    id: 'ka62-kamov',
+    name: "Kamov Ka-62",
+    category: 'Helicopters',
+    role: "Transport utilitaire moyen",
+    manufacturer: 'Kamov',
+    country: 'Russie',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Rotor de queue Fenestron",
+      "Nez pointu",
+      "Rotor principal à 5 pales"
+    ],
+    description: "Version civile du Ka-60 dotée d'un rotor de queue caréné et d'une conception moderne.",
+    specs: {
+      wingspan: '13.5 m',
+      length: '15.7 m',
+      height: '4.5 m',
+      payload: '2 500 kg'
+    }
+  },
+  {
+    id: 'e145-h-aewc',
+    name: "Embraer E-99 / R-99",
+    category: 'Combat Support Aircraft',
+    role: "Surveillance et renseignement",
+    manufacturer: 'Embraer',
+    country: 'Brésil',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Antenne rectangulaire sur le dos",
+      "Silhouette de jet régional",
+      "Moteurs à l'arrière"
+    ],
+    description: "Avion radar basé sur l'ERJ-145 utilisé par plusieurs forces aériennes pour la surveillance.",
+    specs: {
+      wingspan: '20.0 m',
+      length: '28.4 m',
+      height: '6.8 m',
+      payload: 'N/A'
+    }
+  },
+  {
+    id: 'x2-shinshin',
+    name: "Mitsubishi X-2 Shinshin",
+    category: 'Combat Aircraft',
+    role: "Démonstrateur technologique",
+    manufacturer: 'Mitsubishi',
+    country: 'Japon',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Tuyères à pétales",
+      "Petite taille",
+      "Double dérive inclinée"
+    ],
+    description: "Appareil expérimental pour tester la furtivité et la super-maniabilité japonaise.",
+    specs: {
+      wingspan: '9.1 m',
+      length: '14.2 m',
+      height: '4.5 m',
+      payload: 'Prototype'
+    }
+  },
+  {
+    id: 'tedbf-hal',
+    name: "HAL TEDBF",
+    category: 'Combat Aircraft',
+    role: "Chasseur embarqué (Prototype)",
+    manufacturer: 'HAL',
+    country: 'Inde',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Plans canards",
+      "Aile delta",
+      "Double moteur"
+    ],
+    description: "Futur chasseur bimoteur destiné aux porte-avions de la marine indienne.",
+    specs: {
+      wingspan: '11.2 m',
+      length: '16.3 m',
+      height: 'N/A',
+      payload: 'Classifié'
+    }
+  },
+  {
+    id: 'h175m-airbus',
+    name: "Airbus H175M",
+    category: 'Helicopters',
+    role: "Transport militaire moyen",
+    manufacturer: 'Airbus Helicopters',
+    country: 'France',
+    engineType: 'Turbine',
+    enginesCount: 2,
+    recognitionTips: [
+      "Nez court",
+      "Grandes vitres latérales",
+      "Livrée militaire mate"
+    ],
+    description: "Version militaire du H175 destinée au transport de troupes et aux forces spéciales.",
+    specs: {
+      wingspan: '14.8 m',
+      length: '15.7 m',
+      height: '5.3 m',
+      payload: '18 troupes'
+    }
+  },
+  {
+    id: '737-max-9-boeing',
+    name: "Boeing 737 MAX 9",
+    category: 'Civil Jet Airliners',
+    role: "Moyen-courrier monocouloir",
+    manufacturer: 'Boeing',
+    country: 'USA',
+    engineType: 'Turbofan',
+    enginesCount: 2,
+    recognitionTips: [
+      "Winglets en V scindé",
+      "Fuselage long",
+      "Moteurs à chevrons"
+    ],
+    description: "Variante allongée du MAX 8 offrant une plus grande capacité de transport.",
+    specs: {
+      wingspan: '35.9 m',
+      length: '42.1 m',
+      height: '12.3 m',
+      payload: '220 passagers'
+    }
+  },
+  {
+    id: 'e2d-hawkeye-ng',
+    name: "Northrop Grumman E-2D",
+    category: 'Combat Support Aircraft',
+    role: "Alerte avancée embarquée",
+    manufacturer: 'Northrop Grumman',
+    country: 'USA',
+    engineType: 'Turboprop',
+    enginesCount: 2,
+    recognitionTips: [
+      "Grand dôme radar rotatif",
+      "Hélices à 8 pales",
+      "Quatre dérives verticales"
+    ],
+    description: "Version 'Advanced Hawkeye' dotée d'un nouveau radar AESA et d'un cockpit numérique.",
+    specs: {
+      wingspan: '24.6 m',
+      length: '17.6 m',
+      height: '5.6 m',
+      payload: 'N/A'
+    }
+  },
 ];
+
+console.log('AIRCRAFT_DATA_RAW length:', AIRCRAFT_DATA_RAW.length);
+console.log('AIRCRAFT_DATA_RAW first 5:', AIRCRAFT_DATA_RAW.slice(0, 5).map(a => a?.name || 'undefined'));
 
 const AIRCRAFT_DATA_DEDUPED: Omit<Aircraft, 'image'>[] = (() => {
   const seenNames = new Set<string>();
@@ -9653,7 +14971,11 @@ const AIRCRAFT_DATA_DEDUPED: Omit<Aircraft, 'image'>[] = (() => {
   });
 })();
 
+console.log('AIRCRAFT_DATA_DEDUPED length:', AIRCRAFT_DATA_DEDUPED.length);
+
 export const AIRCRAFT_DATA: Aircraft[] = AIRCRAFT_DATA_DEDUPED.map(aircraft => ({
   ...aircraft,
-  image: `/images/aircraft/${aircraft.id}.${aircraft.imageExt || 'jpg'}`
+  image: `/images/aircraft/${aircraft.id}.jpg`
 }));
+
+console.log('AIRCRAFT_DATA final length:', AIRCRAFT_DATA.length);

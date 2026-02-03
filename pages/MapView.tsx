@@ -172,6 +172,15 @@ const MapView: React.FC = () => {
   const [geoError, setGeoError] = useState(false);
   const [mousePos, setMousePos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
+  // Dynamically build countries from AIRCRAFT_DATA
+  const allCountries = useMemo(() => {
+    const countries = new Set<string>();
+    AIRCRAFT_DATA.forEach((aircraft) => {
+      countries.add(aircraft.country);
+    });
+    return Array.from(countries).sort();
+  }, []);
+
   const byMapName = useMemo(() => {
     const map: Record<string, { displayName: string; count: number; aircraft: Array<(typeof AIRCRAFT_DATA)[number]> }> = {};
 
@@ -200,6 +209,11 @@ const MapView: React.FC = () => {
   };
 
   const selectedData = selectedCountry ? byMapName[selectedCountry] : null;
+
+  const countriesOnMap = useMemo(() => {
+    if (!geoData) return new Set<string>();
+    return new Set(geoData.features.map((feature) => feature.properties?.name ?? ''));
+  }, [geoData]);
 
   useEffect(() => {
     let mounted = true;
@@ -376,30 +390,41 @@ const MapView: React.FC = () => {
           </div>
 
           {/* Countries not on map */}
-          <div className="mt-6 pt-6 border-t border-slate-200">
-            <h3 className="text-sm font-bold text-slate-600 mb-3">Pays non affichés sur la carte</h3>
-            <div className="flex flex-wrap gap-2">
-              {['Taïwan', 'Chili', 'Iran', 'Nouvelle-Zélande'].map((country) => (
-                <button
-                  key={country}
-                  onClick={() => setSelectedCountry(country)}
-                  className={`px-3 py-1 rounded-full text-xs font-semibold transition-all ${
-                    selectedCountry === country
-                      ? 'bg-yellow-400 text-slate-900'
-                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                  }`}
-                >
-                  {country}
-                </button>
-              ))}
-            </div>
-          </div>
+          {(() => {
+            const countriesNotOnMap = allCountries.filter((country) => {
+              const mappedName = countryNameMap[country] ?? country;
+              return !countriesOnMap.has(mappedName);
+            });
+            return countriesNotOnMap.length > 0 ? (
+              <div className="mt-6 pt-6 border-t border-slate-200">
+                <h3 className="text-sm font-bold text-slate-600 mb-3">Pays non cartographiés ({countriesNotOnMap.length})</h3>
+                <div className="flex flex-wrap gap-2 max-h-40 overflow-y-auto">
+                  {countriesNotOnMap.map((country) => {
+                    const mappedName = countryNameMap[country] ?? country;
+                    return (
+                      <button
+                        key={country}
+                        onClick={() => setSelectedCountry(country)}
+                        className={`px-3 py-1 rounded-full text-xs font-semibold transition-all whitespace-nowrap ${
+                          selectedCountry === country
+                            ? 'bg-yellow-400 text-slate-900'
+                            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                        }`}
+                      >
+                        {country}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ) : null;
+          })()}
         </div>
 
         <div className="bg-white rounded-3xl p-6 shadow-lg border border-slate-200 h-fit">
           <div className="flex items-center mb-4 justify-between">
             <div className="flex items-center">
-            {selectedCountry && getCountryCode(selectedCountry) && (
+            {selectedCountry && !selectedCountry.includes('/') && getCountryCode(selectedCountry) && (
               <img 
                 src={getFlagUrl(getCountryCode(selectedCountry))!} 
                 alt={selectedCountry}

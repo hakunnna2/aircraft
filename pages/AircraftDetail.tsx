@@ -119,6 +119,8 @@ const AircraftDetail: React.FC = () => {
   // Engine type descriptions
   const engineDescriptions: Record<string, string> = {
     'Jet': 'Moteurs à réaction utilisant un compresseur et une chambre de combustion pour créer une poussée. Utilisés pour les avions de combat et les gros porteurs civils.',
+    'Turbofan': 'Moteurs à réaction avec compresseur haute pression et un grand ventilateur d\'admission. Plus silencieux et plus efficace qu\'un réacteur pur, utilisé sur la plupart des avions de ligne modernes.',
+    'Turbofan (Poussée vectorielle)': 'Turbofan avancé avec tuyères mobiles capable de dévier le flux d\'air pour améliorer la maniabilité. Utilisé sur les avions de combat modernes comme le F-35 et le Rafale.',
     'Turboprop': 'Combinaison d\'une turbine et d\'une hélice. Plus efficace que les réacteurs à basse vitesse, utilisé pour les avions régionaux et de transport.',
     'Piston': 'Moteurs à pistons classiques alimentant une hélice. Utilisés pour les petits avions de loisir et les avions légers.',
     'Propfan': 'Turbine haute vitesse entrainant une hélice non carénée. Combinaison d\'efficacité du turbopropulseur et vitesse du réacteur.',
@@ -439,6 +441,12 @@ const AircraftDetail: React.FC = () => {
                   )}
                   <p className="text-sm font-bold text-slate-900">{aircraft.country}</p>
                 </div>
+             </div>
+             <div className="p-4 bg-white rounded-2xl border border-slate-200 col-span-2">
+               <span className="text-[10px] font-bold text-slate-400 uppercase">Propulsion</span>
+               <p className="text-sm font-bold text-slate-900 mt-1">
+                 {aircraft.enginesCount}x {aircraft.engineType === 'Jet' ? 'Réacteur' : 'Hélice'}
+               </p>
              </div>
           </div>
 
