@@ -12,7 +12,7 @@ interface GameAircraft {
 }
 
 const QuickChoice: React.FC = () => {
-  const { data: AIRCRAFT_DATA } = useAircraftData();
+  const { data: AIRCRAFT_DATA, loading } = useAircraftData();
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -129,6 +129,17 @@ const QuickChoice: React.FC = () => {
         <div className="animate-pulse text-center">
           <div className="w-16 h-16 mx-auto bg-yellow-400 rounded-full mb-4" />
           <p className="text-slate-600">Préparation du jeu rapide...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-slate-50 to-orange-50 flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-yellow-500 mx-auto"></div>
+          <p className="text-slate-600 font-semibold">Chargement du défi...</p>
         </div>
       </div>
     );

@@ -210,7 +210,7 @@ type GeoJSON = {
 };
 
 const MapView: React.FC = () => {
-  const { data: AIRCRAFT_DATA } = useAircraftData();
+  const { data: AIRCRAFT_DATA, loading } = useAircraftData();
   const navigate = useNavigate();
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -352,6 +352,19 @@ const MapView: React.FC = () => {
     return { minX, minY, maxX, maxY };
   };
 
+  if (loading) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center space-y-8">
+          <div className="animate-pulse space-y-4">
+            <div className="h-8 bg-slate-200 rounded w-48 mx-auto"></div>
+            <div className="h-12 bg-slate-200 rounded w-96 mx-auto"></div>
+          </div>
+          <div className="h-96 bg-slate-200 rounded-3xl animate-pulse"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">

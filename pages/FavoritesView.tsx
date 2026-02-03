@@ -6,7 +6,7 @@ import { loadFavorites, toggleFavorite } from '../utils/favoritesService';
 import AircraftCard from '../components/AircraftCard';
 
 const FavoritesView: React.FC = () => {
-  const { data: AIRCRAFT_DATA } = useAircraftData();
+  const { data: AIRCRAFT_DATA, loading: dataLoading } = useAircraftData();
   const navigate = useNavigate();
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
@@ -37,10 +37,13 @@ const FavoritesView: React.FC = () => {
     setFavoriteIds(updated);
   };
 
-  if (loading) {
+  if (loading || dataLoading) {
     return (
       <div className="min-h-screen bg-white p-4 flex items-center justify-center">
-        <div className="text-slate-700 text-lg">Chargement des favoris...</div>
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-yellow-500 mx-auto"></div>
+          <p className="text-slate-600 font-semibold">Chargement des favoris...</p>
+        </div>
       </div>
     );
   }

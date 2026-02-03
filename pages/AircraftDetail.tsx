@@ -17,7 +17,7 @@ import {
 import { loadFavorites, toggleFavorite } from '../utils/favoritesService';
 
 const AircraftDetail: React.FC = () => {
-  const { data: AIRCRAFT_DATA } = useAircraftData();
+  const { data: AIRCRAFT_DATA, loading: dataLoading } = useAircraftData();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const aircraft = AIRCRAFT_DATA.find((a) => a.id === id);
@@ -247,6 +247,21 @@ const AircraftDetail: React.FC = () => {
     // Open Google Images directly for the layout
     window.open(`https://www.google.com/search?tbm=isch&q=${encodeURIComponent(query)}`, '_blank', 'noopener,noreferrer');
   };
+
+  if (dataLoading) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <div className="animate-pulse space-y-8">
+          <div className="h-96 bg-slate-200 rounded-3xl"></div>
+          <div className="space-y-4">
+            <div className="h-8 bg-slate-200 rounded w-3/4"></div>
+            <div className="h-4 bg-slate-200 rounded w-full"></div>
+            <div className="h-4 bg-slate-200 rounded w-5/6"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!aircraft) {
     return (

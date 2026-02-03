@@ -5,7 +5,7 @@ import { saveBookmark, loadBookmark } from '../utils/bookmarkService';
 import { useAircraftData } from '../context/AircraftDataContext.tsx';
 
 const BookView: React.FC = () => {
-  const { data: AIRCRAFT_DATA } = useAircraftData();
+  const { data: AIRCRAFT_DATA, loading } = useAircraftData();
   const [selectedCategory, setSelectedCategory] = useState<AircraftCategory | 'All'>('All');
   const [selectedEngine, setSelectedEngine] = useState<EngineType | 'All'>('All');
   const [showFilters, setShowFilters] = useState(false);
@@ -101,6 +101,17 @@ const BookView: React.FC = () => {
         <div className="text-center">
           <BookOpen className="w-16 h-16 mx-auto mb-4 text-slate-400" />
           <p className="text-xl">Aucun appareil trouvé</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-yellow-500 mx-auto"></div>
+          <p className="text-slate-600 font-semibold">Chargement de l'encyclopédie...</p>
         </div>
       </div>
     );
