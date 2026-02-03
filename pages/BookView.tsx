@@ -22,12 +22,16 @@ const BookView: React.FC = () => {
       if (data) {
         if (data.bookmarkedId) {
           setBookmarkedId(data.bookmarkedId);
+          // Also save to localStorage as backup
+          localStorage.setItem(BOOKMARK_KEY, data.bookmarkedId);
         }
         if (data.orderIds && data.orderIds.length > 0) {
           const allIds = AIRCRAFT_DATA.map((aircraft) => aircraft.id);
           const knownIds = data.orderIds.filter((id) => allIds.includes(id));
           const newIds = allIds.filter((id) => !knownIds.includes(id));
-          setOrderIds([...knownIds, ...newIds]);
+          const finalOrder = [...knownIds, ...newIds];
+          setOrderIds(finalOrder);
+          localStorage.setItem(ORDER_KEY, JSON.stringify(finalOrder));
         }
       }
     };
@@ -49,8 +53,14 @@ const BookView: React.FC = () => {
       return;
     }
 
-    // Save to Firebase
+    // Save to Firebase and localStorage
     saveBookmark(bookmarkedId, nextOrder);
+    if (bookmarkedId) {
+      localStorage.setItem(BOOKMARK_KEY, bookmarkedId);
+    } else {
+      localStorage.removeItem(BOOKMARK_KEY);
+    }
+    localStorage.setItem(ORDER_KEY, JSON.stringify(nextOrder));
   }, [orderIds, bookmarkedId]);
 
   const aircraftById = useMemo(() => {
@@ -72,17 +82,19 @@ const BookView: React.FC = () => {
     });
   }, [orderedAircraft, selectedCategory, selectedEngine]);
 
-  // Load bookmark on mount
+  // Scroll to bookmark when loaded
   useEffect(() => {
     if (bookmarkedId && aircraftRefs.current[bookmarkedId]) {
+      // Longer delay to ensure refs are attached
       setTimeout(() => {
         aircraftRefs.current[bookmarkedId]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
+      }, 500);
     }
   }, [bookmarkedId]);
 
   const handleBookmark = async (aircraftId: string) => {
     setBookmarkedId(aircraftId);
+    localStorage.setItem(BOOKMARK_KEY, aircraftId);
     await saveBookmark(aircraftId, orderIds);
   };
 
