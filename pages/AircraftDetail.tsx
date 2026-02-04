@@ -503,7 +503,7 @@ const AircraftDetail: React.FC = () => {
             </div>
             
             <button className="mt-8 md:mt-10 w-full py-3.5 bg-black/10 hover:bg-black/20 border border-black/10 rounded-xl md:rounded-2xl flex items-center justify-center text-sm font-bold transition-all group active:scale-95" onClick={handlePDFExport}>
-              Télécharger la fiche (PNG)
+              JoJo, Garde un souvenir !!
               <ArrowUpRight size={18} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
           </div>
