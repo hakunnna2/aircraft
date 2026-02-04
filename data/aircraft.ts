@@ -9595,7 +9595,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Chasseur multirôle furtif',
     manufacturer: 'KAI',
     country: 'Corée du Sud',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette de petit F-22",
@@ -9617,7 +9617,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Chasseur léger multirôle',
     manufacturer: 'PAC/Chengdu',
     country: 'Pakistan/Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Entrées d\'air DSI sans séparateur",
@@ -9639,7 +9639,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Chasseur multirôle',
     manufacturer: 'Chengdu Aircraft',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Aile delta avec canards",
@@ -9661,7 +9661,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Chasseur léger de défense',
     manufacturer: 'HAL',
     country: 'Inde',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Aile delta sans canards",
@@ -9683,7 +9683,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Chasseur de supériorité aérienne',
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette classique F-15",
@@ -9705,7 +9705,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Chasseur de frappe',
     manufacturer: 'Shenyang Aircraft',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Biplace en tandem",
@@ -9727,7 +9727,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Chasseur multirôle léger',
     manufacturer: 'Saab',
     country: 'Suède',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Configuration canard-delta",
@@ -9749,7 +9749,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Chasseur de supériorité aérienne',
     manufacturer: 'Sukhoi',
     country: 'Russie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Pas de canards",
@@ -9771,7 +9771,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Patrouille maritime et ASW',
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Cellule de 737",
@@ -9793,7 +9793,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Avion ravitailleur',
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Basé sur le Boeing 767",
@@ -9815,7 +9815,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Ravitailleur et transport',
     manufacturer: 'Airbus',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Pods sous les ailes",
@@ -9837,7 +9837,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Transport militaire tactique',
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Moteurs à réaction sous ailes hautes",
@@ -9859,7 +9859,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Transport militaire lourd',
     manufacturer: 'Kawasaki',
     country: 'Japon',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Taille massive",
@@ -9881,7 +9881,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Surveillance maritime HALE',
     manufacturer: 'Northrop Grumman',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Ailes très longues type planeur",
@@ -9903,7 +9903,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Entraîneur avancé',
     manufacturer: 'Boeing/Saab',
     country: 'USA/Suède',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Double dérive inclinée",
@@ -9925,7 +9925,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Entraîneur avancé (LIFT)',
     manufacturer: 'Leonardo',
     country: 'Italie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Nez court et arrondi",
@@ -9947,7 +9947,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Entraîneur et attaque légère',
     manufacturer: 'Hongdu',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Ressemble au M-346 mais plus long",
@@ -9969,7 +9969,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Long-courrier monocouloir',
     manufacturer: 'Airbus',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Fuselage d\'A320 allongé",
@@ -9991,7 +9991,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Moyen-courrier',
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Winglets en V scindé",
@@ -10013,7 +10013,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Long-courrier gros-porteur',
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Bouts d\'ailes pliables au sol",
@@ -10035,7 +10035,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Moyen-courrier',
     manufacturer: 'COMAC',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Pare-brise à 4 vitres",
@@ -10057,7 +10057,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Jet régional',
     manufacturer: 'Sukhoi',
     country: 'Russie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Nez bulbeux",
@@ -10079,7 +10079,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Jet régional et moyen-courrier',
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Ailes très fines sans winglets",
@@ -10101,7 +10101,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Jet d\'affaires ultra-long courrier',
     manufacturer: 'Gulfstream',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "10 grands hublots ovales par côté",
@@ -10123,7 +10123,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Jet d\'affaires ultra-longue portée',
     manufacturer: 'Dassault',
     country: 'France',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Pare-brise panoramique 4 vitres",
@@ -10145,7 +10145,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Jet d\'affaires léger',
     manufacturer: 'Honda Aircraft',
     country: 'Japon/USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Moteurs sur pylônes au-dessus de l\'aile",
@@ -10167,7 +10167,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Jet personnel léger',
     manufacturer: 'Cirrus Aircraft',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Moteur unique sur le dos",
@@ -10365,7 +10365,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Drone de ravitaillement',
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Fuselage plat et furtif",
@@ -10387,7 +10387,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Surveillance stratégique',
     manufacturer: 'Northrop Grumman',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Nez en tête de baleine",
@@ -10409,7 +10409,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: 'Drone de combat furtif',
     manufacturer: 'Dassault',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Aile volante pure sans dérive",
@@ -10431,7 +10431,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur multirôle embarqué",
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Réservoirs sur le dessus du fuselage",
@@ -10453,7 +10453,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur furtif multirôle",
     manufacturer: 'Shenyang Aircraft',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette angulaire type F-35",
@@ -10475,7 +10475,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur furtif de supériorité",
     manufacturer: 'TAI',
     country: 'Turquie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette proche du F-22",
@@ -10497,7 +10497,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Transport militaire lourd",
     manufacturer: 'Xian Aircraft',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Quatre moteurs à réaction",
@@ -10695,7 +10695,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Drone de combat furtif",
     manufacturer: 'Baykar',
     country: 'Turquie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Plans canards à l'avant",
@@ -10717,7 +10717,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Drone ailier fidèle",
     manufacturer: 'Boeing Australia',
     country: 'Australie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Nez interchangeable",
@@ -10739,7 +10739,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Démonstrateur de drone embarqué",
     manufacturer: 'Northrop Grumman',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Aile volante pure en forme de losange",
@@ -10761,7 +10761,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet régional",
     manufacturer: 'COMAC',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Moteurs à l'arrière",
@@ -10805,7 +10805,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet régional",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Moteurs sous les ailes",
@@ -10827,7 +10827,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Moyen-courrier monocouloir",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Moteurs de grand diamètre",
@@ -10849,7 +10849,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet régional",
     manufacturer: 'Mitsubishi Aircraft',
     country: 'Japon',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Nez très aérodynamique",
@@ -10871,7 +10871,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires moyen",
     manufacturer: 'Textron Aviation',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Nez arrondi",
@@ -10893,7 +10893,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires super-médium",
     manufacturer: 'Textron Aviation',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Grands winglets verticaux",
@@ -10915,7 +10915,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires super-médium",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Winglets inclinés vers l'extérieur",
@@ -10937,7 +10937,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires large cabine",
     manufacturer: 'Dassault',
     country: 'France',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Bimoteur à l'arrière",
@@ -10959,7 +10959,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires très léger (VLJ)",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Petite taille",
@@ -10981,7 +10981,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires léger",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Ailes en flèche avec winglets élégants",
@@ -11179,7 +11179,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Avion amphibie bombardier d'eau",
     manufacturer: 'Beriev',
     country: 'Russie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Moteurs sur le dessus des ailes",
@@ -11223,7 +11223,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Lancement spatial",
     manufacturer: 'Scaled Composites',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 6,
     recognitionTips: [
       "Double fuselage",
@@ -11355,7 +11355,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur multirôle lourd",
     manufacturer: 'Boeing',
     country: 'USA/Arabie Saoudite',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Deux moteurs massifs",
@@ -11377,7 +11377,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Démonstrateur furtif",
     manufacturer: 'Mitsubishi',
     country: 'Japon',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Petite taille",
@@ -11399,7 +11399,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur de frappe maritime",
     manufacturer: 'Sukhoi',
     country: 'Russie/Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Dérives verticales à sommet plat",
@@ -11421,7 +11421,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Long-courrier gros-porteur",
     manufacturer: 'Airbus',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Masque noir de cockpit",
@@ -11443,7 +11443,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Transport de fret lourd",
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Bord de fuite de dérive dentelé",
@@ -11465,7 +11465,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet régional",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Fuselage extrêmement long et fin",
@@ -11685,7 +11685,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires long-courrier",
     manufacturer: 'Gulfstream',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Hublots ovales larges",
@@ -11707,7 +11707,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires super-médium",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Winglets imposants inclinés",
@@ -11729,7 +11729,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires longue portée",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Ailes fines et souples",
@@ -11993,7 +11993,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur de supériorité avancé",
     manufacturer: 'Boeing',
     country: 'USA/Israël',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Dérives verticales",
@@ -12037,7 +12037,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Attaque légère et ISR",
     manufacturer: 'Textron AirLand',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Ailes droites",
@@ -12059,7 +12059,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Patrouille maritime et ASW",
     manufacturer: 'Kawasaki',
     country: 'Japon',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Quatre moteurs à réaction",
@@ -12081,7 +12081,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Entraîneur supersonique et attaque",
     manufacturer: 'TAI',
     country: 'Turquie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Nez pointu effilé",
@@ -12103,7 +12103,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Transport de pièces de fuselage",
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Fuselage supérieur énormément gonflé",
@@ -12147,7 +12147,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Transport lourd modernisé",
     manufacturer: 'Ilyushin',
     country: 'Russie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Quatre moteurs à réaction",
@@ -12455,7 +12455,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Drone de combat furtif",
     manufacturer: 'BAE Systems',
     country: 'UK',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Aile volante pure en forme de triangle",
@@ -12499,7 +12499,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Démonstrateur supersonique",
     manufacturer: 'Boom Supersonic',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 3,
     recognitionTips: [
       "Fuselage très long et fin",
@@ -12521,7 +12521,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Avion supersonique silencieux",
     manufacturer: 'Lockheed Martin',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Nez extrêmement long (un tiers de l'avion)",
@@ -12543,7 +12543,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur multirôle",
     manufacturer: 'Lockheed Martin',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Radar APG-83 dans le nez",
@@ -12565,7 +12565,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur de supériorité aérienne",
     manufacturer: 'Shenyang Aircraft',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Radar incliné vers le haut",
@@ -12587,7 +12587,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur multirôle lourd",
     manufacturer: 'Sukhoi/HAL',
     country: 'Inde',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Plans canards à l'avant",
@@ -12631,7 +12631,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Avion ravitailleur",
     manufacturer: 'Ilyushin',
     country: 'Russie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Quatre réacteurs PS-90A",
@@ -12763,7 +12763,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Drone de combat furtif",
     manufacturer: 'General Atomics',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Entrée d'air sur le dessus",
@@ -12807,7 +12807,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires long-courrier",
     manufacturer: 'Dassault',
     country: 'France',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Bimoteur à l'arrière",
@@ -12829,7 +12829,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires haute performance",
     manufacturer: 'Gulfstream',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Sept hublots ovales par côté",
@@ -12851,7 +12851,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires ultra-large",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette de jet régional",
@@ -12873,7 +12873,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires léger",
     manufacturer: 'Textron Aviation',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Ailes en flèche",
@@ -12939,7 +12939,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet régional allongé",
     manufacturer: 'Antonov',
     country: 'Ukraine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Moteurs sous ailes hautes",
@@ -12961,7 +12961,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Moyen-courrier allongé",
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Deux sorties de secours derrière les ailes",
@@ -12983,7 +12983,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Moyen-courrier flexible",
     manufacturer: 'Airbus',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Absence de porte devant l'aile",
@@ -13115,7 +13115,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires long-courrier",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette allongée élégante",
@@ -13137,7 +13137,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires super-médium",
     manufacturer: 'Dassault',
     country: 'France',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Bords d'attaque d'ailes mobiles",
@@ -13159,7 +13159,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires large cabine",
     manufacturer: 'Gulfstream',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Nez court effilé",
@@ -13181,7 +13181,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires très longue portée",
     manufacturer: 'Gulfstream',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette de G700 mais plus courte",
@@ -13203,7 +13203,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires ultra-rapide",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette du Global 7500",
@@ -13225,7 +13225,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur multirôle lourd",
     manufacturer: 'Boeing',
     country: 'USA/Malaisie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Camouflage gris deux tons",
@@ -13247,7 +13247,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur multirôle amélioré",
     manufacturer: 'Chengdu Aircraft',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Entrée d'air ventrale sans montants",
@@ -13357,7 +13357,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur lourd avancé",
     manufacturer: 'Boeing',
     country: 'USA/Indonésie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Dérives verticales",
@@ -13379,7 +13379,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur multirôle avancé",
     manufacturer: 'Lockheed Martin',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Radar AESA APG-83",
@@ -13511,7 +13511,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires super-médium",
     manufacturer: 'Gulfstream',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Ailes sans bords d'attaque mobiles",
@@ -13533,7 +13533,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires large cabine",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Moteurs imposants à l'arrière",
@@ -13555,7 +13555,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet régional de luxe",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette de CRJ-700",
@@ -13577,7 +13577,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet régional longue portée",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Winglets larges",
@@ -13599,7 +13599,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Transport de fret lourd",
     manufacturer: 'Airbus',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Basé sur l'A350",
@@ -13621,7 +13621,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Transport de fret long-courrier",
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Bouts d'ailes pliables",
@@ -13797,7 +13797,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Guerre électronique embarquée",
     manufacturer: 'Shenyang Aircraft',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Pods de guerre électronique aux ailes",
@@ -13973,7 +13973,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Bombardier stratégique",
     manufacturer: 'Xian Aircraft',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Nez plein sans vitrage (radar)",
@@ -14039,7 +14039,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Drone ailier de combat",
     manufacturer: 'Kratos Defense',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Entrée d'air sur le dessus",
@@ -14061,7 +14061,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Transport court-courrier",
     manufacturer: 'Airbus',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Fuselage très court et trapu",
@@ -14083,7 +14083,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet régional",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette de jet régional",
@@ -14105,7 +14105,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires léger",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Winglets imposants et inclinés",
@@ -14127,7 +14127,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires long-courrier",
     manufacturer: 'Gulfstream',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Six grands hublots ovales par côté",
@@ -14149,7 +14149,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires très léger",
     manufacturer: 'Textron Aviation',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Winglets arrondis (Swooplets)",
@@ -14259,7 +14259,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur multirôle avancé",
     manufacturer: 'Mikoyan',
     country: 'Russie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Radar AESA plat dans le nez",
@@ -14281,7 +14281,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Très long-courrier",
     manufacturer: 'Airbus',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Quatre réacteurs",
@@ -14303,7 +14303,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Long-courrier haute capacité",
     manufacturer: 'Airbus',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Fuselage extrêmement long",
@@ -14325,7 +14325,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Long-courrier à autonomie étendue",
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Winglets en bout d'aile",
@@ -14347,7 +14347,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet régional",
     manufacturer: 'Bombardier',
     country: 'Canada',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Fuselage très effilé",
@@ -14413,7 +14413,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "AWACS stratégique lourd",
     manufacturer: 'Xian Aircraft',
     country: 'Chine',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 4,
     recognitionTips: [
       "Grand dôme radar rotatif",
@@ -14457,7 +14457,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur multirôle avancé",
     manufacturer: 'Lockheed Martin',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 1,
     recognitionTips: [
       "Réservoirs sur le dessus",
@@ -14479,7 +14479,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires super-médium",
     manufacturer: 'Hawker Beechcraft',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Nez pointu",
@@ -14501,7 +14501,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires large cabine",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Silhouette de jet régional",
@@ -14523,7 +14523,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Ravitailleur et transport",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Pods de ravitaillement sous les ailes",
@@ -14545,7 +14545,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Patrouille maritime et ASW",
     manufacturer: 'Boeing',
     country: 'USA/Inde',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Détecteur MAD à l'arrière",
@@ -14589,7 +14589,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Long-courrier très grande capacité",
     manufacturer: 'Airbus',
     country: 'Europe',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Train d'atterrissage principal à 6 roues",
@@ -14611,7 +14611,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Long-courrier ultra-long rayon",
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Bimoteur géant",
@@ -14655,7 +14655,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Jet d'affaires long-courrier",
     manufacturer: 'Dassault',
     country: 'France',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 3,
     recognitionTips: [
       "Trois moteurs à l'arrière",
@@ -14677,7 +14677,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Alerte avancée (AEW&C)",
     manufacturer: 'IAI/Gulfstream',
     country: 'Israël',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Radars larges sur les flancs",
@@ -14699,7 +14699,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Attaque légère et chasse",
     manufacturer: 'Leonardo',
     country: 'Italie',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Nez avec radar",
@@ -14765,7 +14765,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Surveillance et renseignement",
     manufacturer: 'Embraer',
     country: 'Brésil',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Antenne rectangulaire sur le dos",
@@ -14787,7 +14787,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Démonstrateur technologique",
     manufacturer: 'Mitsubishi',
     country: 'Japon',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Tuyères à pétales",
@@ -14809,7 +14809,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Chasseur embarqué (Prototype)",
     manufacturer: 'HAL',
     country: 'Inde',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Plans canards",
@@ -14853,7 +14853,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     role: "Moyen-courrier monocouloir",
     manufacturer: 'Boeing',
     country: 'USA',
-    engineType: 'Turbofan',
+    engineType: 'Jet',
     enginesCount: 2,
     recognitionTips: [
       "Winglets en V scindé",
