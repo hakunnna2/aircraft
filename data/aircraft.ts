@@ -3454,23 +3454,7 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     description: "Beech a remotorisé le T-34 original avec un turbopropulseur PT6 en 1972. La version armée T-34C-1 sert au contrôle aérien avancé.",
     specs: { wingspan: '10,2 m', length: '8,7 m', height: '2,9 m', payload: '544 kg' }
   },
-  {
-    id: 'rfb-fantrainer',
-    name: 'RFB Fantrainer',
-    category: 'Combat Training Aircraft',
-    role: 'Entraîneur primaire',
-    manufacturer: 'RFB',
-    country: 'Allemagne',
-    engineType: 'Ducted Fan',
-    enginesCount: 1,
-    recognitionTips: [
-      "Aile droite en position médiane",
-      "Soufflante carénée (ducted fan) au milieu du fuselage",
-      "Empennage en T"
-    ],
-    description: "Bien qu'il ressemble à un jet, il est propulsé par une soufflante carénée. Ce design permet de simuler le pilotage d'un jet à moindre coût.",
-    specs: { wingspan: '9,7 m', length: '9,2 m', height: '3,2 m', payload: '0 kg' }
-  },
+
   {
     id: 'firefly',
     name: 'Slingsby T67/T-3A Firefly',
