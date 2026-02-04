@@ -13285,28 +13285,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     }
   },
   {
-    id: 'c929-comac',
-    name: "COMAC C929",
-    category: 'Civil Jet Airliners',
-    role: "Long-courrier gros-porteur",
-    manufacturer: 'COMAC',
-    country: 'Chine',
-    engineType: 'Turbofan',
-    enginesCount: 2,
-    recognitionTips: [
-      "Fuselage large",
-      "Silhouette proche de l'A330neo",
-      "Moteurs de nouvelle génération"
-    ],
-    description: "Futur avion gros-porteur chinois (ex-CR929) conçu pour briser le monopole Boeing/Airbus.",
-    specs: {
-      wingspan: '63.9 m',
-      length: '63.3 m',
-      height: '17.9 m',
-      payload: '280 passagers'
-    }
-  },
-  {
     id: 'an132d-antonov',
     name: "Antonov An-132D",
     category: 'Combat Support Aircraft',
