@@ -11921,28 +11921,6 @@ const AIRCRAFT_DATA_RAW: Omit<Aircraft, 'image'>[] = [
     }
   },
   {
-    id: 'an132-antonov',
-    name: "Antonov An-132",
-    category: 'Combat Support Aircraft',
-    role: "Transport tactique léger",
-    manufacturer: 'Antonov',
-    country: 'Ukraine/Arabie Saoudite',
-    engineType: 'Turboprop',
-    enginesCount: 2,
-    recognitionTips: [
-      "Moteurs montés très haut sur les ailes",
-      "Hélices à 6 pales",
-      "Rampe arrière"
-    ],
-    description: "Version modernisée de l'An-32 équipée de moteurs occidentaux Pratt & Whitney.",
-    specs: {
-      wingspan: '29.2 m',
-      length: '24.5 m',
-      height: '8.8 m',
-      payload: '9 200 kg'
-    }
-  },
-  {
     id: 'mc130j-commando',
     name: "Lockheed Martin MC-130J Commando II",
     category: 'Combat Support Aircraft',
