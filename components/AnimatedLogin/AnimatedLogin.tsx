@@ -61,16 +61,16 @@ export const AnimatedLogin: React.FC<AnimatedLoginProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-[100svh] bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center p-3 sm:p-4 relative overflow-hidden">
       {/* Background decorative blobs */}
       <div className="absolute -top-24 -right-24 w-72 h-72 bg-yellow-200/40 blur-3xl rounded-full" />
       <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-200/40 blur-3xl rounded-full" />
 
       {/* Main card */}
-      <div className={`w-full max-w-md bg-white/90 backdrop-blur border border-slate-200 rounded-3xl shadow-[0_20px_60px_-30px_rgba(15,23,42,0.4)] p-8 relative z-10 ${animationState === 'flyaway' ? 'animate-box-fade' : ''}`}>
+      <div className={`w-full max-w-md bg-white/90 backdrop-blur border border-slate-200 rounded-3xl shadow-[0_20px_60px_-30px_rgba(15,23,42,0.4)] p-5 sm:p-6 relative z-10 ${animationState === 'flyaway' ? 'animate-box-fade' : ''}`}>
         
         {/* Logo */}
-        <div className="flex items-center justify-center space-x-2 mb-8">
+        <div className="flex items-center justify-center space-x-2 mb-4 sm:mb-6">
           <div className="p-2 bg-yellow-400 rounded-lg text-slate-900">
             <Plane size={24} />
           </div>
@@ -78,18 +78,18 @@ export const AnimatedLogin: React.FC<AnimatedLoginProps> = ({
         </div>
 
         {/* Aircraft Mascot */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-4 sm:mb-6 scale-90 sm:scale-100">
           <AircraftMascot animationState={animationState} />
         </div>
 
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-4 sm:mb-6">
           <h1 className="text-2xl font-bold text-slate-900 mb-2">Accès protégé</h1>
-          <p className="text-sm text-slate-500">Entrez le mot de passe pour continuer</p>
+          <p className="text-sm text-slate-500">Juste pour ma petite JoJo 💛</p>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-2">
               Mot de passe
@@ -144,7 +144,7 @@ export const AnimatedLogin: React.FC<AnimatedLoginProps> = ({
 
         {/* Footer hint */}
         <p className="mt-6 text-xs text-slate-400 text-center">
-          Conseil : le mot de passe est sensible à la casse.
+          « Conseil : le mot de passe est un mot qui me plaît 🤭 »
         </p>
       </div>
     </div>
