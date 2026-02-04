@@ -444,6 +444,15 @@ const MapView: React.FC = () => {
                       onClick={() => {
                         if (byMapName[name]) {
                           setSelectedCountry(name);
+                          // Scroll to results on small screens (mobile/tablet)
+                          if (window.innerWidth < 1024) {
+                            setTimeout(() => {
+                              const resultsSection = document.getElementById('map-results');
+                              if (resultsSection) {
+                                resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                              }
+                            }, 100);
+                          }
                         }
                       }}
                       className="transition-colors cursor-pointer"
@@ -481,7 +490,18 @@ const MapView: React.FC = () => {
                     return (
                       <button
                         key={country}
-                        onClick={() => setSelectedCountry(country)}
+                        onClick={() => {
+                          setSelectedCountry(country);
+                          // Scroll to results on small screens (mobile/tablet)
+                          if (window.innerWidth < 1024) {
+                            setTimeout(() => {
+                              const resultsSection = document.getElementById('map-results');
+                              if (resultsSection) {
+                                resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                              }
+                            }, 100);
+                          }
+                        }}
                         className={`px-3 py-1 rounded-full text-xs font-semibold transition-all whitespace-nowrap ${
                           selectedCountry === country
                             ? 'bg-yellow-400 text-slate-900'
@@ -498,7 +518,7 @@ const MapView: React.FC = () => {
           })()}
         </div>
 
-        <div className="bg-white rounded-3xl p-6 shadow-lg border border-slate-200 h-fit">
+        <div className="bg-white rounded-3xl p-6 shadow-lg border border-slate-200 h-fit" id="map-results">
           <div className="flex items-center mb-4 justify-between">
             <div className="flex items-center">
             {selectedCountry && !selectedCountry.includes('/') && getCountryCode(selectedCountry) && (

@@ -107,12 +107,25 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
               <input
                 type="text"
                 placeholder="Rechercher un avion (ex: Boeing 747)..."
-                className="block w-full pl-11 pr-4 py-3 bg-slate-100 border border-transparent rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:bg-white focus:border-white transition-all shadow-inner"
+                className="block w-full pl-11 pr-12 py-3 bg-slate-100 border border-transparent rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:bg-white focus:border-white transition-all shadow-inner"
                 value={searchQuery}
                 onChange={(e) => handleSearchChange(e.target.value)}
                 onFocus={() => setShowSuggestions(searchQuery.length > 0)}
                 onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
               />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSearchQuery('');
+                    setShowSuggestions(false);
+                    onSearch('');
+                  }}
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-700 transition-colors"
+                >
+                  <X size={18} />
+                </button>
+              )}
             </div>
           </form>
 
@@ -228,10 +241,23 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
                   autoFocus
                   type="text"
                   placeholder="Rechercher un avion..."
-                  className="block w-full pl-12 pr-4 py-4 bg-slate-100 border-none rounded-2xl text-base font-medium focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                  className="block w-full pl-12 pr-12 py-4 bg-slate-100 border-none rounded-2xl text-base font-medium focus:ring-2 focus:ring-yellow-400 focus:outline-none"
                   value={searchQuery}
                   onChange={(e) => handleSearchChange(e.target.value)}
                 />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSearchQuery('');
+                      setShowSuggestions(false);
+                      onSearch('');
+                    }}
+                    className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-700 transition-colors"
+                  >
+                    <X size={20} />
+                  </button>
+                )}
               </div>
             </form>
             
