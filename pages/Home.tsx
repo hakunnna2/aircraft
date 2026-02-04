@@ -3,7 +3,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { CATEGORIES } from '../data/aircraft.ts';
 import { AircraftCategory, EngineType } from '../types.ts';
-import AircraftCard from '../components/AircraftCard.tsx';
+import AircraftCard from '../components/AircraftCard';
 import FilterPanel from '../components/FilterPanel.tsx';
 import { useAircraftData } from '../context/AircraftDataContext.tsx';
 import { ArrowRight, PlaneTakeoff, Info, Filter as FilterIcon } from 'lucide-react';
@@ -177,19 +177,19 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
         <div className="relative z-10 px-6 md:px-16 max-w-2xl text-white w-full text-center md:text-left py-12">
           <div className="inline-flex items-center px-3 py-1 bg-yellow-400 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wider mb-6 text-slate-900">
             <PlaneTakeoff size={14} className="mr-2" />
-            Guide pour mon petit JoJo
+            Guide pour ma petite JoJo
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
-            Maîtrisez la Reconnaissance Aérienne
+            Le Monde Des Avions, Rien Que Pour JoJo 💛
           </h1>
           <p className="text-sm md:text-lg text-slate-300 mb-8 leading-relaxed max-w-lg mx-auto md:mx-0">
-            Votre encyclopédie visuelle complète pour les avions civils, militaires et de collection. Identifiez chaque appareil au premier coup d'œil.
+            Une encyclopédie visuelle complète pour découvrir les avions civils, militaires et de collection. Reconnais chaque appareil au premier coup d’œil.
           </p>
           <button 
             onClick={() => document.getElementById('explore')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto px-8 py-3.5 bg-white text-slate-900 font-bold rounded-xl hover:bg-yellow-50 transition-all shadow-lg active:scale-95"
           >
-            Commencer l'exploration
+            On Commence l'exploration
           </button>
         </div>
       </section>
@@ -257,7 +257,7 @@ const Home: React.FC<HomeProps> = ({ searchQuery }) => {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <h2 className="text-xl md:text-2xl font-bold text-slate-900">Bibliothèque</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-slate-900">Ta Bibliothèque</h2>
                   <span className="px-2.5 py-0.5 bg-slate-200 text-slate-600 rounded-full text-[10px] md:text-xs font-bold">
                     {filteredAircraft.length}
                   </span>

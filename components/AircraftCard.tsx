@@ -6,9 +6,10 @@ import { OptimizedImage } from './OptimizedImage';
 
 interface AircraftCardProps {
   aircraft: Aircraft;
+  priority?: boolean;
 }
 
-const AircraftCard: React.FC<AircraftCardProps> = ({ aircraft }) => {
+const AircraftCard: React.FC<AircraftCardProps> = ({ aircraft, priority = false }) => {
   const [imageError, setImageError] = useState(false);
 
   // Helper function to get category badge text
@@ -39,7 +40,7 @@ const AircraftCard: React.FC<AircraftCardProps> = ({ aircraft }) => {
             imageId={aircraft.id}
             alt={aircraft.name}
             transform="thumbnail"
-            loading="lazy"
+            loading={priority ? 'eager' : 'lazy'}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             onError={() => setImageError(true)}
           />

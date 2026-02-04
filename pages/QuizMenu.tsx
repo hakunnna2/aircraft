@@ -21,7 +21,7 @@ const QuizMenu: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 mb-2 sm:mb-3 leading-tight">
             Quick Choice 🎮
           </h1>
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 px-2 font-medium">Teste tes reflexes et tes connaissances en avions</p>
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 px-2 font-medium">Amuse-toi à tester tes réflexes et tes connaissances en avions !</p>
         </div>
         {/* Main Card with Enhanced Styling */}
         <div className="max-w-2xl mx-auto mb-8 sm:mb-10 md:mb-12">
@@ -30,7 +30,7 @@ const QuizMenu: React.FC = () => {
             <div className="relative bg-white/95 backdrop-blur-sm transition-all duration-300 p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl text-center border border-yellow-100">
               <div className="text-6xl sm:text-7xl md:text-8xl mb-4 sm:mb-6">⚡</div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 mb-3 sm:mb-4 leading-tight">
-                Prêt à jouer?
+                Prête à t'amuser, JoJo ?
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-slate-600 mb-6 sm:mb-8 px-2 font-medium leading-relaxed">
                 Reconnais les avions à la vitesse de l'éclair 🚀

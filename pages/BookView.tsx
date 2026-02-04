@@ -125,7 +125,7 @@ const BookView: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <BookOpen className="w-6 h-6 text-yellow-400" />
-            <h1 className="text-xl font-bold">Mode Lecture</h1>
+            <h1 className="text-xl font-bold">Mode lecture activé !</h1>
             <span className="text-sm text-slate-600">
               {filteredAircraft.length} avions
             </span>

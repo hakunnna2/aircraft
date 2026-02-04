@@ -46,7 +46,7 @@ const App: React.FC = () => {
   const ACCESS_KEY = 'jp_access_granted';
   const ACCESS_LAST_ACTIVITY_KEY = 'jp_access_last_activity';
   const SESSION_IDLE_DURATION = 10 * 60 * 1000; // 10 minutes in milliseconds
-  const APP_PASSWORD = 'justplane';
+  const APP_PASSWORD = 'kanbghik'; // Replace with your desired password
   const [isUnlocked, setIsUnlocked] = useState(() => {
     const unlocked = sessionStorage.getItem(ACCESS_KEY) === 'true';
     if (!unlocked) return false;

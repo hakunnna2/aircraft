@@ -377,7 +377,7 @@ const MapView: React.FC = () => {
           Carte Interactive
         </h1>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          Cliquez sur un pays pour découvrir les aéronefs associés.
+          Ma Petite JoJo, clique sur un pays pour voir ses avions 💛
         </p>
       </div>
 

@@ -34,7 +34,7 @@ const PasswordGate: React.FC<PasswordGateProps> = ({ password, accessKey, onSucc
           </div>
           <div>
             <h1 className="text-2xl font-bold text-slate-900">Accès protégé</h1>
-            <p className="text-sm text-slate-500">Entrez le mot de passe pour continuer</p>
+              <p className="text-sm text-slate-500">Juste pour ma petite JoJo</p>
           </div>
         </div>
 
@@ -72,7 +72,7 @@ const PasswordGate: React.FC<PasswordGateProps> = ({ password, accessKey, onSucc
         </form>
 
         <p className="mt-6 text-xs text-slate-400 text-center">
-          Conseil : le mot de passe est sensible à la casse.
+          « Conseil : le mot de passe est un mot qui me plaît. »
         </p>
       </div>
     </div>
