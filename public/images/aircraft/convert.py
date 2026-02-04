@@ -8,6 +8,7 @@ folder = os.path.dirname(os.path.abspath(__file__))
 image_extensions = (".png", ".bmp", ".gif", ".tiff", ".jpeg", ".jpg", ".webp", ".avif")
 
 for filename in os.listdir(folder):
+
     input_path = os.path.join(folder, filename)
 
     # Skip if not a file
@@ -16,6 +17,10 @@ for filename in os.listdir(folder):
 
     # Skip files that are not images
     if not filename.lower().endswith(image_extensions):
+        continue
+
+    # Skip files that are already .jpg
+    if filename.lower().endswith(".jpg"):
         continue
 
     try:
@@ -29,9 +34,8 @@ for filename in os.listdir(folder):
 
             img.save(output_path, "JPEG", quality=98, optimize=True, subsampling=0)
 
-            # Remove original if not already JPG
-            if not filename.lower().endswith(".jpg"):
-                os.remove(input_path)
+            # Remove original
+            os.remove(input_path)
 
     except Exception as e:
         print(f"Failed to convert {filename}: {e}")
