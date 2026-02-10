@@ -225,7 +225,7 @@ const MapView: React.FC = () => {
       countries.add(aircraft.country);
     });
     return Array.from(countries).sort();
-  }, []);
+  }, [AIRCRAFT_DATA]);
 
   const byMapName = useMemo(() => {
     const map: Record<string, { displayName: string; count: number; aircraft: Array<(typeof AIRCRAFT_DATA)[number]> }> = {};
@@ -241,7 +241,7 @@ const MapView: React.FC = () => {
     });
 
     return map;
-  }, []);
+  }, [AIRCRAFT_DATA]);
 
   const maxCount = useMemo(() => {
     const counts = Object.values(byMapName).map((c) => c.count);
@@ -260,7 +260,7 @@ const MapView: React.FC = () => {
       map[countryName].aircraft.push(aircraft);
     });
     return map;
-  }, []);
+  }, [AIRCRAFT_DATA]);
 
   const getFill = (name: string) => {
     const count = byMapName[name]?.count ?? 0;
